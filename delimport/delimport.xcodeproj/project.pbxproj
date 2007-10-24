@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C8ED5900CCE5B0A00FE0E05 /* Keychain.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C8ED57B0CCE5AE600FE0E05 /* Keychain.framework */; };
-		6C8ED5940CCE5B4700FE0E05 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8ED57B0CCE5AE600FE0E05 /* Keychain.framework */; };
-		6C8F4BF40CCE496000BFE897 /* del.icio.us Spotlight Interface.mdimporter in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C8F4BE90CCE492100BFE897 /* del.icio.us Spotlight Interface.mdimporter */; };
+		6C38B3700CCF5C6D00E5933D /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8ED4DF0CCE598100FE0E05 /* Keychain.framework */; };
+		6C38B39E0CCF5CF300E5933D /* Keychain.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C8ED4DF0CCE598100FE0E05 /* Keychain.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -22,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6C38B3450CCF5C4400E5933D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D576316048677EA00EA77CD /* del.icio.us Spotlight Interface.mdimporter */;
+			remoteInfo = "del.icio.us Spotlight Interface";
+		};
 		6C8ED57A0CCE5AE600FE0E05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
@@ -92,13 +98,6 @@
 			remoteGlobalIDString = 75C6E8F70A3BDCD8009201FB;
 			remoteInfo = KeychainSearchTester;
 		};
-		6C8F4BE80CCE492100BFE897 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8D576316048677EA00EA77CD;
-			remoteInfo = "del.icio.us Spotlight Interface";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,7 +107,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6C8ED5900CCE5B0A00FE0E05 /* Keychain.framework in CopyFiles */,
+				6C38B39E0CCF5CF300E5933D /* Keychain.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +117,6 @@
 			dstPath = Contents/Library/Spotlight;
 			dstSubfolderSpec = 1;
 			files = (
-				6C8F4BF40CCE496000BFE897 /* del.icio.us Spotlight Interface.mdimporter in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +132,7 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* delimport_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delimport_Prefix.pch; sourceTree = "<group>"; };
 		6C8ED4DF0CCE598100FE0E05 /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = /Users/Shared/builds/Deployment/Keychain.framework; sourceTree = "<absolute>"; };
-		6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "del.icio.us Spotlight Interface.xcodeproj"; path = "/Volumes/Kalle/Users/ssp/Developer/zExamples/delimport/spotlight_interface/del.icio.us Spotlight Interface.xcodeproj"; sourceTree = "<absolute>"; };
+		6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "del.icio.us Spotlight Interface.xcodeproj"; path = "spotlight_interface/del.icio.us Spotlight Interface.xcodeproj"; sourceTree = "<group>"; };
 		6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Keychain.xcodeproj; path = ../Keychain/Keychain.xcodeproj; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* delimport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delimport.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,7 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C8ED5940CCE5B4700FE0E05 /* Keychain.framework in Frameworks */,
+				6C38B3700CCF5C6D00E5933D /* Keychain.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +243,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6C38B3420CCF5C4400E5933D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6C8ED56D0CCE5AE600FE0E05 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,14 +264,6 @@
 				6C8ED5890CCE5AE600FE0E05 /* CertificateGenerationTester */,
 				6C8ED58B0CCE5AE600FE0E05 /* CryptographyTester */,
 				6C8ED58D0CCE5AE600FE0E05 /* KeychainSearchTester */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6C8F4BE20CCE492100BFE897 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6C8F4BE90CCE492100BFE897 /* del.icio.us Spotlight Interface.mdimporter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,7 +302,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 6C8F4BE20CCE492100BFE897 /* Products */;
+					ProductGroup = 6C38B3420CCF5C4400E5933D /* Products */;
 					ProjectRef = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
 				},
 				{
@@ -320,6 +318,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "del.icio.us Spotlight Interface.mdimporter";
+			remoteRef = 6C38B3450CCF5C4400E5933D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		6C8ED57B0CCE5AE600FE0E05 /* Keychain.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -388,13 +393,6 @@
 			fileType = "compiled.mach-o.executable";
 			path = KeychainSearchTester;
 			remoteRef = 6C8ED58C0CCE5AE600FE0E05 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C8F4BE90CCE492100BFE897 /* del.icio.us Spotlight Interface.mdimporter */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "del.icio.us Spotlight Interface.mdimporter";
-			remoteRef = 6C8F4BE80CCE492100BFE897 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -496,7 +494,9 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../../../Shared/builds/Deployment\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -539,6 +539,10 @@
 		6CCC64340A40CC7F00540A50 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Development;
@@ -546,6 +550,10 @@
 		6CCC64350A40CC7F00540A50 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Deployment;

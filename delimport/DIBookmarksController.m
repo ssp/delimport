@@ -87,8 +87,6 @@
 
 - (KeychainItem *)getKeychainUserAndPass
 {
-//	Keychain *keychain = [Keychain defaultKeychain];
-//	KeychainSearch *search = [[KeychainSearch alloc] initWithKeychain:keychain];
 	KeychainSearch * search = [[KeychainSearch alloc] init];
 	
 	[search setServer:@"del.icio.us"];
@@ -126,6 +124,7 @@
 		}
 		fileController = [[DIFileController alloc] init];
 		loginController = [[DILoginController alloc] init];
+		throttleTimepoint = [[NSDate distantPast] retain];
 	}
 	return self;
 }
@@ -140,15 +139,18 @@
 
 	NSHTTPURLResponse *response;
 	NSData * xmlData = [NSURLConnection sendSynchronousRequest:URLRequest returningResponse:&response error:&error];
-	if (!xmlData) {
-		if ([response statusCode] == 401) {
-			[self logIn];
-		}
-		else {
-			NSLog([NSString stringWithFormat:@"API Response Problem: %@", [NSHTTPURLResponse localizedStringForStatusCode:[response statusCode]], nil]);
-		}
+	NSLog(@"http response code for API request '%@': %i", request, [response statusCode], nil);
+	if ([response statusCode] == 401) {
+		[self logIn];
 		return nil;
 	}
+	if ([response statusCode] == 503) {
+		// we've been throttled
+		[self setValue:[NSDate date] forKey:@"throttleTimepoint"];
+		NSLog(@"503 http error: throttled");
+		return nil;
+	}
+	
 	NSXMLDocument *document = [[[NSXMLDocument alloc] initWithData:xmlData options:NSXMLDocumentTidyXML error:&error] autorelease];
 	if (document == nil) {
 		NSAlert *alert = [NSAlert alertWithError:error];
@@ -198,6 +200,8 @@
 
 - (void)updateList:(NSTimer *)timer
 {
+	[self setupTimer:timer];
+
 	if (!username) {
 		[self logIn];
 	}
@@ -213,6 +217,7 @@
 	}
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	NSXMLElement *root = [allPostsDoc rootElement];
+//	NSLog([NSString stringWithFormat:@"-updateList, downloaded %@", [root description],nil]);
 	if (![[root name] isEqualTo:@"html"]) {
 		// it seems that error pages may come through without the right status code but an error message HTML page
 		// avoid reading those as they'll destroy our metadata cache
@@ -269,7 +274,33 @@
 	[self addToLoginItems];
 	[self getKeychainUserAndPass];
 	[self updateList:nil];
-	updateTimer = [NSTimer scheduledTimerWithTimeInterval:30*60 target:self selector:@selector(updateList:) userInfo:nil repeats:YES];
+}
+
+- (void) setupTimer:(NSTimer*) timer {
+	if ((timer == nil) || ([timer timeInterval] != [self currentUpdateInterval])) {
+		// timer setting changed, create new timer and dump old one
+		updateTimer = [NSTimer scheduledTimerWithTimeInterval:[self currentUpdateInterval] target:self selector:@selector(updateList:) userInfo:nil repeats:YES];
+		[timer invalidate];
+		NSLog(@"-setupTimer: Timer set with interval: %d", [self currentUpdateInterval]);
+	}
+	
+}	
+	
+
+- (NSTimeInterval) currentUpdateInterval {
+	NSNumber * delta = [[NSUserDefaults standardUserDefaults] objectForKey:DIMinutesBetweenChecks];
+	NSTimeInterval minutes;
+	if ((delta != nil) && ([throttleTimepoint timeIntervalSinceNow] < -30.0*60.0)) {
+		// if a time is stored and throttling is more than 30min ago, use the stored time, otherwise go for a 30min interval
+		minutes = [delta doubleValue];
+		if (minutes < 1.0) {
+			minutes = 1.0;
+		}
+	}
+	else {
+		minutes = 30.0;
+	}
+	return (minutes * 60.0);
 }
 
 - (void)dealloc
@@ -280,6 +311,7 @@
 	[lastUpdate release];
 	[fileController release];
 	[loginController release];
+	[throttleTimepoint release];
 	
 	[updateTimer invalidate];
 	[super dealloc];

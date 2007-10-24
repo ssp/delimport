@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+#define DIMinutesBetweenChecks @"MinutesBetweenChecks"
+
 @class DIFileController, DILoginController;
 
 @interface DIBookmarksController : NSObject {
@@ -19,6 +21,7 @@
 
 	NSSet *bookmarks;
 	NSDate *lastUpdate;
+	NSDate *throttleTimepoint;
 	
 	NSTimer *updateTimer;
 }
@@ -26,5 +29,8 @@
 - (void)logIn;
 - (void)updateList:(NSTimer *)timer;
 - (void)setBookmarks:(NSSet *)newMarks;
+
+- (void) setupTimer:(NSTimer*) timer;
+- (NSTimeInterval) currentUpdateInterval;
 
 @end
