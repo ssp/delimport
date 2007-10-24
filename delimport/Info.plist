@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>delicious</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>delicious</string>
+			<key>CFBundleTypeName</key>
+			<string>Del.icio.us Bookmark</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>DELi</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.ianhenderson.delicious.bookmark</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<false/>
+			<key>NSPersistentStoreTypeKey</key>
+			<string>XML</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>delimport</string>
+	<key>CFBundleIconFile</key>
+	<string>delicious</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.ianhenderson.delimport</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>DeLi</string>
+	<key>CFBundleVersion</key>
+	<string>0.3</string>
+	<key>LSUIElement</key>
+	<integer>1</integer>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>

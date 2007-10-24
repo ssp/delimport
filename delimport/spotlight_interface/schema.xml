@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<schema version="1.0" xmlns="http://www.apple.com/metadata"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://www.apple.com/metadata file:///System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Resources/MetadataSchema.xsd">
+
+    <types>
+        <type name="org.ianhenderson.delicious.bookmark">
+			<note>
+            </note>
+            <previewattrs>
+kMDItemContentCreationDate
+            </previewattrs>
+            <allattrs>
+kMDItemURL
+kMDItemContentCreationDate
+kMDItemContentModificationDate
+kMDItemDisplayName
+kMDItemKeywords
+kMDItemDescription
+kMDItemKind
+            </allattrs>
+            <displayattrs>
+kMDItemURL
+kMDItemContentCreationDate
+kMDItemKeywords
+kMDItemDescription
+            </displayattrs>
+        </type>
+    </types>
+</schema>
+

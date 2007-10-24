@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {logIn = id; }; 
+            CLASS = DIBookmarksController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                fileController = DIFileController; 
+                loginPanel = NSPanel; 
+                passField = NSTextField; 
+                userField = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {testStuff = id; }; 
+            CLASS = DIFileController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}
