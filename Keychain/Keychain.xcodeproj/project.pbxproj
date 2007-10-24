@@ -1,0 +1,2033 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		75A0764A0943BA09008B9D9E /* World */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 75A076580943BA3D008B9D9E /* Build configuration list for PBXAggregateTarget "World" */;
+			buildPhases = (
+			);
+			dependencies = (
+				75A0764C0943BA13008B9D9E /* PBXTargetDependency */,
+				75A0764E0943BA16008B9D9E /* PBXTargetDependency */,
+				75A076500943BA18008B9D9E /* PBXTargetDependency */,
+				75A076520943BA1A008B9D9E /* PBXTargetDependency */,
+				75A076540943BA1C008B9D9E /* PBXTargetDependency */,
+				75A076560943BA1D008B9D9E /* PBXTargetDependency */,
+				755CFABD0A1F672D008C69A9 /* PBXTargetDependency */,
+				755DE3320A20A2B9002EAC2B /* PBXTargetDependency */,
+				755DE3340A20A2B9002EAC2B /* PBXTargetDependency */,
+				75C6E9300A3BE210009201FB /* PBXTargetDependency */,
+			);
+			name = World;
+			productName = World;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		7540B3ED0999D1C000469F46 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		7540B3FE0999D1D600469F46 /* SKeyPlusTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7540B3FD0999D1D600469F46 /* SKeyPlusTester.m */; };
+		7556131A0A2090B5003428C2 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		755613250A209100003428C2 /* CryptographicTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 755613240A209100003428C2 /* CryptographicTester.m */; };
+		755613260A20910C003428C2 /* CertificateGenerationTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7594D49C0A20467E0090E497 /* CertificateGenerationTester.m */; };
+		755CFA420A1F6201008C69A9 /* CSSMACLEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 754DC2CB089B8A72002DC7DF /* CSSMACLEntry.m */; };
+		755CFA430A1F6202008C69A9 /* CSSMACLEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 754DC2CA089B8A72002DC7DF /* CSSMACLEntry.h */; };
+		7594D48C0A2045E00090E497 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		7599CC480946C8B600C54323 /* CompilerIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 7599CC470946C8B600C54323 /* CompilerIndependence.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		75A0749409438F8E008B9D9E /* Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = F566C84903E0D9AA015C51F3 /* Keychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A0749509438F8E008B9D9E /* AccessControlList.h in Headers */ = {isa = PBXBuildFile; fileRef = F524D43103E0ECFB0168D458 /* AccessControlList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A0749609438F8E008B9D9E /* Access.h in Headers */ = {isa = PBXBuildFile; fileRef = F524D43503E0ED0C0168D458 /* Access.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A0749709438F8E008B9D9E /* Certificate.h in Headers */ = {isa = PBXBuildFile; fileRef = F524D43903E0ED1A0168D458 /* Certificate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A0749809438F8E008B9D9E /* Identity.h in Headers */ = {isa = PBXBuildFile; fileRef = F524D43D03E0ED280168D458 /* Identity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A0749909438F8E008B9D9E /* Key.h in Headers */ = {isa = PBXBuildFile; fileRef = F524D44103E0ED390168D458 /* Key.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A0749A09438F8E008B9D9E /* KeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F524D44503E0ED530168D458 /* KeychainItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A0749B09438F8E008B9D9E /* Policy.h in Headers */ = {isa = PBXBuildFile; fileRef = F524D44D03E0ED7E0168D458 /* Policy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A0749C09438F8E008B9D9E /* TrustedApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = F524D45103E0ED8C0168D458 /* TrustedApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A0749D09438F8E008B9D9E /* UtilitySupport.h in Headers */ = {isa = PBXBuildFile; fileRef = F524D48603E0F9040168D458 /* UtilitySupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A0749E09438F8E008B9D9E /* KeychainSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = F524D44903E0ED620168D458 /* KeychainSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A0749F09438F8E008B9D9E /* Trust.h in Headers */ = {isa = PBXBuildFile; fileRef = F58AA08E03F0808801A8007C /* Trust.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074A009438F8E008B9D9E /* NSCachedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = F57CC07103FF7E7001A79F78 /* NSCachedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074A109438F8E008B9D9E /* CSSMUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 75A0B53604207C2700AC536A /* CSSMUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074A209438F8E008B9D9E /* CSSMControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F33BAB04220CC500AC536A /* CSSMControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074A309438F8E008B9D9E /* MutableKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F33BA4042209D600AC536A /* MutableKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074A409438F8E008B9D9E /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 75ACEDA80468A58D000052DF /* NSDataAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074A509438F8E008B9D9E /* CSSMDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 75ACEDB50468AA01000052DF /* CSSMDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074A609438F8E008B9D9E /* KeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 75B5A5390471E53700F43DE7 /* KeychainUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074A709438F8E008B9D9E /* x509.h in Headers */ = {isa = PBXBuildFile; fileRef = 75EF8F46047BB28700FED506 /* x509.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074A809438F8E008B9D9E /* MultiThreading.h in Headers */ = {isa = PBXBuildFile; fileRef = 7599D90C0482257000AC536A /* MultiThreading.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074A909438F8E008B9D9E /* CertificateGeneration.h in Headers */ = {isa = PBXBuildFile; fileRef = 7500C3ED0482F97300AC536A /* CertificateGeneration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074AA09438F8E008B9D9E /* ABPersonAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 755B2FF70564B5F900AC536A /* ABPersonAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074AB09438F8E008B9D9E /* FileUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 758DB80505C3A23400D7757A /* FileUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074AC09438F8E008B9D9E /* CSSMInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 7548ACBA069D58150072DA47 /* CSSMInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074AD09438F8E008B9D9E /* CertificateExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 755B14B706A28A7A0015D6C8 /* CertificateExtensions.h */; };
+		75A074B009438F8E008B9D9E /* Logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 7535FE3307A7095200F8DAFF /* Logging.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		75A074B109438F8E008B9D9E /* NSCalendarDateAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 75F820A70838A27D007E2503 /* NSCalendarDateAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074B209438F8E008B9D9E /* CSSMTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 753F8BEC084215550060298F /* CSSMTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074B309438F8E008B9D9E /* DigestOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E5A4C0084378390050F0B7 /* DigestOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074B409438F8E008B9D9E /* ChainedOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 7571C6500872DE1800E68E43 /* ChainedOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074B509438F8E008B9D9E /* CSSMOpenDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 754DC234089B8113002DC7DF /* CSSMOpenDataStore.h */; };
+		75A074B909438F8E008B9D9E /* CSSMControlInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 75920C26089D0FCA00C37C75 /* CSSMControlInternal.h */; };
+		75A074BA09438F8E008B9D9E /* CSSMModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E06401089FC8F800863AD1 /* CSSMModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074BB09438F8E008B9D9E /* MDS.h in Headers */ = {isa = PBXBuildFile; fileRef = 75855DC408A0CEBC00DA2CEC /* MDS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75A074BC09438F8E008B9D9E /* MultiThreadingInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 75855DF408A0D11700DA2CEC /* MultiThreadingInternal.h */; };
+		75A074BE09438F8E008B9D9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		75A074BF09438F8E008B9D9E /* CSSM Errors.strings in Resources */ = {isa = PBXBuildFile; fileRef = 752BB77D043ACC3C00EDE39C /* CSSM Errors.strings */; };
+		75A074C009438F8E008B9D9E /* OID Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 752BB783043ADB1000EDE39C /* OID Names.strings */; };
+		75A074C109438F8E008B9D9E /* BER Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 752BB789043ADC4900EDE39C /* BER Names.strings */; };
+		75A074C209438F8E008B9D9E /* Misc Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 751AC3AE043AE4350081E49D /* Misc Names.strings */; };
+		75A074C309438F8E008B9D9E /* Algorithms.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75E577E3043AE5D500A3C85B /* Algorithms.strings */; };
+		75A074C409438F8E008B9D9E /* Certificate Types.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75E38026082C6AAD00089FF8 /* Certificate Types.strings */; };
+		75A074C509438F8E008B9D9E /* Certificate Encodings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75E38054082C6C4000089FF8 /* Certificate Encodings.strings */; };
+		75A074C609438F8E008B9D9E /* Keyblob Types.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75E38090082C78C600089FF8 /* Keyblob Types.strings */; };
+		75A074C709438F8E008B9D9E /* Keyblob Formats.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75E380BB082C7BFC00089FF8 /* Keyblob Formats.strings */; };
+		75A074C809438F8E008B9D9E /* Algorithm Modes.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75E380C4082C812200089FF8 /* Algorithm Modes.strings */; };
+		75A074C909438F8E008B9D9E /* Key Classes.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75E380C9082C839800089FF8 /* Key Classes.strings */; };
+		75A074CA09438F8E008B9D9E /* Key Attributes.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75E380CE082C841300089FF8 /* Key Attributes.strings */; };
+		75A074CB09438F8E008B9D9E /* Key Usage.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75E38110082C865800089FF8 /* Key Usage.strings */; };
+		75A074CC09438F8E008B9D9E /* GUID Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7552D52C08406BD3007DCB2F /* GUID Names.strings */; };
+		75A074CD09438F8E008B9D9E /* Extension Formats.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75EAF8DC0841B8C30068EA90 /* Extension Formats.strings */; };
+		75A074CE09438F8E008B9D9E /* CSSM Error Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D1B9E408A8EBA900D77A20 /* CSSM Error Names.strings */; };
+		75A074CF09438F8E008B9D9E /* CSSM Error Bases.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7562382608E92D4900B4C9B1 /* CSSM Error Bases.strings */; };
+		75A074D009438F8E008B9D9E /* CSSM Error Codes.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7562383008E92DCF00B4C9B1 /* CSSM Error Codes.strings */; };
+		75A074D209438F8E008B9D9E /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F566C84A03E0D9AA015C51F3 /* Keychain.m */; };
+		75A074D309438F8E008B9D9E /* AccessControlList.m in Sources */ = {isa = PBXBuildFile; fileRef = F524D43203E0ECFB0168D458 /* AccessControlList.m */; };
+		75A074D409438F8E008B9D9E /* Access.m in Sources */ = {isa = PBXBuildFile; fileRef = F524D43603E0ED0C0168D458 /* Access.m */; };
+		75A074D509438F8E008B9D9E /* Certificate.m in Sources */ = {isa = PBXBuildFile; fileRef = F524D43A03E0ED1A0168D458 /* Certificate.m */; };
+		75A074D609438F8E008B9D9E /* Identity.m in Sources */ = {isa = PBXBuildFile; fileRef = F524D43E03E0ED280168D458 /* Identity.m */; };
+		75A074D709438F8E008B9D9E /* Key.m in Sources */ = {isa = PBXBuildFile; fileRef = F524D44203E0ED390168D458 /* Key.m */; };
+		75A074D809438F8E008B9D9E /* KeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F524D44603E0ED530168D458 /* KeychainItem.m */; };
+		75A074D909438F8E008B9D9E /* Policy.m in Sources */ = {isa = PBXBuildFile; fileRef = F524D44E03E0ED7E0168D458 /* Policy.m */; };
+		75A074DA09438F8E008B9D9E /* TrustedApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = F524D45203E0ED8C0168D458 /* TrustedApplication.m */; };
+		75A074DB09438F8E008B9D9E /* KeychainSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F524D44A03E0ED620168D458 /* KeychainSearch.m */; };
+		75A074DC09438F8E008B9D9E /* Trust.m in Sources */ = {isa = PBXBuildFile; fileRef = F58AA08F03F0808801A8007C /* Trust.m */; };
+		75A074DD09438F8E008B9D9E /* NSCachedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F57CC07203FF7E7001A79F78 /* NSCachedObject.m */; };
+		75A074DE09438F8E008B9D9E /* CSSMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A0B53704207C2700AC536A /* CSSMUtils.m */; };
+		75A074DF09438F8E008B9D9E /* CSSMControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F33BAC04220CC500AC536A /* CSSMControl.m */; };
+		75A074E009438F8E008B9D9E /* MutableKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F33BA5042209D600AC536A /* MutableKey.m */; };
+		75A074E109438F8E008B9D9E /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ACEDA90468A58D000052DF /* NSDataAdditions.m */; };
+		75A074E209438F8E008B9D9E /* CSSMDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 75ACEDB60468AA01000052DF /* CSSMDefaults.m */; };
+		75A074E309438F8E008B9D9E /* KeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B5A53A0471E53700F43DE7 /* KeychainUtils.m */; };
+		75A074E409438F8E008B9D9E /* x509.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EF8F47047BB28700FED506 /* x509.m */; };
+		75A074E509438F8E008B9D9E /* MultiThreading.m in Sources */ = {isa = PBXBuildFile; fileRef = 7599D90D0482257000AC536A /* MultiThreading.m */; };
+		75A074E609438F8E008B9D9E /* CertificateGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7500C3EE0482F97300AC536A /* CertificateGeneration.m */; };
+		75A074E709438F8E008B9D9E /* UtilitySupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 753DDCFD04C2ED6000A8007B /* UtilitySupport.m */; };
+		75A074E809438F8E008B9D9E /* ABPersonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B2FF80564B5F900AC536A /* ABPersonAdditions.m */; };
+		75A074E909438F8E008B9D9E /* FileUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 758DB80605C3A23400D7757A /* FileUtilities.m */; };
+		75A074EA09438F8E008B9D9E /* CSSMInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7548ACBB069D58150072DA47 /* CSSMInfo.m */; };
+		75A074EB09438F8E008B9D9E /* CertificateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 755B14B806A28A7A0015D6C8 /* CertificateExtensions.m */; };
+		75A074EE09438F8E008B9D9E /* NSCalendarDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F820A80838A27D007E2503 /* NSCalendarDateAdditions.m */; };
+		75A074EF09438F8E008B9D9E /* DigestOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E5A4C1084378390050F0B7 /* DigestOutputStream.m */; };
+		75A074F009438F8E008B9D9E /* ChainedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 7571C6510872DE1800E68E43 /* ChainedOutputStream.m */; };
+		75A074F109438F8E008B9D9E /* CSSMOpenDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 754DC235089B8113002DC7DF /* CSSMOpenDataStore.m */; };
+		75A074F509438F8E008B9D9E /* CSSMModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E06402089FC8F800863AD1 /* CSSMModule.m */; };
+		75A074F609438F8E008B9D9E /* MDS.m in Sources */ = {isa = PBXBuildFile; fileRef = 75855DC508A0CEBC00DA2CEC /* MDS.m */; };
+		75A074F809438F8E008B9D9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		75A074F909438F8E008B9D9E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F566C81003E0D92B015C51F3 /* Security.framework */; };
+		75A074FA09438F8E008B9D9E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58080CA03EB75D701B6B625 /* CoreFoundation.framework */; };
+		75A074FB09438F8E008B9D9E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BAD75E0480E99400DA8EF2 /* AddressBook.framework */; };
+		75A0750509438F8E008B9D9E /* CSSMUtilsTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EE821C0837443E00D8CF7B /* CSSMUtilsTester.m */; };
+		75A0751009438F8E008B9D9E /* NSCalendarDateAdditionsTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 751EAB570839B75500690BA7 /* NSCalendarDateAdditionsTester.m */; };
+		75A0751B09438F8F008B9D9E /* OutputStreamsTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 753F8AB80841F08F0060298F /* OutputStreamsTester.m */; };
+		75A0752609438F8F008B9D9E /* StringsTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7563708D08444F4F00F9E7D7 /* StringsTester.m */; };
+		75A0752909438F8F008B9D9E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F566C81003E0D92B015C51F3 /* Security.framework */; };
+		75A0753209438F8F008B9D9E /* MDSProber.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D1B95E08A8E74200D77A20 /* MDSProber.m */; };
+		75A0753509438F8F008B9D9E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F566C81003E0D92B015C51F3 /* Security.framework */; };
+		75A0753C09438F8F008B9D9E /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75A0753D09438F8F008B9D9E /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75A0753E09438F8F008B9D9E /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75A0753F09438F8F008B9D9E /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75A0754009438F8F008B9D9E /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75C6E8F20A3BDCD8009201FB /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75C6E9040A3BDD1A009201FB /* KeychainSearchTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C6E9030A3BDD1A009201FB /* KeychainSearchTester.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		755CFABC0A1F672D008C69A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7540B3E90999D1C000469F46;
+			remoteInfo = SKeyPlusTester;
+		};
+		755DE3310A20A2B9002EAC2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7594D4880A2045E00090E497;
+			remoteInfo = CertificateGenerationTester;
+		};
+		755DE3330A20A2B9002EAC2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 755613160A2090B5003428C2;
+			remoteInfo = CryptographyTester;
+		};
+		75A0764B0943BA13008B9D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		75A0764D0943BA16008B9D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0750309438F8E008B9D9E;
+			remoteInfo = CSSMUtilsTester;
+		};
+		75A0764F0943BA18008B9D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0750E09438F8E008B9D9E;
+			remoteInfo = NSCalendarDateAdditionsTester;
+		};
+		75A076510943BA1A008B9D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0751909438F8F008B9D9E;
+			remoteInfo = OutputStreamsTester;
+		};
+		75A076530943BA1C008B9D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0752409438F8F008B9D9E;
+			remoteInfo = StringsTester;
+		};
+		75A076550943BA1D008B9D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0753009438F8F008B9D9E;
+			remoteInfo = MDSProber;
+		};
+		75C6E92F0A3BE210009201FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75C6E8EE0A3BDCD8009201FB;
+			remoteInfo = KeychainSearchTester;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7500C3ED0482F97300AC536A /* CertificateGeneration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificateGeneration.h; sourceTree = "<group>"; };
+		7500C3EE0482F97300AC536A /* CertificateGeneration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificateGeneration.m; sourceTree = "<group>"; };
+		751AC3AB043AE4240081E49D /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Misc Names.strings"; sourceTree = "<group>"; };
+		751EAB2C0839B2B300690BA7 /* TestingCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestingCommon.h; path = Testers/TestingCommon.h; sourceTree = "<group>"; };
+		751EAB570839B75500690BA7 /* NSCalendarDateAdditionsTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCalendarDateAdditionsTester.m; path = Testers/NSCalendarDateAdditionsTester.m; sourceTree = "<group>"; };
+		752BB77A043ACC2B00EDE39C /* CSSM Errors.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "CSSM Errors.strings"; path = "English.lproj/CSSM Errors.strings"; sourceTree = "<group>"; };
+		752BB780043ADB0B00EDE39C /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/OID Names.strings"; sourceTree = "<group>"; };
+		752BB786043ADC4100EDE39C /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/BER Names.strings"; sourceTree = "<group>"; };
+		7535FDEB07A6F1B200F8DAFF /* SKeyPlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKeyPlus.h; sourceTree = "<group>"; };
+		7535FDEC07A6F1B300F8DAFF /* SKeyPlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKeyPlus.m; sourceTree = "<group>"; };
+		7535FE3307A7095200F8DAFF /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		753DDCFD04C2ED6000A8007B /* UtilitySupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilitySupport.m; sourceTree = "<group>"; };
+		753F8AB80841F08F0060298F /* OutputStreamsTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OutputStreamsTester.m; path = Testers/OutputStreamsTester.m; sourceTree = "<group>"; };
+		753F8BEC084215550060298F /* CSSMTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSMTypes.h; sourceTree = "<group>"; };
+		7540B3F20999D1C000469F46 /* SKeyPlusTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SKeyPlusTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		7540B3FD0999D1D600469F46 /* SKeyPlusTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKeyPlusTester.m; path = Testers/SKeyPlusTester.m; sourceTree = "<group>"; };
+		7548ACBA069D58150072DA47 /* CSSMInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSMInfo.h; sourceTree = "<group>"; };
+		7548ACBB069D58150072DA47 /* CSSMInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSMInfo.m; sourceTree = "<group>"; };
+		754DC234089B8113002DC7DF /* CSSMOpenDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSMOpenDataStore.h; path = CDSA/CSSMOpenDataStore.h; sourceTree = "<group>"; };
+		754DC235089B8113002DC7DF /* CSSMOpenDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSMOpenDataStore.m; path = CDSA/CSSMOpenDataStore.m; sourceTree = "<group>"; };
+		754DC25F089B84D9002DC7DF /* CSSMDataStorageModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSMDataStorageModule.h; path = CDSA/CSSMDataStorageModule.h; sourceTree = "<group>"; };
+		754DC260089B84D9002DC7DF /* CSSMDataStorageModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSMDataStorageModule.m; path = CDSA/CSSMDataStorageModule.m; sourceTree = "<group>"; };
+		754DC265089B84E4002DC7DF /* CSSMDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSMDataStore.h; path = CDSA/CSSMDataStore.h; sourceTree = "<group>"; };
+		754DC266089B84E4002DC7DF /* CSSMDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSMDataStore.m; path = CDSA/CSSMDataStore.m; sourceTree = "<group>"; };
+		754DC2CA089B8A72002DC7DF /* CSSMACLEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSMACLEntry.h; path = CDSA/CSSMACLEntry.h; sourceTree = "<group>"; };
+		754DC2CB089B8A72002DC7DF /* CSSMACLEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSMACLEntry.m; path = CDSA/CSSMACLEntry.m; sourceTree = "<group>"; };
+		7552D52D08406BD3007DCB2F /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/GUID Names.strings"; sourceTree = "<group>"; };
+		7556131F0A2090B5003428C2 /* CryptographyTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CryptographyTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		755613240A209100003428C2 /* CryptographicTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CryptographicTester.m; path = Testers/CryptographicTester.m; sourceTree = "<group>"; };
+		755B14B706A28A7A0015D6C8 /* CertificateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificateExtensions.h; sourceTree = "<group>"; };
+		755B14B806A28A7A0015D6C8 /* CertificateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificateExtensions.m; sourceTree = "<group>"; };
+		755B2FF70564B5F900AC536A /* ABPersonAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPersonAdditions.h; sourceTree = "<group>"; };
+		755B2FF80564B5F900AC536A /* ABPersonAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABPersonAdditions.m; sourceTree = "<group>"; };
+		7562382708E92D4900B4C9B1 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/CSSM Error Bases.strings"; sourceTree = "<group>"; };
+		7562383108E92DCF00B4C9B1 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/CSSM Error Codes.strings"; sourceTree = "<group>"; };
+		7563708D08444F4F00F9E7D7 /* StringsTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringsTester.m; path = Testers/StringsTester.m; sourceTree = "<group>"; };
+		7571C6500872DE1800E68E43 /* ChainedOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChainedOutputStream.h; path = Streams/ChainedOutputStream.h; sourceTree = "<group>"; };
+		7571C6510872DE1800E68E43 /* ChainedOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChainedOutputStream.m; path = Streams/ChainedOutputStream.m; sourceTree = "<group>"; };
+		75855DC408A0CEBC00DA2CEC /* MDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDS.h; path = CDSA/MDS.h; sourceTree = "<group>"; };
+		75855DC508A0CEBC00DA2CEC /* MDS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDS.m; path = CDSA/MDS.m; sourceTree = "<group>"; };
+		75855DF408A0D11700DA2CEC /* MultiThreadingInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiThreadingInternal.h; sourceTree = "<group>"; };
+		758DB80505C3A23400D7757A /* FileUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtilities.h; sourceTree = "<group>"; };
+		758DB80605C3A23400D7757A /* FileUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtilities.m; sourceTree = "<group>"; };
+		75920C26089D0FCA00C37C75 /* CSSMControlInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSMControlInternal.h; sourceTree = "<group>"; };
+		7594D47C0A203E870090E497 /* KeychainInternal.hdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KeychainInternal.hdoc; sourceTree = "<group>"; };
+		7594D4910A2045E00090E497 /* CertificateGenerationTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CertificateGenerationTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		7594D49C0A20467E0090E497 /* CertificateGenerationTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CertificateGenerationTester.m; path = Testers/CertificateGenerationTester.m; sourceTree = "<group>"; };
+		7599CC470946C8B600C54323 /* CompilerIndependence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompilerIndependence.h; sourceTree = "<group>"; };
+		7599D90C0482257000AC536A /* MultiThreading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiThreading.h; sourceTree = "<group>"; };
+		7599D90D0482257000AC536A /* MultiThreading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiThreading.m; sourceTree = "<group>"; };
+		75A0750109438F8E008B9D9E /* Info-Keychain.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-Keychain.plist"; sourceTree = "<group>"; };
+		75A0750209438F8E008B9D9E /* Keychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A0750C09438F8E008B9D9E /* CSSMUtilsTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CSSMUtilsTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A0751709438F8E008B9D9E /* NSCalendarDateAdditionsTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NSCalendarDateAdditionsTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A0752209438F8F008B9D9E /* OutputStreamsTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OutputStreamsTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A0752E09438F8F008B9D9E /* StringsTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StringsTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A0753A09438F8F008B9D9E /* MDSProber */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MDSProber; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A0B53604207C2700AC536A /* CSSMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSMUtils.h; sourceTree = "<group>"; };
+		75A0B53704207C2700AC536A /* CSSMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSMUtils.m; sourceTree = "<group>"; };
+		75A88F6406996E4C006182BB /* NSDataAdditionsCanonicalOld.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = NSDataAdditionsCanonicalOld.mm; sourceTree = "<group>"; };
+		75ACEDA80468A58D000052DF /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		75ACEDA90468A58D000052DF /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		75ACEDB50468AA01000052DF /* CSSMDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSMDefaults.h; sourceTree = "<group>"; };
+		75ACEDB60468AA01000052DF /* CSSMDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSMDefaults.m; sourceTree = "<group>"; };
+		75B2AC11074472AC0079716A /* Hashcash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hashcash.h; sourceTree = "<group>"; };
+		75B2AC12074472AC0079716A /* Hashcash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hashcash.m; sourceTree = "<group>"; };
+		75B5A5390471E53700F43DE7 /* KeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainUtils.h; sourceTree = "<group>"; };
+		75B5A53A0471E53700F43DE7 /* KeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainUtils.m; sourceTree = "<group>"; };
+		75BAD75E0480E99400DA8EF2 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
+		75C6E8F70A3BDCD8009201FB /* KeychainSearchTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KeychainSearchTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C6E9030A3BDD1A009201FB /* KeychainSearchTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainSearchTester.m; path = Testers/KeychainSearchTester.m; sourceTree = "<group>"; };
+		75D1B95E08A8E74200D77A20 /* MDSProber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDSProber.m; path = Testers/MDSProber.m; sourceTree = "<group>"; };
+		75D1B9E508A8EBA900D77A20 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/CSSM Error Names.strings"; sourceTree = "<group>"; };
+		75E06401089FC8F800863AD1 /* CSSMModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSMModule.h; path = CDSA/CSSMModule.h; sourceTree = "<group>"; };
+		75E06402089FC8F800863AD1 /* CSSMModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSMModule.m; path = CDSA/CSSMModule.m; sourceTree = "<group>"; };
+		75E38027082C6AAD00089FF8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Certificate Types.strings"; sourceTree = "<group>"; };
+		75E38055082C6C4000089FF8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Certificate Encodings.strings"; sourceTree = "<group>"; };
+		75E38091082C78C600089FF8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Keyblob Types.strings"; sourceTree = "<group>"; };
+		75E380BC082C7BFC00089FF8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Keyblob Formats.strings"; sourceTree = "<group>"; };
+		75E380C5082C812200089FF8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Algorithm Modes.strings"; sourceTree = "<group>"; };
+		75E380CA082C839800089FF8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Key Classes.strings"; sourceTree = "<group>"; };
+		75E380CF082C841300089FF8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Key Attributes.strings"; sourceTree = "<group>"; };
+		75E38111082C865800089FF8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Key Usage.strings"; sourceTree = "<group>"; };
+		75E577E0043AE5C700A3C85B /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Algorithms.strings; sourceTree = "<group>"; };
+		75E5A4C0084378390050F0B7 /* DigestOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DigestOutputStream.h; path = Streams/DigestOutputStream.h; sourceTree = "<group>"; };
+		75E5A4C1084378390050F0B7 /* DigestOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DigestOutputStream.m; path = Streams/DigestOutputStream.m; sourceTree = "<group>"; };
+		75EAF8DD0841B8C30068EA90 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Extension Formats.strings"; sourceTree = "<group>"; };
+		75EBD9E908A21D0300CB9F02 /* Keychain.hdoc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Keychain.hdoc; sourceTree = "<group>"; };
+		75EE821C0837443E00D8CF7B /* CSSMUtilsTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSMUtilsTester.m; path = Testers/CSSMUtilsTester.m; sourceTree = "<group>"; };
+		75EF8F46047BB28700FED506 /* x509.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
+		75EF8F47047BB28700FED506 /* x509.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = x509.m; sourceTree = "<group>"; };
+		75F33BA4042209D600AC536A /* MutableKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutableKey.h; sourceTree = "<group>"; };
+		75F33BA5042209D600AC536A /* MutableKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutableKey.m; sourceTree = "<group>"; };
+		75F33BAB04220CC500AC536A /* CSSMControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSMControl.h; sourceTree = "<group>"; };
+		75F33BAC04220CC500AC536A /* CSSMControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSMControl.m; sourceTree = "<group>"; };
+		75F820A70838A27D007E2503 /* NSCalendarDateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCalendarDateAdditions.h; sourceTree = "<group>"; };
+		75F820A80838A27D007E2503 /* NSCalendarDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCalendarDateAdditions.m; sourceTree = "<group>"; };
+		F524D43103E0ECFB0168D458 /* AccessControlList.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AccessControlList.h; sourceTree = "<group>"; };
+		F524D43203E0ECFB0168D458 /* AccessControlList.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AccessControlList.m; sourceTree = "<group>"; };
+		F524D43503E0ED0C0168D458 /* Access.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Access.h; sourceTree = "<group>"; };
+		F524D43603E0ED0C0168D458 /* Access.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Access.m; sourceTree = "<group>"; };
+		F524D43903E0ED1A0168D458 /* Certificate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Certificate.h; sourceTree = "<group>"; };
+		F524D43A03E0ED1A0168D458 /* Certificate.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Certificate.m; sourceTree = "<group>"; };
+		F524D43D03E0ED280168D458 /* Identity.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Identity.h; sourceTree = "<group>"; };
+		F524D43E03E0ED280168D458 /* Identity.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Identity.m; sourceTree = "<group>"; };
+		F524D44103E0ED390168D458 /* Key.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
+		F524D44203E0ED390168D458 /* Key.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Key.m; sourceTree = "<group>"; };
+		F524D44503E0ED530168D458 /* KeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KeychainItem.h; sourceTree = "<group>"; };
+		F524D44603E0ED530168D458 /* KeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = KeychainItem.m; sourceTree = "<group>"; };
+		F524D44903E0ED620168D458 /* KeychainSearch.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KeychainSearch.h; sourceTree = "<group>"; };
+		F524D44A03E0ED620168D458 /* KeychainSearch.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = KeychainSearch.m; sourceTree = "<group>"; };
+		F524D44D03E0ED7E0168D458 /* Policy.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Policy.h; sourceTree = "<group>"; };
+		F524D44E03E0ED7E0168D458 /* Policy.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Policy.m; sourceTree = "<group>"; };
+		F524D45103E0ED8C0168D458 /* TrustedApplication.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TrustedApplication.h; sourceTree = "<group>"; };
+		F524D45203E0ED8C0168D458 /* TrustedApplication.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TrustedApplication.m; sourceTree = "<group>"; };
+		F524D48603E0F9040168D458 /* UtilitySupport.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = UtilitySupport.h; sourceTree = "<group>"; };
+		F566C81003E0D92B015C51F3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		F566C84903E0D9AA015C51F3 /* Keychain.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Keychain.h; sourceTree = "<group>"; };
+		F566C84A03E0D9AA015C51F3 /* Keychain.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Keychain.m; sourceTree = "<group>"; };
+		F57CC07103FF7E7001A79F78 /* NSCachedObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSCachedObject.h; sourceTree = "<group>"; };
+		F57CC07203FF7E7001A79F78 /* NSCachedObject.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSCachedObject.m; sourceTree = "<group>"; };
+		F580806A03EB4E8801B6B625 /* CertificateBundle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CertificateBundle.h; sourceTree = "<group>"; };
+		F580806B03EB4E8801B6B625 /* CertificateBundle.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CertificateBundle.m; sourceTree = "<group>"; };
+		F58080CA03EB75D701B6B625 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		F58AA08E03F0808801A8007C /* Trust.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Trust.h; sourceTree = "<group>"; };
+		F58AA08F03F0808801A8007C /* Trust.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Trust.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7540B3EC0999D1C000469F46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7540B3ED0999D1C000469F46 /* Keychain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755613190A2090B5003428C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7556131A0A2090B5003428C2 /* Keychain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7594D48B0A2045E00090E497 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7594D48C0A2045E00090E497 /* Keychain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A074F709438F8E008B9D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A074F809438F8E008B9D9E /* Foundation.framework in Frameworks */,
+				75A074F909438F8E008B9D9E /* Security.framework in Frameworks */,
+				75A074FA09438F8E008B9D9E /* CoreFoundation.framework in Frameworks */,
+				75A074FB09438F8E008B9D9E /* AddressBook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0750609438F8E008B9D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0753C09438F8F008B9D9E /* Keychain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0751109438F8E008B9D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0753D09438F8F008B9D9E /* Keychain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0751C09438F8F008B9D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0753E09438F8F008B9D9E /* Keychain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0752709438F8F008B9D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0753F09438F8F008B9D9E /* Keychain.framework in Frameworks */,
+				75A0752909438F8F008B9D9E /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0753309438F8F008B9D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0754009438F8F008B9D9E /* Keychain.framework in Frameworks */,
+				75A0753509438F8F008B9D9E /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C6E8F10A3BDCD8009201FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C6E8F20A3BDCD8009201FB /* Keychain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75A0750209438F8E008B9D9E /* Keychain.framework */,
+				75A0750C09438F8E008B9D9E /* CSSMUtilsTester */,
+				75A0751709438F8E008B9D9E /* NSCalendarDateAdditionsTester */,
+				75A0752209438F8F008B9D9E /* OutputStreamsTester */,
+				75A0752E09438F8F008B9D9E /* StringsTester */,
+				75A0753A09438F8F008B9D9E /* MDSProber */,
+				7540B3F20999D1C000469F46 /* SKeyPlusTester */,
+				7594D4910A2045E00090E497 /* CertificateGenerationTester */,
+				7556131F0A2090B5003428C2 /* CryptographyTester */,
+				75C6E8F70A3BDCD8009201FB /* KeychainSearchTester */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				75B2AD5E0744CF400079716A /* Framework */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				75EE82160837440700D8CF7B /* Testers */,
+				75A0750109438F8E008B9D9E /* Info-Keychain.plist */,
+			);
+			name = Keychain;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				75BAD75E0480E99400DA8EF2 /* AddressBook.framework */,
+				F58080CA03EB75D701B6B625 /* CoreFoundation.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+				F566C81003E0D92B015C51F3 /* Security.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75EBD9E908A21D0300CB9F02 /* Keychain.hdoc */,
+				7594D47C0A203E870090E497 /* KeychainInternal.hdoc */,
+				75F4890D043AF9E80043140F /* English.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Keychain Classes */ = {
+			isa = PBXGroup;
+			children = (
+				754DC23A089B8119002DC7DF /* CDSA */,
+				F524D43503E0ED0C0168D458 /* Access.h */,
+				F524D43603E0ED0C0168D458 /* Access.m */,
+				F524D43103E0ECFB0168D458 /* AccessControlList.h */,
+				F524D43203E0ECFB0168D458 /* AccessControlList.m */,
+				F524D43903E0ED1A0168D458 /* Certificate.h */,
+				F524D43A03E0ED1A0168D458 /* Certificate.m */,
+				755B14B706A28A7A0015D6C8 /* CertificateExtensions.h */,
+				755B14B806A28A7A0015D6C8 /* CertificateExtensions.m */,
+				F580806A03EB4E8801B6B625 /* CertificateBundle.h */,
+				F580806B03EB4E8801B6B625 /* CertificateBundle.m */,
+				F524D43D03E0ED280168D458 /* Identity.h */,
+				F524D43E03E0ED280168D458 /* Identity.m */,
+				F524D44103E0ED390168D458 /* Key.h */,
+				F524D44203E0ED390168D458 /* Key.m */,
+				F566C84903E0D9AA015C51F3 /* Keychain.h */,
+				F566C84A03E0D9AA015C51F3 /* Keychain.m */,
+				F524D44503E0ED530168D458 /* KeychainItem.h */,
+				F524D44603E0ED530168D458 /* KeychainItem.m */,
+				F524D44903E0ED620168D458 /* KeychainSearch.h */,
+				F524D44A03E0ED620168D458 /* KeychainSearch.m */,
+				75F33BA4042209D600AC536A /* MutableKey.h */,
+				75F33BA5042209D600AC536A /* MutableKey.m */,
+				F57CC07103FF7E7001A79F78 /* NSCachedObject.h */,
+				F57CC07203FF7E7001A79F78 /* NSCachedObject.m */,
+				F524D44D03E0ED7E0168D458 /* Policy.h */,
+				F524D44E03E0ED7E0168D458 /* Policy.m */,
+				F58AA08E03F0808801A8007C /* Trust.h */,
+				F58AA08F03F0808801A8007C /* Trust.m */,
+				F524D45103E0ED8C0168D458 /* TrustedApplication.h */,
+				F524D45203E0ED8C0168D458 /* TrustedApplication.m */,
+				75EF8F46047BB28700FED506 /* x509.h */,
+				75EF8F47047BB28700FED506 /* x509.m */,
+			);
+			name = "Keychain Classes";
+			sourceTree = "<group>";
+		};
+		754DC23A089B8119002DC7DF /* CDSA */ = {
+			isa = PBXGroup;
+			children = (
+				75E06401089FC8F800863AD1 /* CSSMModule.h */,
+				75E06402089FC8F800863AD1 /* CSSMModule.m */,
+				754DC2CA089B8A72002DC7DF /* CSSMACLEntry.h */,
+				754DC2CB089B8A72002DC7DF /* CSSMACLEntry.m */,
+				754DC265089B84E4002DC7DF /* CSSMDataStore.h */,
+				754DC266089B84E4002DC7DF /* CSSMDataStore.m */,
+				754DC234089B8113002DC7DF /* CSSMOpenDataStore.h */,
+				754DC235089B8113002DC7DF /* CSSMOpenDataStore.m */,
+				754DC25F089B84D9002DC7DF /* CSSMDataStorageModule.h */,
+				754DC260089B84D9002DC7DF /* CSSMDataStorageModule.m */,
+				75855DC408A0CEBC00DA2CEC /* MDS.h */,
+				75855DC508A0CEBC00DA2CEC /* MDS.m */,
+			);
+			name = CDSA;
+			sourceTree = "<group>";
+		};
+		75987733046B44EB00EF316C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7500C3ED0482F97300AC536A /* CertificateGeneration.h */,
+				7500C3EE0482F97300AC536A /* CertificateGeneration.m */,
+				7599CC470946C8B600C54323 /* CompilerIndependence.h */,
+				75F33BAB04220CC500AC536A /* CSSMControl.h */,
+				75920C26089D0FCA00C37C75 /* CSSMControlInternal.h */,
+				75F33BAC04220CC500AC536A /* CSSMControl.m */,
+				75ACEDB50468AA01000052DF /* CSSMDefaults.h */,
+				75ACEDB60468AA01000052DF /* CSSMDefaults.m */,
+				7548ACBA069D58150072DA47 /* CSSMInfo.h */,
+				7548ACBB069D58150072DA47 /* CSSMInfo.m */,
+				753F8BEC084215550060298F /* CSSMTypes.h */,
+				75A0B53604207C2700AC536A /* CSSMUtils.h */,
+				75A0B53704207C2700AC536A /* CSSMUtils.m */,
+				758DB80505C3A23400D7757A /* FileUtilities.h */,
+				758DB80605C3A23400D7757A /* FileUtilities.m */,
+				75B5A5390471E53700F43DE7 /* KeychainUtils.h */,
+				75B5A53A0471E53700F43DE7 /* KeychainUtils.m */,
+				7535FE3307A7095200F8DAFF /* Logging.h */,
+				7599D90C0482257000AC536A /* MultiThreading.h */,
+				75855DF408A0D11700DA2CEC /* MultiThreadingInternal.h */,
+				7599D90D0482257000AC536A /* MultiThreading.m */,
+				F524D48603E0F9040168D458 /* UtilitySupport.h */,
+				753DDCFD04C2ED6000A8007B /* UtilitySupport.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		75ACEDAE0468A66C000052DF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				755B2FF70564B5F900AC536A /* ABPersonAdditions.h */,
+				755B2FF80564B5F900AC536A /* ABPersonAdditions.m */,
+				75ACEDA80468A58D000052DF /* NSDataAdditions.h */,
+				75ACEDA90468A58D000052DF /* NSDataAdditions.m */,
+				75A88F6406996E4C006182BB /* NSDataAdditionsCanonicalOld.mm */,
+				75F820A70838A27D007E2503 /* NSCalendarDateAdditions.h */,
+				75F820A80838A27D007E2503 /* NSCalendarDateAdditions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		75B2AD190744CE590079716A /* Bonus */ = {
+			isa = PBXGroup;
+			children = (
+				75B2AC11074472AC0079716A /* Hashcash.h */,
+				75B2AC12074472AC0079716A /* Hashcash.m */,
+				7535FDEB07A6F1B200F8DAFF /* SKeyPlus.h */,
+				7535FDEC07A6F1B300F8DAFF /* SKeyPlus.m */,
+			);
+			name = Bonus;
+			sourceTree = "<group>";
+		};
+		75B2AD5E0744CF400079716A /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				75987733046B44EB00EF316C /* Base */,
+				75B2AD190744CE590079716A /* Bonus */,
+				75ACEDAE0468A66C000052DF /* Categories */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				08FB77AEFE84172EC02AAC07 /* Keychain Classes */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				75EAF9140841C08E0068EA90 /* Streams */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		75EAF9140841C08E0068EA90 /* Streams */ = {
+			isa = PBXGroup;
+			children = (
+				7571C6500872DE1800E68E43 /* ChainedOutputStream.h */,
+				7571C6510872DE1800E68E43 /* ChainedOutputStream.m */,
+				75E5A4C0084378390050F0B7 /* DigestOutputStream.h */,
+				75E5A4C1084378390050F0B7 /* DigestOutputStream.m */,
+			);
+			name = Streams;
+			sourceTree = "<group>";
+		};
+		75EE82160837440700D8CF7B /* Testers */ = {
+			isa = PBXGroup;
+			children = (
+				7594D49C0A20467E0090E497 /* CertificateGenerationTester.m */,
+				755613240A209100003428C2 /* CryptographicTester.m */,
+				75EE821C0837443E00D8CF7B /* CSSMUtilsTester.m */,
+				75C6E9030A3BDD1A009201FB /* KeychainSearchTester.m */,
+				75D1B95E08A8E74200D77A20 /* MDSProber.m */,
+				751EAB570839B75500690BA7 /* NSCalendarDateAdditionsTester.m */,
+				753F8AB80841F08F0060298F /* OutputStreamsTester.m */,
+				7540B3FD0999D1D600469F46 /* SKeyPlusTester.m */,
+				7563708D08444F4F00F9E7D7 /* StringsTester.m */,
+				751EAB2C0839B2B300690BA7 /* TestingCommon.h */,
+			);
+			name = Testers;
+			sourceTree = "<group>";
+		};
+		75F4890D043AF9E80043140F /* English.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				75E380C4082C812200089FF8 /* Algorithm Modes.strings */,
+				75E577E3043AE5D500A3C85B /* Algorithms.strings */,
+				752BB789043ADC4900EDE39C /* BER Names.strings */,
+				75E38054082C6C4000089FF8 /* Certificate Encodings.strings */,
+				75E38026082C6AAD00089FF8 /* Certificate Types.strings */,
+				7562382608E92D4900B4C9B1 /* CSSM Error Bases.strings */,
+				7562383008E92DCF00B4C9B1 /* CSSM Error Codes.strings */,
+				75D1B9E408A8EBA900D77A20 /* CSSM Error Names.strings */,
+				752BB77D043ACC3C00EDE39C /* CSSM Errors.strings */,
+				75EAF8DC0841B8C30068EA90 /* Extension Formats.strings */,
+				7552D52C08406BD3007DCB2F /* GUID Names.strings */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+				75E380CE082C841300089FF8 /* Key Attributes.strings */,
+				75E380C9082C839800089FF8 /* Key Classes.strings */,
+				75E38110082C865800089FF8 /* Key Usage.strings */,
+				75E380BB082C7BFC00089FF8 /* Keyblob Formats.strings */,
+				75E38090082C78C600089FF8 /* Keyblob Types.strings */,
+				751AC3AE043AE4350081E49D /* Misc Names.strings */,
+				752BB783043ADB1000EDE39C /* OID Names.strings */,
+			);
+			name = English.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		75A0749309438F8E008B9D9E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0749409438F8E008B9D9E /* Keychain.h in Headers */,
+				75A0749509438F8E008B9D9E /* AccessControlList.h in Headers */,
+				75A0749609438F8E008B9D9E /* Access.h in Headers */,
+				75A0749709438F8E008B9D9E /* Certificate.h in Headers */,
+				75A0749809438F8E008B9D9E /* Identity.h in Headers */,
+				75A0749909438F8E008B9D9E /* Key.h in Headers */,
+				75A0749A09438F8E008B9D9E /* KeychainItem.h in Headers */,
+				75A0749B09438F8E008B9D9E /* Policy.h in Headers */,
+				75A0749C09438F8E008B9D9E /* TrustedApplication.h in Headers */,
+				75A0749D09438F8E008B9D9E /* UtilitySupport.h in Headers */,
+				75A0749E09438F8E008B9D9E /* KeychainSearch.h in Headers */,
+				75A0749F09438F8E008B9D9E /* Trust.h in Headers */,
+				75A074A009438F8E008B9D9E /* NSCachedObject.h in Headers */,
+				75A074A109438F8E008B9D9E /* CSSMUtils.h in Headers */,
+				75A074A209438F8E008B9D9E /* CSSMControl.h in Headers */,
+				75A074A309438F8E008B9D9E /* MutableKey.h in Headers */,
+				75A074A409438F8E008B9D9E /* NSDataAdditions.h in Headers */,
+				75A074A509438F8E008B9D9E /* CSSMDefaults.h in Headers */,
+				75A074A609438F8E008B9D9E /* KeychainUtils.h in Headers */,
+				75A074A709438F8E008B9D9E /* x509.h in Headers */,
+				75A074A809438F8E008B9D9E /* MultiThreading.h in Headers */,
+				75A074A909438F8E008B9D9E /* CertificateGeneration.h in Headers */,
+				75A074AA09438F8E008B9D9E /* ABPersonAdditions.h in Headers */,
+				75A074AB09438F8E008B9D9E /* FileUtilities.h in Headers */,
+				75A074AC09438F8E008B9D9E /* CSSMInfo.h in Headers */,
+				75A074AD09438F8E008B9D9E /* CertificateExtensions.h in Headers */,
+				75A074B009438F8E008B9D9E /* Logging.h in Headers */,
+				75A074B109438F8E008B9D9E /* NSCalendarDateAdditions.h in Headers */,
+				75A074B209438F8E008B9D9E /* CSSMTypes.h in Headers */,
+				75A074B309438F8E008B9D9E /* DigestOutputStream.h in Headers */,
+				75A074B409438F8E008B9D9E /* ChainedOutputStream.h in Headers */,
+				75A074B509438F8E008B9D9E /* CSSMOpenDataStore.h in Headers */,
+				75A074B909438F8E008B9D9E /* CSSMControlInternal.h in Headers */,
+				75A074BA09438F8E008B9D9E /* CSSMModule.h in Headers */,
+				75A074BB09438F8E008B9D9E /* MDS.h in Headers */,
+				75A074BC09438F8E008B9D9E /* MultiThreadingInternal.h in Headers */,
+				7599CC480946C8B600C54323 /* CompilerIndependence.h in Headers */,
+				755CFA430A1F6202008C69A9 /* CSSMACLEntry.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7540B3E90999D1C000469F46 /* SKeyPlusTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7540B3EE0999D1C000469F46 /* Build configuration list for PBXNativeTarget "SKeyPlusTester" */;
+			buildPhases = (
+				7540B3EA0999D1C000469F46 /* Sources */,
+				7540B3EC0999D1C000469F46 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKeyPlusTester;
+			productName = OutputStreamsTester;
+			productReference = 7540B3F20999D1C000469F46 /* SKeyPlusTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		755613160A2090B5003428C2 /* CryptographyTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7556131B0A2090B5003428C2 /* Build configuration list for PBXNativeTarget "CryptographyTester" */;
+			buildPhases = (
+				755613170A2090B5003428C2 /* Sources */,
+				755613190A2090B5003428C2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptographyTester;
+			productName = CSSMUtilsTester;
+			productReference = 7556131F0A2090B5003428C2 /* CryptographyTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		7594D4880A2045E00090E497 /* CertificateGenerationTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7594D48D0A2045E00090E497 /* Build configuration list for PBXNativeTarget "CertificateGenerationTester" */;
+			buildPhases = (
+				7594D4890A2045E00090E497 /* Sources */,
+				7594D48B0A2045E00090E497 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CertificateGenerationTester;
+			productName = CSSMUtilsTester;
+			productReference = 7594D4910A2045E00090E497 /* CertificateGenerationTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		75A0749209438F8E008B9D9E /* Keychain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A074FD09438F8E008B9D9E /* Build configuration list for PBXNativeTarget "Keychain" */;
+			buildPhases = (
+				75A0749309438F8E008B9D9E /* Headers */,
+				75A074BD09438F8E008B9D9E /* Resources */,
+				75A074D109438F8E008B9D9E /* Sources */,
+				75A074F709438F8E008B9D9E /* Frameworks */,
+				75A074FC09438F8E008B9D9E /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keychain;
+			productName = Keychain;
+			productReference = 75A0750209438F8E008B9D9E /* Keychain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		75A0750309438F8E008B9D9E /* CSSMUtilsTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A0750809438F8E008B9D9E /* Build configuration list for PBXNativeTarget "CSSMUtilsTester" */;
+			buildPhases = (
+				75A0750409438F8E008B9D9E /* Sources */,
+				75A0750609438F8E008B9D9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSSMUtilsTester;
+			productName = CSSMUtilsTester;
+			productReference = 75A0750C09438F8E008B9D9E /* CSSMUtilsTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		75A0750E09438F8E008B9D9E /* NSCalendarDateAdditionsTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A0751309438F8E008B9D9E /* Build configuration list for PBXNativeTarget "NSCalendarDateAdditionsTester" */;
+			buildPhases = (
+				75A0750F09438F8E008B9D9E /* Sources */,
+				75A0751109438F8E008B9D9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSCalendarDateAdditionsTester;
+			productName = NSCalendarDateAdditionsTester;
+			productReference = 75A0751709438F8E008B9D9E /* NSCalendarDateAdditionsTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		75A0751909438F8F008B9D9E /* OutputStreamsTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A0751E09438F8F008B9D9E /* Build configuration list for PBXNativeTarget "OutputStreamsTester" */;
+			buildPhases = (
+				75A0751A09438F8F008B9D9E /* Sources */,
+				75A0751C09438F8F008B9D9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OutputStreamsTester;
+			productName = OutputStreamsTester;
+			productReference = 75A0752209438F8F008B9D9E /* OutputStreamsTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		75A0752409438F8F008B9D9E /* StringsTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A0752A09438F8F008B9D9E /* Build configuration list for PBXNativeTarget "StringsTester" */;
+			buildPhases = (
+				75A0752509438F8F008B9D9E /* Sources */,
+				75A0752709438F8F008B9D9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StringsTester;
+			productName = StringsTester;
+			productReference = 75A0752E09438F8F008B9D9E /* StringsTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		75A0753009438F8F008B9D9E /* MDSProber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A0753609438F8F008B9D9E /* Build configuration list for PBXNativeTarget "MDSProber" */;
+			buildPhases = (
+				75A0753109438F8F008B9D9E /* Sources */,
+				75A0753309438F8F008B9D9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MDSProber;
+			productName = MDSTester;
+			productReference = 75A0753A09438F8F008B9D9E /* MDSProber */;
+			productType = "com.apple.product-type.tool";
+		};
+		75C6E8EE0A3BDCD8009201FB /* KeychainSearchTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75C6E8F30A3BDCD8009201FB /* Build configuration list for PBXNativeTarget "KeychainSearchTester" */;
+			buildPhases = (
+				75C6E8EF0A3BDCD8009201FB /* Sources */,
+				75C6E8F10A3BDCD8009201FB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeychainSearchTester;
+			productName = CSSMUtilsTester;
+			productReference = 75C6E8F70A3BDCD8009201FB /* KeychainSearchTester */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7528103408569F6900FEFBDC /* Build configuration list for PBXProject "Keychain" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* Keychain */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75A0764A0943BA09008B9D9E /* World */,
+				75A0749209438F8E008B9D9E /* Keychain */,
+				75A0750309438F8E008B9D9E /* CSSMUtilsTester */,
+				75A0750E09438F8E008B9D9E /* NSCalendarDateAdditionsTester */,
+				75A0751909438F8F008B9D9E /* OutputStreamsTester */,
+				75A0752409438F8F008B9D9E /* StringsTester */,
+				75A0753009438F8F008B9D9E /* MDSProber */,
+				7540B3E90999D1C000469F46 /* SKeyPlusTester */,
+				7594D4880A2045E00090E497 /* CertificateGenerationTester */,
+				755613160A2090B5003428C2 /* CryptographyTester */,
+				75C6E8EE0A3BDCD8009201FB /* KeychainSearchTester */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75A074BD09438F8E008B9D9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A074BE09438F8E008B9D9E /* InfoPlist.strings in Resources */,
+				75A074BF09438F8E008B9D9E /* CSSM Errors.strings in Resources */,
+				75A074C009438F8E008B9D9E /* OID Names.strings in Resources */,
+				75A074C109438F8E008B9D9E /* BER Names.strings in Resources */,
+				75A074C209438F8E008B9D9E /* Misc Names.strings in Resources */,
+				75A074C309438F8E008B9D9E /* Algorithms.strings in Resources */,
+				75A074C409438F8E008B9D9E /* Certificate Types.strings in Resources */,
+				75A074C509438F8E008B9D9E /* Certificate Encodings.strings in Resources */,
+				75A074C609438F8E008B9D9E /* Keyblob Types.strings in Resources */,
+				75A074C709438F8E008B9D9E /* Keyblob Formats.strings in Resources */,
+				75A074C809438F8E008B9D9E /* Algorithm Modes.strings in Resources */,
+				75A074C909438F8E008B9D9E /* Key Classes.strings in Resources */,
+				75A074CA09438F8E008B9D9E /* Key Attributes.strings in Resources */,
+				75A074CB09438F8E008B9D9E /* Key Usage.strings in Resources */,
+				75A074CC09438F8E008B9D9E /* GUID Names.strings in Resources */,
+				75A074CD09438F8E008B9D9E /* Extension Formats.strings in Resources */,
+				75A074CE09438F8E008B9D9E /* CSSM Error Names.strings in Resources */,
+				75A074CF09438F8E008B9D9E /* CSSM Error Bases.strings in Resources */,
+				75A074D009438F8E008B9D9E /* CSSM Error Codes.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		75A074FC09438F8E008B9D9E /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7540B3EA0999D1C000469F46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7540B3FE0999D1D600469F46 /* SKeyPlusTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755613170A2090B5003428C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755613250A209100003428C2 /* CryptographicTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7594D4890A2045E00090E497 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755613260A20910C003428C2 /* CertificateGenerationTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A074D109438F8E008B9D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A074D209438F8E008B9D9E /* Keychain.m in Sources */,
+				75A074D309438F8E008B9D9E /* AccessControlList.m in Sources */,
+				75A074D409438F8E008B9D9E /* Access.m in Sources */,
+				75A074D509438F8E008B9D9E /* Certificate.m in Sources */,
+				75A074D609438F8E008B9D9E /* Identity.m in Sources */,
+				75A074D709438F8E008B9D9E /* Key.m in Sources */,
+				75A074D809438F8E008B9D9E /* KeychainItem.m in Sources */,
+				75A074D909438F8E008B9D9E /* Policy.m in Sources */,
+				75A074DA09438F8E008B9D9E /* TrustedApplication.m in Sources */,
+				75A074DB09438F8E008B9D9E /* KeychainSearch.m in Sources */,
+				75A074DC09438F8E008B9D9E /* Trust.m in Sources */,
+				75A074DD09438F8E008B9D9E /* NSCachedObject.m in Sources */,
+				75A074DE09438F8E008B9D9E /* CSSMUtils.m in Sources */,
+				75A074DF09438F8E008B9D9E /* CSSMControl.m in Sources */,
+				75A074E009438F8E008B9D9E /* MutableKey.m in Sources */,
+				75A074E109438F8E008B9D9E /* NSDataAdditions.m in Sources */,
+				75A074E209438F8E008B9D9E /* CSSMDefaults.m in Sources */,
+				75A074E309438F8E008B9D9E /* KeychainUtils.m in Sources */,
+				75A074E409438F8E008B9D9E /* x509.m in Sources */,
+				75A074E509438F8E008B9D9E /* MultiThreading.m in Sources */,
+				75A074E609438F8E008B9D9E /* CertificateGeneration.m in Sources */,
+				75A074E709438F8E008B9D9E /* UtilitySupport.m in Sources */,
+				75A074E809438F8E008B9D9E /* ABPersonAdditions.m in Sources */,
+				75A074E909438F8E008B9D9E /* FileUtilities.m in Sources */,
+				75A074EA09438F8E008B9D9E /* CSSMInfo.m in Sources */,
+				75A074EB09438F8E008B9D9E /* CertificateExtensions.m in Sources */,
+				75A074EE09438F8E008B9D9E /* NSCalendarDateAdditions.m in Sources */,
+				75A074EF09438F8E008B9D9E /* DigestOutputStream.m in Sources */,
+				75A074F009438F8E008B9D9E /* ChainedOutputStream.m in Sources */,
+				75A074F109438F8E008B9D9E /* CSSMOpenDataStore.m in Sources */,
+				75A074F509438F8E008B9D9E /* CSSMModule.m in Sources */,
+				75A074F609438F8E008B9D9E /* MDS.m in Sources */,
+				755CFA420A1F6201008C69A9 /* CSSMACLEntry.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0750409438F8E008B9D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0750509438F8E008B9D9E /* CSSMUtilsTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0750F09438F8E008B9D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0751009438F8E008B9D9E /* NSCalendarDateAdditionsTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0751A09438F8F008B9D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0751B09438F8F008B9D9E /* OutputStreamsTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0752509438F8F008B9D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0752609438F8F008B9D9E /* StringsTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0753109438F8F008B9D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0753209438F8F008B9D9E /* MDSProber.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C6E8EF0A3BDCD8009201FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C6E9040A3BDD1A009201FB /* KeychainSearchTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		755CFABD0A1F672D008C69A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7540B3E90999D1C000469F46 /* SKeyPlusTester */;
+			targetProxy = 755CFABC0A1F672D008C69A9 /* PBXContainerItemProxy */;
+		};
+		755DE3320A20A2B9002EAC2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7594D4880A2045E00090E497 /* CertificateGenerationTester */;
+			targetProxy = 755DE3310A20A2B9002EAC2B /* PBXContainerItemProxy */;
+		};
+		755DE3340A20A2B9002EAC2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 755613160A2090B5003428C2 /* CryptographyTester */;
+			targetProxy = 755DE3330A20A2B9002EAC2B /* PBXContainerItemProxy */;
+		};
+		75A0764C0943BA13008B9D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 75A0764B0943BA13008B9D9E /* PBXContainerItemProxy */;
+		};
+		75A0764E0943BA16008B9D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0750309438F8E008B9D9E /* CSSMUtilsTester */;
+			targetProxy = 75A0764D0943BA16008B9D9E /* PBXContainerItemProxy */;
+		};
+		75A076500943BA18008B9D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0750E09438F8E008B9D9E /* NSCalendarDateAdditionsTester */;
+			targetProxy = 75A0764F0943BA18008B9D9E /* PBXContainerItemProxy */;
+		};
+		75A076520943BA1A008B9D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0751909438F8F008B9D9E /* OutputStreamsTester */;
+			targetProxy = 75A076510943BA1A008B9D9E /* PBXContainerItemProxy */;
+		};
+		75A076540943BA1C008B9D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0752409438F8F008B9D9E /* StringsTester */;
+			targetProxy = 75A076530943BA1C008B9D9E /* PBXContainerItemProxy */;
+		};
+		75A076560943BA1D008B9D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0753009438F8F008B9D9E /* MDSProber */;
+			targetProxy = 75A076550943BA1D008B9D9E /* PBXContainerItemProxy */;
+		};
+		75C6E9300A3BE210009201FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75C6E8EE0A3BDCD8009201FB /* KeychainSearchTester */;
+			targetProxy = 75C6E92F0A3BE210009201FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		751AC3AE043AE4350081E49D /* Misc Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				751AC3AB043AE4240081E49D /* English */,
+			);
+			name = "Misc Names.strings";
+			sourceTree = "<group>";
+		};
+		752BB77D043ACC3C00EDE39C /* CSSM Errors.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				752BB77A043ACC2B00EDE39C /* CSSM Errors.strings */,
+			);
+			name = "CSSM Errors.strings";
+			sourceTree = "<group>";
+		};
+		752BB783043ADB1000EDE39C /* OID Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				752BB780043ADB0B00EDE39C /* English */,
+			);
+			name = "OID Names.strings";
+			sourceTree = "<group>";
+		};
+		752BB789043ADC4900EDE39C /* BER Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				752BB786043ADC4100EDE39C /* English */,
+			);
+			name = "BER Names.strings";
+			sourceTree = "<group>";
+		};
+		7552D52C08406BD3007DCB2F /* GUID Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7552D52D08406BD3007DCB2F /* English */,
+			);
+			name = "GUID Names.strings";
+			sourceTree = "<group>";
+		};
+		7562382608E92D4900B4C9B1 /* CSSM Error Bases.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7562382708E92D4900B4C9B1 /* English */,
+			);
+			name = "CSSM Error Bases.strings";
+			sourceTree = "<group>";
+		};
+		7562383008E92DCF00B4C9B1 /* CSSM Error Codes.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7562383108E92DCF00B4C9B1 /* English */,
+			);
+			name = "CSSM Error Codes.strings";
+			sourceTree = "<group>";
+		};
+		75D1B9E408A8EBA900D77A20 /* CSSM Error Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75D1B9E508A8EBA900D77A20 /* English */,
+			);
+			name = "CSSM Error Names.strings";
+			sourceTree = "<group>";
+		};
+		75E38026082C6AAD00089FF8 /* Certificate Types.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75E38027082C6AAD00089FF8 /* English */,
+			);
+			name = "Certificate Types.strings";
+			sourceTree = "<group>";
+		};
+		75E38054082C6C4000089FF8 /* Certificate Encodings.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75E38055082C6C4000089FF8 /* English */,
+			);
+			name = "Certificate Encodings.strings";
+			sourceTree = "<group>";
+		};
+		75E38090082C78C600089FF8 /* Keyblob Types.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75E38091082C78C600089FF8 /* English */,
+			);
+			name = "Keyblob Types.strings";
+			sourceTree = "<group>";
+		};
+		75E380BB082C7BFC00089FF8 /* Keyblob Formats.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75E380BC082C7BFC00089FF8 /* English */,
+			);
+			name = "Keyblob Formats.strings";
+			sourceTree = "<group>";
+		};
+		75E380C4082C812200089FF8 /* Algorithm Modes.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75E380C5082C812200089FF8 /* English */,
+			);
+			name = "Algorithm Modes.strings";
+			sourceTree = "<group>";
+		};
+		75E380C9082C839800089FF8 /* Key Classes.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75E380CA082C839800089FF8 /* English */,
+			);
+			name = "Key Classes.strings";
+			sourceTree = "<group>";
+		};
+		75E380CE082C841300089FF8 /* Key Attributes.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75E380CF082C841300089FF8 /* English */,
+			);
+			name = "Key Attributes.strings";
+			sourceTree = "<group>";
+		};
+		75E38110082C865800089FF8 /* Key Usage.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75E38111082C865800089FF8 /* English */,
+			);
+			name = "Key Usage.strings";
+			sourceTree = "<group>";
+		};
+		75E577E3043AE5D500A3C85B /* Algorithms.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75E577E0043AE5C700A3C85B /* English */,
+			);
+			name = Algorithms.strings;
+			sourceTree = "<group>";
+		};
+		75EAF8DC0841B8C30068EA90 /* Extension Formats.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75EAF8DD0841B8C30068EA90 /* English */,
+			);
+			name = "Extension Formats.strings";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7528103508569F6900FEFBDC /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/build/Development\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				OTHER_CFLAGS = "-ggdb3";
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = "-Wno-import";
+			};
+			name = Development;
+		};
+		7528103608569F6900FEFBDC /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/build/Development\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				OTHER_CFLAGS = "-ggdb3";
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = "-Wno-import";
+			};
+			name = Deployment;
+		};
+		7528103708569F6900FEFBDC /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/build/Development\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				OTHER_CFLAGS = "-ggdb3";
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = "-Wno-import";
+			};
+			name = Default;
+		};
+		7540B3EF0999D1C000469F46 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = SKeyPlusTester;
+			};
+			name = Development;
+		};
+		7540B3F00999D1C000469F46 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = SKeyPlusTester;
+			};
+			name = Deployment;
+		};
+		7540B3F10999D1C000469F46 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = SKeyPlusTester;
+			};
+			name = Default;
+		};
+		7556131C0A2090B5003428C2 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_MODEL_CPU = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = CryptographyTester;
+			};
+			name = Development;
+		};
+		7556131D0A2090B5003428C2 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_MODEL_CPU = G3;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = CryptographyTester;
+			};
+			name = Deployment;
+		};
+		7556131E0A2090B5003428C2 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = CryptographyTester;
+			};
+			name = Default;
+		};
+		7594D48E0A2045E00090E497 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_MODEL_CPU = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = CertificateGenerationTester;
+			};
+			name = Development;
+		};
+		7594D48F0A2045E00090E497 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_MODEL_CPU = G3;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = CertificateGenerationTester;
+			};
+			name = Deployment;
+		};
+		7594D4900A2045E00090E497 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = CertificateGenerationTester;
+			};
+			name = Default;
+		};
+		75A074FE09438F8E008B9D9E /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 3;
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = TAGGED_DEBUGGING;
+				INFOPLIST_FILE = "Info-Keychain.plist";
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = Keychain;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Development;
+		};
+		75A074FF09438F8E008B9D9E /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 3;
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					NO_CONSOLE_OUTPUT,
+				);
+				INFOPLIST_FILE = "Info-Keychain.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_dylib;
+				PREBINDING = NO;
+				PRODUCT_NAME = Keychain;
+				STRIP_STYLE = all;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Deployment;
+		};
+		75A0750009438F8E008B9D9E /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 3;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Info-Keychain.plist";
+				LIBRARY_STYLE = BUNDLE;
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = Keychain;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Default;
+		};
+		75A0750909438F8E008B9D9E /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_MODEL_CPU = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = CSSMUtilsTester;
+			};
+			name = Development;
+		};
+		75A0750A09438F8E008B9D9E /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_MODEL_CPU = G3;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = CSSMUtilsTester;
+			};
+			name = Deployment;
+		};
+		75A0750B09438F8E008B9D9E /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = CSSMUtilsTester;
+			};
+			name = Default;
+		};
+		75A0751409438F8E008B9D9E /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = NSCalendarDateAdditionsTester;
+			};
+			name = Development;
+		};
+		75A0751509438F8E008B9D9E /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = NSCalendarDateAdditionsTester;
+			};
+			name = Deployment;
+		};
+		75A0751609438F8E008B9D9E /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = NSCalendarDateAdditionsTester;
+			};
+			name = Default;
+		};
+		75A0751F09438F8F008B9D9E /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = OutputStreamsTester;
+			};
+			name = Development;
+		};
+		75A0752009438F8F008B9D9E /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = OutputStreamsTester;
+			};
+			name = Deployment;
+		};
+		75A0752109438F8F008B9D9E /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = OutputStreamsTester;
+			};
+			name = Default;
+		};
+		75A0752B09438F8F008B9D9E /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = StringsTester;
+			};
+			name = Development;
+		};
+		75A0752C09438F8F008B9D9E /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = StringsTester;
+			};
+			name = Deployment;
+		};
+		75A0752D09438F8F008B9D9E /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = StringsTester;
+			};
+			name = Default;
+		};
+		75A0753709438F8F008B9D9E /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = MDSProber;
+			};
+			name = Development;
+		};
+		75A0753809438F8F008B9D9E /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = MDSProber;
+			};
+			name = Deployment;
+		};
+		75A0753909438F8F008B9D9E /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = MDSProber;
+			};
+			name = Default;
+		};
+		75A076590943BA3D008B9D9E /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = World;
+			};
+			name = Development;
+		};
+		75A0765A0943BA3D008B9D9E /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = World;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		75A0765B0943BA3D008B9D9E /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = World;
+			};
+			name = Default;
+		};
+		75C6E8F40A3BDCD8009201FB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_MODEL_CPU = "";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = KeychainSearchTester;
+			};
+			name = Development;
+		};
+		75C6E8F50A3BDCD8009201FB /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_MODEL_CPU = G3;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = KeychainSearchTester;
+			};
+			name = Deployment;
+		};
+		75C6E8F60A3BDCD8009201FB /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PRODUCT_NAME = KeychainSearchTester;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7528103408569F6900FEFBDC /* Build configuration list for PBXProject "Keychain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7528103508569F6900FEFBDC /* Development */,
+				7528103608569F6900FEFBDC /* Deployment */,
+				7528103708569F6900FEFBDC /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7540B3EE0999D1C000469F46 /* Build configuration list for PBXNativeTarget "SKeyPlusTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7540B3EF0999D1C000469F46 /* Development */,
+				7540B3F00999D1C000469F46 /* Deployment */,
+				7540B3F10999D1C000469F46 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7556131B0A2090B5003428C2 /* Build configuration list for PBXNativeTarget "CryptographyTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7556131C0A2090B5003428C2 /* Development */,
+				7556131D0A2090B5003428C2 /* Deployment */,
+				7556131E0A2090B5003428C2 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7594D48D0A2045E00090E497 /* Build configuration list for PBXNativeTarget "CertificateGenerationTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7594D48E0A2045E00090E497 /* Development */,
+				7594D48F0A2045E00090E497 /* Deployment */,
+				7594D4900A2045E00090E497 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		75A074FD09438F8E008B9D9E /* Build configuration list for PBXNativeTarget "Keychain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A074FE09438F8E008B9D9E /* Development */,
+				75A074FF09438F8E008B9D9E /* Deployment */,
+				75A0750009438F8E008B9D9E /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		75A0750809438F8E008B9D9E /* Build configuration list for PBXNativeTarget "CSSMUtilsTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A0750909438F8E008B9D9E /* Development */,
+				75A0750A09438F8E008B9D9E /* Deployment */,
+				75A0750B09438F8E008B9D9E /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		75A0751309438F8E008B9D9E /* Build configuration list for PBXNativeTarget "NSCalendarDateAdditionsTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A0751409438F8E008B9D9E /* Development */,
+				75A0751509438F8E008B9D9E /* Deployment */,
+				75A0751609438F8E008B9D9E /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		75A0751E09438F8F008B9D9E /* Build configuration list for PBXNativeTarget "OutputStreamsTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A0751F09438F8F008B9D9E /* Development */,
+				75A0752009438F8F008B9D9E /* Deployment */,
+				75A0752109438F8F008B9D9E /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		75A0752A09438F8F008B9D9E /* Build configuration list for PBXNativeTarget "StringsTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A0752B09438F8F008B9D9E /* Development */,
+				75A0752C09438F8F008B9D9E /* Deployment */,
+				75A0752D09438F8F008B9D9E /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		75A0753609438F8F008B9D9E /* Build configuration list for PBXNativeTarget "MDSProber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A0753709438F8F008B9D9E /* Development */,
+				75A0753809438F8F008B9D9E /* Deployment */,
+				75A0753909438F8F008B9D9E /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		75A076580943BA3D008B9D9E /* Build configuration list for PBXAggregateTarget "World" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A076590943BA3D008B9D9E /* Development */,
+				75A0765A0943BA3D008B9D9E /* Deployment */,
+				75A0765B0943BA3D008B9D9E /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		75C6E8F30A3BDCD8009201FB /* Build configuration list for PBXNativeTarget "KeychainSearchTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75C6E8F40A3BDCD8009201FB /* Development */,
+				75C6E8F50A3BDCD8009201FB /* Deployment */,
+				75C6E8F60A3BDCD8009201FB /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

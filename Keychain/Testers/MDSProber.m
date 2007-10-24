@@ -1,0 +1,224 @@
+//
+//  MDSProber.m
+//  Keychain
+//
+//  Created by Wade Tregaskis on 9/8/2005.
+//
+//  Copyright (c) 2005, Wade Tregaskis.  All rights reserved.
+//  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+//    * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+//    * Neither the name of Wade Tregaskis nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+//  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+#import <Keychain/MDS.h>
+#import <Keychain/CSSMUtils.h>
+
+
+int main(int argc, char const *argv[]) {
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    MDS *mds = [MDS defaultMDS];
+    BOOL withResults = NO;
+    
+    if ((2 <= argc) && (0 == strcmp("-v", argv[1]))) {
+        withResults = YES;
+    }
+    
+    if (nil != mds) {
+        BOOL success;
+        MDS_DB_HANDLE handle;
+                
+        success = [mds open:[NSString stringWithUTF8String:MDS_CDSA_DIRECTORY_NAME/*MDS_OBJECT_DIRECTORY_NAME*/] access:CSSM_DB_ACCESS_READ handle:&handle];
+
+        if (YES == success) {
+            NSArray *attributes = [NSArray arrayWithObjects:
+                @"Acl SubjectTypes",
+                @"AlgType",
+                @"AttributeFormat",
+                @"AttributeID",
+                @"AttributeName",
+                @"AttributeNameFormat",
+                @"AttributeNameID",
+                @"AttributeType",
+                @"AttributeValue",
+                @"AuthorityRequestType",
+                @"AuthTags",
+                @"BundleTypeFormat",
+                @"CDSAVersion",
+                @"CertClassName",
+                @"CertFieldNames",
+                @"CertTypeFormat",
+                @"CompatCSSMVersion",
+                @"ConfigFileLocation",
+                @"ConjunctiveOps",
+                @"ContextType",
+                @"CrlTypeFormat",
+                @"CspCustomFlags",
+                @"CspFlags",
+                @"CspType",
+                @"CustomFlags",
+                @"DefaultTemplateType",
+                @"Desc",
+                @"Description",
+                @"DLType",
+                @"DynamicFlag",
+                @"EMMSpecVersion",
+                @"EmmType",
+                @"EmmVendor",
+                @"EmmVersion",
+                @"GroupId",
+                @"IndexedDataLocation",
+                @"IndexID",
+                @"IndexType",
+                @"Manifest",
+                @"ModuleID",
+                @"ModuleName",
+                @"MultiThreadFlag",
+                @"NativeServices",
+                @"OID",
+                @"Path",
+                @"PolicyInfo",
+                @"PolicyManifest",
+                @"PolicyName",
+                @"PolicyPath",
+                @"PolicyStmt",
+                @"PolicyType",
+                @"ProductDesc",
+                @"ProductFlags",
+                @"ProductVendor",
+                @"ProductVersion",
+                @"Protocol",
+                @"ProtocolDesc",
+                @"ProtocolFlags",
+                @"QueryLimitsFlag",
+                @"ReaderDesc",
+                @"ReaderCustomFlags",
+                @"ReaderFirmwareVersion",
+                @"ReaderFlags",
+                @"ReaderSerialNumber",
+                @"ReaderVendor",
+                @"ReaderVersion",
+                @"RelationalOps",
+                @"RelationID",
+                @"RelationName",
+                @"RetrievalMode",
+                @"RootCertificate",
+                @"RootCertType Format",
+                @"ScCustomFlags",
+                @"ScDesc",
+                @"ScFirmwareVersion",
+                @"ScFlags",
+                @"ScSerialNumber",
+                @"ScVendor",
+                @"ScVersion",
+                @"ServiceMask",
+                @"SampleTypes",
+                @"SSID",
+                @"ServiceType",
+                @"StandardDesc",
+                @"StandardVersion",
+                @"TemplateFieldNames",
+                @"UseeTags",
+                @"Value",
+                @"Vendor",
+                @"Version",
+                @"XlationTypeFormat",
+                nil];
+            NSEnumerator *enumerator;
+            NSString *currentAttribute;
+            NSArray *result;
+            CSSM_DB_RECORDTYPE recordTypes[] = {
+                MDS_OBJECT_RECORDTYPE,
+                MDS_CDSA_SCHEMA_START,
+                MDS_CDSADIR_CSSM_RECORDTYPE,
+                MDS_CDSADIR_KRMM_RECORDTYPE,
+                MDS_CDSADIR_EMM_RECORDTYPE,
+                MDS_CDSADIR_COMMON_RECORDTYPE,
+                MDS_CDSADIR_CSP_PRIMARY_RECORDTYPE,
+                MDS_CDSADIR_CSP_CAPABILITY_RECORDTYPE,
+                MDS_CDSADIR_CSP_ENCAPSULATED_PRODUCT_RECORDTYPE,
+                MDS_CDSADIR_CSP_SC_INFO_RECORDTYPE,
+                MDS_CDSADIR_DL_PRIMARY_RECORDTYPE,
+                MDS_CDSADIR_DL_ENCAPSULATED_PRODUCT_RECORDTYPE,
+                MDS_CDSADIR_CL_PRIMARY_RECORDTYPE,
+                MDS_CDSADIR_CL_ENCAPSULATED_PRODUCT_RECORDTYPE,
+                MDS_CDSADIR_TP_PRIMARY_RECORDTYPE,
+                MDS_CDSADIR_TP_OIDS_RECORDTYPE,
+                MDS_CDSADIR_TP_ENCAPSULATED_PRODUCT_RECORDTYPE,
+                MDS_CDSADIR_EMM_PRIMARY_RECORDTYPE,
+                MDS_CDSADIR_AC_PRIMARY_RECORDTYPE,
+                MDS_CDSADIR_KR_PRIMARY_RECORDTYPE,
+                MDS_CDSADIR_MDS_SCHEMA_RELATIONS,
+                MDS_CDSADIR_MDS_SCHEMA_ATTRIBUTES,
+                MDS_CDSADIR_MDS_SCHEMA_INDEXES
+            };
+            const char *recordTypeNames[] = {
+                "MDS_OBJECT_RECORDTYPE",
+                "MDS_CDSA_SCHEMA_START",
+                "MDS_CDSADIR_CSSM_RECORDTYPE",
+                "MDS_CDSADIR_KRMM_RECORDTYPE",
+                "MDS_CDSADIR_EMM_RECORDTYPE",
+                "MDS_CDSADIR_COMMON_RECORDTYPE",
+                "MDS_CDSADIR_CSP_PRIMARY_RECORDTYPE",
+                "MDS_CDSADIR_CSP_CAPABILITY_RECORDTYPE",
+                "MDS_CDSADIR_CSP_ENCAPSULATED_PRODUCT_RECORDTYPE",
+                "MDS_CDSADIR_CSP_SC_INFO_RECORDTYPE",
+                "MDS_CDSADIR_DL_PRIMARY_RECORDTYPE",
+                "MDS_CDSADIR_DL_ENCAPSULATED_PRODUCT_RECORDTYPE",
+                "MDS_CDSADIR_CL_PRIMARY_RECORDTYPE",
+                "MDS_CDSADIR_CL_ENCAPSULATED_PRODUCT_RECORDTYPE",
+                "MDS_CDSADIR_TP_PRIMARY_RECORDTYPE",
+                "MDS_CDSADIR_TP_OIDS_RECORDTYPE",
+                "MDS_CDSADIR_TP_ENCAPSULATED_PRODUCT_RECORDTYPE",
+                "MDS_CDSADIR_EMM_PRIMARY_RECORDTYPE",
+                "MDS_CDSADIR_AC_PRIMARY_RECORDTYPE",
+                "MDS_CDSADIR_KR_PRIMARY_RECORDTYPE",
+                "MDS_CDSADIR_MDS_SCHEMA_RELATIONS",
+                "MDS_CDSADIR_MDS_SCHEMA_ATTRIBUTES",
+                "MDS_CDSADIR_MDS_SCHEMA_INDEXES"
+            };
+            const int numberOfRecordTypes = sizeof(recordTypes) / sizeof(CSSM_DB_RECORDTYPE);
+            int i;
+            
+            // Result of this using the 'probe' method is that only AlgType is queried, since the probe dictionary returns nil for all queries, so the logical AND doesn't require the right hand expression to be evaluated... so clearly we can't do pre-flight using this 'probe' method.
+            //[mds query:handle attributes:nil forAllRecordsOfType:MDS_OBJECT_RECORDTYPE usingPredicate:[NSPredicate predicateWithFormat:@"(AlgType contains[cd] \"AES\") AND (Version > 2.0)"] withTimeLimit:CSSM_QUERY_TIMELIMIT_NONE andSizeLimit:CSSM_QUERY_SIZELIMIT_NONE];
+
+            // This works like a charm using the feedback method... it's only a simple query, of course, but it's a start.  In theory any query will now work.
+            //printf("Query result = %s\n", [[[mds query:handle attributes:[NSArray arrayWithObjects:@"Desc", @"ModuleName", @"Path", nil] forAllRecordsOfType:MDS_CDSADIR_COMMON_RECORDTYPE usingPredicate:[NSPredicate predicateWithFormat:@"MultiThreadFlag == 1"] withTimeLimit:CSSM_QUERY_TIMELIMIT_NONE andSizeLimit:CSSM_QUERY_SIZELIMIT_NONE] description] UTF8String]);
+  
+            for (i = 0; i < numberOfRecordTypes; ++i) {
+                printf("Probing %s...\n", recordTypeNames[i]);
+                
+                enumerator = [attributes objectEnumerator];
+                
+                while (currentAttribute = [enumerator nextObject]) {
+                    result = [mds query:handle attributes:[NSArray arrayWithObject:currentAttribute] forAllRecordsOfType:recordTypes[i] withTimeLimit:CSSM_QUERY_TIMELIMIT_NONE andSizeLimit:CSSM_QUERY_SIZELIMIT_NONE];
+                    
+                    if (nil != result) {
+                        printf("\tHas attribute \"%s\"\n", [currentAttribute UTF8String]);
+                        
+                        if (withResults) {
+                            printf("\t\t%s\n", [[result description] UTF8String]);
+                        }
+                    } else if (CSSMERR_DL_INVALID_RECORDTYPE == [mds lastError]) {
+                        printf("\tInvalid record type.\n");
+                        break;
+                    } else if (CSSMERR_DL_INVALID_FIELD_NAME != [mds lastError]) {
+                        fprintf(stderr, "\tUnexpected error for attribute \"%s\", #%u - %s\n", [currentAttribute UTF8String], (unsigned int)[mds lastError], [CSSMErrorAsString([mds lastError]) UTF8String]);
+                        //return -3;
+                    }
+                }
+            }
+        } else {
+            fprintf(stderr, "Unable to open MDS database.\n");
+            return -1;
+        }
+    } else {
+        fprintf(stderr, "Unable to obtain MDS instance.\n");
+        return -2;
+    }
+    
+    [pool release];
+    
+    return 0;
+}
