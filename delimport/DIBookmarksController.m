@@ -21,7 +21,7 @@
 - (void)addToLoginItems {
 	// First, get the login items from loginwindow pref
 	NSMutableArray* loginItems = (NSMutableArray*) CFPreferencesCopyValue((CFStringRef) @"AutoLaunchedApplicationDictionary",
-																		  (CFStringRef) @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
+		(CFStringRef) @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
 	BOOL changed = NO, foundMyAppItem = NO;
 	int myAppItemIndex = 0;
 	NSString *kDTMyAppAppPath = [[NSBundle mainBundle] bundlePath]; 
@@ -41,7 +41,11 @@
 		}
 	}
 	if (!foundMyAppItem) {
-		NSAlert *alert = [NSAlert alertWithMessageText:@"Add delimport to Login Items?" defaultButton:@"Add" alternateButton:@"Don't Add" otherButton:nil informativeTextWithFormat:@"Delimport will start every time your computer boots to keep your bookmarks in sync."];
+		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Automatically launch delimport on login?", @"Headline for add to login items dialogue") defaultButton:NSLocalizedString(@"Add", @"Add") alternateButton:NSLocalizedString(@"Don't Add", @"Don't Add") 
+			otherButton:nil 
+			informativeTextWithFormat:NSLocalizedString(@"delimport will be added to your login items. This will ensure delimport runs and downloads your del.icio.us bookmarks whenever you are using this account.", @"Explanatory text for add to login items dialogue")
+			];
+		[NSApp activateIgnoringOtherApps:YES];
 		[[alert window] makeKeyAndOrderFront:self];
 		[[alert window] center];
 		if ([alert runModal] == NSAlertDefaultReturn) {
@@ -136,10 +140,11 @@
 	NSURL *requestURL = [NSURL URLWithString:[apiPath stringByAppendingString:request]];
 	NSMutableURLRequest *URLRequest = [NSMutableURLRequest requestWithURL:requestURL];
 	[URLRequest setValue: @"delimport/0.3" forHTTPHeaderField: @"User-Agent"];
-
+	// NSLog(@"%f", [URLRequest timeoutInterval]);
+	
 	NSHTTPURLResponse *response;
 	NSData * xmlData = [NSURLConnection sendSynchronousRequest:URLRequest returningResponse:&response error:&error];
-	NSLog(@"http response code for API request '%@': %i", request, [response statusCode], nil);
+	NSLog(@"API request: '%@', response: %i, d/l size: %i", request, [response statusCode], [xmlData length], nil);
 	if ([response statusCode] == 401) {
 		[self logIn];
 		return nil;
@@ -152,11 +157,19 @@
 	}
 	
 	NSXMLDocument *document = [[[NSXMLDocument alloc] initWithData:xmlData options:NSXMLDocumentTidyXML error:&error] autorelease];
+
 	if (document == nil) {
-		NSAlert *alert = [NSAlert alertWithError:error];
-		[[alert window] makeKeyAndOrderFront:self];
-		[[alert window] center];
-		[alert runModal];
+		// Display or log the problem (just sliently retrying seems preferable to me)
+		[[NSUserDefaults standardUserDefaults] synchronize];
+		if ([[NSUserDefaults standardUserDefaults] boolForKey:DIDisplayErrorMessages]) {
+			NSAlert *alert = [NSAlert alertWithError:error];
+			[[alert window] makeKeyAndOrderFront:self];
+			[[alert window] center];
+			[alert runModal];
+		}
+		else {
+			NSLog(@"Download failed: %@", [error localizedDescription]);
+		}
 		return nil;
 	}
 	return document;
@@ -277,19 +290,19 @@
 }
 
 - (void) setupTimer:(NSTimer*) timer {
-	if ((timer == nil) || ([timer timeInterval] != [self currentUpdateInterval])) {
-		// timer setting changed, create new timer and dump old one
-		updateTimer = [NSTimer scheduledTimerWithTimeInterval:[self currentUpdateInterval] target:self selector:@selector(updateList:) userInfo:nil repeats:YES];
-		[timer invalidate];
-		NSLog(@"-setupTimer: Timer set with interval: %d", [self currentUpdateInterval]);
-	}
-	
+	// get rid of the old timer
+	[timer invalidate];
+	// set up a new timer, potentially using an updated time interval
+	[NSTimer scheduledTimerWithTimeInterval:[self currentUpdateInterval] target:self selector:@selector(updateList:) userInfo:nil repeats:NO];
+	NSLog(@"-setupTimer: Timer set to trigger in %fs", [self currentUpdateInterval]);
 }	
 	
 
 - (NSTimeInterval) currentUpdateInterval {
+	[[NSUserDefaults standardUserDefaults] synchronize];
 	NSNumber * delta = [[NSUserDefaults standardUserDefaults] objectForKey:DIMinutesBetweenChecks];
 	NSTimeInterval minutes;
+		// Might be better to not go beneath 30min because of throttling.
 	if ((delta != nil) && ([throttleTimepoint timeIntervalSinceNow] < -30.0*60.0)) {
 		// if a time is stored and throttling is more than 30min ago, use the stored time, otherwise go for a 30min interval
 		minutes = [delta doubleValue];
@@ -313,7 +326,6 @@
 	[loginController release];
 	[throttleTimepoint release];
 	
-	[updateTimer invalidate];
 	[super dealloc];
 }
 - (void)applicationWillTerminate:(NSNotification *)notification

@@ -38,7 +38,16 @@
 	}
 	[mutable removeObjectForKey:@"hash"];
 	[mutable writeToFile:path atomically:YES];
+	
 	[[NSFileManager defaultManager] changeFileAttributes:[NSDictionary dictionaryWithObject:osType forKey:NSFileHFSTypeCode] atPath:path];
+	/*  set creation date do delicious date
+		setting the modification date might be more useful, but would be 'wrong' as we don't know when the bookmark was last edited.
+		investigate setting the last used date as well? This would put bookmarks in their correct order in Spotlight results.
+	 */
+	NSDate * date = [mutable objectForKey:@"time"];
+	if (date) {
+		[[NSFileManager defaultManager] changeFileAttributes:[NSDictionary dictionaryWithObject:date forKey:NSFileCreationDate] atPath:path];
+	}
 	[mutable release];
 }
 

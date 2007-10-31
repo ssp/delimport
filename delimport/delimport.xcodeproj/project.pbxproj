@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C2FC9670CD9396900C1FD91 /* Localizable.strings */; };
 		6C38B3700CCF5C6D00E5933D /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8ED4DF0CCE598100FE0E05 /* Keychain.framework */; };
 		6C38B39E0CCF5CF300E5933D /* Keychain.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C8ED4DF0CCE598100FE0E05 /* Keychain.framework */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
@@ -25,7 +26,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8D576316048677EA00EA77CD /* del.icio.us Spotlight Interface.mdimporter */;
+			remoteGlobalIDString = 8D576316048677EA00EA77CD;
 			remoteInfo = "del.icio.us Spotlight Interface";
 		};
 		6C8ED57A0CCE5AE600FE0E05 /* PBXContainerItemProxy */ = {
@@ -131,6 +132,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* delimport_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delimport_Prefix.pch; sourceTree = "<group>"; };
+		6C2FC9680CD9396900C1FD91 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C8ED4DF0CCE598100FE0E05 /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = /Users/Shared/builds/Deployment/Keychain.framework; sourceTree = "<absolute>"; };
 		6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "del.icio.us Spotlight Interface.xcodeproj"; path = "spotlight_interface/del.icio.us Spotlight Interface.xcodeproj"; sourceTree = "<group>"; };
 		6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Keychain.xcodeproj; path = ../Keychain/Keychain.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				BFAA6A5F082210D500828D28 /* delicious.icns */,
+				6C2FC9670CD9396900C1FD91 /* Localizable.strings */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
@@ -406,6 +409,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				BFAA6A60082210D500828D28 /* delicious.icns in Resources */,
 				BF138E6B082587AC009D55C5 /* LogIn.nib in Resources */,
+				6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +444,14 @@
 				29B97319FDCFA39411CA2CEA /* English */,
 			);
 			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		6C2FC9670CD9396900C1FD91 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C2FC9680CD9396900C1FD91 /* English */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		BF138E69082587AB009D55C5 /* LogIn.nib */ = {

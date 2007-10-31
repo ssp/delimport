@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 #define DIMinutesBetweenChecks @"MinutesBetweenChecks"
+#define DIDisplayErrorMessages @"DisplayErrorMessages"
 
 @class DIFileController, DILoginController;
 
@@ -22,8 +23,6 @@
 	NSSet *bookmarks;
 	NSDate *lastUpdate;
 	NSDate *throttleTimepoint;
-	
-	NSTimer *updateTimer;
 }
 
 - (void)logIn;
