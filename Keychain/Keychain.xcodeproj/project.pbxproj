@@ -890,6 +890,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 7528103408569F6900FEFBDC /* Build configuration list for PBXProject "Keychain" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 0867D691FE84028FC02AAC07 /* Keychain */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;

@@ -132,6 +132,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 6CCC644D0A40CCF800540A50 /* Build configuration list for PBXProject "del.icio.us Spotlight Interface" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 089C166AFE841209C02AAC07 /* del.icio.us Spotlight Interface */;
 			projectDirPath = "";

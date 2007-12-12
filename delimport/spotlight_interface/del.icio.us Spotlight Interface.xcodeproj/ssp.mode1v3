@@ -270,12 +270,14 @@
 								<string>089C1671FE841209C02AAC07</string>
 								<string>19C28FB6FE9D52B211CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
+								<string>6C0CA3100CEC9ECD000B18FC</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>0</integer>
+									<integer>10</integer>
+									<integer>9</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -379,9 +381,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>6C8ED4950CCE595200FE0E05</string>
+				<string>6C0CA3110CEC9ECD000B18FC</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>6C8ED4960CCE595200FE0E05</string>
+				<string>6C0CA3120CEC9ECD000B18FC</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -513,7 +515,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Volumes/Kalle/Users/ssp/Developer/zExamples/delimport/spotlight_interface/del.icio.us Spotlight Interface.xcodeproj</string>
+		<string>6C8F4CBA0CCE4B9900BFE897</string>
+		<string>/Users/ssp/Developer/delimport/delimport/spotlight_interface/del.icio.us Spotlight Interface.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>275 381 690 397 0 0 1280 778 </string>
@@ -593,7 +596,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>6C8F4CBA0CCE4B9900BFE897</string>
-				<string>6C8F4CBB0CCE4B9900BFE897</string>
+				<string>6C0CA3130CEC9ECD000B18FC</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

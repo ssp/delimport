@@ -133,6 +133,15 @@
 	return self;
 }
 
+
+- (void)applicationDidFinishLaunching:(NSNotification *)notification
+{
+	[self addToLoginItems];
+	[self getKeychainUserAndPass];
+	[self updateList:nil];
+}
+
+
 - (NSXMLDocument *)deliciousAPIResponseToRequest:(NSString *)request
 {
 	NSString *apiPath = [NSString stringWithFormat:@"https://%@:%@@api.del.icio.us/v1/", username, password, nil];
@@ -282,12 +291,6 @@
 	[defaults synchronize];
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)notification
-{
-	[self addToLoginItems];
-	[self getKeychainUserAndPass];
-	[self updateList:nil];
-}
 
 - (void) setupTimer:(NSTimer*) timer {
 	// get rid of the old timer

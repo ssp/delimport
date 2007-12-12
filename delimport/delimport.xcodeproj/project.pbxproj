@@ -6,10 +6,27 @@
 	objectVersion = 42;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		6C0CA2BF0CEC8221000B18FC /* Release */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6C0CA2C30CEC8244000B18FC /* Build configuration list for PBXAggregateTarget "Release" */;
+			buildPhases = (
+				6C0CA2CF0CEC8269000B18FC /* ShellScript */,
+				6C0CA2DF0CEC8554000B18FC /* ShellScript */,
+			);
+			dependencies = (
+				6C0CA2CD0CEC8263000B18FC /* PBXTargetDependency */,
+			);
+			name = Release;
+			productName = Release;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C2FC9670CD9396900C1FD91 /* Localizable.strings */; };
 		6C38B3700CCF5C6D00E5933D /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8ED4DF0CCE598100FE0E05 /* Keychain.framework */; };
 		6C38B39E0CCF5CF300E5933D /* Keychain.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C8ED4DF0CCE598100FE0E05 /* Keychain.framework */; };
+		6CD57B260CEC5261009D3862 /* del.icio.us Spotlight Interface.mdimporter in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -22,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6C0CA2CC0CEC8263000B18FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = delimport;
+		};
 		6C38B3450CCF5C4400E5933D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
@@ -118,6 +142,7 @@
 			dstPath = Contents/Library/Spotlight;
 			dstSubfolderSpec = 1;
 			files = (
+				6CD57B260CEC5261009D3862 /* del.icio.us Spotlight Interface.mdimporter in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +325,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 6CCC64330A40CC7F00540A50 /* Build configuration list for PBXProject "delimport" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* delimport */;
 			projectDirPath = "";
@@ -316,6 +342,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* delimport */,
+				6C0CA2BF0CEC8221000B18FC /* Release */,
 			);
 		};
 /* End PBXProject section */
@@ -415,6 +442,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6C0CA2CF0CEC8269000B18FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# compress the distribution folder\nrm -f \"$BUILT_PRODUCTS_DIR/delimport.zip\"\ncd \"$BUILT_PRODUCTS_DIR\"\nzip -y -r \"delimport.zip\" \"delimport.app\"";
+		};
+		6C0CA2DF0CEC8554000B18FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# compress the distribution folder\nrm -f \"$BUILT_PRODUCTS_DIR/delimport.zip\"\ncd \"$BUILT_PRODUCTS_DIR\"\nzip -y -r \"delimport.zip\" \"delimport.app\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -428,6 +484,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C0CA2CD0CEC8263000B18FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* delimport */;
+			targetProxy = 6C0CA2CC0CEC8263000B18FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
@@ -465,6 +529,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6C0CA2C00CEC8222000B18FC /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Release;
+			};
+			name = Development;
+		};
+		6C0CA2C10CEC8222000B18FC /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Release;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		6C0CA2C20CEC8222000B18FC /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Release;
+			};
+			name = Default;
+		};
 		6CCC64300A40CC7F00540A50 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -580,6 +672,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6C0CA2C30CEC8244000B18FC /* Build configuration list for PBXAggregateTarget "Release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C0CA2C00CEC8222000B18FC /* Development */,
+				6C0CA2C10CEC8222000B18FC /* Deployment */,
+				6C0CA2C20CEC8222000B18FC /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
 		6CCC642F0A40CC7F00540A50 /* Build configuration list for PBXNativeTarget "delimport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

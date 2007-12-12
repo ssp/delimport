@@ -1,10 +1,10 @@
 // !$*UTF8*$!
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeArchitecture = i386;
 		activeBuildConfigurationName = Deployment;
 		activeExecutable = 6CCC64560A40CDF700540A50 /* CSSMUtilsTester */;
 		activeTarget = 75A0749209438F8E008B9D9E /* Keychain */;
-		breakpointsGroup = 6C38B3A60CCF5D4300E5933D /* XCBreakpointsBucket */;
 		codeSenseManager = 6CCC64680A40CE1800540A50 /* Code sense */;
 		executables = (
 			6CCC64560A40CDF700540A50 /* CSSMUtilsTester */,
@@ -37,7 +37,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					364,
+					400,
 					20,
 					48,
 					43,
@@ -60,7 +60,7 @@
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
 					360,
-					10,
+					60,
 					20,
 					48,
 					43,
@@ -76,133 +76,21 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 214916388;
-			PBXWorkspaceStateSaveDate = 214916388;
-		};
-		perUserProjectItems = {
-			6C38B4ED0CCF615100E5933D /* PBXTextBookmark */ = 6C38B4ED0CCF615100E5933D /* PBXTextBookmark */;
-			6C38B4EE0CCF615100E5933D /* PBXTextBookmark */ = 6C38B4EE0CCF615100E5933D /* PBXTextBookmark */;
-			6C38B4EF0CCF615100E5933D /* PBXTextBookmark */ = 6C38B4EF0CCF615100E5933D /* PBXTextBookmark */;
-			6C38B4F00CCF615100E5933D /* PBXBookmark */ = 6C38B4F00CCF615100E5933D /* PBXBookmark */;
-			6C38B4F10CCF615100E5933D /* PBXTextBookmark */ = 6C38B4F10CCF615100E5933D /* PBXTextBookmark */;
-			6C38B4F20CCF615100E5933D /* PBXTextBookmark */ = 6C38B4F20CCF615100E5933D /* PBXTextBookmark */;
-			6C38B4F30CCF615100E5933D /* PBXTextBookmark */ = 6C38B4F30CCF615100E5933D /* PBXTextBookmark */;
-			6C38B5080CCF61F600E5933D /* PBXTextBookmark */ = 6C38B5080CCF61F600E5933D /* PBXTextBookmark */;
-			6C38B5820CCF6C4900E5933D /* PBXTextBookmark */ = 6C38B5820CCF6C4900E5933D /* PBXTextBookmark */;
-			6C38B5830CCF6C4900E5933D /* PBXTextBookmark */ = 6C38B5830CCF6C4900E5933D /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 216827328;
+			PBXWorkspaceStateSaveDate = 216827328;
 		};
 		sourceControlManager = 6CCC64670A40CE1800540A50 /* Source Control */;
 		userBuildSettings = {
 		};
 	};
-	6C38B3A60CCF5D4300E5933D /* XCBreakpointsBucket */ = {
-		isa = XCBreakpointsBucket;
-		name = Keychain;
-		objects = (
-		);
-	};
-	6C38B4ED0CCF615100E5933D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F566C84A03E0D9AA015C51F3 /* Keychain.m */;
-		name = "Keychain.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1195;
-		vrLoc = 2864;
-	};
-	6C38B4EE0CCF615100E5933D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F524D43203E0ECFB0168D458 /* AccessControlList.m */;
-		name = "AccessControlList.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1649;
-		vrLoc = 0;
-	};
-	6C38B4EF0CCF615100E5933D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F524D43603E0ED0C0168D458 /* Access.m */;
-		name = "Access.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1609;
-		vrLoc = 0;
-	};
-	6C38B4F00CCF615100E5933D /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = F58AA08F03F0808801A8007C /* Trust.m */;
-	};
-	6C38B4F10CCF615100E5933D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F566C84A03E0D9AA015C51F3 /* Keychain.m */;
-		name = "Keychain.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1195;
-		vrLoc = 2864;
-	};
-	6C38B4F20CCF615100E5933D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F524D43203E0ECFB0168D458 /* AccessControlList.m */;
-		name = "AccessControlList.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1649;
-		vrLoc = 0;
-	};
-	6C38B4F30CCF615100E5933D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F524D43603E0ED0C0168D458 /* Access.m */;
-		name = "Access.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1609;
-		vrLoc = 0;
-	};
-	6C38B5080CCF61F600E5933D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F58AA08F03F0808801A8007C /* Trust.m */;
-		name = "Trust.m: 3";
-		rLen = 0;
-		rLoc = 27;
-		rType = 0;
-		vrLen = 1749;
-		vrLoc = 0;
-	};
-	6C38B5820CCF6C4900E5933D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F58AA08F03F0808801A8007C /* Trust.m */;
-		name = "Trust.m: 3";
-		rLen = 0;
-		rLoc = 27;
-		rType = 0;
-		vrLen = 1325;
-		vrLoc = 637;
-	};
-	6C38B5830CCF6C4900E5933D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = F58AA08F03F0808801A8007C /* Trust.m */;
-		name = "Trust.m: 3";
-		rLen = 0;
-		rLoc = 27;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 0;
-	};
 	6CCC64560A40CDF700540A50 /* CSSMUtilsTester */ = {
 		isa = PBXExecutable;
-		activeArgIndex = 2147483647;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -220,12 +108,12 @@
 	};
 	6CCC64570A40CDF700540A50 /* NSCalendarDateAdditionsTester */ = {
 		isa = PBXExecutable;
-		activeArgIndex = 2147483647;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -243,12 +131,12 @@
 	};
 	6CCC64580A40CDF700540A50 /* OutputStreamsTester */ = {
 		isa = PBXExecutable;
-		activeArgIndex = 2147483647;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -266,12 +154,12 @@
 	};
 	6CCC64590A40CDF700540A50 /* StringsTester */ = {
 		isa = PBXExecutable;
-		activeArgIndex = 2147483647;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -289,12 +177,12 @@
 	};
 	6CCC645A0A40CDF700540A50 /* MDSProber */ = {
 		isa = PBXExecutable;
-		activeArgIndex = 2147483647;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -312,12 +200,12 @@
 	};
 	6CCC645B0A40CDF700540A50 /* SKeyPlusTester */ = {
 		isa = PBXExecutable;
-		activeArgIndex = 2147483647;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -335,12 +223,12 @@
 	};
 	6CCC645C0A40CDF700540A50 /* CertificateGenerationTester */ = {
 		isa = PBXExecutable;
-		activeArgIndex = 2147483647;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -358,12 +246,12 @@
 	};
 	6CCC645D0A40CDF700540A50 /* CryptographyTester */ = {
 		isa = PBXExecutable;
-		activeArgIndex = 2147483647;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -381,12 +269,12 @@
 	};
 	6CCC645E0A40CDF700540A50 /* KeychainSearchTester */ = {
 		isa = PBXExecutable;
-		activeArgIndex = 2147483647;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
