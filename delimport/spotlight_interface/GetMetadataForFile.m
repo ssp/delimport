@@ -49,27 +49,26 @@ Boolean GetMetadataForFile(void* thisInterface,
 			   CFStringRef pathToFile)
 {
 	NSDictionary *dictionary;
-	NSMutableDictionary *attributes = attrs;
+	NSMutableDictionary *attributes = (NSMutableDictionary*) attrs;
 	NSAutoreleasePool *pool;
 	pool = [[NSAutoreleasePool alloc] init];
+	BOOL result = NO;
 	
-	dictionary = [[NSDictionary alloc] initWithContentsOfFile:(NSString *)pathToFile];
-	if (!dictionary) {
-		[pool release];
-		return NO;
-	}
-	[attributes setObject:[dictionary objectForKey:@"description"] forKey:(NSString *)kMDItemDisplayName];
-	[attributes setObject:[dictionary objectForKey:@"tag"] forKey:(NSString *)kMDItemKeywords];
-	if ([dictionary objectForKey:@"extended"]) {
-		[attributes setObject:[dictionary objectForKey:@"extended"] forKey:(NSString *)kMDItemDescription];
-	} else {
-		[attributes setObject:@"" forKey:(NSString *)kMDItemDescription];
-	}
-	[attributes setObject:[dictionary objectForKey:@"time"] forKey:(NSString *)kMDItemContentCreationDate];
-	[attributes setObject:[dictionary objectForKey:@"time"] forKey:(NSString *)kMDItemContentModificationDate];
-	[attributes setObject:@"Del.icio.us Bookmark" forKey:(NSString *)kMDItemKind];
-	[attributes setObject:[dictionary objectForKey:@"href"] forKey:@"kMDItemURL"];
-	
+	dictionary = [[[NSDictionary alloc] initWithContentsOfFile:(NSString *)pathToFile] autorelease];
+	if (dictionary != nil) {
+		[attributes setObject:[dictionary objectForKey:@"description"] forKey:(NSString *)kMDItemDisplayName];
+		[attributes setObject:[dictionary objectForKey:@"tag"] forKey:(NSString *)kMDItemKeywords];
+		if ([dictionary objectForKey:@"extended"]) {
+			[attributes setObject:[dictionary objectForKey:@"extended"] forKey:(NSString *)kMDItemDescription];
+		} else {
+			[attributes setObject:@"" forKey:(NSString *)kMDItemDescription];
+		}
+		[attributes setObject:[dictionary objectForKey:@"time"] forKey:(NSString *)kMDItemContentCreationDate];
+		[attributes setObject:[dictionary objectForKey:@"time"] forKey:(NSString *)kMDItemContentModificationDate];
+		[attributes setObject:@"Del.icio.us Bookmark" forKey:(NSString *)kMDItemKind];
+		[attributes setObject:[dictionary objectForKey:@"href"] forKey:@"kMDItemURL"];
+		result = YES;
+	}	
 	[pool release];
-    return YES;
+    return result;
 }
