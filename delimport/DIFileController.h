@@ -13,6 +13,7 @@
 
 }
 
+- (NSDictionary*) readDictionaryForHash:(NSString*) hash;
 - (void)saveDictionary:(NSDictionary *)dictionary;
 
 - (void)saveDictionaries:(NSSet *)dictionaries;

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -11,8 +11,8 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 6C0CA2C30CEC8244000B18FC /* Build configuration list for PBXAggregateTarget "Release" */;
 			buildPhases = (
-				6C0CA2CF0CEC8269000B18FC /* ShellScript */,
-				6C0CA2DF0CEC8554000B18FC /* ShellScript */,
+				6CE1A806104AD07C0078D932 /* delete files */,
+				6C0CA2CF0CEC8269000B18FC /* zip */,
 			);
 			dependencies = (
 				6C0CA2CD0CEC8263000B18FC /* PBXTargetDependency */,
@@ -24,14 +24,14 @@
 
 /* Begin PBXBuildFile section */
 		6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C2FC9670CD9396900C1FD91 /* Localizable.strings */; };
-		6C38B3700CCF5C6D00E5933D /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8ED4DF0CCE598100FE0E05 /* Keychain.framework */; };
-		6C38B39E0CCF5CF300E5933D /* Keychain.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C8ED4DF0CCE598100FE0E05 /* Keychain.framework */; };
-		6CD57B260CEC5261009D3862 /* del.icio.us Spotlight Interface.mdimporter in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */; };
-		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		6CA955C2104AA40200F225D2 /* LogIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA955C0104AA40200F225D2 /* LogIn.xib */; };
+		6CA95704104AB8B000F225D2 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA95703104AB8B000F225D2 /* Keychain.framework */; };
+		6CD57B260CEC5261009D3862 /* del.icio.us Spotlight Interface.mdimporter in Copy mdimporter */ = {isa = PBXBuildFile; fileRef = 6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */; };
+		6CE1A7CE104AC5130078D932 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA955BD104AA3E100F225D2 /* MainMenu.xib */; };
+		6CE1A7F4104AD04A0078D932 /* Keychain.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA95703104AB8B000F225D2 /* Keychain.framework */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		BF138E6B082587AC009D55C5 /* LogIn.nib in Resources */ = {isa = PBXBuildFile; fileRef = BF138E69082587AB009D55C5 /* LogIn.nib */; };
 		BF138E70082587BA009D55C5 /* DILoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF138E6F082587BA009D55C5 /* DILoginController.m */; };
 		BF5D10070824537F0096CC1B /* DIBookmarksController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5D10060824537F0096CC1B /* DIBookmarksController.m */; };
 		BFAA6A2C0821F9F300828D28 /* DIFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAA6A2B0821F9F300828D28 /* DIFileController.m */; };
@@ -126,24 +126,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6C8ED5930CCE5B1F00FE0E05 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				6C38B39E0CCF5CF300E5933D /* Keychain.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6C8F4BB90CCE48D300BFE897 /* CopyFiles */ = {
+		6C8F4BB90CCE48D300BFE897 /* Copy mdimporter */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents/Library/Spotlight;
 			dstSubfolderSpec = 1;
 			files = (
-				6CD57B260CEC5261009D3862 /* del.icio.us Spotlight Interface.mdimporter in CopyFiles */,
+				6CD57B260CEC5261009D3862 /* del.icio.us Spotlight Interface.mdimporter in Copy mdimporter */,
 			);
+			name = "Copy mdimporter";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CE1A802104AD05B0078D932 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6CE1A7F4104AD04A0078D932 /* Keychain.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -153,17 +155,19 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* delimport_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delimport_Prefix.pch; sourceTree = "<group>"; };
 		6C2FC9680CD9396900C1FD91 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6C8ED4DF0CCE598100FE0E05 /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = /Users/Shared/builds/Deployment/Keychain.framework; sourceTree = "<absolute>"; };
 		6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "del.icio.us Spotlight Interface.xcodeproj"; path = "spotlight_interface/del.icio.us Spotlight Interface.xcodeproj"; sourceTree = "<group>"; };
 		6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Keychain.xcodeproj; path = ../Keychain/Keychain.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6CA955BD104AA3E100F225D2 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		6CA955C1104AA40200F225D2 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/LogIn.xib; sourceTree = "<group>"; };
+		6CA95690104AADDB00F225D2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6CA95703104AB8B000F225D2 /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = ../../builds/Deployment/Keychain.framework; sourceTree = SOURCE_ROOT; };
+		6CE1A7CA104AC4E70078D932 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/LogIn.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* delimport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delimport.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF138E6A082587AB009D55C5 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/LogIn.nib; sourceTree = "<group>"; };
 		BF138E6E082587BA009D55C5 /* DILoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILoginController.h; sourceTree = "<group>"; };
 		BF138E6F082587BA009D55C5 /* DILoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILoginController.m; sourceTree = "<group>"; };
 		BF5D10050824537F0096CC1B /* DIBookmarksController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIBookmarksController.h; sourceTree = "<group>"; };
@@ -178,8 +182,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C38B3700CCF5C6D00E5933D /* Keychain.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				6CA95704104AB8B000F225D2 /* Keychain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +206,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6C8ED4DF0CCE598100FE0E05 /* Keychain.framework */,
+				6CA95703104AB8B000F225D2 /* Keychain.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -254,10 +258,10 @@
 			children = (
 				BFAA6A5F082210D500828D28 /* delicious.icns */,
 				6C2FC9670CD9396900C1FD91 /* Localizable.strings */,
+				6CA955C0104AA40200F225D2 /* LogIn.xib */,
+				6CA955BD104AA3E100F225D2 /* MainMenu.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
-				BF138E69082587AB009D55C5 /* LogIn.nib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -305,9 +309,9 @@
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
+				6CE1A802104AD05B0078D932 /* Copy Frameworks */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				6C8F4BB90CCE48D300BFE897 /* CopyFiles */,
-				6C8ED5930CCE5B1F00FE0E05 /* CopyFiles */,
+				6C8F4BB90CCE48D300BFE897 /* Copy mdimporter */,
 			);
 			buildRules = (
 			);
@@ -325,8 +329,15 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 6CCC64330A40CC7F00540A50 /* Build configuration list for PBXProject "delimport" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				de,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* delimport */;
 			projectDirPath = "";
 			projectReferences = (
@@ -432,42 +443,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				6CE1A7CE104AC5130078D932 /* MainMenu.xib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				BFAA6A60082210D500828D28 /* delicious.icns in Resources */,
-				BF138E6B082587AC009D55C5 /* LogIn.nib in Resources */,
 				6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */,
+				6CA955C2104AA40200F225D2 /* LogIn.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6C0CA2CF0CEC8269000B18FC /* ShellScript */ = {
+		6C0CA2CF0CEC8269000B18FC /* zip */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = zip;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# compress the distribution folder\nrm -f \"$BUILT_PRODUCTS_DIR/delimport.zip\"\ncd \"$BUILT_PRODUCTS_DIR\"\nzip -y -r \"delimport.zip\" \"delimport.app\"";
 		};
-		6C0CA2DF0CEC8554000B18FC /* ShellScript */ = {
+		6CE1A806104AD07C0078D932 /* delete files */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "delete files";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# compress the distribution folder\nrm -f \"$BUILT_PRODUCTS_DIR/delimport.zip\"\ncd \"$BUILT_PRODUCTS_DIR\"\nzip -y -r \"delimport.zip\" \"delimport.app\"";
+			shellScript = "cd \"$BUILT_PRODUCTS_DIR\"\ncd \"delimport.app/Contents/\"\n\n# Keyhcain cleanup\n# kill headers\ncd \"Frameworks/Keychain.framework/\"\nls | grep Headers | xargs rm\ncd \"Versions/A\"\nls | grep Headers | xargs rm -r \n\n# kill unused localisations\n#cd \"Resources\"\n#ls | grep lproj | grep -v -E '(de|en).lproj' | xargs rm -r\n\n# kill 64bit binary\n#cd ..\n#lipo -output SparkleGC -remove x86_64 SparkleGC";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -502,28 +515,22 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				29B97319FDCFA39411CA2CEA /* English */,
-			);
-			name = MainMenu.nib;
-			sourceTree = "<group>";
-		};
 		6C2FC9670CD9396900C1FD91 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6C2FC9680CD9396900C1FD91 /* English */,
+				6CA95690104AADDB00F225D2 /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		BF138E69082587AB009D55C5 /* LogIn.nib */ = {
+		6CA955C0104AA40200F225D2 /* LogIn.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BF138E6A082587AB009D55C5 /* English */,
+				6CA955C1104AA40200F225D2 /* English */,
+				6CE1A7CA104AC4E70078D932 /* de */,
 			);
-			name = LogIn.nib;
+			name = LogIn.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -546,7 +553,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = Release;
-				ZERO_LINK = NO;
 			};
 			name = Deployment;
 		};
@@ -560,78 +566,67 @@
 		6CCC64300A40CC7F00540A50 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				CODE_SIGN_IDENTITY = "earthlingsoft Software";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Shared/builds/Deployment,
-				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = delimport_Prefix.pch;
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_USE_REGISTER_FUNCTION_CALLS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_SHADOW = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PREBINDING = NO;
 				PRODUCT_NAME = delimport;
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = YES;
 			};
 			name = Development;
 		};
 		6CCC64310A40CC7F00540A50 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_2)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../../../Shared/builds/Deployment\"";
+				CODE_SIGN_IDENTITY = "earthlingsoft Software";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = delimport_Prefix.pch;
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_USE_REGISTER_FUNCTION_CALLS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_SHADOW = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				PRODUCT_NAME = delimport;
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = NO;
 			};
 			name = Deployment;
 		};
 		6CCC64320A40CC7F00540A50 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/Shared/builds/Deployment,
-				);
+				CODE_SIGN_IDENTITY = "earthlingsoft Software";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = delimport_Prefix.pch;
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_USE_REGISTER_FUNCTION_CALLS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_SHADOW = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -643,29 +638,59 @@
 		6CCC64340A40CC7F00540A50 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_VERSION = 4.0;
+				"GCC_VERSION[arch=i386]" = 4.0;
+				"GCC_VERSION[arch=ppc]" = 4.0;
+				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
+				SDKROOT = macosx10.4;
+				"SDKROOT[arch=i386]" = macosx10.4;
+				"SDKROOT[arch=ppc]" = macosx10.4;
+				"SDKROOT[arch=x86_64]" = macosx10.5;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Development;
 		};
 		6CCC64350A40CC7F00540A50 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_VERSION = 4.0;
+				"GCC_VERSION[arch=i386]" = 4.0;
+				"GCC_VERSION[arch=ppc]" = 4.0;
+				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
+				SDKROOT = macosx10.4;
+				"SDKROOT[arch=i386]" = macosx10.4;
+				"SDKROOT[arch=ppc]" = macosx10.4;
+				"SDKROOT[arch=x86_64]" = macosx10.5;
 			};
 			name = Deployment;
 		};
 		6CCC64360A40CC7F00540A50 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_VERSION = 4.0;
+				"GCC_VERSION[arch=i386]" = 4.0;
+				"GCC_VERSION[arch=ppc]" = 4.0;
+				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
+				SDKROOT = macosx10.4;
+				"SDKROOT[arch=i386]" = macosx10.4;
+				"SDKROOT[arch=ppc]" = macosx10.4;
+				"SDKROOT[arch=x86_64]" = macosx10.5;
 			};
 			name = Default;
 		};

@@ -14,7 +14,6 @@
 #import <Keychain/KeychainItem.h>
 
 
-
 @implementation DIBookmarksController
 
 // Shamelessly stolen from http://www.cocoadev.com/index.pl?AddingYourAppToLoginWindow
@@ -48,6 +47,20 @@
 		[NSApp activateIgnoringOtherApps:YES];
 		[[alert window] makeKeyAndOrderFront:self];
 		[[alert window] center];
+
+		// suppression button for X.5 and above
+		SEL suppressionSelector = @selector(setShowsSuppressionButton:);
+		if ([alert respondsToSelector:suppressionSelector]) {
+			NSMethodSignature * sig = [alert methodSignatureForSelector:suppressionSelector];
+									   
+			NSInvocation * inv = [NSInvocation invocationWithMethodSignature:sig];
+			[inv setSelector:suppressionSelector];
+			[inv setTarget:alert];
+			BOOL yes = YES;
+			[inv setArgument:&yes atIndex:2];
+			[inv invoke];
+		}
+		
 		if ([alert runModal] == NSAlertDefaultReturn) {
 			// OK, Create item and add it - should work even if no pref existed
 			NSDictionary	*myAppItem;
@@ -138,8 +151,34 @@
 {
 	[self addToLoginItems];
 	[self getKeychainUserAndPass];
+	[self verifyMetadataCache];
 	[self updateList:nil];
 }
+
+
+/*
+ Check whether all our metadata files exist and are correct. 
+ Make metadata consistent if they are not.
+ In particular this ensures none of the Metadata files are lost in case Caches are deleted. Unfortunately Apple consider it wise to store Spotlight Metadata inside the Caches folder.
+*/  
+- (void) verifyMetadataCache {
+	NSEnumerator * bookmarkEnumerator = [bookmarks objectEnumerator];
+	NSDictionary * bookmark;
+	while ( bookmark = [bookmarkEnumerator nextObject] ) {
+		NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+		NSString * hash = [bookmark objectForKey:@"hash"];
+		if ( hash != nil) {
+			NSDictionary * fileBookmark = [fileController readDictionaryForHash: hash];
+			if (fileBookmark == nil || [bookmark isEqualToDictionary:fileBookmark] == NO) {
+				// we don't have a bookmkark or the bookmark ist not in sync with the cache
+				// NSLog(@"replacing cache file %@", hash);
+				[fileController saveDictionary:bookmark];
+			}
+		}
+		[pool release];
+	}
+}
+
 
 
 - (NSXMLDocument *)deliciousAPIResponseToRequest:(NSString *)request
@@ -153,7 +192,7 @@
 	
 	NSHTTPURLResponse *response;
 	NSData * xmlData = [NSURLConnection sendSynchronousRequest:URLRequest returningResponse:&response error:&error];
-	NSLog(@"API request: '%@', response: %i, d/l size: %i", request, [response statusCode], [xmlData length], nil);
+	// NSLog(@"API request: '%@', response: %i, d/l size: %i", request, [response statusCode], [xmlData length], nil);
 	if ([response statusCode] == 401) {
 		[self logIn];
 		return nil;
@@ -233,40 +272,44 @@
 		return;
 	}
 	
+	// the work gets done here and data could be lost, so disable sudden termination
+	[self disableSuddenTermination];
 	NSXMLDocument *allPostsDoc = [self deliciousAPIResponseToRequest:@"posts/all"];
-	if (allPostsDoc == nil) {
-		return;
-	}
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	NSXMLElement *root = [allPostsDoc rootElement];
-//	NSLog([NSString stringWithFormat:@"-updateList, downloaded %@", [root description],nil]);
-	if (![[root name] isEqualTo:@"html"]) {
-		// it seems that error pages may come through without the right status code but an error message HTML page
-		// avoid reading those as they'll destroy our metadata cache
-		NSMutableSet *updatedPosts = [NSMutableSet set];
-		NSEnumerator *postEnumerator = [[root children] objectEnumerator], *attributeEnumerator;
-		NSXMLElement *post;
-		NSXMLNode *attribute;
-		NSMutableDictionary *postDictionary;
-		while (post = [postEnumerator nextObject]) {
-			postDictionary = [[NSMutableDictionary alloc] init];
-			attributeEnumerator = [[post attributes] objectEnumerator];
-			while (attribute = [attributeEnumerator nextObject]) {
-			if ([[attribute name] isEqualToString:@"time"]) {
-				[postDictionary setObject:[self dateFromXMLDateString:[attribute stringValue]] forKey:[attribute name]];
-			} else if ([[attribute name] isEqualToString:@"tag"]) {
-				[postDictionary setObject:[[attribute stringValue] componentsSeparatedByString:@" "] forKey:[attribute name]];
-			} else {
-				[postDictionary setObject:[attribute stringValue] forKey:[attribute name]];
+	if (allPostsDoc != nil) {
+		NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+		NSXMLElement *root = [allPostsDoc rootElement];
+		//	NSLog([NSString stringWithFormat:@"-updateList, downloaded %@", [root description],nil]);
+		if (![[root name] isEqualTo:@"html"]) {
+			// it seems that error pages may come through without the right status code but an error message HTML page
+			// avoid reading those as they'll destroy our metadata cache
+			NSMutableSet *updatedPosts = [NSMutableSet set];
+			NSEnumerator *postEnumerator = [[root children] objectEnumerator], *attributeEnumerator;
+			NSXMLElement *post;
+			NSXMLNode *attribute;
+			NSMutableDictionary *postDictionary;
+			while (post = [postEnumerator nextObject]) {
+				NSAutoreleasePool * pool2 = [[NSAutoreleasePool alloc] init];
+				postDictionary = [[NSMutableDictionary alloc] init];
+				attributeEnumerator = [[post attributes] objectEnumerator];
+				while (attribute = [attributeEnumerator nextObject]) {
+					if ([[attribute name] isEqualToString:@"time"]) {
+						[postDictionary setObject:[self dateFromXMLDateString:[attribute stringValue]] forKey:[attribute name]];
+					} else if ([[attribute name] isEqualToString:@"tag"]) {
+						[postDictionary setObject:[[attribute stringValue] componentsSeparatedByString:@" "] forKey:[attribute name]];
+					} else {
+						[postDictionary setObject:[attribute stringValue] forKey:[attribute name]];
+					}
+				}
+				
+				[updatedPosts addObject:[NSDictionary dictionaryWithDictionary:postDictionary]];
+				[postDictionary release];
+				[pool2 release];
 			}
-			}
-			
-			[updatedPosts addObject:[NSDictionary dictionaryWithDictionary:postDictionary]];
-			[postDictionary release];
+		[self setBookmarks:updatedPosts];
 		}
-	[self setBookmarks:updatedPosts];
+		[pool release];
 	}
-	[pool release];
+	[self enableSuddenTermination];
 }
 
 - (void)setBookmarks:(NSSet *)newMarks
@@ -275,7 +318,7 @@
 	NSMutableSet *postsToDelete = [[bookmarks mutableCopy] autorelease];
 	[postsToAdd minusSet:bookmarks];
 	[postsToDelete minusSet:newMarks];
-	NSLog(@"Deleting %d entries, then adding %d...", [postsToDelete count], [postsToAdd count]);
+	// NSLog(@"Deleting %d entries, then adding %d...", [postsToDelete count], [postsToAdd count]);
 	[fileController deleteDictionaries:postsToDelete];
 	[fileController saveDictionaries:postsToAdd];
 
@@ -297,7 +340,7 @@
 	[timer invalidate];
 	// set up a new timer, potentially using an updated time interval
 	[NSTimer scheduledTimerWithTimeInterval:[self currentUpdateInterval] target:self selector:@selector(updateList:) userInfo:nil repeats:NO];
-	NSLog(@"-setupTimer: Timer set to trigger in %fs", [self currentUpdateInterval]);
+	// NSLog(@"-setupTimer: Timer set to trigger in %fs", [self currentUpdateInterval]);
 }	
 	
 
@@ -337,6 +380,26 @@
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
 	return [fileController openFile:filename];
+}
+
+
+/*
+ uglyuglyugly but sudden termination seems worth the hassle
+*/
+- (void) enableSuddenTermination {
+	NSProcessInfo * pI = [NSProcessInfo processInfo];
+	SEL enableSuddenTerminationSelector = @selector(enableSuddenTermination);
+	if ([pI respondsToSelector:enableSuddenTerminationSelector]) { // we're running X.6 or higher
+		[pI performSelector:enableSuddenTerminationSelector];
+	}
+}
+
+- (void) disableSuddenTermination {
+	NSProcessInfo * pI = [NSProcessInfo processInfo];
+	SEL enableSuddenTerminationSelector = @selector(disableSuddenTermination);
+	if ([pI respondsToSelector:enableSuddenTerminationSelector]) { // we're running X.6 or higher
+		[pI performSelector:enableSuddenTerminationSelector];
+	}
 }
 
 @end

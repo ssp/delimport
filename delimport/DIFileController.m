@@ -28,14 +28,25 @@
 	return nil;
 }
 
+
+- (NSDictionary*) readDictionaryForHash:(NSString*) hash {
+	NSString * cachePath = [self cachePath];
+	NSString * fileName = [hash stringByAppendingPathExtension:@"delicious"];
+	NSString * path = [cachePath stringByAppendingPathComponent:fileName];
+	NSMutableDictionary * fileBookmark = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+	[fileBookmark setObject:hash forKey:@"hash"];
+	return fileBookmark;
+}
+
+
+
 - (void)saveDictionary:(NSDictionary *)dictionary
 {
-	NSMutableDictionary *mutable = [dictionary mutableCopy];
-	NSNumber *osType = [NSNumber numberWithUnsignedLong:'DELi'];
+	NSMutableDictionary *mutable = [[dictionary mutableCopy] autorelease];
 	NSString *path = [[[self cachePath] stringByAppendingPathComponent:[mutable objectForKey:@"hash"]] stringByAppendingPathExtension:@"delicious"];
-	if (!path) {
-		return;
-	}
+	if (!path) { return; }
+	
+	NSNumber *osType = [NSNumber numberWithUnsignedLong:'DELi'];
 	[mutable removeObjectForKey:@"hash"];
 	[mutable writeToFile:path atomically:YES];
 	
@@ -48,7 +59,6 @@
 	if (date) {
 		[[NSFileManager defaultManager] changeFileAttributes:[NSDictionary dictionaryWithObject:date forKey:NSFileCreationDate] atPath:path];
 	}
-	[mutable release];
 }
 
 - (void)deleteDictionary:(NSDictionary *)dictionary

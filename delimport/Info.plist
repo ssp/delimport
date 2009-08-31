@@ -44,12 +44,14 @@
 	<key>CFBundleSignature</key>
 	<string>DeLi</string>
 	<key>CFBundleVersion</key>
-	<string>0.3</string>
+	<string>0.4</string>
 	<key>LSUIElement</key>
 	<integer>1</integer>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSSupportsSuddenTermination</key>
+	<string>YES</string>
 </dict>
 </plist>

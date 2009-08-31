@@ -26,10 +26,13 @@
 }
 
 - (void)logIn;
+- (void)verifyMetadataCache;
 - (void)updateList:(NSTimer *)timer;
 - (void)setBookmarks:(NSSet *)newMarks;
 
 - (void) setupTimer:(NSTimer*) timer;
 - (NSTimeInterval) currentUpdateInterval;
 
+- (void) enableSuddenTermination;
+- (void) disableSuddenTermination;
 @end
