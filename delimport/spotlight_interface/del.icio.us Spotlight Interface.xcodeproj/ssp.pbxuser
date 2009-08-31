@@ -1,7 +1,6 @@
 // !$*UTF8*$!
 {
 	089C1669FE841209C02AAC07 /* Project object */ = {
-		activeArchitecture = i386;
 		activeBuildConfigurationName = Deployment;
 		activeTarget = 8D57630D048677EA00EA77CD /* del.icio.us Spotlight Interface */;
 		codeSenseManager = 6CCC64520A40CCF800540A50 /* Code sense */;
@@ -62,24 +61,58 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 216826180;
-			PBXWorkspaceStateSaveDate = 216826180;
+			PBXPerProjectTemplateStateSaveDate = 273355799;
+			PBXWorkspaceStateSaveDate = 273355799;
+		};
+		perUserProjectItems = {
+			6CA95538104A693200F225D2 /* PBXTextBookmark */ = 6CA95538104A693200F225D2 /* PBXTextBookmark */;
+			6CE1A8D7104B143E0078D932 /* PBXTextBookmark */ = 6CE1A8D7104B143E0078D932 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 6CCC64510A40CCF800540A50 /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {421, 1078}}";
+			sepNavSelRange = "{2023, 0}";
+			sepNavVisRange = "{0, 0}";
+		};
+	};
+	6CA95538104A693200F225D2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */;
+		name = "GetMetadataForFile.m: 52";
+		rLen = 0;
+		rLoc = 2023;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
 	};
 	6CCC64510A40CCF800540A50 /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
 		isSCMEnabled = 0;
 		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = Kalle;
+			};
 		};
 		scmType = "";
 	};
 	6CCC64520A40CCF800540A50 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	6CE1A8D7104B143E0078D932 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */;
+		name = "GetMetadataForFile.m: 52";
+		rLen = 0;
+		rLoc = 2023;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
 	};
 	8D57630D048677EA00EA77CD /* del.icio.us Spotlight Interface */ = {
 		activeExec = 0;
