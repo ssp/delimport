@@ -159,6 +159,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* delimport_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delimport_Prefix.pch; sourceTree = "<group>"; };
 		6C2FC9680CD9396900C1FD91 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C5A9C66104D9A030092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C5A9C67104D9A090092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/LogIn.xib; sourceTree = "<group>"; };
 		6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "del.icio.us Spotlight Interface.xcodeproj"; path = "spotlight_interface/del.icio.us Spotlight Interface.xcodeproj"; sourceTree = "<group>"; };
 		6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Keychain.xcodeproj; path = ../Keychain/Keychain.xcodeproj; sourceTree = SOURCE_ROOT; };
 		6CA955BD104AA3E100F225D2 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				French,
 				German,
 				de,
+				fr,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* delimport */;
 			projectDirPath = "";
@@ -520,6 +523,7 @@
 			children = (
 				6C2FC9680CD9396900C1FD91 /* English */,
 				6CA95690104AADDB00F225D2 /* de */,
+				6C5A9C66104D9A030092E350 /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -529,6 +533,7 @@
 			children = (
 				6CA955C1104AA40200F225D2 /* English */,
 				6CE1A7CA104AC4E70078D932 /* de */,
+				6C5A9C67104D9A090092E350 /* fr */,
 			);
 			name = LogIn.xib;
 			sourceTree = "<group>";
@@ -582,6 +587,7 @@
 				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
 				GCC_WARN_SHADOW = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PREBINDING = NO;
