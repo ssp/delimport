@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C05A19C06CAA52B00D84F6F /* GetMetadataForFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */; };
+		6C5AA553104EAA120092E350 /* DIFileController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5AA552104EAA120092E350 /* DIFileController.h */; };
+		6C5AA555104EAA180092E350 /* DIBookmarksController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5AA554104EAA180092E350 /* DIBookmarksController.h */; };
 		8D576312048677EA00EA77CD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB77B6FE84183AC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
 		8D576314048677EA00EA77CD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
 		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
@@ -22,6 +24,8 @@
 		08FB77B6FE84183AC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMetadataForFile.m; sourceTree = "<group>"; };
+		6C5AA552104EAA120092E350 /* DIFileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIFileController.h; path = ../DIFileController.h; sourceTree = SOURCE_ROOT; };
+		6C5AA554104EAA180092E350 /* DIBookmarksController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIBookmarksController.h; path = ../DIBookmarksController.h; sourceTree = SOURCE_ROOT; };
 		8D576316048677EA00EA77CD /* del.icio.us Spotlight Interface.mdimporter */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "del.icio.us Spotlight Interface.mdimporter"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BFAA6A140821F44D00828D28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -81,6 +85,8 @@
 			children = (
 				2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */,
 				08FB77B6FE84183AC02AAC07 /* main.c */,
+				6C5AA552104EAA120092E350 /* DIFileController.h */,
+				6C5AA554104EAA180092E350 /* DIBookmarksController.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -100,6 +106,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C5AA553104EAA120092E350 /* DIFileController.h in Headers */,
+				6C5AA555104EAA180092E350 /* DIBookmarksController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

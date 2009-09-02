@@ -2,6 +2,9 @@
 #include <CoreServices/CoreServices.h> 
 #include <Foundation/Foundation.h> 
 
+#include "DIFileController.h"
+#include "DIBookmarksController.h"
+
 /* -----------------------------------------------------------------------------
    Step 1
    Set the UTI types the importer supports
@@ -56,17 +59,29 @@ Boolean GetMetadataForFile(void* thisInterface,
 	
 	dictionary = [[[NSDictionary alloc] initWithContentsOfFile:(NSString *)pathToFile] autorelease];
 	if (dictionary != nil) {
-		[attributes setObject:[dictionary objectForKey:@"description"] forKey:(NSString *)kMDItemDisplayName];
-		[attributes setObject:[dictionary objectForKey:@"tag"] forKey:(NSString *)kMDItemKeywords];
-		if ([dictionary objectForKey:@"extended"]) {
-			[attributes setObject:[dictionary objectForKey:@"extended"] forKey:(NSString *)kMDItemDescription];
+		NSString * displayName = [dictionary objectForKey: DINameKey];
+		if ( displayName == nil ) { // try old-style key if no name is found
+			displayName = [dictionary objectForKey: DIDeliciousNameKey];
+		}
+		[attributes setObject: displayName forKey:(NSString *)kMDItemDisplayName];			
+
+		NSString * URLString = [dictionary objectForKey: DIURLKey ];
+		if ( URLString == nil ) { // try old-style key if no URL is found
+			URLString = [dictionary objectForKey: DIDeliciousURLKey ];
+		}
+		[attributes setObject: URLString forKey:@"kMDItemURL"];			
+		
+		NSString * description = [dictionary objectForKey:@"extended"];
+		if ( description != nil) {
+			[attributes setObject:description forKey:(NSString *)kMDItemDescription];
 		} else {
 			[attributes setObject:@"" forKey:(NSString *)kMDItemDescription];
 		}
-		[attributes setObject:[dictionary objectForKey:@"time"] forKey:(NSString *)kMDItemContentCreationDate];
-		[attributes setObject:[dictionary objectForKey:@"time"] forKey:(NSString *)kMDItemContentModificationDate];
-		[attributes setObject:@"Del.icio.us Bookmark" forKey:(NSString *)kMDItemKind];
-		[attributes setObject:[dictionary objectForKey:@"href"] forKey:@"kMDItemURL"];
+		
+		[attributes setObject:[dictionary objectForKey: DITagKey ] forKey:(NSString *)kMDItemKeywords];
+		[attributes setObject:[dictionary objectForKey: DITimeKey ] forKey:(NSString *)kMDItemContentCreationDate];
+		[attributes setObject:[dictionary objectForKey: DITimeKey ] forKey:(NSString *)kMDItemContentModificationDate];
+
 		result = YES;
 	}	
 	[pool release];

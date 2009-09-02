@@ -9,7 +9,11 @@
 			<note>
             </note>
             <previewattrs>
+kMDItemDisplayName
+kMDItemURL
 kMDItemContentCreationDate
+kMDItemKeywords
+kMDItemDescription
             </previewattrs>
             <allattrs>
 kMDItemURL
@@ -21,6 +25,7 @@ kMDItemDescription
 kMDItemKind
             </allattrs>
             <displayattrs>
+kMDItemDisplayName
 kMDItemURL
 kMDItemContentCreationDate
 kMDItemKeywords
