@@ -10,6 +10,14 @@
 
 #define DIMinutesBetweenChecks @"MinutesBetweenChecks"
 #define DIDisplayErrorMessages @"DisplayErrorMessages"
+#define DILoginAlertSuppressedKey @"Suppress Add To Login Items Aler"
+
+#define DIDefaultsBookmarksKey @"DeliciousBookmarks"
+#define DIDefaultsLastUpdateKey @"DeliciousLastUpdate"
+
+#define DITagKey @"tag"
+
+
 
 @class DIFileController, DILoginController;
 
@@ -26,6 +34,7 @@
 }
 
 - (void)logIn;
+- (void) updateMetadataCache;
 - (void)verifyMetadataCache;
 - (void)updateList:(NSTimer *)timer;
 - (void)setBookmarks:(NSSet *)newMarks;

@@ -11,7 +11,8 @@
 
 @implementation DIFileController
 
-- (NSString *)cachePath
+
+- (NSString *) cachePath
 {
 	NSString *cachePath = [@"~/Library/Caches/Metadata/delimport" stringByExpandingTildeInPath];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -29,12 +30,23 @@
 }
 
 
-- (NSDictionary*) readDictionaryForHash:(NSString*) hash {
+- (NSString *) pathForHash: (NSString*) hash {
+	NSString * fileName = [hash stringByAppendingPathExtension: DIDeliciousFileNameExtension];
 	NSString * cachePath = [self cachePath];
-	NSString * fileName = [hash stringByAppendingPathExtension:@"delicious"];
-	NSString * path = [cachePath stringByAppendingPathComponent:fileName];
+	NSString * path = nil;
+	if (cachePath) {
+		path = [cachePath stringByAppendingPathComponent:fileName];
+	}
+	
+	return path;
+}
+
+
+
+- (NSDictionary*) readDictionaryForHash:(NSString*) hash {
+	NSString * path = [self pathForHash: hash];
 	NSMutableDictionary * fileBookmark = [NSMutableDictionary dictionaryWithContentsOfFile:path];
-	[fileBookmark setObject:hash forKey:@"hash"];
+	[fileBookmark setObject:hash forKey: DIHashKey];
 	return fileBookmark;
 }
 
@@ -43,32 +55,37 @@
 - (void)saveDictionary:(NSDictionary *)dictionary
 {
 	NSMutableDictionary *mutable = [[dictionary mutableCopy] autorelease];
-	NSString *path = [[[self cachePath] stringByAppendingPathComponent:[mutable objectForKey:@"hash"]] stringByAppendingPathExtension:@"delicious"];
-	if (!path) { return; }
-	
-	NSNumber *osType = [NSNumber numberWithUnsignedLong:'DELi'];
-	[mutable removeObjectForKey:@"hash"];
-	[mutable writeToFile:path atomically:YES];
-	
-	[[NSFileManager defaultManager] changeFileAttributes:[NSDictionary dictionaryWithObject:osType forKey:NSFileHFSTypeCode] atPath:path];
-	/*  set creation date do delicious date
-		setting the modification date might be more useful, but would be 'wrong' as we don't know when the bookmark was last edited.
-		investigate setting the last used date as well? This would put bookmarks in their correct order in Spotlight results.
-	 */
-	NSDate * date = [mutable objectForKey:@"time"];
-	if (date) {
-		[[NSFileManager defaultManager] changeFileAttributes:[NSDictionary dictionaryWithObject:date forKey:NSFileCreationDate] atPath:path];
+	NSString *path = [self pathForHash: [mutable objectForKey: DIHashKey]];
+
+	if ( path != nil ) {
+		NSNumber *osType = [NSNumber numberWithUnsignedLong:'DELi'];
+		[mutable removeObjectForKey: DIHashKey];
+		[mutable writeToFile:path atomically:YES];
+		
+		[[NSFileManager defaultManager] changeFileAttributes:[NSDictionary dictionaryWithObject:osType forKey:NSFileHFSTypeCode] atPath:path];
+
+		/*  set creation date do delicious date
+			setting the modification date might be more useful, but would be 'wrong' as we don't know when the bookmark was last edited.
+			investigate setting the last used date as well? This would put bookmarks in their correct order in Spotlight results.
+		 */
+		NSDate * date = [mutable objectForKey: DITimeKey];
+		if (date) {
+			[[NSFileManager defaultManager] changeFileAttributes:[NSDictionary dictionaryWithObject:date forKey:NSFileCreationDate] atPath:path];
+		}
 	}
 }
 
+
+
 - (void)deleteDictionary:(NSDictionary *)dictionary
 {
-	NSString *path = [[[self cachePath] stringByAppendingPathComponent:[dictionary objectForKey:@"hash"]] stringByAppendingPathExtension:@"delicious"];
-	if (!path) {
-		return;
+	NSString *path = [self pathForHash: [dictionary objectForKey: DIHashKey]];
+	if ( path != nil) {
+		[[NSFileManager defaultManager] removeFileAtPath:path handler:nil];
 	}
-	[[NSFileManager defaultManager] removeFileAtPath:path handler:nil];
 }
+
+
 
 - (void)saveDictionaries:(NSSet *)dictionaries
 {
@@ -94,11 +111,15 @@
 	if (!dict) {
 		return NO;
 	}
-	NSString *href = [dict objectForKey:@"href"];
-	if (!href) {
-		return NO;
+	NSString * URLString = [dict objectForKey: DIURLKey];
+	if (URLString == nil) {
+		// try old-style key first
+		URLString = [dict objectForKey: DIDeliciousURLKey];
+		if (URLString == nil) { // fail
+			return NO;
+		}
 	}
-	return [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:href]];
+	return [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:URLString]];
 }
 
 @end

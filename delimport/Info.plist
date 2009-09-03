@@ -14,7 +14,7 @@
 			<key>CFBundleTypeIconFile</key>
 			<string>delicious</string>
 			<key>CFBundleTypeName</key>
-			<string>Del.icio.us Bookmark</string>
+			<string>delicious Bookmark</string>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
 				<string>DELi</string>
@@ -45,6 +45,8 @@
 	<string>DeLi</string>
 	<key>CFBundleVersion</key>
 	<string>0.4</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.4</string>
 	<key>LSUIElement</key>
 	<integer>1</integer>
 	<key>NSMainNibFile</key>
@@ -53,5 +55,29 @@
 	<string>NSApplication</string>
 	<key>NSSupportsSuddenTermination</key>
 	<string>YES</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>com.apple.safari.bookmark</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>delicious Bookmark</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.ianhenderson.delicious.bookmark</string>
+			<key>UTTypeReferenceURL</key>
+			<string>http://del.icio.us/</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>com.apple.ostype</key>
+				<string>DELi</string>
+				<key>public.filename-extension</key>
+				<array>
+					<string>delicious</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

@@ -39,7 +39,7 @@
 			myAppItemIndex++;
 		}
 	}
-	if (!foundMyAppItem) {
+	if (!foundMyAppItem && ![[NSUserDefaults standardUserDefaults] boolForKey:DILoginAlertSuppressedKey]) {
 		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Automatically launch delimport on login?", @"Headline for add to login items dialogue") defaultButton:NSLocalizedString(@"Add", @"Add") alternateButton:NSLocalizedString(@"Don't Add", @"Don't Add") 
 			otherButton:nil 
 			informativeTextWithFormat:NSLocalizedString(@"delimport will be added to your login items. This will ensure delimport runs and downloads your del.icio.us bookmarks whenever you are using this account.", @"Explanatory text for add to login items dialogue")
@@ -90,6 +90,24 @@
 				}
 			}
 		}
+		
+		// For X.5 and higher evaluate the suppression button
+		SEL suppressionButtonSelector = @selector(suppressionButton);
+		if ([alert respondsToSelector:suppressionButtonSelector]) {
+			NSMethodSignature * sig = [alert methodSignatureForSelector:suppressionButtonSelector];
+			
+			NSInvocation * inv = [NSInvocation invocationWithMethodSignature:sig];
+			[inv setSelector:suppressionButtonSelector];
+			[inv setTarget:alert];
+			[inv invoke];
+			NSButton * suppressionButton;
+			[inv getReturnValue:&suppressionButton];
+			if ([suppressionButton state] == NSOnState) {
+				[[NSUserDefaults standardUserDefaults] setBool:YES forKey:DILoginAlertSuppressedKey];
+				[[NSUserDefaults standardUserDefaults] synchronize];
+			}		
+		}
+	
 	}
 	
 	if (changed) {
@@ -127,13 +145,13 @@
 	if (self != nil) {
 		username = nil;
 		password = nil;
-		NSArray *bookmarkArray = [[NSUserDefaults standardUserDefaults] objectForKey:@"DeliciousBookmarks"];
+		NSArray *bookmarkArray = [[NSUserDefaults standardUserDefaults] objectForKey:DIDefaultsBookmarksKey];
 		if (!bookmarkArray) {
 			bookmarks = [[NSSet alloc] init];
 		} else {
 			bookmarks = [[NSSet alloc] initWithArray:bookmarkArray];
 		}
-		lastUpdate = [[NSUserDefaults standardUserDefaults] objectForKey:@"DeliciousLastUpdate"];
+		lastUpdate = [[NSUserDefaults standardUserDefaults] objectForKey:DIDefaultsLastUpdateKey];
 		if (!lastUpdate) {
 			lastUpdate = [[NSDate distantPast] retain];
 		} else if (![lastUpdate isKindOfClass:[NSDate class]]) {
@@ -151,9 +169,40 @@
 {
 	[self addToLoginItems];
 	[self getKeychainUserAndPass];
+	[self updateMetadataCache];
 	[self verifyMetadataCache];
 	[self updateList:nil];
 }
+
+
+
+
+/*
+ The keys for the URL and page Name were changed for v 0.4 to conform to Apple's Safari bookmarks (and no longer to the keys used by delicious). In case the some stored bookmark still contains an old-style key, upgrade the whole cache.
+*/
+- (void) updateMetadataCache {
+	NSDictionary * bookmark = [bookmarks anyObject];
+	if (bookmark != nil) {
+		if ( [bookmark objectForKey: DIDeliciousURLKey] ) {
+			// old style key => convert
+			NSMutableSet * updatedBookmarks = [NSMutableSet setWithCapacity:[bookmarks count]];
+			NSEnumerator * bookmarkEnumerator = [bookmarks objectEnumerator];
+			while ( bookmark = [bookmarkEnumerator nextObject] ) {
+				NSMutableDictionary * newBookmark = [[bookmark mutableCopy] autorelease];
+				NSString * URL = [newBookmark objectForKey: DIDeliciousURLKey];
+				[newBookmark removeObjectForKey: DIDeliciousURLKey];
+				[newBookmark setValue:URL forKey: DIURLKey];
+				NSString * Name = [newBookmark objectForKey: DIDeliciousNameKey];
+				[newBookmark removeObjectForKey: DIDeliciousNameKey];
+				[newBookmark setValue:Name forKey: DINameKey];
+				[updatedBookmarks addObject:newBookmark];
+			}
+			[self setBookmarks: updatedBookmarks];
+		}
+	}
+}
+
+
 
 
 /*
@@ -161,12 +210,14 @@
  Make metadata consistent if they are not.
  In particular this ensures none of the Metadata files are lost in case Caches are deleted. Unfortunately Apple consider it wise to store Spotlight Metadata inside the Caches folder.
 */  
-- (void) verifyMetadataCache {
+- (void) verifyMetadataCache {	
 	NSEnumerator * bookmarkEnumerator = [bookmarks objectEnumerator];
 	NSDictionary * bookmark;
+	
 	while ( bookmark = [bookmarkEnumerator nextObject] ) {
 		NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-		NSString * hash = [bookmark objectForKey:@"hash"];
+		
+		NSString * hash = [bookmark objectForKey: DIHashKey];
 		if ( hash != nil) {
 			NSDictionary * fileBookmark = [fileController readDictionaryForHash: hash];
 			if (fileBookmark == nil || [bookmark isEqualToDictionary:fileBookmark] == NO) {
@@ -187,7 +238,7 @@
 	NSError *error;
 	NSURL *requestURL = [NSURL URLWithString:[apiPath stringByAppendingString:request]];
 	NSMutableURLRequest *URLRequest = [NSMutableURLRequest requestWithURL:requestURL];
-	[URLRequest setValue: @"delimport/0.3" forHTTPHeaderField: @"User-Agent"];
+	[URLRequest setValue: @"delimport/0.4" forHTTPHeaderField: @"User-Agent"];
 	// NSLog(@"%f", [URLRequest timeoutInterval]);
 	
 	NSHTTPURLResponse *response;
@@ -256,7 +307,7 @@
 		return [NSDate distantFuture];
 	}
 	NSXMLElement *updateElement = [updateDoc rootElement];
-	return [self dateFromXMLDateString:[[updateElement attributeForName:@"time"] stringValue]];
+	return [self dateFromXMLDateString:[[updateElement attributeForName: DITimeKey] stringValue]];
 }
 
 - (void)updateList:(NSTimer *)timer
@@ -276,7 +327,6 @@
 	[self disableSuddenTermination];
 	NSXMLDocument *allPostsDoc = [self deliciousAPIResponseToRequest:@"posts/all"];
 	if (allPostsDoc != nil) {
-		NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 		NSXMLElement *root = [allPostsDoc rootElement];
 		//	NSLog([NSString stringWithFormat:@"-updateList, downloaded %@", [root description],nil]);
 		if (![[root name] isEqualTo:@"html"]) {
@@ -288,14 +338,20 @@
 			NSXMLNode *attribute;
 			NSMutableDictionary *postDictionary;
 			while (post = [postEnumerator nextObject]) {
-				NSAutoreleasePool * pool2 = [[NSAutoreleasePool alloc] init];
+				NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 				postDictionary = [[NSMutableDictionary alloc] init];
 				attributeEnumerator = [[post attributes] objectEnumerator];
 				while (attribute = [attributeEnumerator nextObject]) {
-					if ([[attribute name] isEqualToString:@"time"]) {
+					if ([[attribute name] isEqualToString: DITimeKey]) {
 						[postDictionary setObject:[self dateFromXMLDateString:[attribute stringValue]] forKey:[attribute name]];
-					} else if ([[attribute name] isEqualToString:@"tag"]) {
+					} else if ([[attribute name] isEqualToString: DITagKey]) {
 						[postDictionary setObject:[[attribute stringValue] componentsSeparatedByString:@" "] forKey:[attribute name]];
+					} else if ([[attribute name] isEqualToString: DIDeliciousURLKey]) {
+						// use Safari-style key for URL
+						[postDictionary setObject:[attribute stringValue] forKey:DIURLKey];
+					} else if ([[attribute name] isEqualToString: DIDeliciousNameKey]) {
+						// use Safari-style key for Name
+						[postDictionary setObject:[attribute stringValue] forKey:DINameKey];
 					} else {
 						[postDictionary setObject:[attribute stringValue] forKey:[attribute name]];
 					}
@@ -303,11 +359,10 @@
 				
 				[updatedPosts addObject:[NSDictionary dictionaryWithDictionary:postDictionary]];
 				[postDictionary release];
-				[pool2 release];
+				[pool release];
 			}
 		[self setBookmarks:updatedPosts];
 		}
-		[pool release];
 	}
 	[self enableSuddenTermination];
 }
@@ -316,8 +371,8 @@
 {
 	NSMutableSet *postsToAdd = [[newMarks mutableCopy] autorelease];
 	NSMutableSet *postsToDelete = [[bookmarks mutableCopy] autorelease];
-	[postsToAdd minusSet:bookmarks];
 	[postsToDelete minusSet:newMarks];
+	[postsToAdd minusSet:bookmarks];
 	// NSLog(@"Deleting %d entries, then adding %d...", [postsToDelete count], [postsToAdd count]);
 	[fileController deleteDictionaries:postsToDelete];
 	[fileController saveDictionaries:postsToAdd];
@@ -329,8 +384,8 @@
 	NSData *archivedDate = [NSArchiver archivedDataWithRootObject:lastUpdate];
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	[defaults setObject:[bookmarks allObjects] forKey:@"DeliciousBookmarks"];
-	[defaults setObject:archivedDate forKey:@"DeliciousLastUpdate"];
+	[defaults setObject:[bookmarks allObjects] forKey:DIDefaultsBookmarksKey];
+	[defaults setObject:archivedDate forKey:DIDefaultsLastUpdateKey];
 	[defaults synchronize];
 }
 
@@ -362,6 +417,7 @@
 	return (minutes * 60.0);
 }
 
+
 - (void)dealloc
 {
 	[username release];
@@ -374,9 +430,8 @@
 	
 	[super dealloc];
 }
-- (void)applicationWillTerminate:(NSNotification *)notification
-{
-}
+
+
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
 	return [fileController openFile:filename];

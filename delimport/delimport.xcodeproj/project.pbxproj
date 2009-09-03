@@ -53,75 +53,89 @@
 			remoteGlobalIDString = 8D576316048677EA00EA77CD;
 			remoteInfo = "del.icio.us Spotlight Interface";
 		};
-		6C8ED57A0CCE5AE600FE0E05 /* PBXContainerItemProxy */ = {
+		6C5A9DCD104E8D120092E350 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75A0750209438F8E008B9D9E;
 			remoteInfo = Keychain;
 		};
-		6C8ED57C0CCE5AE600FE0E05 /* PBXContainerItemProxy */ = {
+		6C5A9DCF104E8D120092E350 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75A0750C09438F8E008B9D9E;
 			remoteInfo = CSSMUtilsTester;
 		};
-		6C8ED57E0CCE5AE600FE0E05 /* PBXContainerItemProxy */ = {
+		6C5A9DD1104E8D120092E350 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75A0751709438F8E008B9D9E;
 			remoteInfo = NSCalendarDateAdditionsTester;
 		};
-		6C8ED5800CCE5AE600FE0E05 /* PBXContainerItemProxy */ = {
+		6C5A9DD3104E8D120092E350 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75A0752209438F8F008B9D9E;
 			remoteInfo = OutputStreamsTester;
 		};
-		6C8ED5820CCE5AE600FE0E05 /* PBXContainerItemProxy */ = {
+		6C5A9DD5104E8D120092E350 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75A0752E09438F8F008B9D9E;
 			remoteInfo = StringsTester;
 		};
-		6C8ED5840CCE5AE600FE0E05 /* PBXContainerItemProxy */ = {
+		6C5A9DD7104E8D120092E350 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75A0753A09438F8F008B9D9E;
 			remoteInfo = MDSProber;
 		};
-		6C8ED5860CCE5AE600FE0E05 /* PBXContainerItemProxy */ = {
+		6C5A9DD9104E8D120092E350 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7540B3F20999D1C000469F46;
 			remoteInfo = SKeyPlusTester;
 		};
-		6C8ED5880CCE5AE600FE0E05 /* PBXContainerItemProxy */ = {
+		6C5A9DDB104E8D120092E350 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7594D4910A2045E00090E497;
 			remoteInfo = CertificateGenerationTester;
 		};
-		6C8ED58A0CCE5AE600FE0E05 /* PBXContainerItemProxy */ = {
+		6C5A9DDD104E8D120092E350 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7556131F0A2090B5003428C2;
 			remoteInfo = CryptographyTester;
 		};
-		6C8ED58C0CCE5AE600FE0E05 /* PBXContainerItemProxy */ = {
+		6C5A9DDF104E8D120092E350 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75C6E8F70A3BDCD8009201FB;
 			remoteInfo = KeychainSearchTester;
+		};
+		6C5A9DE1104E8D120092E350 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7506C03D0A3DB5A8000DB6BD;
+			remoteInfo = PolicyProber;
+		};
+		6C5A9DE3104E8D120092E350 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7588AC770CA3916D00466BEF;
+			remoteInfo = KeychainTester;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -161,12 +175,14 @@
 		6C2FC9680CD9396900C1FD91 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C5A9C66104D9A030092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C5A9C67104D9A090092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/LogIn.xib; sourceTree = "<group>"; };
+		6C5AA488104E91210092E350 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6C5AA489104E912A0092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "del.icio.us Spotlight Interface.xcodeproj"; path = "spotlight_interface/del.icio.us Spotlight Interface.xcodeproj"; sourceTree = "<group>"; };
-		6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Keychain.xcodeproj; path = ../Keychain/Keychain.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Keychain.xcodeproj; path = ../../Keychain/Frameworks/Keychain/Keychain.xcodeproj; sourceTree = SOURCE_ROOT; };
 		6CA955BD104AA3E100F225D2 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		6CA955C1104AA40200F225D2 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/LogIn.xib; sourceTree = "<group>"; };
 		6CA95690104AADDB00F225D2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6CA95703104AB8B000F225D2 /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = ../../builds/Deployment/Keychain.framework; sourceTree = SOURCE_ROOT; };
+		6CA95703104AB8B000F225D2 /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = ../../../builds/Deployment/Keychain.framework; sourceTree = SOURCE_ROOT; };
 		6CE1A7CA104AC4E70078D932 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/LogIn.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* delimport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delimport.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,19 +301,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6C8ED56D0CCE5AE600FE0E05 /* Products */ = {
+		6C5A9DBE104E8D120092E350 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C8ED57B0CCE5AE600FE0E05 /* Keychain.framework */,
-				6C8ED57D0CCE5AE600FE0E05 /* CSSMUtilsTester */,
-				6C8ED57F0CCE5AE600FE0E05 /* NSCalendarDateAdditionsTester */,
-				6C8ED5810CCE5AE600FE0E05 /* OutputStreamsTester */,
-				6C8ED5830CCE5AE600FE0E05 /* StringsTester */,
-				6C8ED5850CCE5AE600FE0E05 /* MDSProber */,
-				6C8ED5870CCE5AE600FE0E05 /* SKeyPlusTester */,
-				6C8ED5890CCE5AE600FE0E05 /* CertificateGenerationTester */,
-				6C8ED58B0CCE5AE600FE0E05 /* CryptographyTester */,
-				6C8ED58D0CCE5AE600FE0E05 /* KeychainSearchTester */,
+				6C5A9DCE104E8D120092E350 /* Keychain.framework */,
+				6C5A9DD0104E8D120092E350 /* CSSMUtilsTester */,
+				6C5A9DD2104E8D120092E350 /* NSCalendarDateAdditionsTester */,
+				6C5A9DD4104E8D120092E350 /* OutputStreamsTester */,
+				6C5A9DD6104E8D120092E350 /* StringsTester */,
+				6C5A9DD8104E8D120092E350 /* MDSProber */,
+				6C5A9DDA104E8D120092E350 /* SKeyPlusTester */,
+				6C5A9DDC104E8D120092E350 /* CertificateGenerationTester */,
+				6C5A9DDE104E8D120092E350 /* CryptographyTester */,
+				6C5A9DE0104E8D120092E350 /* KeychainSearchTester */,
+				6C5A9DE2104E8D120092E350 /* PolicyProber */,
+				6C5A9DE4104E8D120092E350 /* KeychainTester */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -349,7 +367,7 @@
 					ProjectRef = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
 				},
 				{
-					ProductGroup = 6C8ED56D0CCE5AE600FE0E05 /* Products */;
+					ProductGroup = 6C5A9DBE104E8D120092E350 /* Products */;
 					ProjectRef = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 				},
 			);
@@ -369,74 +387,88 @@
 			remoteRef = 6C38B3450CCF5C4400E5933D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6C8ED57B0CCE5AE600FE0E05 /* Keychain.framework */ = {
+		6C5A9DCE104E8D120092E350 /* Keychain.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Keychain.framework;
-			remoteRef = 6C8ED57A0CCE5AE600FE0E05 /* PBXContainerItemProxy */;
+			remoteRef = 6C5A9DCD104E8D120092E350 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6C8ED57D0CCE5AE600FE0E05 /* CSSMUtilsTester */ = {
+		6C5A9DD0104E8D120092E350 /* CSSMUtilsTester */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = CSSMUtilsTester;
-			remoteRef = 6C8ED57C0CCE5AE600FE0E05 /* PBXContainerItemProxy */;
+			remoteRef = 6C5A9DCF104E8D120092E350 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6C8ED57F0CCE5AE600FE0E05 /* NSCalendarDateAdditionsTester */ = {
+		6C5A9DD2104E8D120092E350 /* NSCalendarDateAdditionsTester */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = NSCalendarDateAdditionsTester;
-			remoteRef = 6C8ED57E0CCE5AE600FE0E05 /* PBXContainerItemProxy */;
+			remoteRef = 6C5A9DD1104E8D120092E350 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6C8ED5810CCE5AE600FE0E05 /* OutputStreamsTester */ = {
+		6C5A9DD4104E8D120092E350 /* OutputStreamsTester */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = OutputStreamsTester;
-			remoteRef = 6C8ED5800CCE5AE600FE0E05 /* PBXContainerItemProxy */;
+			remoteRef = 6C5A9DD3104E8D120092E350 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6C8ED5830CCE5AE600FE0E05 /* StringsTester */ = {
+		6C5A9DD6104E8D120092E350 /* StringsTester */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = StringsTester;
-			remoteRef = 6C8ED5820CCE5AE600FE0E05 /* PBXContainerItemProxy */;
+			remoteRef = 6C5A9DD5104E8D120092E350 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6C8ED5850CCE5AE600FE0E05 /* MDSProber */ = {
+		6C5A9DD8104E8D120092E350 /* MDSProber */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = MDSProber;
-			remoteRef = 6C8ED5840CCE5AE600FE0E05 /* PBXContainerItemProxy */;
+			remoteRef = 6C5A9DD7104E8D120092E350 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6C8ED5870CCE5AE600FE0E05 /* SKeyPlusTester */ = {
+		6C5A9DDA104E8D120092E350 /* SKeyPlusTester */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = SKeyPlusTester;
-			remoteRef = 6C8ED5860CCE5AE600FE0E05 /* PBXContainerItemProxy */;
+			remoteRef = 6C5A9DD9104E8D120092E350 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6C8ED5890CCE5AE600FE0E05 /* CertificateGenerationTester */ = {
+		6C5A9DDC104E8D120092E350 /* CertificateGenerationTester */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = CertificateGenerationTester;
-			remoteRef = 6C8ED5880CCE5AE600FE0E05 /* PBXContainerItemProxy */;
+			remoteRef = 6C5A9DDB104E8D120092E350 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6C8ED58B0CCE5AE600FE0E05 /* CryptographyTester */ = {
+		6C5A9DDE104E8D120092E350 /* CryptographyTester */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = CryptographyTester;
-			remoteRef = 6C8ED58A0CCE5AE600FE0E05 /* PBXContainerItemProxy */;
+			remoteRef = 6C5A9DDD104E8D120092E350 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6C8ED58D0CCE5AE600FE0E05 /* KeychainSearchTester */ = {
+		6C5A9DE0104E8D120092E350 /* KeychainSearchTester */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = KeychainSearchTester;
-			remoteRef = 6C8ED58C0CCE5AE600FE0E05 /* PBXContainerItemProxy */;
+			remoteRef = 6C5A9DDF104E8D120092E350 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C5A9DE2104E8D120092E350 /* PolicyProber */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = PolicyProber;
+			remoteRef = 6C5A9DE1104E8D120092E350 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C5A9DE4104E8D120092E350 /* KeychainTester */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = KeychainTester;
+			remoteRef = 6C5A9DE3104E8D120092E350 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -514,6 +546,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				089C165DFE840E0CC02AAC07 /* English */,
+				6C5AA488104E91210092E350 /* de */,
+				6C5AA489104E912A0092E350 /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
