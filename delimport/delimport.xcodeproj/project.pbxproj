@@ -46,96 +46,110 @@
 			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = delimport;
 		};
-		6C38B3450CCF5C4400E5933D /* PBXContainerItemProxy */ = {
+		6C2C57431066F83000A90A54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		6C2C57451066F83500A90A54 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8D576316048677EA00EA77CD;
+			proxyType = 1;
+			remoteGlobalIDString = 8D57630D048677EA00EA77CD;
 			remoteInfo = "del.icio.us Spotlight Interface";
 		};
-		6C5A9DCD104E8D120092E350 /* PBXContainerItemProxy */ = {
+		6C3840491066F5850001AAAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75A0750209438F8E008B9D9E;
 			remoteInfo = Keychain;
 		};
-		6C5A9DCF104E8D120092E350 /* PBXContainerItemProxy */ = {
+		6C38404B1066F5850001AAAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75A0750C09438F8E008B9D9E;
 			remoteInfo = CSSMUtilsTester;
 		};
-		6C5A9DD1104E8D120092E350 /* PBXContainerItemProxy */ = {
+		6C38404D1066F5850001AAAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75A0751709438F8E008B9D9E;
 			remoteInfo = NSCalendarDateAdditionsTester;
 		};
-		6C5A9DD3104E8D120092E350 /* PBXContainerItemProxy */ = {
+		6C38404F1066F5850001AAAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75A0752209438F8F008B9D9E;
 			remoteInfo = OutputStreamsTester;
 		};
-		6C5A9DD5104E8D120092E350 /* PBXContainerItemProxy */ = {
+		6C3840511066F5850001AAAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75A0752E09438F8F008B9D9E;
 			remoteInfo = StringsTester;
 		};
-		6C5A9DD7104E8D120092E350 /* PBXContainerItemProxy */ = {
+		6C3840531066F5850001AAAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75A0753A09438F8F008B9D9E;
 			remoteInfo = MDSProber;
 		};
-		6C5A9DD9104E8D120092E350 /* PBXContainerItemProxy */ = {
+		6C3840551066F5850001AAAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7540B3F20999D1C000469F46;
 			remoteInfo = SKeyPlusTester;
 		};
-		6C5A9DDB104E8D120092E350 /* PBXContainerItemProxy */ = {
+		6C3840571066F5850001AAAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7594D4910A2045E00090E497;
 			remoteInfo = CertificateGenerationTester;
 		};
-		6C5A9DDD104E8D120092E350 /* PBXContainerItemProxy */ = {
+		6C3840591066F5850001AAAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7556131F0A2090B5003428C2;
 			remoteInfo = CryptographyTester;
 		};
-		6C5A9DDF104E8D120092E350 /* PBXContainerItemProxy */ = {
+		6C38405B1066F5850001AAAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 75C6E8F70A3BDCD8009201FB;
 			remoteInfo = KeychainSearchTester;
 		};
-		6C5A9DE1104E8D120092E350 /* PBXContainerItemProxy */ = {
+		6C38405D1066F5850001AAAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7506C03D0A3DB5A8000DB6BD;
 			remoteInfo = PolicyProber;
 		};
-		6C5A9DE3104E8D120092E350 /* PBXContainerItemProxy */ = {
+		6C38405F1066F5850001AAAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7588AC770CA3916D00466BEF;
 			remoteInfo = KeychainTester;
+		};
+		6C38B3450CCF5C4400E5933D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D576316048677EA00EA77CD;
+			remoteInfo = "del.icio.us Spotlight Interface";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -173,12 +187,13 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* delimport_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delimport_Prefix.pch; sourceTree = "<group>"; };
 		6C2FC9680CD9396900C1FD91 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C383FF21066F2370001AAAD /* History & Notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "History & Notes"; sourceTree = "<group>"; };
 		6C5A9C66104D9A030092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C5A9C67104D9A090092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/LogIn.xib; sourceTree = "<group>"; };
 		6C5AA488104E91210092E350 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C5AA489104E912A0092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "del.icio.us Spotlight Interface.xcodeproj"; path = "spotlight_interface/del.icio.us Spotlight Interface.xcodeproj"; sourceTree = "<group>"; };
-		6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Keychain.xcodeproj; path = ../../Keychain/Frameworks/Keychain/Keychain.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Keychain.xcodeproj; path = ../Keychain/Keychain.xcodeproj; sourceTree = SOURCE_ROOT; };
 		6CA955BD104AA3E100F225D2 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		6CA955C1104AA40200F225D2 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/LogIn.xib; sourceTree = "<group>"; };
 		6CA95690104AADDB00F225D2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -251,6 +266,7 @@
 		29B97314FDCFA39411CA2CEA /* delimport */ = {
 			isa = PBXGroup;
 			children = (
+				6C383FF21066F2370001AAAD /* History & Notes */,
 				6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */,
 				6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -293,29 +309,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6C38B3420CCF5C4400E5933D /* Products */ = {
+		6C38403A1066F5850001AAAD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */,
+				6C38404A1066F5850001AAAD /* Keychain.framework */,
+				6C38404C1066F5850001AAAD /* CSSMUtilsTester */,
+				6C38404E1066F5850001AAAD /* NSCalendarDateAdditionsTester */,
+				6C3840501066F5850001AAAD /* OutputStreamsTester */,
+				6C3840521066F5850001AAAD /* StringsTester */,
+				6C3840541066F5850001AAAD /* MDSProber */,
+				6C3840561066F5850001AAAD /* SKeyPlusTester */,
+				6C3840581066F5850001AAAD /* CertificateGenerationTester */,
+				6C38405A1066F5850001AAAD /* CryptographyTester */,
+				6C38405C1066F5850001AAAD /* KeychainSearchTester */,
+				6C38405E1066F5850001AAAD /* PolicyProber */,
+				6C3840601066F5850001AAAD /* KeychainTester */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6C5A9DBE104E8D120092E350 /* Products */ = {
+		6C38B3420CCF5C4400E5933D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C5A9DCE104E8D120092E350 /* Keychain.framework */,
-				6C5A9DD0104E8D120092E350 /* CSSMUtilsTester */,
-				6C5A9DD2104E8D120092E350 /* NSCalendarDateAdditionsTester */,
-				6C5A9DD4104E8D120092E350 /* OutputStreamsTester */,
-				6C5A9DD6104E8D120092E350 /* StringsTester */,
-				6C5A9DD8104E8D120092E350 /* MDSProber */,
-				6C5A9DDA104E8D120092E350 /* SKeyPlusTester */,
-				6C5A9DDC104E8D120092E350 /* CertificateGenerationTester */,
-				6C5A9DDE104E8D120092E350 /* CryptographyTester */,
-				6C5A9DE0104E8D120092E350 /* KeychainSearchTester */,
-				6C5A9DE2104E8D120092E350 /* PolicyProber */,
-				6C5A9DE4104E8D120092E350 /* KeychainTester */,
+				6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -336,6 +352,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				6C2C57441066F83000A90A54 /* PBXTargetDependency */,
+				6C2C57461066F83500A90A54 /* PBXTargetDependency */,
 			);
 			name = delimport;
 			productInstallPath = "$(HOME)/Applications";
@@ -367,7 +385,7 @@
 					ProjectRef = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
 				},
 				{
-					ProductGroup = 6C5A9DBE104E8D120092E350 /* Products */;
+					ProductGroup = 6C38403A1066F5850001AAAD /* Products */;
 					ProjectRef = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 				},
 			);
@@ -380,95 +398,95 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		6C38404A1066F5850001AAAD /* Keychain.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Keychain.framework;
+			remoteRef = 6C3840491066F5850001AAAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C38404C1066F5850001AAAD /* CSSMUtilsTester */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = CSSMUtilsTester;
+			remoteRef = 6C38404B1066F5850001AAAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C38404E1066F5850001AAAD /* NSCalendarDateAdditionsTester */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = NSCalendarDateAdditionsTester;
+			remoteRef = 6C38404D1066F5850001AAAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C3840501066F5850001AAAD /* OutputStreamsTester */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = OutputStreamsTester;
+			remoteRef = 6C38404F1066F5850001AAAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C3840521066F5850001AAAD /* StringsTester */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = StringsTester;
+			remoteRef = 6C3840511066F5850001AAAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C3840541066F5850001AAAD /* MDSProber */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = MDSProber;
+			remoteRef = 6C3840531066F5850001AAAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C3840561066F5850001AAAD /* SKeyPlusTester */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = SKeyPlusTester;
+			remoteRef = 6C3840551066F5850001AAAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C3840581066F5850001AAAD /* CertificateGenerationTester */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = CertificateGenerationTester;
+			remoteRef = 6C3840571066F5850001AAAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C38405A1066F5850001AAAD /* CryptographyTester */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = CryptographyTester;
+			remoteRef = 6C3840591066F5850001AAAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C38405C1066F5850001AAAD /* KeychainSearchTester */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = KeychainSearchTester;
+			remoteRef = 6C38405B1066F5850001AAAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C38405E1066F5850001AAAD /* PolicyProber */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = PolicyProber;
+			remoteRef = 6C38405D1066F5850001AAAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C3840601066F5850001AAAD /* KeychainTester */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = KeychainTester;
+			remoteRef = 6C38405F1066F5850001AAAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "del.icio.us Spotlight Interface.mdimporter";
 			remoteRef = 6C38B3450CCF5C4400E5933D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A9DCE104E8D120092E350 /* Keychain.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Keychain.framework;
-			remoteRef = 6C5A9DCD104E8D120092E350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A9DD0104E8D120092E350 /* CSSMUtilsTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = CSSMUtilsTester;
-			remoteRef = 6C5A9DCF104E8D120092E350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A9DD2104E8D120092E350 /* NSCalendarDateAdditionsTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = NSCalendarDateAdditionsTester;
-			remoteRef = 6C5A9DD1104E8D120092E350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A9DD4104E8D120092E350 /* OutputStreamsTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = OutputStreamsTester;
-			remoteRef = 6C5A9DD3104E8D120092E350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A9DD6104E8D120092E350 /* StringsTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = StringsTester;
-			remoteRef = 6C5A9DD5104E8D120092E350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A9DD8104E8D120092E350 /* MDSProber */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = MDSProber;
-			remoteRef = 6C5A9DD7104E8D120092E350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A9DDA104E8D120092E350 /* SKeyPlusTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = SKeyPlusTester;
-			remoteRef = 6C5A9DD9104E8D120092E350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A9DDC104E8D120092E350 /* CertificateGenerationTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = CertificateGenerationTester;
-			remoteRef = 6C5A9DDB104E8D120092E350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A9DDE104E8D120092E350 /* CryptographyTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = CryptographyTester;
-			remoteRef = 6C5A9DDD104E8D120092E350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A9DE0104E8D120092E350 /* KeychainSearchTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = KeychainSearchTester;
-			remoteRef = 6C5A9DDF104E8D120092E350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A9DE2104E8D120092E350 /* PolicyProber */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = PolicyProber;
-			remoteRef = 6C5A9DE1104E8D120092E350 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A9DE4104E8D120092E350 /* KeychainTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = KeychainTester;
-			remoteRef = 6C5A9DE3104E8D120092E350 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -538,6 +556,16 @@
 			isa = PBXTargetDependency;
 			target = 8D1107260486CEB800E47090 /* delimport */;
 			targetProxy = 6C0CA2CC0CEC8263000B18FC /* PBXContainerItemProxy */;
+		};
+		6C2C57441066F83000A90A54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Keychain;
+			targetProxy = 6C2C57431066F83000A90A54 /* PBXContainerItemProxy */;
+		};
+		6C2C57461066F83500A90A54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "del.icio.us Spotlight Interface";
+			targetProxy = 6C2C57451066F83500A90A54 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -624,6 +652,7 @@
 				IBC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = delimport;
 				WRAPPER_EXTENSION = app;
@@ -647,6 +676,7 @@
 				GCC_WARN_SHADOW = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
+				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				PRODUCT_NAME = delimport;
 				WRAPPER_EXTENSION = app;
