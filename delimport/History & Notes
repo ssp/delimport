@@ -1,0 +1,18 @@
+
+
+
+v0.4 (2009-09, ssp-web@earthlingsoft.net)
+Add 64bit binaries (comes with a current version of the Keychain framework to make that work).
+Support Sudden Termination on X.6.
+Add German localisation.
+Add French localisation (thanks to Ronald Leroux).
+Change bookmark format to actually conform to that of Safari's bookmarks as claimed by our UTI.
+Check whether all bookmarks are present on launch and re-create them if necessary.
+Add ability to not show 'Add to Login Items' dialogue again on X.5 and above.
+
+
+http://ianhenderson.org/delimport.html
+
+v0.3, released 5th December 2007- no more installer, supports leopard, runs on x86, makes waffles – thanks Sven! - Download (381 KB)
+
+v0.2, released 14th August 2006- supports new del.icio.us api – please upgrade if you are still running version 0.1.2 - Download (454 KB)
