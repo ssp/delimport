@@ -301,7 +301,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>208 57 1011 674 0 0 1280 778 </string>
+						<string>181 74 1011 674 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -331,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>20</integer>
 										<key>bookmark</key>
-										<string>6C5AA5E0104EB51D0092E350</string>
+										<string>6C184334106E1DFD004F996D</string>
 										<key>history</key>
 										<array>
 											<string>6C5A9E0E104E8DD80092E350</string>
@@ -340,7 +340,7 @@
 											<string>6C5AA5DC104EB51D0092E350</string>
 											<string>6C5AA5DD104EB51D0092E350</string>
 											<string>6C5AA5DE104EB51D0092E350</string>
-											<string>6C5AA5DF104EB51D0092E350</string>
+											<string>6C5AA736104EDECD0092E350</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -352,14 +352,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {803, 549}}</string>
+								<string>{{0, 0}, {803, 543}}</string>
 								<key>RubberWindowFrame</key>
-								<string>208 57 1011 674 0 0 1280 778 </string>
+								<string>181 74 1011 674 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>549pt</string>
+							<string>543pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -372,14 +372,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 554}, {803, 79}}</string>
+								<string>{{0, 548}, {803, 85}}</string>
 								<key>RubberWindowFrame</key>
-								<string>208 57 1011 674 0 0 1280 778 </string>
+								<string>181 74 1011 674 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>79pt</string>
+							<string>85pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -398,9 +398,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>6C5AA5E1104EB51D0092E350</string>
+				<string>6C184309106E12E8004F996D</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>6C5AA5E2104EB51D0092E350</string>
+				<string>6C18430A106E12E8004F996D</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -538,7 +538,7 @@
 		<string>/Users/ssp/Developer/_open-projects/delimport/delimport/spotlight_interface/del.icio.us Spotlight Interface.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>208 57 1011 674 0 0 1280 778 </string>
+	<string>181 74 1011 674 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -615,7 +615,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>6C8F4CBA0CCE4B9900BFE897</string>
-				<string>6C5AA5E3104EB51D0092E350</string>
+				<string>6C18430B106E12E8004F996D</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

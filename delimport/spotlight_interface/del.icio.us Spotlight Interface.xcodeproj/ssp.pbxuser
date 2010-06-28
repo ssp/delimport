@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	089C1669FE841209C02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Deployment;
+		activeBuildConfigurationName = Development;
 		activeTarget = 8D57630D048677EA00EA77CD /* del.icio.us Spotlight Interface */;
 		addToTargets = (
 			8D57630D048677EA00EA77CD /* del.icio.us Spotlight Interface */,
@@ -64,18 +64,18 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 273588127;
-			PBXWorkspaceStateSaveDate = 273588127;
+			PBXPerProjectTemplateStateSaveDate = 275649247;
+			PBXWorkspaceStateSaveDate = 275649247;
 		};
 		perUserProjectItems = {
+			6C184334106E1DFD004F996D /* PBXTextBookmark */ = 6C184334106E1DFD004F996D /* PBXTextBookmark */;
 			6C5A9E0E104E8DD80092E350 /* PBXTextBookmark */ = 6C5A9E0E104E8DD80092E350 /* PBXTextBookmark */;
 			6C5AA5DA104EB51D0092E350 /* PlistBookmark */ = 6C5AA5DA104EB51D0092E350 /* PlistBookmark */;
 			6C5AA5DB104EB51D0092E350 /* PBXTextBookmark */ = 6C5AA5DB104EB51D0092E350 /* PBXTextBookmark */;
 			6C5AA5DC104EB51D0092E350 /* PBXTextBookmark */ = 6C5AA5DC104EB51D0092E350 /* PBXTextBookmark */;
 			6C5AA5DD104EB51D0092E350 /* PBXTextBookmark */ = 6C5AA5DD104EB51D0092E350 /* PBXTextBookmark */;
 			6C5AA5DE104EB51D0092E350 /* PBXTextBookmark */ = 6C5AA5DE104EB51D0092E350 /* PBXTextBookmark */;
-			6C5AA5DF104EB51D0092E350 /* PBXTextBookmark */ = 6C5AA5DF104EB51D0092E350 /* PBXTextBookmark */;
-			6C5AA5E0104EB51D0092E350 /* PBXTextBookmark */ = 6C5AA5E0104EB51D0092E350 /* PBXTextBookmark */;
+			6C5AA736104EDECD0092E350 /* PBXTextBookmark */ = 6C5AA736104EDECD0092E350 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 6CCC64510A40CCF800540A50 /* Source Control */;
 		userBuildSettings = {
@@ -92,9 +92,19 @@
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{187, 395}\";\n            s = 0;\n        },\n                {\n            r = \"{586, 422}\";\n            s = 0;\n        },\n                {\n            r = \"{1012, 570}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 3553}\";\n    s = 0;\n}";
 			sepNavIntBoundsRect = "{{0, 0}, {742, 896}}";
-			sepNavSelRange = "{2113, 0}";
+			sepNavSelRange = "{1465, 61}";
 			sepNavVisRange = "{646, 1523}";
 		};
+	};
+	6C184334106E1DFD004F996D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */;
+		name = "GetMetadataForFile.m: 72";
+		rLen = 61;
+		rLoc = 2849;
+		rType = 0;
+		vrLen = 1523;
+		vrLoc = 2030;
 	};
 	6C5A9E0E104E8DD80092E350 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -130,14 +140,14 @@
 		);
 		name = "/Users/ssp/Developer/_open-projects/delimport/delimport/spotlight_interface/Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	6C5AA5DB104EB51D0092E350 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 6C5AA554104EAA180092E350 /* DIBookmarksController.h */;
 		name = "DIBookmarksController.h: 17";
 		rLen = 24;
-		rLoc = 394;
+		rLoc = 464;
 		rType = 0;
 		vrLen = 821;
 		vrLoc = 0;
@@ -172,14 +182,7 @@
 		vrLen = 773;
 		vrLoc = 0;
 	};
-	6C5AA5DF104EB51D0092E350 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */;
-		rLen = 1;
-		rLoc = 48;
-		rType = 1;
-	};
-	6C5AA5E0104EB51D0092E350 /* PBXTextBookmark */ = {
+	6C5AA736104EDECD0092E350 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */;
 		name = "GetMetadataForFile.m: 85";
