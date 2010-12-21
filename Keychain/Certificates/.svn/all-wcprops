@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/keychain/!svn/ver/462/trunk/Frameworks/Keychain/Certificates
+END
+CertificateBundle.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Certificates/CertificateBundle.h
+END
+ABPersonAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Certificates/ABPersonAdditions.m
+END
+CertificateGeneration.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/keychain/!svn/ver/462/trunk/Frameworks/Keychain/Certificates/CertificateGeneration.h
+END
+Policy.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Certificates/Policy.h
+END
+CertificateBundle.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Certificates/CertificateBundle.m
+END
+Trust.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Certificates/Trust.h
+END
+Certificate.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Certificates/Certificate.h
+END
+CertificateExtensions.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Certificates/CertificateExtensions.h
+END
+CertificateGeneration.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Certificates/CertificateGeneration.m
+END
+Policy.m
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Certificates/Policy.m
+END
+Trust.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Certificates/Trust.m
+END
+Certificate.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Certificates/Certificate.m
+END
+CertificateExtensions.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Certificates/CertificateExtensions.m
+END
+ABPersonAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/keychain/!svn/ver/433/trunk/Frameworks/Keychain/Certificates/ABPersonAdditions.h
+END

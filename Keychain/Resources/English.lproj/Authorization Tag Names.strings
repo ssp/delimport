@@ -1,0 +1,33 @@
+/* Authorization Tag Names. */
+
+/* The key is the value as defined in cssmtype.h in Apple's Security framework.  Last updated for 10.4.10. */
+/* The value is the human-readable name of the code.  This may be localised. */
+
+
+1 = "Anything";
+
+/* Defined authorization tag values for CSPs */
+57 = "Login";
+41 = "Key generation";
+25 = "Deletion";
+38 = "Exporting wrapped";
+37 = "Exporting clear";
+48 = "Importing wrapped";
+47 = "Importing clear";
+115 = "Signing";
+35 = "Encryption";
+24 = "Decryption";
+59 = "MACing";
+28 = "Key derivation";
+
+/* Defined authorization tag values for DLs */
+22 = "Database creation";
+23 = "Database deletion";
+21 = "Database entry reading";
+19 = "Database entry insertion";
+20 = "Database entry modification";
+17 = "Database entry deletion";
+
+/* Apple-defined ACL authorization tags, from cssmapple.h in the Security framework. */
+65536 = "Changing Access";
+65537 = "Changing Owner";

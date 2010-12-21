@@ -1,43 +1,31 @@
 // !$*UTF8*$!
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
-		activeArchitecture = i386;
 		activeBuildConfigurationName = Deployment;
-		activeExecutable = 6CCC64560A40CDF700540A50 /* CSSMUtilsTester */;
+		activeExecutable = 6CE1A77F104ABE770078D932 /* CSSMUtilsTester */;
+		activeSDKPreference = macosx10.5;
 		activeTarget = 75A0749209438F8E008B9D9E /* Keychain */;
-		codeSenseManager = 6CCC64680A40CE1800540A50 /* Code sense */;
+		codeSenseManager = 6CE1A79A104ABE990078D932 /* Code sense */;
 		executables = (
-			6CCC64560A40CDF700540A50 /* CSSMUtilsTester */,
-			6CCC64570A40CDF700540A50 /* NSCalendarDateAdditionsTester */,
-			6CCC64580A40CDF700540A50 /* OutputStreamsTester */,
-			6CCC64590A40CDF700540A50 /* StringsTester */,
-			6CCC645A0A40CDF700540A50 /* MDSProber */,
-			6CCC645B0A40CDF700540A50 /* SKeyPlusTester */,
-			6CCC645C0A40CDF700540A50 /* CertificateGenerationTester */,
-			6CCC645D0A40CDF700540A50 /* CryptographyTester */,
-			6CCC645E0A40CDF700540A50 /* KeychainSearchTester */,
+			6CE1A77F104ABE770078D932 /* CSSMUtilsTester */,
+			6CE1A780104ABE770078D932 /* NSCalendarDateAdditionsTester */,
+			6CE1A781104ABE770078D932 /* OutputStreamsTester */,
+			6CE1A782104ABE770078D932 /* StringsTester */,
+			6CE1A783104ABE770078D932 /* MDSProber */,
+			6CE1A784104ABE770078D932 /* SKeyPlusTester */,
+			6CE1A785104ABE770078D932 /* CertificateGenerationTester */,
+			6CE1A786104ABE770078D932 /* CryptographyTester */,
+			6CE1A787104ABE770078D932 /* KeychainSearchTester */,
+			6CE1A788104ABE770078D932 /* PolicyProber */,
+			6CE1A789104ABE770078D932 /* KeychainTester */,
 		);
 		perUserDictionary = {
-			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
-				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
-				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
-				PBXFileTableDataSourceColumnWidthsKey = (
-					22,
-					300,
-					340,
-				);
-				PBXFileTableDataSourceColumnsKey = (
-					PBXExecutablesDataSource_ActiveFlagID,
-					PBXExecutablesDataSource_NameID,
-					PBXExecutablesDataSource_CommentsID,
-				);
-			};
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
 				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					400,
+					415,
 					20,
 					48,
 					43,
@@ -59,7 +47,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					360,
+					375,
 					60,
 					20,
 					48,
@@ -76,24 +64,27 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 216827328;
-			PBXWorkspaceStateSaveDate = 216827328;
+			PBXPerProjectTemplateStateSaveDate = 314458886;
+			PBXWorkspaceStateSaveDate = 314458886;
 		};
-		sourceControlManager = 6CCC64670A40CE1800540A50 /* Source Control */;
+		sourceControlManager = 6CE1A799104ABE990078D932 /* Source Control */;
 		userBuildSettings = {
 		};
 	};
-	6CCC64560A40CDF700540A50 /* CSSMUtilsTester */ = {
+	6CE1A77F104ABE770078D932 /* CSSMUtilsTester */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
 		enableDebugStr = 1;
@@ -103,20 +94,24 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = CSSMUtilsTester;
+		showTypeColumn = 0;
 		sourceDirectories = (
 		);
 	};
-	6CCC64570A40CDF700540A50 /* NSCalendarDateAdditionsTester */ = {
+	6CE1A780104ABE770078D932 /* NSCalendarDateAdditionsTester */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
 		enableDebugStr = 1;
@@ -126,20 +121,24 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = NSCalendarDateAdditionsTester;
+		showTypeColumn = 0;
 		sourceDirectories = (
 		);
 	};
-	6CCC64580A40CDF700540A50 /* OutputStreamsTester */ = {
+	6CE1A781104ABE770078D932 /* OutputStreamsTester */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
 		enableDebugStr = 1;
@@ -149,20 +148,24 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = OutputStreamsTester;
+		showTypeColumn = 0;
 		sourceDirectories = (
 		);
 	};
-	6CCC64590A40CDF700540A50 /* StringsTester */ = {
+	6CE1A782104ABE770078D932 /* StringsTester */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
 		enableDebugStr = 1;
@@ -172,20 +175,24 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = StringsTester;
+		showTypeColumn = 0;
 		sourceDirectories = (
 		);
 	};
-	6CCC645A0A40CDF700540A50 /* MDSProber */ = {
+	6CE1A783104ABE770078D932 /* MDSProber */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
 		enableDebugStr = 1;
@@ -195,20 +202,24 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = MDSProber;
+		showTypeColumn = 0;
 		sourceDirectories = (
 		);
 	};
-	6CCC645B0A40CDF700540A50 /* SKeyPlusTester */ = {
+	6CE1A784104ABE770078D932 /* SKeyPlusTester */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
 		enableDebugStr = 1;
@@ -218,20 +229,24 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = SKeyPlusTester;
+		showTypeColumn = 0;
 		sourceDirectories = (
 		);
 	};
-	6CCC645C0A40CDF700540A50 /* CertificateGenerationTester */ = {
+	6CE1A785104ABE770078D932 /* CertificateGenerationTester */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
 		enableDebugStr = 1;
@@ -241,20 +256,24 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = CertificateGenerationTester;
+		showTypeColumn = 0;
 		sourceDirectories = (
 		);
 	};
-	6CCC645D0A40CDF700540A50 /* CryptographyTester */ = {
+	6CE1A786104ABE770078D932 /* CryptographyTester */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
 		enableDebugStr = 1;
@@ -264,20 +283,24 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = CryptographyTester;
+		showTypeColumn = 0;
 		sourceDirectories = (
 		);
 	};
-	6CCC645E0A40CDF700540A50 /* KeychainSearchTester */ = {
+	6CE1A787104ABE770078D932 /* KeychainSearchTester */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
 		enableDebugStr = 1;
@@ -287,101 +310,135 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = KeychainSearchTester;
+		showTypeColumn = 0;
 		sourceDirectories = (
 		);
 	};
-	6CCC64670A40CE1800540A50 /* Source Control */ = {
+	6CE1A788104ABE770078D932 /* PolicyProber */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = PolicyProber;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	6CE1A789104ABE770078D932 /* KeychainTester */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = KeychainTester;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	6CE1A799104ABE990078D932 /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
-		isSCMEnabled = 1;
+		isSCMEnabled = 0;
 		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = keychain;
+			};
 		};
-		scmType = scm.subversion;
 	};
-	6CCC64680A40CE1800540A50 /* Code sense */ = {
+	6CE1A79A104ABE990078D932 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	7500C3ED0482F97300AC536A /* CertificateGeneration.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 1134}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1751}";
-		};
-	};
-	7500C3EE0482F97300AC536A /* CertificateGeneration.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 2702}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{251, 1736}";
-		};
-	};
-	7535FE3307A7095200F8DAFF /* Logging.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 5726}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{16164, 1132}";
-		};
-	};
-	753DDCFD04C2ED6000A8007B /* UtilitySupport.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 4130}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{244, 1629}";
-		};
-	};
-	753F8BEC084215550060298F /* CSSMTypes.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 588}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1713}";
-		};
+	7506C0340A3DB5A8000DB6BD /* PolicyProber */ = {
+		activeExec = 0;
+		executables = (
+			6CE1A788104ABE770078D932 /* PolicyProber */,
+		);
 	};
 	7540B3E90999D1C000469F46 /* SKeyPlusTester */ = {
 		activeExec = 0;
 		executables = (
-			6CCC645B0A40CDF700540A50 /* SKeyPlusTester */,
+			6CE1A784104ABE770078D932 /* SKeyPlusTester */,
 		);
-	};
-	7540B3FD0999D1D600469F46 /* SKeyPlusTester.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {439, 2044}}";
-			sepNavSelRange = "{1590, 30}";
-			sepNavVisRange = "{1299, 525}";
-		};
 	};
 	755613160A2090B5003428C2 /* CryptographyTester */ = {
 		activeExec = 0;
 		executables = (
-			6CCC645D0A40CDF700540A50 /* CryptographyTester */,
+			6CE1A786104ABE770078D932 /* CryptographyTester */,
 		);
 	};
-	75855DF408A0D11700DA2CEC /* MultiThreadingInternal.h */ = {
+	757A97D10CB98BCD00513299 /* CSSMACLEntry.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 784}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{1458, 1306}";
+			sepNavIntBoundsRect = "{{0, 0}, {593, 616}}";
+			sepNavSelRange = "{1634, 0}";
+			sepNavVisRange = "{0, 1688}";
 		};
+	};
+	757A97DE0CB98BCD00513299 /* CSSMManagedModule.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {593, 6202}}";
+			sepNavSelRange = "{3519, 0}";
+			sepNavVisRange = "{3035, 820}";
+		};
+	};
+	757A982A0CB98BF300513299 /* Keychain.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {712, 27622}}";
+			sepNavSelRange = "{13882, 0}";
+			sepNavVisRange = "{13777, 552}";
+		};
+	};
+	757A98950CB98BF300513299 /* Logging.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {593, 4298}}";
+			sepNavSelRange = "{2217, 0}";
+			sepNavVisRange = "{2111, 1054}";
+		};
+	};
+	7588AC6B0CA3916D00466BEF /* KeychainTester */ = {
+		activeExec = 0;
+		executables = (
+			6CE1A789104ABE770078D932 /* KeychainTester */,
+		);
 	};
 	7594D4880A2045E00090E497 /* CertificateGenerationTester */ = {
 		activeExec = 0;
 		executables = (
-			6CCC645C0A40CDF700540A50 /* CertificateGenerationTester */,
+			6CE1A785104ABE770078D932 /* CertificateGenerationTester */,
 		);
-	};
-	7594D49C0A20467E0090E497 /* CertificateGenerationTester.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 2240}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1785}";
-		};
-	};
-	7599CC470946C8B600C54323 /* CompilerIndependence.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 1750}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1645}";
-		};
 	};
 	75A0749209438F8E008B9D9E /* Keychain */ = {
 		activeExec = 0;
@@ -389,147 +446,40 @@
 	75A0750309438F8E008B9D9E /* CSSMUtilsTester */ = {
 		activeExec = 0;
 		executables = (
-			6CCC64560A40CDF700540A50 /* CSSMUtilsTester */,
+			6CE1A77F104ABE770078D932 /* CSSMUtilsTester */,
 		);
 	};
 	75A0750E09438F8E008B9D9E /* NSCalendarDateAdditionsTester */ = {
 		activeExec = 0;
 		executables = (
-			6CCC64570A40CDF700540A50 /* NSCalendarDateAdditionsTester */,
+			6CE1A780104ABE770078D932 /* NSCalendarDateAdditionsTester */,
 		);
 	};
 	75A0751909438F8F008B9D9E /* OutputStreamsTester */ = {
 		activeExec = 0;
 		executables = (
-			6CCC64580A40CDF700540A50 /* OutputStreamsTester */,
+			6CE1A781104ABE770078D932 /* OutputStreamsTester */,
 		);
 	};
 	75A0752409438F8F008B9D9E /* StringsTester */ = {
 		activeExec = 0;
 		executables = (
-			6CCC64590A40CDF700540A50 /* StringsTester */,
+			6CE1A782104ABE770078D932 /* StringsTester */,
 		);
 	};
 	75A0753009438F8F008B9D9E /* MDSProber */ = {
 		activeExec = 0;
 		executables = (
-			6CCC645A0A40CDF700540A50 /* MDSProber */,
+			6CE1A783104ABE770078D932 /* MDSProber */,
 		);
 	};
 	75A0764A0943BA09008B9D9E /* World */ = {
 		activeExec = 0;
 	};
-	75A0B53604207C2700AC536A /* CSSMUtils.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 4396}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1684}";
-		};
-	};
-	75A0B53704207C2700AC536A /* CSSMUtils.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 11032}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{88, 1820}";
-		};
-	};
-	75ACEDA80468A58D000052DF /* NSDataAdditions.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 896}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1686}";
-		};
-	};
-	75ACEDA90468A58D000052DF /* NSDataAdditions.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 6636}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{156, 1670}";
-		};
-	};
-	75B5A53A0471E53700F43DE7 /* KeychainUtils.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 1120}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1690}";
-		};
-	};
 	75C6E8EE0A3BDCD8009201FB /* KeychainSearchTester */ = {
 		activeExec = 0;
 		executables = (
-			6CCC645E0A40CDF700540A50 /* KeychainSearchTester */,
+			6CE1A787104ABE770078D932 /* KeychainSearchTester */,
 		);
-	};
-	F524D43203E0ECFB0168D458 /* AccessControlList.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {644, 5894}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {644, 384}}";
-		};
-	};
-	F524D43603E0ED0C0168D458 /* Access.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {644, 3108}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRect = "{{0, 0}, {644, 384}}";
-		};
-	};
-	F524D43903E0ED1A0168D458 /* Certificate.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 3822}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{37, 1874}";
-		};
-	};
-	F524D43A03E0ED1A0168D458 /* Certificate.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 7378}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{299, 1594}";
-		};
-	};
-	F524D44603E0ED530168D458 /* KeychainItem.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 22680}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{644, 1493}";
-		};
-	};
-	F524D44903E0ED620168D458 /* KeychainSearch.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 2142}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{3869, 1388}";
-		};
-	};
-	F524D44A03E0ED620168D458 /* KeychainSearch.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 8008}}";
-			sepNavSelRange = "{16287, 16}";
-			sepNavVisRange = "{15666, 1300}";
-		};
-	};
-	F566C84A03E0D9AA015C51F3 /* Keychain.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {644, 21028}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{406, 1559}";
-			sepNavVisRect = "{{0, 778}, {644, 384}}";
-		};
-	};
-	F58AA08E03F0808801A8007C /* Trust.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {578, 1008}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{15, 1735}";
-		};
-	};
-	F58AA08F03F0808801A8007C /* Trust.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {531, 3962}}";
-			sepNavSelRange = "{27, 0}";
-			sepNavVisRange = "{15, 1734}";
-			sepNavVisRect = "{{0, 205}, {531, 451}}";
-		};
 	};
 }

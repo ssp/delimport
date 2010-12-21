@@ -1,0 +1,17 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11904\paperh16836\margl1440\margr1440\vieww12900\viewh8760\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\fs24 \cf0 The Keychain framework is provided as-is, with no warrantee expressed or implied, etc etc.  Standard BS disclaimer.\
+\
+More importantly, and from a human now:\
+\
+* Please send in bug reports.  Yes, the whole thing's probably busting at the seams with them, but unfortunately there is a very wide range of uses, and I simply cannot test or even anticipate all of them.  No matter how obvious it seems, if it's not listed as a known issue in the release notes, I probably don't know about it.  Bug reports should go to <wadetregaskis@mac.com> or the SourceForge page at <http://www.sourceforge.net/projects/keychain/> (in the bugs section, of course).\
+\
+* This framework is considered alpha.  The interfaces are not finalized, and now and again I do change things around significantly.  All in the name of progress.  If you use it now, you do run the risk of having your code break in a later release.  However, nearly all the changes are superficial and can easily be resolved by running a quick search & replace on your code.  So don't fear too much.  But don't say you weren't warned, either.\
+\
+* Please contribute.  I simply cannot write everything.  There is so much functionality I would love to add, but I can only do so much, and so I only do what I need personally.  If you need something else, by all means add it.  Once code is contributed I'll take any necessary responsibility for keeping it up to date and so forth, so don't be afraid to throw something at me, even if you don't want to know about it any further.\
+\
+* Refer to the 'Usage.rtf' file for information on how to include the framework into your applications, as well as information on how to build it with various options enabled or disabled.}

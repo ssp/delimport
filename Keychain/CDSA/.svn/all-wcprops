@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/CDSA
+END
+CSSMTypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/CDSA/CSSMTypes.h
+END
+CSSMUtils.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/CDSA/CSSMUtils.m
+END
+CSSMManagedModule.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/CDSA/CSSMManagedModule.m
+END
+CSSMDefaults.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/CDSA/CSSMDefaults.h
+END
+CSSMOpenDataStore.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/keychain/!svn/ver/338/trunk/Frameworks/Keychain/CDSA/CSSMOpenDataStore.h
+END
+CSSMDefaults.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/CDSA/CSSMDefaults.m
+END
+CSSMOpenDataStore.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/CDSA/CSSMOpenDataStore.m
+END
+CSSMControlInternal.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/CDSA/CSSMControlInternal.h
+END
+CSSMControl.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/CDSA/CSSMControl.h
+END
+CSSMACLEntry.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/keychain/!svn/ver/338/trunk/Frameworks/Keychain/CDSA/CSSMACLEntry.h
+END
+CSSMModule.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/keychain/!svn/ver/338/trunk/Frameworks/Keychain/CDSA/CSSMModule.h
+END
+CSSMControl.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/CDSA/CSSMControl.m
+END
+CSSMACLEntry.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/CDSA/CSSMACLEntry.m
+END
+CSSMModule.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/CDSA/CSSMModule.m
+END
+CSSMInfo.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/CDSA/CSSMInfo.h
+END
+MDS.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/keychain/!svn/ver/338/trunk/Frameworks/Keychain/CDSA/MDS.h
+END
+CSSMInfo.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/CDSA/CSSMInfo.m
+END
+CSSMUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/keychain/!svn/ver/428/trunk/Frameworks/Keychain/CDSA/CSSMUtils.h
+END
+CSSMManagedModule.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/keychain/!svn/ver/338/trunk/Frameworks/Keychain/CDSA/CSSMManagedModule.h
+END
+MDS.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/CDSA/MDS.m
+END

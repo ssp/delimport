@@ -1,0 +1,11 @@
+/* CRL Encoding Constants. */
+
+/* Key is the [unsigned] decimal representation of the type, value is the constant corresponding to that code. */
+
+0 = "CSSM_CRL_ENCODING_UNKNOWN";
+1 = "CSSM_CRL_ENCODING_CUSTOM";
+2 = "CSSM_CRL_ENCODING_BER";
+3 = "CSSM_CRL_ENCODING_DER";
+4 = "CSSM_CRL_ENCODING_BLOOM";
+5 = "CSSM_CRL_ENCODING_SEXPR";
+32766 = "CSSM_CRL_ENCODING_MULTIPLE";

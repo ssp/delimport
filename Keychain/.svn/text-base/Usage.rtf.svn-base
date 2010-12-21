@@ -1,0 +1,19 @@
+{\rtf1\mac\ansicpg10000\cocoartf102
+{\fonttbl\f0\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww9000\viewh9000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural
+
+\f0\fs36 \cf0 Keychain Framework Usage
+\fs24 \
+\
+
+\fs32 Building
+\fs24 \
+\
+	The framework can be configured in several ways at compile time, to produce an executable that best suits your particular needs.\
+	The first flags of interest are those related to logging.  The framework contains a lot of informational and debugging output, which can take significant space both on disk and in memory.  By default everything is included in development builds (those where NDEBUG is not defined) and only non-debug output is included in deployment builds (those where NDEBUG is defined).  You shouldn't need to enter this flag manually.\
+	If you want even less output you can also define any of the NO_STANDARD_OUTPUT, NO_ERROR_OUTPUT and NO_CONSOLE_OUTPUT flags.  These selectively turn off each type of output.  Console output is typically used throughout the framework for basic error messages, which describe the problem in layman's terms and provide only an error code for debugging.  You should generally leave these in - it will help you and your users identify the exact failing.  You can then later have your user substitute a debug version of the framework in order to gather more information.\
+	Standard & error output are not usually used by the framework explicitly, as there is no guarantee they will be user-visible (i.e. as in the case of a GUI program).  You may wish to use them in your own code.\
+\
+	In addition, the various outputs can be rerouted to alternative locations.  For example, if STD_ERR_TO_CONSOLE is defined, output that usually goes to standard error will instead go to the console.  There are several such flags - see the Logging header file (or it's generated HeaderDoc documentation) for more information.}

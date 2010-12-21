@@ -1,0 +1,10 @@
+/* Key Class Constants. */
+
+/* The key is the numeric value as defined in cssmtype.h in Apple's Security framework.  Last updated for 10.3.9. */
+/* The value is the constant corresponding to the code. */
+
+0 = "CSSM_KEYCLASS_PUBLIC_KEY";
+1 = "CSSM_KEYCLASS_PRIVATE_KEY";
+2 = "CSSM_KEYCLASS_SESSION_KEY";
+3 = "CSSM_KEYCLASS_SECRET_PART";
+4294967295 = "CSSM_KEYCLASS_OTHER";

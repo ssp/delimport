@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/keychain/!svn/ver/462/trunk/Frameworks/Keychain/Utilities
+END
+Logging.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Utilities/Logging.m
+END
+SecurityUtils.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Utilities/SecurityUtils.m
+END
+NSCachedObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Utilities/NSCachedObject.h
+END
+UtilitySupport.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Utilities/UtilitySupport.h
+END
+LocalisationUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Utilities/LocalisationUtils.h
+END
+NSCachedObject.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Utilities/NSCachedObject.m
+END
+UtilitySupport.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Utilities/UtilitySupport.m
+END
+NSCalendarDateAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Utilities/NSCalendarDateAdditions.h
+END
+LocalisationUtils.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Utilities/LocalisationUtils.m
+END
+NSCalendarDateAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Utilities/NSCalendarDateAdditions.m
+END
+CompilerIndependence.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Utilities/CompilerIndependence.h
+END
+MultiThreadingInternal.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Utilities/MultiThreadingInternal.h
+END
+MultiThreading.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/keychain/!svn/ver/462/trunk/Frameworks/Keychain/Utilities/MultiThreading.h
+END
+MultiThreading.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Utilities/MultiThreading.m
+END
+Logging.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/keychain/!svn/ver/373/trunk/Frameworks/Keychain/Utilities/Logging.h
+END
+SecurityUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/keychain/!svn/ver/393/trunk/Frameworks/Keychain/Utilities/SecurityUtils.h
+END

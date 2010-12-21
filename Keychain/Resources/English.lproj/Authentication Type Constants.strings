@@ -1,0 +1,12 @@
+/* Authentication Type Constants. */
+
+/* The key is the four-character code of the type.  The value is the Security.framework constant corresponding to that code. */
+
+"ntlm" = "kSecAuthenticationTypeNTLM";
+"msna" = "kSecAuthenticationTypeMSN";
+"dpaa" = "kSecAuthenticationTypeDPA";
+"rpaa" = "kSecAuthenticationTypeRPA";
+"http" = "kSecAuthenticationTypeHTTPBasic";
+"httd" = "kSecAuthenticationTypeHTTPDigest";
+"form" = "kSecAuthenticationTypeHTMLForm";
+"dflt" = "kSecAuthenticationTypeDefault";

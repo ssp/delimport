@@ -1,0 +1,16 @@
+/* Key Usage Constants. */
+
+/* The key is the bit mask value as defined in cssmtype.h in Apple's Security framework.  Last updated for 10.4.10.  Note that since the key attribute is a bit map, you must mask out other bits first. */
+/* The value is the constant corresponding to the code. */
+
+0x00000001 = "CSSM_KEYUSE_ENCRYPT";
+0x00000002 = "CSSM_KEYUSE_DECRYPT";
+0x00000004 = "CSSM_KEYUSE_SIGN";
+0x00000008 = "CSSM_KEYUSE_VERIFY";
+0x00000010 = "CSSM_KEYUSE_SIGN_RECOVER";
+0x00000020 = "CSSM_KEYUSE_VERIFY_RECOVER";
+0x00000040 = "CSSM_KEYUSE_WRAP";
+0x00000080 = "CSSM_KEYUSE_UNWRAP";
+0x00000100 = "CSSM_KEYUSE_DERIVE";
+
+0x80000000 = "CSSM_KEYUSE_ANY";

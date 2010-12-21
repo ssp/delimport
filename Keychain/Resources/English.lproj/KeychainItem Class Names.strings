@@ -1,0 +1,9 @@
+/* KeychainItem Class Names. */
+
+/* The key is the hex representation of the four-character-code, as an unsigned 32-bit integer, as defined in SecKeychainItem.h in Apple's Security framework.  Last updated for 10.4.10. */
+/* The value is human-readable name of the class. */
+
+0x696e6574 = "Internet password";
+0x67656e70 = "Generic password";
+0x61736870 = "AppleShare password";
+0x80001000 = "Certificate";

@@ -1,0 +1,2804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		75A0764A0943BA09008B9D9E /* World */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 75A076580943BA3D008B9D9E /* Build configuration list for PBXAggregateTarget "World" */;
+			buildPhases = (
+			);
+			dependencies = (
+				75A0764C0943BA13008B9D9E /* PBXTargetDependency */,
+				75A0764E0943BA16008B9D9E /* PBXTargetDependency */,
+				75A076500943BA18008B9D9E /* PBXTargetDependency */,
+				75A076520943BA1A008B9D9E /* PBXTargetDependency */,
+				75A076540943BA1C008B9D9E /* PBXTargetDependency */,
+				75A076560943BA1D008B9D9E /* PBXTargetDependency */,
+				755CFABD0A1F672D008C69A9 /* PBXTargetDependency */,
+				755DE3320A20A2B9002EAC2B /* PBXTargetDependency */,
+				755DE3340A20A2B9002EAC2B /* PBXTargetDependency */,
+				75C6E9300A3BE210009201FB /* PBXTargetDependency */,
+				7506C0400A3DB5EA000DB6BD /* PBXTargetDependency */,
+			);
+			name = World;
+			productName = World;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		7506C0380A3DB5A8000DB6BD /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		7506C0520A3DB606000DB6BD /* PolicyProber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7506C0510A3DB606000DB6BD /* PolicyProber.m */; };
+		751166810CA6012400A619CF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F566C81003E0D92B015C51F3 /* Security.framework */; };
+		75331C320D9EE27A00588D3C /* KeychainSearchInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 75331C310D9EE27A00588D3C /* KeychainSearchInternal.h */; };
+		7540B3ED0999D1C000469F46 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		7540B3FE0999D1D600469F46 /* SKeyPlusTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7540B3FD0999D1D600469F46 /* SKeyPlusTester.m */; };
+		7554346E0D037157003D0C29 /* External Item Type Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 755434660D037157003D0C29 /* External Item Type Names.strings */; };
+		7554346F0D037157003D0C29 /* External Item Type Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 755434680D037157003D0C29 /* External Item Type Constants.strings */; };
+		755434700D037157003D0C29 /* External Format Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7554346A0D037157003D0C29 /* External Format Names.strings */; };
+		755434710D037157003D0C29 /* External Format Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7554346C0D037157003D0C29 /* External Format Constants.strings */; };
+		7556131A0A2090B5003428C2 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		755613250A209100003428C2 /* CryptographicTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 755613240A209100003428C2 /* CryptographicTester.m */; };
+		755613260A20910C003428C2 /* CertificateGenerationTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7594D49C0A20467E0090E497 /* CertificateGenerationTester.m */; };
+		757A97E80CB98BCD00513299 /* CSSMACLEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97D00CB98BCD00513299 /* CSSMACLEntry.h */; };
+		757A97E90CB98BCD00513299 /* CSSMACLEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97D10CB98BCD00513299 /* CSSMACLEntry.m */; };
+		757A97EA0CB98BCD00513299 /* CSSMControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97D20CB98BCD00513299 /* CSSMControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A97EB0CB98BCD00513299 /* CSSMControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97D30CB98BCD00513299 /* CSSMControl.m */; };
+		757A97EC0CB98BCD00513299 /* CSSMControlInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97D40CB98BCD00513299 /* CSSMControlInternal.h */; };
+		757A97F10CB98BCD00513299 /* CSSMDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97D90CB98BCD00513299 /* CSSMDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A97F20CB98BCD00513299 /* CSSMDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97DA0CB98BCD00513299 /* CSSMDefaults.m */; };
+		757A97F30CB98BCD00513299 /* CSSMInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97DB0CB98BCD00513299 /* CSSMInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A97F40CB98BCD00513299 /* CSSMInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97DC0CB98BCD00513299 /* CSSMInfo.m */; };
+		757A97F50CB98BCD00513299 /* CSSMManagedModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97DD0CB98BCD00513299 /* CSSMManagedModule.h */; };
+		757A97F60CB98BCD00513299 /* CSSMManagedModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97DE0CB98BCD00513299 /* CSSMManagedModule.m */; };
+		757A97F70CB98BCD00513299 /* CSSMModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97DF0CB98BCD00513299 /* CSSMModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A97F80CB98BCD00513299 /* CSSMModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97E00CB98BCD00513299 /* CSSMModule.m */; };
+		757A97F90CB98BCD00513299 /* CSSMOpenDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97E10CB98BCD00513299 /* CSSMOpenDataStore.h */; settings = {ATTRIBUTES = (); }; };
+		757A97FA0CB98BCD00513299 /* CSSMOpenDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97E20CB98BCD00513299 /* CSSMOpenDataStore.m */; };
+		757A97FB0CB98BCD00513299 /* CSSMTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97E30CB98BCD00513299 /* CSSMTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A97FC0CB98BCD00513299 /* CSSMUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97E40CB98BCD00513299 /* CSSMUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A97FD0CB98BCD00513299 /* CSSMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97E50CB98BCD00513299 /* CSSMUtils.m */; };
+		757A97FE0CB98BCD00513299 /* MDS.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97E60CB98BCD00513299 /* MDS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A97FF0CB98BCD00513299 /* MDS.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97E70CB98BCD00513299 /* MDS.m */; };
+		757A98A40CB98BF300513299 /* ABPersonAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98010CB98BF200513299 /* ABPersonAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98A50CB98BF300513299 /* ABPersonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98020CB98BF200513299 /* ABPersonAdditions.m */; };
+		757A98A60CB98BF300513299 /* Certificate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98030CB98BF200513299 /* Certificate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98A70CB98BF300513299 /* Certificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98040CB98BF200513299 /* Certificate.m */; };
+		757A98AA0CB98BF300513299 /* CertificateExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98070CB98BF200513299 /* CertificateExtensions.h */; settings = {ATTRIBUTES = (); }; };
+		757A98AB0CB98BF300513299 /* CertificateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98080CB98BF200513299 /* CertificateExtensions.m */; };
+		757A98AC0CB98BF300513299 /* CertificateGeneration.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98090CB98BF200513299 /* CertificateGeneration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98AD0CB98BF300513299 /* CertificateGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A980A0CB98BF200513299 /* CertificateGeneration.m */; };
+		757A98AE0CB98BF300513299 /* Policy.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A980B0CB98BF200513299 /* Policy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98AF0CB98BF300513299 /* Policy.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A980C0CB98BF200513299 /* Policy.m */; };
+		757A98B00CB98BF300513299 /* Trust.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A980D0CB98BF300513299 /* Trust.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98B10CB98BF300513299 /* Trust.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A980E0CB98BF300513299 /* Trust.m */; };
+		757A98B20CB98BF300513299 /* FileUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98100CB98BF300513299 /* FileUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98B30CB98BF300513299 /* FileUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98110CB98BF300513299 /* FileUtilities.m */; };
+		757A98B40CB98BF300513299 /* Key.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98120CB98BF300513299 /* Key.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98B50CB98BF300513299 /* Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98130CB98BF300513299 /* Key.m */; };
+		757A98B60CB98BF300513299 /* KeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98140CB98BF300513299 /* KeychainUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98B70CB98BF300513299 /* KeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98150CB98BF300513299 /* KeychainUtils.m */; };
+		757A98B80CB98BF300513299 /* MutableKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98160CB98BF300513299 /* MutableKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98B90CB98BF300513299 /* MutableKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98170CB98BF300513299 /* MutableKey.m */; };
+		757A98BA0CB98BF300513299 /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98180CB98BF300513299 /* NSDataAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98BB0CB98BF300513299 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98190CB98BF300513299 /* NSDataAdditions.m */; };
+		757A98BC0CB98BF300513299 /* ChainedOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A981B0CB98BF300513299 /* ChainedOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98BD0CB98BF300513299 /* ChainedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A981C0CB98BF300513299 /* ChainedOutputStream.m */; };
+		757A98BE0CB98BF300513299 /* DigestOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A981D0CB98BF300513299 /* DigestOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98BF0CB98BF300513299 /* DigestOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A981E0CB98BF300513299 /* DigestOutputStream.m */; };
+		757A98C00CB98BF300513299 /* Hashcash.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98200CB98BF300513299 /* Hashcash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98C10CB98BF300513299 /* Hashcash.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98210CB98BF300513299 /* Hashcash.m */; };
+		757A98C20CB98BF300513299 /* Access.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98230CB98BF300513299 /* Access.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98C30CB98BF300513299 /* Access.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98240CB98BF300513299 /* Access.m */; };
+		757A98C40CB98BF300513299 /* AccessControlList.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98250CB98BF300513299 /* AccessControlList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98C50CB98BF300513299 /* AccessControlList.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98260CB98BF300513299 /* AccessControlList.m */; };
+		757A98C60CB98BF300513299 /* Identity.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98270CB98BF300513299 /* Identity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98C70CB98BF300513299 /* Identity.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98280CB98BF300513299 /* Identity.m */; };
+		757A98C80CB98BF300513299 /* Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98290CB98BF300513299 /* Keychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98C90CB98BF300513299 /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A982A0CB98BF300513299 /* Keychain.m */; };
+		757A98CA0CB98BF300513299 /* KeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A982B0CB98BF300513299 /* KeychainItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98CB0CB98BF300513299 /* KeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A982C0CB98BF300513299 /* KeychainItem.m */; };
+		757A98CC0CB98BF300513299 /* KeychainSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A982D0CB98BF300513299 /* KeychainSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98CD0CB98BF300513299 /* KeychainSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A982E0CB98BF300513299 /* KeychainSearch.m */; };
+		757A98CE0CB98BF300513299 /* TrustedApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A982F0CB98BF300513299 /* TrustedApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98CF0CB98BF300513299 /* TrustedApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98300CB98BF300513299 /* TrustedApplication.m */; };
+		757A98D00CB98BF300513299 /* Algorithm Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98320CB98BF300513299 /* Algorithm Constants.strings */; };
+		757A98D10CB98BF300513299 /* Algorithm Mode Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98340CB98BF300513299 /* Algorithm Mode Constants.strings */; };
+		757A98D20CB98BF300513299 /* Algorithm Mode Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98360CB98BF300513299 /* Algorithm Mode Names.strings */; };
+		757A98D30CB98BF300513299 /* Algorithm Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98380CB98BF300513299 /* Algorithm Names.strings */; };
+		757A98D40CB98BF300513299 /* Authentication Type Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A983A0CB98BF300513299 /* Authentication Type Constants.strings */; };
+		757A98D50CB98BF300513299 /* Authentication Type Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A983C0CB98BF300513299 /* Authentication Type Names.strings */; };
+		757A98D60CB98BF300513299 /* BER Code Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A983E0CB98BF300513299 /* BER Code Constants.strings */; };
+		757A98D70CB98BF300513299 /* BER Code Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98400CB98BF300513299 /* BER Code Names.strings */; };
+		757A98D80CB98BF300513299 /* Certificate Encoding Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98420CB98BF300513299 /* Certificate Encoding Constants.strings */; };
+		757A98D90CB98BF300513299 /* Certificate Encoding Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98440CB98BF300513299 /* Certificate Encoding Names.strings */; };
+		757A98DA0CB98BF300513299 /* Certificate Type Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98460CB98BF300513299 /* Certificate Type Constants.strings */; };
+		757A98DB0CB98BF300513299 /* Certificate Type Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98480CB98BF300513299 /* Certificate Type Names.strings */; };
+		757A98DC0CB98BF300513299 /* CRL Encoding Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A984A0CB98BF300513299 /* CRL Encoding Constants.strings */; };
+		757A98DD0CB98BF300513299 /* CRL Encoding Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A984C0CB98BF300513299 /* CRL Encoding Names.strings */; };
+		757A98DE0CB98BF300513299 /* CRL Type Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A984E0CB98BF300513299 /* CRL Type Constants.strings */; };
+		757A98DF0CB98BF300513299 /* CRL Type Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98500CB98BF300513299 /* CRL Type Names.strings */; };
+		757A98E00CB98BF300513299 /* CSSM Error Base Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98520CB98BF300513299 /* CSSM Error Base Names.strings */; };
+		757A98E10CB98BF300513299 /* CSSM Error Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98540CB98BF300513299 /* CSSM Error Constants.strings */; };
+		757A98E20CB98BF300513299 /* CSSM Error Core Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98560CB98BF300513299 /* CSSM Error Core Names.strings */; };
+		757A98E30CB98BF300513299 /* CSSM Error Descriptions.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98580CB98BF300513299 /* CSSM Error Descriptions.strings */; };
+		757A98E40CB98BF300513299 /* CSSM Error Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A985A0CB98BF300513299 /* CSSM Error Names.strings */; };
+		757A98E50CB98BF300513299 /* Extension Format Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A985C0CB98BF300513299 /* Extension Format Constants.strings */; };
+		757A98E60CB98BF300513299 /* Extension Format Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A985E0CB98BF300513299 /* Extension Format Names.strings */; };
+		757A98E70CB98BF300513299 /* GUID Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98600CB98BF300513299 /* GUID Names.strings */; };
+		757A98E80CB98BF300513299 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98620CB98BF300513299 /* InfoPlist.strings */; };
+		757A98E90CB98BF300513299 /* Key Attribute Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98640CB98BF300513299 /* Key Attribute Constants.strings */; };
+		757A98EA0CB98BF300513299 /* Key Attribute Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98660CB98BF300513299 /* Key Attribute Names.strings */; };
+		757A98EB0CB98BF300513299 /* Key Class Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98680CB98BF300513299 /* Key Class Constants.strings */; };
+		757A98EC0CB98BF300513299 /* Key Class Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A986A0CB98BF300513299 /* Key Class Names.strings */; };
+		757A98ED0CB98BF300513299 /* Key Usage Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A986C0CB98BF300513299 /* Key Usage Constants.strings */; };
+		757A98EE0CB98BF300513299 /* Key Usage Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A986E0CB98BF300513299 /* Key Usage Names.strings */; };
+		757A98EF0CB98BF300513299 /* Keyblob Formats.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98700CB98BF300513299 /* Keyblob Formats.strings */; };
+		757A98F00CB98BF300513299 /* Keyblob Type Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98720CB98BF300513299 /* Keyblob Type Constants.strings */; };
+		757A98F10CB98BF300513299 /* Keyblob Type Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98740CB98BF300513299 /* Keyblob Type Names.strings */; };
+		757A98F20CB98BF300513299 /* Keychain Attribute Type Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98760CB98BF300513299 /* Keychain Attribute Type Constants.strings */; };
+		757A98F30CB98BF300513299 /* Keychain Attribute Type Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98780CB98BF300513299 /* Keychain Attribute Type Names.strings */; };
+		757A98F40CB98BF300513299 /* KeychainItem Class Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A987A0CB98BF300513299 /* KeychainItem Class Constants.strings */; };
+		757A98F50CB98BF300513299 /* KeychainItem Class Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A987C0CB98BF300513299 /* KeychainItem Class Names.strings */; };
+		757A98F60CB98BF300513299 /* Misc Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A987E0CB98BF300513299 /* Misc Names.strings */; };
+		757A98F70CB98BF300513299 /* OID Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98800CB98BF300513299 /* OID Names.strings */; };
+		757A98F80CB98BF300513299 /* OSStatus Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98820CB98BF300513299 /* OSStatus Constants.strings */; };
+		757A98F90CB98BF300513299 /* OSStatus Descriptions.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98840CB98BF300513299 /* OSStatus Descriptions.strings */; };
+		757A98FA0CB98BF300513299 /* Protocol Type Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98860CB98BF300513299 /* Protocol Type Constants.strings */; };
+		757A98FB0CB98BF300513299 /* Protocol Type Long Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98880CB98BF300513299 /* Protocol Type Long Names.strings */; };
+		757A98FC0CB98BF300513299 /* Protocol Type Short Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A988A0CB98BF300513299 /* Protocol Type Short Names.strings */; };
+		757A98FE0CB98BF300513299 /* SKeyPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A988E0CB98BF300513299 /* SKeyPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A98FF0CB98BF300513299 /* SKeyPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A988F0CB98BF300513299 /* SKeyPlus.m */; };
+		757A99000CB98BF300513299 /* CompilerIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98910CB98BF300513299 /* CompilerIndependence.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		757A99010CB98BF300513299 /* LocalisationUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98920CB98BF300513299 /* LocalisationUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A99020CB98BF300513299 /* LocalisationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98930CB98BF300513299 /* LocalisationUtils.m */; };
+		757A99030CB98BF300513299 /* Logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98940CB98BF300513299 /* Logging.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		757A99040CB98BF300513299 /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98950CB98BF300513299 /* Logging.m */; };
+		757A99050CB98BF300513299 /* MultiThreading.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98960CB98BF300513299 /* MultiThreading.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A99060CB98BF300513299 /* MultiThreading.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98970CB98BF300513299 /* MultiThreading.m */; };
+		757A99070CB98BF300513299 /* MultiThreadingInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98980CB98BF300513299 /* MultiThreadingInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		757A99080CB98BF300513299 /* NSCachedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98990CB98BF300513299 /* NSCachedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A99090CB98BF300513299 /* NSCachedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A989A0CB98BF300513299 /* NSCachedObject.m */; };
+		757A990A0CB98BF300513299 /* NSCalendarDateAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A989B0CB98BF300513299 /* NSCalendarDateAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A990B0CB98BF300513299 /* NSCalendarDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A989C0CB98BF300513299 /* NSCalendarDateAdditions.m */; };
+		757A990C0CB98BF300513299 /* SecurityUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A989D0CB98BF300513299 /* SecurityUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A990D0CB98BF300513299 /* SecurityUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A989E0CB98BF300513299 /* SecurityUtils.m */; };
+		757A990E0CB98BF300513299 /* UtilitySupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A989F0CB98BF300513299 /* UtilitySupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A990F0CB98BF300513299 /* UtilitySupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98A00CB98BF300513299 /* UtilitySupport.m */; };
+		757A99100CB98BF300513299 /* x509.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98A20CB98BF300513299 /* x509.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757A99110CB98BF300513299 /* x509.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98A30CB98BF300513299 /* x509.m */; };
+		7588AC710CA3916D00466BEF /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		7588AC8B0CA391B500466BEF /* KeychainTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7588AC8A0CA391B500466BEF /* KeychainTester.m */; };
+		7588AC8C0CA391BC00466BEF /* KeychainTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7588AC8A0CA391B500466BEF /* KeychainTester.m */; };
+		7588AEE90CA3A23300466BEF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7588ADD40CA3A23300466BEF /* AppKit.framework */; };
+		7588AEEA0CA3A23300466BEF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7588ADD40CA3A23300466BEF /* AppKit.framework */; };
+		7588AEEB0CA3A23300466BEF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7588ADD40CA3A23300466BEF /* AppKit.framework */; };
+		7588AEEC0CA3A23300466BEF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7588ADD40CA3A23300466BEF /* AppKit.framework */; };
+		7588AEED0CA3A23300466BEF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7588ADD40CA3A23300466BEF /* AppKit.framework */; };
+		7588AEEE0CA3A23300466BEF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7588ADD40CA3A23300466BEF /* AppKit.framework */; };
+		7588AEEF0CA3A23300466BEF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7588ADD40CA3A23300466BEF /* AppKit.framework */; };
+		7588AEF00CA3A23300466BEF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7588ADD40CA3A23300466BEF /* AppKit.framework */; };
+		7588AEF10CA3A23300466BEF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7588ADD40CA3A23300466BEF /* AppKit.framework */; };
+		7588AEF20CA3A23300466BEF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7588ADD40CA3A23300466BEF /* AppKit.framework */; };
+		7588AEF30CA3A23300466BEF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7588ADD40CA3A23300466BEF /* AppKit.framework */; };
+		7588B0080CA3A24000466BEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		7588B0090CA3A24600466BEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		7588B00A0CA3A24900466BEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		7588B00B0CA3A24C00466BEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		7588B00C0CA3A25100466BEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		7588B00D0CA3A25600466BEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		7588B00E0CA3A25A00466BEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		7588B00F0CA3A25F00466BEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		7588B0100CA3A26100466BEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		7588B0110CA3A26400466BEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		7588B0120CA3A26800466BEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		7594D48C0A2045E00090E497 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75A074F809438F8E008B9D9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		75A074F909438F8E008B9D9E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F566C81003E0D92B015C51F3 /* Security.framework */; };
+		75A074FA09438F8E008B9D9E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58080CA03EB75D701B6B625 /* CoreFoundation.framework */; };
+		75A074FB09438F8E008B9D9E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75BAD75E0480E99400DA8EF2 /* AddressBook.framework */; };
+		75A0750509438F8E008B9D9E /* CSSMUtilsTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EE821C0837443E00D8CF7B /* CSSMUtilsTester.m */; };
+		75A0751009438F8E008B9D9E /* NSCalendarDateAdditionsTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 751EAB570839B75500690BA7 /* NSCalendarDateAdditionsTester.m */; };
+		75A0751B09438F8F008B9D9E /* OutputStreamsTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 753F8AB80841F08F0060298F /* OutputStreamsTester.m */; };
+		75A0752609438F8F008B9D9E /* StringsTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7563708D08444F4F00F9E7D7 /* StringsTester.m */; };
+		75A0753209438F8F008B9D9E /* MDSProber.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D1B95E08A8E74200D77A20 /* MDSProber.m */; };
+		75A0753C09438F8F008B9D9E /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75A0753D09438F8F008B9D9E /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75A0753E09438F8F008B9D9E /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75A0753F09438F8F008B9D9E /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75A0754009438F8F008B9D9E /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75C6E8F20A3BDCD8009201FB /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
+		75C6E9040A3BDD1A009201FB /* KeychainSearchTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C6E9030A3BDD1A009201FB /* KeychainSearchTester.m */; };
+		75D25AA60CC1643600C8B443 /* Authorization Tag Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D25AA20CC1643600C8B443 /* Authorization Tag Constants.strings */; };
+		75D25AA70CC1643600C8B443 /* Authorization Tag Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D25AA40CC1643600C8B443 /* Authorization Tag Names.strings */; };
+		75D914A30D333062002926F8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F566C81003E0D92B015C51F3 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7506C03F0A3DB5EA000DB6BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7506C0340A3DB5A8000DB6BD;
+			remoteInfo = PolicyProber;
+		};
+		754E37390A553CC700005844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		754E37440A553CCD00005844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		754E37460A553CD000005844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		754E37480A553CD400005844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		754E374A0A553CD700005844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		754E374C0A553CDA00005844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		754E374E0A553CDE00005844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		754E37500A553CE100005844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		754E37520A553CE300005844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		754E37540A553CE600005844 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		755CFABC0A1F672D008C69A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7540B3E90999D1C000469F46;
+			remoteInfo = SKeyPlusTester;
+		};
+		755DE3310A20A2B9002EAC2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7594D4880A2045E00090E497;
+			remoteInfo = CertificateGenerationTester;
+		};
+		755DE3330A20A2B9002EAC2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 755613160A2090B5003428C2;
+			remoteInfo = CryptographyTester;
+		};
+		7588AC6D0CA3916D00466BEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		75A0764B0943BA13008B9D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
+			remoteInfo = Keychain;
+		};
+		75A0764D0943BA16008B9D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0750309438F8E008B9D9E;
+			remoteInfo = CSSMUtilsTester;
+		};
+		75A0764F0943BA18008B9D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0750E09438F8E008B9D9E;
+			remoteInfo = NSCalendarDateAdditionsTester;
+		};
+		75A076510943BA1A008B9D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0751909438F8F008B9D9E;
+			remoteInfo = OutputStreamsTester;
+		};
+		75A076530943BA1C008B9D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0752409438F8F008B9D9E;
+			remoteInfo = StringsTester;
+		};
+		75A076550943BA1D008B9D9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A0753009438F8F008B9D9E;
+			remoteInfo = MDSProber;
+		};
+		75C6E92F0A3BE210009201FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75C6E8EE0A3BDCD8009201FB;
+			remoteInfo = KeychainSearchTester;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		7506C03D0A3DB5A8000DB6BD /* PolicyProber */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PolicyProber; sourceTree = BUILT_PRODUCTS_DIR; };
+		7506C0510A3DB606000DB6BD /* PolicyProber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PolicyProber.m; path = Testers/PolicyProber.m; sourceTree = "<group>"; };
+		751EAB2C0839B2B300690BA7 /* TestingCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestingCommon.h; path = Testers/TestingCommon.h; sourceTree = "<group>"; };
+		751EAB570839B75500690BA7 /* NSCalendarDateAdditionsTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCalendarDateAdditionsTester.m; path = Testers/NSCalendarDateAdditionsTester.m; sourceTree = "<group>"; };
+		75331C310D9EE27A00588D3C /* KeychainSearchInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainSearchInternal.h; sourceTree = "<group>"; };
+		753F8AB80841F08F0060298F /* OutputStreamsTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OutputStreamsTester.m; path = Testers/OutputStreamsTester.m; sourceTree = "<group>"; };
+		7540B3F20999D1C000469F46 /* SKeyPlusTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SKeyPlusTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		7540B3FD0999D1D600469F46 /* SKeyPlusTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKeyPlusTester.m; path = Testers/SKeyPlusTester.m; sourceTree = "<group>"; };
+		755434670D037157003D0C29 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/External Item Type Names.strings"; sourceTree = "<group>"; };
+		755434690D037157003D0C29 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/External Item Type Constants.strings"; sourceTree = "<group>"; };
+		7554346B0D037157003D0C29 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/External Format Names.strings"; sourceTree = "<group>"; };
+		7554346D0D037157003D0C29 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/External Format Constants.strings"; sourceTree = "<group>"; };
+		7556131F0A2090B5003428C2 /* CryptographyTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CryptographyTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		755613240A209100003428C2 /* CryptographicTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CryptographicTester.m; path = Testers/CryptographicTester.m; sourceTree = "<group>"; };
+		7563708D08444F4F00F9E7D7 /* StringsTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringsTester.m; path = Testers/StringsTester.m; sourceTree = "<group>"; };
+		757709C20B12D4AA00E926A4 /* FrameworkDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = FrameworkDebug.xcconfig; sourceTree = "<group>"; };
+		757709CA0B12DE2000E926A4 /* FrameworkRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = FrameworkRelease.xcconfig; sourceTree = "<group>"; };
+		757A97D00CB98BCD00513299 /* CSSMACLEntry.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CSSMACLEntry.h; sourceTree = "<group>"; };
+		757A97D10CB98BCD00513299 /* CSSMACLEntry.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CSSMACLEntry.m; sourceTree = "<group>"; };
+		757A97D20CB98BCD00513299 /* CSSMControl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CSSMControl.h; sourceTree = "<group>"; };
+		757A97D30CB98BCD00513299 /* CSSMControl.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CSSMControl.m; sourceTree = "<group>"; };
+		757A97D40CB98BCD00513299 /* CSSMControlInternal.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CSSMControlInternal.h; sourceTree = "<group>"; };
+		757A97D50CB98BCD00513299 /* CSSMDataStorageModule.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CSSMDataStorageModule.h; sourceTree = "<group>"; };
+		757A97D60CB98BCD00513299 /* CSSMDataStorageModule.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CSSMDataStorageModule.m; sourceTree = "<group>"; };
+		757A97D70CB98BCD00513299 /* CSSMDataStore.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CSSMDataStore.h; sourceTree = "<group>"; };
+		757A97D80CB98BCD00513299 /* CSSMDataStore.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CSSMDataStore.m; sourceTree = "<group>"; };
+		757A97D90CB98BCD00513299 /* CSSMDefaults.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CSSMDefaults.h; sourceTree = "<group>"; };
+		757A97DA0CB98BCD00513299 /* CSSMDefaults.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CSSMDefaults.m; sourceTree = "<group>"; };
+		757A97DB0CB98BCD00513299 /* CSSMInfo.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CSSMInfo.h; sourceTree = "<group>"; };
+		757A97DC0CB98BCD00513299 /* CSSMInfo.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CSSMInfo.m; sourceTree = "<group>"; };
+		757A97DD0CB98BCD00513299 /* CSSMManagedModule.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CSSMManagedModule.h; sourceTree = "<group>"; };
+		757A97DE0CB98BCD00513299 /* CSSMManagedModule.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CSSMManagedModule.m; sourceTree = "<group>"; };
+		757A97DF0CB98BCD00513299 /* CSSMModule.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CSSMModule.h; sourceTree = "<group>"; };
+		757A97E00CB98BCD00513299 /* CSSMModule.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CSSMModule.m; sourceTree = "<group>"; };
+		757A97E10CB98BCD00513299 /* CSSMOpenDataStore.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CSSMOpenDataStore.h; sourceTree = "<group>"; };
+		757A97E20CB98BCD00513299 /* CSSMOpenDataStore.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CSSMOpenDataStore.m; sourceTree = "<group>"; };
+		757A97E30CB98BCD00513299 /* CSSMTypes.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CSSMTypes.h; sourceTree = "<group>"; };
+		757A97E40CB98BCD00513299 /* CSSMUtils.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CSSMUtils.h; sourceTree = "<group>"; };
+		757A97E50CB98BCD00513299 /* CSSMUtils.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CSSMUtils.m; sourceTree = "<group>"; };
+		757A97E60CB98BCD00513299 /* MDS.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MDS.h; sourceTree = "<group>"; };
+		757A97E70CB98BCD00513299 /* MDS.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MDS.m; sourceTree = "<group>"; };
+		757A98010CB98BF200513299 /* ABPersonAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ABPersonAdditions.h; sourceTree = "<group>"; };
+		757A98020CB98BF200513299 /* ABPersonAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ABPersonAdditions.m; sourceTree = "<group>"; };
+		757A98030CB98BF200513299 /* Certificate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Certificate.h; sourceTree = "<group>"; };
+		757A98040CB98BF200513299 /* Certificate.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Certificate.m; sourceTree = "<group>"; };
+		757A98050CB98BF200513299 /* CertificateBundle.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CertificateBundle.h; sourceTree = "<group>"; };
+		757A98060CB98BF200513299 /* CertificateBundle.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CertificateBundle.m; sourceTree = "<group>"; };
+		757A98070CB98BF200513299 /* CertificateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CertificateExtensions.h; sourceTree = "<group>"; };
+		757A98080CB98BF200513299 /* CertificateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CertificateExtensions.m; sourceTree = "<group>"; };
+		757A98090CB98BF200513299 /* CertificateGeneration.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CertificateGeneration.h; sourceTree = "<group>"; };
+		757A980A0CB98BF200513299 /* CertificateGeneration.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CertificateGeneration.m; sourceTree = "<group>"; };
+		757A980B0CB98BF200513299 /* Policy.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Policy.h; sourceTree = "<group>"; };
+		757A980C0CB98BF200513299 /* Policy.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Policy.m; sourceTree = "<group>"; };
+		757A980D0CB98BF300513299 /* Trust.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Trust.h; sourceTree = "<group>"; };
+		757A980E0CB98BF300513299 /* Trust.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Trust.m; sourceTree = "<group>"; };
+		757A98100CB98BF300513299 /* FileUtilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FileUtilities.h; sourceTree = "<group>"; };
+		757A98110CB98BF300513299 /* FileUtilities.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FileUtilities.m; sourceTree = "<group>"; };
+		757A98120CB98BF300513299 /* Key.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Key.h; sourceTree = "<group>"; };
+		757A98130CB98BF300513299 /* Key.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Key.m; sourceTree = "<group>"; };
+		757A98140CB98BF300513299 /* KeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KeychainUtils.h; sourceTree = "<group>"; };
+		757A98150CB98BF300513299 /* KeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = KeychainUtils.m; sourceTree = "<group>"; };
+		757A98160CB98BF300513299 /* MutableKey.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MutableKey.h; sourceTree = "<group>"; };
+		757A98170CB98BF300513299 /* MutableKey.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MutableKey.m; sourceTree = "<group>"; };
+		757A98180CB98BF300513299 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		757A98190CB98BF300513299 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		757A981B0CB98BF300513299 /* ChainedOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ChainedOutputStream.h; sourceTree = "<group>"; };
+		757A981C0CB98BF300513299 /* ChainedOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ChainedOutputStream.m; sourceTree = "<group>"; };
+		757A981D0CB98BF300513299 /* DigestOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DigestOutputStream.h; sourceTree = "<group>"; };
+		757A981E0CB98BF300513299 /* DigestOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = DigestOutputStream.m; sourceTree = "<group>"; };
+		757A98200CB98BF300513299 /* Hashcash.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Hashcash.h; sourceTree = "<group>"; };
+		757A98210CB98BF300513299 /* Hashcash.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Hashcash.m; sourceTree = "<group>"; };
+		757A98230CB98BF300513299 /* Access.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Access.h; sourceTree = "<group>"; };
+		757A98240CB98BF300513299 /* Access.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Access.m; sourceTree = "<group>"; };
+		757A98250CB98BF300513299 /* AccessControlList.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AccessControlList.h; sourceTree = "<group>"; };
+		757A98260CB98BF300513299 /* AccessControlList.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AccessControlList.m; sourceTree = "<group>"; };
+		757A98270CB98BF300513299 /* Identity.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Identity.h; sourceTree = "<group>"; };
+		757A98280CB98BF300513299 /* Identity.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Identity.m; sourceTree = "<group>"; };
+		757A98290CB98BF300513299 /* Keychain.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Keychain.h; sourceTree = "<group>"; };
+		757A982A0CB98BF300513299 /* Keychain.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Keychain.m; sourceTree = "<group>"; };
+		757A982B0CB98BF300513299 /* KeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KeychainItem.h; sourceTree = "<group>"; };
+		757A982C0CB98BF300513299 /* KeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = KeychainItem.m; sourceTree = "<group>"; };
+		757A982D0CB98BF300513299 /* KeychainSearch.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KeychainSearch.h; sourceTree = "<group>"; };
+		757A982E0CB98BF300513299 /* KeychainSearch.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = KeychainSearch.m; sourceTree = "<group>"; };
+		757A982F0CB98BF300513299 /* TrustedApplication.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TrustedApplication.h; sourceTree = "<group>"; };
+		757A98300CB98BF300513299 /* TrustedApplication.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TrustedApplication.m; sourceTree = "<group>"; };
+		757A98330CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Algorithm Constants.strings"; sourceTree = "<group>"; };
+		757A98350CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Algorithm Mode Constants.strings"; sourceTree = "<group>"; };
+		757A98370CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Algorithm Mode Names.strings"; sourceTree = "<group>"; };
+		757A98390CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Algorithm Names.strings"; sourceTree = "<group>"; };
+		757A983B0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Authentication Type Constants.strings"; sourceTree = "<group>"; };
+		757A983D0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Authentication Type Names.strings"; sourceTree = "<group>"; };
+		757A983F0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/BER Code Constants.strings"; sourceTree = "<group>"; };
+		757A98410CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/BER Code Names.strings"; sourceTree = "<group>"; };
+		757A98430CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Certificate Encoding Constants.strings"; sourceTree = "<group>"; };
+		757A98450CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Certificate Encoding Names.strings"; sourceTree = "<group>"; };
+		757A98470CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Certificate Type Constants.strings"; sourceTree = "<group>"; };
+		757A98490CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Certificate Type Names.strings"; sourceTree = "<group>"; };
+		757A984B0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/CRL Encoding Constants.strings"; sourceTree = "<group>"; };
+		757A984D0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/CRL Encoding Names.strings"; sourceTree = "<group>"; };
+		757A984F0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/CRL Type Constants.strings"; sourceTree = "<group>"; };
+		757A98510CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/CRL Type Names.strings"; sourceTree = "<group>"; };
+		757A98530CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/CSSM Error Base Names.strings"; sourceTree = "<group>"; };
+		757A98550CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/CSSM Error Constants.strings"; sourceTree = "<group>"; };
+		757A98570CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/CSSM Error Core Names.strings"; sourceTree = "<group>"; };
+		757A98590CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/CSSM Error Descriptions.strings"; sourceTree = "<group>"; };
+		757A985B0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/CSSM Error Names.strings"; sourceTree = "<group>"; };
+		757A985D0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Extension Format Constants.strings"; sourceTree = "<group>"; };
+		757A985F0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Extension Format Names.strings"; sourceTree = "<group>"; };
+		757A98610CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/GUID Names.strings"; sourceTree = "<group>"; };
+		757A98630CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		757A98650CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Key Attribute Constants.strings"; sourceTree = "<group>"; };
+		757A98670CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Key Attribute Names.strings"; sourceTree = "<group>"; };
+		757A98690CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Key Class Constants.strings"; sourceTree = "<group>"; };
+		757A986B0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Key Class Names.strings"; sourceTree = "<group>"; };
+		757A986D0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Key Usage Constants.strings"; sourceTree = "<group>"; };
+		757A986F0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Key Usage Names.strings"; sourceTree = "<group>"; };
+		757A98710CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Keyblob Formats.strings"; sourceTree = "<group>"; };
+		757A98730CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Keyblob Type Constants.strings"; sourceTree = "<group>"; };
+		757A98750CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Keyblob Type Names.strings"; sourceTree = "<group>"; };
+		757A98770CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Keychain Attribute Type Constants.strings"; sourceTree = "<group>"; };
+		757A98790CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Keychain Attribute Type Names.strings"; sourceTree = "<group>"; };
+		757A987B0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/KeychainItem Class Constants.strings"; sourceTree = "<group>"; };
+		757A987D0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/KeychainItem Class Names.strings"; sourceTree = "<group>"; };
+		757A987F0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Misc Names.strings"; sourceTree = "<group>"; };
+		757A98810CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/OID Names.strings"; sourceTree = "<group>"; };
+		757A98830CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/OSStatus Constants.strings"; sourceTree = "<group>"; };
+		757A98850CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/OSStatus Descriptions.strings"; sourceTree = "<group>"; };
+		757A98870CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Protocol Type Constants.strings"; sourceTree = "<group>"; };
+		757A98890CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Protocol Type Long Names.strings"; sourceTree = "<group>"; };
+		757A988B0CB98BF300513299 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Protocol Type Short Names.strings"; sourceTree = "<group>"; };
+		757A988C0CB98BF300513299 /* Info-Keychain.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "Info-Keychain.plist"; sourceTree = "<group>"; };
+		757A988E0CB98BF300513299 /* SKeyPlus.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SKeyPlus.h; sourceTree = "<group>"; };
+		757A988F0CB98BF300513299 /* SKeyPlus.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SKeyPlus.m; sourceTree = "<group>"; };
+		757A98910CB98BF300513299 /* CompilerIndependence.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CompilerIndependence.h; sourceTree = "<group>"; };
+		757A98920CB98BF300513299 /* LocalisationUtils.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = LocalisationUtils.h; sourceTree = "<group>"; };
+		757A98930CB98BF300513299 /* LocalisationUtils.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = LocalisationUtils.m; sourceTree = "<group>"; };
+		757A98940CB98BF300513299 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		757A98950CB98BF300513299 /* Logging.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Logging.m; sourceTree = "<group>"; };
+		757A98960CB98BF300513299 /* MultiThreading.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MultiThreading.h; sourceTree = "<group>"; };
+		757A98970CB98BF300513299 /* MultiThreading.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MultiThreading.m; sourceTree = "<group>"; };
+		757A98980CB98BF300513299 /* MultiThreadingInternal.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MultiThreadingInternal.h; sourceTree = "<group>"; };
+		757A98990CB98BF300513299 /* NSCachedObject.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSCachedObject.h; sourceTree = "<group>"; };
+		757A989A0CB98BF300513299 /* NSCachedObject.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSCachedObject.m; sourceTree = "<group>"; };
+		757A989B0CB98BF300513299 /* NSCalendarDateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = NSCalendarDateAdditions.h; sourceTree = "<group>"; };
+		757A989C0CB98BF300513299 /* NSCalendarDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = NSCalendarDateAdditions.m; sourceTree = "<group>"; };
+		757A989D0CB98BF300513299 /* SecurityUtils.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SecurityUtils.h; sourceTree = "<group>"; };
+		757A989E0CB98BF300513299 /* SecurityUtils.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SecurityUtils.m; sourceTree = "<group>"; };
+		757A989F0CB98BF300513299 /* UtilitySupport.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = UtilitySupport.h; sourceTree = "<group>"; };
+		757A98A00CB98BF300513299 /* UtilitySupport.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = UtilitySupport.m; sourceTree = "<group>"; };
+		757A98A20CB98BF300513299 /* x509.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
+		757A98A30CB98BF300513299 /* x509.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = x509.m; sourceTree = "<group>"; };
+		757A99240CB98D1600513299 /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
+		7588AC770CA3916D00466BEF /* KeychainTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KeychainTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		7588AC8A0CA391B500466BEF /* KeychainTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainTester.m; path = Testers/KeychainTester.m; sourceTree = "<group>"; };
+		7588ADD40CA3A23300466BEF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		7594D4910A2045E00090E497 /* CertificateGenerationTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CertificateGenerationTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		7594D49C0A20467E0090E497 /* CertificateGenerationTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CertificateGenerationTester.m; path = Testers/CertificateGenerationTester.m; sourceTree = "<group>"; };
+		75A0750209438F8E008B9D9E /* Keychain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Keychain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A0750C09438F8E008B9D9E /* CSSMUtilsTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CSSMUtilsTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A0751709438F8E008B9D9E /* NSCalendarDateAdditionsTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NSCalendarDateAdditionsTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A0752209438F8F008B9D9E /* OutputStreamsTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OutputStreamsTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A0752E09438F8F008B9D9E /* StringsTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StringsTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A0753A09438F8F008B9D9E /* MDSProber */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MDSProber; sourceTree = BUILT_PRODUCTS_DIR; };
+		75BAD75E0480E99400DA8EF2 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
+		75C6E8F70A3BDCD8009201FB /* KeychainSearchTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KeychainSearchTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C6E9030A3BDD1A009201FB /* KeychainSearchTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainSearchTester.m; path = Testers/KeychainSearchTester.m; sourceTree = "<group>"; };
+		75D1B95E08A8E74200D77A20 /* MDSProber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDSProber.m; path = Testers/MDSProber.m; sourceTree = "<group>"; };
+		75D25AA30CC1643600C8B443 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Authorization Tag Constants.strings"; sourceTree = "<group>"; };
+		75D25AA50CC1643600C8B443 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = "English.lproj/Authorization Tag Names.strings"; sourceTree = "<group>"; };
+		75EE821C0837443E00D8CF7B /* CSSMUtilsTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSMUtilsTester.m; path = Testers/CSSMUtilsTester.m; sourceTree = "<group>"; };
+		F566C81003E0D92B015C51F3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		F58080CA03EB75D701B6B625 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7506C0370A3DB5A8000DB6BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7506C0380A3DB5A8000DB6BD /* Keychain.framework in Frameworks */,
+				7588AEF20CA3A23300466BEF /* AppKit.framework in Frameworks */,
+				7588B0120CA3A26800466BEF /* Foundation.framework in Frameworks */,
+				75D914A30D333062002926F8 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7540B3EC0999D1C000469F46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7540B3ED0999D1C000469F46 /* Keychain.framework in Frameworks */,
+				7588AEEE0CA3A23300466BEF /* AppKit.framework in Frameworks */,
+				7588B00E0CA3A25A00466BEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755613190A2090B5003428C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7556131A0A2090B5003428C2 /* Keychain.framework in Frameworks */,
+				7588AEF00CA3A23300466BEF /* AppKit.framework in Frameworks */,
+				7588B0100CA3A26100466BEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7588AC700CA3916D00466BEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7588AC710CA3916D00466BEF /* Keychain.framework in Frameworks */,
+				7588AEF30CA3A23300466BEF /* AppKit.framework in Frameworks */,
+				7588B0080CA3A24000466BEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7594D48B0A2045E00090E497 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7594D48C0A2045E00090E497 /* Keychain.framework in Frameworks */,
+				7588AEEF0CA3A23300466BEF /* AppKit.framework in Frameworks */,
+				7588B00F0CA3A25F00466BEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A074F709438F8E008B9D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A074F809438F8E008B9D9E /* Foundation.framework in Frameworks */,
+				75A074F909438F8E008B9D9E /* Security.framework in Frameworks */,
+				75A074FA09438F8E008B9D9E /* CoreFoundation.framework in Frameworks */,
+				75A074FB09438F8E008B9D9E /* AddressBook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0750609438F8E008B9D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0753C09438F8F008B9D9E /* Keychain.framework in Frameworks */,
+				7588AEE90CA3A23300466BEF /* AppKit.framework in Frameworks */,
+				7588B0090CA3A24600466BEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0751109438F8E008B9D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0753D09438F8F008B9D9E /* Keychain.framework in Frameworks */,
+				7588AEEA0CA3A23300466BEF /* AppKit.framework in Frameworks */,
+				7588B00A0CA3A24900466BEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0751C09438F8F008B9D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0753E09438F8F008B9D9E /* Keychain.framework in Frameworks */,
+				7588AEEB0CA3A23300466BEF /* AppKit.framework in Frameworks */,
+				7588B00B0CA3A24C00466BEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0752709438F8F008B9D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0753F09438F8F008B9D9E /* Keychain.framework in Frameworks */,
+				7588AEEC0CA3A23300466BEF /* AppKit.framework in Frameworks */,
+				7588B00C0CA3A25100466BEF /* Foundation.framework in Frameworks */,
+				751166810CA6012400A619CF /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0753309438F8F008B9D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0754009438F8F008B9D9E /* Keychain.framework in Frameworks */,
+				7588AEED0CA3A23300466BEF /* AppKit.framework in Frameworks */,
+				7588B00D0CA3A25600466BEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C6E8F10A3BDCD8009201FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C6E8F20A3BDCD8009201FB /* Keychain.framework in Frameworks */,
+				7588AEF10CA3A23300466BEF /* AppKit.framework in Frameworks */,
+				7588B0110CA3A26400466BEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75A0750209438F8E008B9D9E /* Keychain.framework */,
+				75A0750C09438F8E008B9D9E /* CSSMUtilsTester */,
+				75A0751709438F8E008B9D9E /* NSCalendarDateAdditionsTester */,
+				75A0752209438F8F008B9D9E /* OutputStreamsTester */,
+				75A0752E09438F8F008B9D9E /* StringsTester */,
+				75A0753A09438F8F008B9D9E /* MDSProber */,
+				7540B3F20999D1C000469F46 /* SKeyPlusTester */,
+				7594D4910A2045E00090E497 /* CertificateGenerationTester */,
+				7556131F0A2090B5003428C2 /* CryptographyTester */,
+				75C6E8F70A3BDCD8009201FB /* KeychainSearchTester */,
+				7506C03D0A3DB5A8000DB6BD /* PolicyProber */,
+				7588AC770CA3916D00466BEF /* KeychainTester */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				757A97CF0CB98BCD00513299 /* CDSA */,
+				757A98000CB98BF200513299 /* Certificates */,
+				757A980F0CB98BF300513299 /* Cryptography */,
+				757A99240CB98D1600513299 /* Documentation */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				757709C20B12D4AA00E926A4 /* FrameworkDebug.xcconfig */,
+				757709CA0B12DE2000E926A4 /* FrameworkRelease.xcconfig */,
+				757A981F0CB98BF300513299 /* Hashcash */,
+				757A98220CB98BF300513299 /* Keychain */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				757A98310CB98BF300513299 /* Resources */,
+				757A988D0CB98BF300513299 /* SKeyPlus */,
+				75EE82160837440700D8CF7B /* Testers */,
+				757A98900CB98BF300513299 /* Utilities */,
+				757A98A10CB98BF300513299 /* X509 */,
+			);
+			name = Keychain;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				7588ADD40CA3A23300466BEF /* AppKit.framework */,
+				75BAD75E0480E99400DA8EF2 /* AddressBook.framework */,
+				F58080CA03EB75D701B6B625 /* CoreFoundation.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+				F566C81003E0D92B015C51F3 /* Security.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		757A97CF0CB98BCD00513299 /* CDSA */ = {
+			isa = PBXGroup;
+			children = (
+				757A97D00CB98BCD00513299 /* CSSMACLEntry.h */,
+				757A97D10CB98BCD00513299 /* CSSMACLEntry.m */,
+				757A97D20CB98BCD00513299 /* CSSMControl.h */,
+				757A97D30CB98BCD00513299 /* CSSMControl.m */,
+				757A97D40CB98BCD00513299 /* CSSMControlInternal.h */,
+				757A97D50CB98BCD00513299 /* CSSMDataStorageModule.h */,
+				757A97D60CB98BCD00513299 /* CSSMDataStorageModule.m */,
+				757A97D70CB98BCD00513299 /* CSSMDataStore.h */,
+				757A97D80CB98BCD00513299 /* CSSMDataStore.m */,
+				757A97D90CB98BCD00513299 /* CSSMDefaults.h */,
+				757A97DA0CB98BCD00513299 /* CSSMDefaults.m */,
+				757A97DB0CB98BCD00513299 /* CSSMInfo.h */,
+				757A97DC0CB98BCD00513299 /* CSSMInfo.m */,
+				757A97DD0CB98BCD00513299 /* CSSMManagedModule.h */,
+				757A97DE0CB98BCD00513299 /* CSSMManagedModule.m */,
+				757A97DF0CB98BCD00513299 /* CSSMModule.h */,
+				757A97E00CB98BCD00513299 /* CSSMModule.m */,
+				757A97E10CB98BCD00513299 /* CSSMOpenDataStore.h */,
+				757A97E20CB98BCD00513299 /* CSSMOpenDataStore.m */,
+				757A97E30CB98BCD00513299 /* CSSMTypes.h */,
+				757A97E40CB98BCD00513299 /* CSSMUtils.h */,
+				757A97E50CB98BCD00513299 /* CSSMUtils.m */,
+				757A97E60CB98BCD00513299 /* MDS.h */,
+				757A97E70CB98BCD00513299 /* MDS.m */,
+			);
+			path = CDSA;
+			sourceTree = "<group>";
+		};
+		757A98000CB98BF200513299 /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				757A98010CB98BF200513299 /* ABPersonAdditions.h */,
+				757A98020CB98BF200513299 /* ABPersonAdditions.m */,
+				757A98030CB98BF200513299 /* Certificate.h */,
+				757A98040CB98BF200513299 /* Certificate.m */,
+				757A98050CB98BF200513299 /* CertificateBundle.h */,
+				757A98060CB98BF200513299 /* CertificateBundle.m */,
+				757A98070CB98BF200513299 /* CertificateExtensions.h */,
+				757A98080CB98BF200513299 /* CertificateExtensions.m */,
+				757A98090CB98BF200513299 /* CertificateGeneration.h */,
+				757A980A0CB98BF200513299 /* CertificateGeneration.m */,
+				757A980B0CB98BF200513299 /* Policy.h */,
+				757A980C0CB98BF200513299 /* Policy.m */,
+				757A980D0CB98BF300513299 /* Trust.h */,
+				757A980E0CB98BF300513299 /* Trust.m */,
+			);
+			path = Certificates;
+			sourceTree = "<group>";
+		};
+		757A980F0CB98BF300513299 /* Cryptography */ = {
+			isa = PBXGroup;
+			children = (
+				757A98100CB98BF300513299 /* FileUtilities.h */,
+				757A98110CB98BF300513299 /* FileUtilities.m */,
+				757A98120CB98BF300513299 /* Key.h */,
+				757A98130CB98BF300513299 /* Key.m */,
+				757A98140CB98BF300513299 /* KeychainUtils.h */,
+				757A98150CB98BF300513299 /* KeychainUtils.m */,
+				757A98160CB98BF300513299 /* MutableKey.h */,
+				757A98170CB98BF300513299 /* MutableKey.m */,
+				757A98180CB98BF300513299 /* NSDataAdditions.h */,
+				757A98190CB98BF300513299 /* NSDataAdditions.m */,
+				757A981A0CB98BF300513299 /* Streams */,
+			);
+			path = Cryptography;
+			sourceTree = "<group>";
+		};
+		757A981A0CB98BF300513299 /* Streams */ = {
+			isa = PBXGroup;
+			children = (
+				757A981B0CB98BF300513299 /* ChainedOutputStream.h */,
+				757A981C0CB98BF300513299 /* ChainedOutputStream.m */,
+				757A981D0CB98BF300513299 /* DigestOutputStream.h */,
+				757A981E0CB98BF300513299 /* DigestOutputStream.m */,
+			);
+			path = Streams;
+			sourceTree = "<group>";
+		};
+		757A981F0CB98BF300513299 /* Hashcash */ = {
+			isa = PBXGroup;
+			children = (
+				757A98200CB98BF300513299 /* Hashcash.h */,
+				757A98210CB98BF300513299 /* Hashcash.m */,
+			);
+			path = Hashcash;
+			sourceTree = "<group>";
+		};
+		757A98220CB98BF300513299 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				757A98230CB98BF300513299 /* Access.h */,
+				757A98240CB98BF300513299 /* Access.m */,
+				757A98250CB98BF300513299 /* AccessControlList.h */,
+				757A98260CB98BF300513299 /* AccessControlList.m */,
+				757A98270CB98BF300513299 /* Identity.h */,
+				757A98280CB98BF300513299 /* Identity.m */,
+				757A98290CB98BF300513299 /* Keychain.h */,
+				757A982A0CB98BF300513299 /* Keychain.m */,
+				757A982B0CB98BF300513299 /* KeychainItem.h */,
+				757A982C0CB98BF300513299 /* KeychainItem.m */,
+				75331C310D9EE27A00588D3C /* KeychainSearchInternal.h */,
+				757A982D0CB98BF300513299 /* KeychainSearch.h */,
+				757A982E0CB98BF300513299 /* KeychainSearch.m */,
+				757A982F0CB98BF300513299 /* TrustedApplication.h */,
+				757A98300CB98BF300513299 /* TrustedApplication.m */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		757A98310CB98BF300513299 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				757A98320CB98BF300513299 /* Algorithm Constants.strings */,
+				757A98340CB98BF300513299 /* Algorithm Mode Constants.strings */,
+				757A98360CB98BF300513299 /* Algorithm Mode Names.strings */,
+				757A98380CB98BF300513299 /* Algorithm Names.strings */,
+				757A983A0CB98BF300513299 /* Authentication Type Constants.strings */,
+				757A983C0CB98BF300513299 /* Authentication Type Names.strings */,
+				75D25AA20CC1643600C8B443 /* Authorization Tag Constants.strings */,
+				75D25AA40CC1643600C8B443 /* Authorization Tag Names.strings */,
+				757A983E0CB98BF300513299 /* BER Code Constants.strings */,
+				757A98400CB98BF300513299 /* BER Code Names.strings */,
+				757A98420CB98BF300513299 /* Certificate Encoding Constants.strings */,
+				757A98440CB98BF300513299 /* Certificate Encoding Names.strings */,
+				757A98460CB98BF300513299 /* Certificate Type Constants.strings */,
+				757A98480CB98BF300513299 /* Certificate Type Names.strings */,
+				757A984A0CB98BF300513299 /* CRL Encoding Constants.strings */,
+				757A984C0CB98BF300513299 /* CRL Encoding Names.strings */,
+				757A984E0CB98BF300513299 /* CRL Type Constants.strings */,
+				757A98500CB98BF300513299 /* CRL Type Names.strings */,
+				757A98520CB98BF300513299 /* CSSM Error Base Names.strings */,
+				757A98540CB98BF300513299 /* CSSM Error Constants.strings */,
+				757A98560CB98BF300513299 /* CSSM Error Core Names.strings */,
+				757A98580CB98BF300513299 /* CSSM Error Descriptions.strings */,
+				757A985A0CB98BF300513299 /* CSSM Error Names.strings */,
+				757A985C0CB98BF300513299 /* Extension Format Constants.strings */,
+				757A985E0CB98BF300513299 /* Extension Format Names.strings */,
+				755434660D037157003D0C29 /* External Item Type Names.strings */,
+				755434680D037157003D0C29 /* External Item Type Constants.strings */,
+				7554346A0D037157003D0C29 /* External Format Names.strings */,
+				7554346C0D037157003D0C29 /* External Format Constants.strings */,
+				757A98600CB98BF300513299 /* GUID Names.strings */,
+				757A98620CB98BF300513299 /* InfoPlist.strings */,
+				757A98640CB98BF300513299 /* Key Attribute Constants.strings */,
+				757A98660CB98BF300513299 /* Key Attribute Names.strings */,
+				757A98680CB98BF300513299 /* Key Class Constants.strings */,
+				757A986A0CB98BF300513299 /* Key Class Names.strings */,
+				757A986C0CB98BF300513299 /* Key Usage Constants.strings */,
+				757A986E0CB98BF300513299 /* Key Usage Names.strings */,
+				757A98700CB98BF300513299 /* Keyblob Formats.strings */,
+				757A98720CB98BF300513299 /* Keyblob Type Constants.strings */,
+				757A98740CB98BF300513299 /* Keyblob Type Names.strings */,
+				757A98760CB98BF300513299 /* Keychain Attribute Type Constants.strings */,
+				757A98780CB98BF300513299 /* Keychain Attribute Type Names.strings */,
+				757A987A0CB98BF300513299 /* KeychainItem Class Constants.strings */,
+				757A987C0CB98BF300513299 /* KeychainItem Class Names.strings */,
+				757A987E0CB98BF300513299 /* Misc Names.strings */,
+				757A98800CB98BF300513299 /* OID Names.strings */,
+				757A98820CB98BF300513299 /* OSStatus Constants.strings */,
+				757A98840CB98BF300513299 /* OSStatus Descriptions.strings */,
+				757A98860CB98BF300513299 /* Protocol Type Constants.strings */,
+				757A98880CB98BF300513299 /* Protocol Type Long Names.strings */,
+				757A988A0CB98BF300513299 /* Protocol Type Short Names.strings */,
+				757A988C0CB98BF300513299 /* Info-Keychain.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		757A988D0CB98BF300513299 /* SKeyPlus */ = {
+			isa = PBXGroup;
+			children = (
+				757A988E0CB98BF300513299 /* SKeyPlus.h */,
+				757A988F0CB98BF300513299 /* SKeyPlus.m */,
+			);
+			path = SKeyPlus;
+			sourceTree = "<group>";
+		};
+		757A98900CB98BF300513299 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				757A98910CB98BF300513299 /* CompilerIndependence.h */,
+				757A98920CB98BF300513299 /* LocalisationUtils.h */,
+				757A98930CB98BF300513299 /* LocalisationUtils.m */,
+				757A98940CB98BF300513299 /* Logging.h */,
+				757A98950CB98BF300513299 /* Logging.m */,
+				757A98960CB98BF300513299 /* MultiThreading.h */,
+				757A98970CB98BF300513299 /* MultiThreading.m */,
+				757A98980CB98BF300513299 /* MultiThreadingInternal.h */,
+				757A98990CB98BF300513299 /* NSCachedObject.h */,
+				757A989A0CB98BF300513299 /* NSCachedObject.m */,
+				757A989B0CB98BF300513299 /* NSCalendarDateAdditions.h */,
+				757A989C0CB98BF300513299 /* NSCalendarDateAdditions.m */,
+				757A989D0CB98BF300513299 /* SecurityUtils.h */,
+				757A989E0CB98BF300513299 /* SecurityUtils.m */,
+				757A989F0CB98BF300513299 /* UtilitySupport.h */,
+				757A98A00CB98BF300513299 /* UtilitySupport.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		757A98A10CB98BF300513299 /* X509 */ = {
+			isa = PBXGroup;
+			children = (
+				757A98A20CB98BF300513299 /* x509.h */,
+				757A98A30CB98BF300513299 /* x509.m */,
+			);
+			path = X509;
+			sourceTree = "<group>";
+		};
+		75EE82160837440700D8CF7B /* Testers */ = {
+			isa = PBXGroup;
+			children = (
+				7594D49C0A20467E0090E497 /* CertificateGenerationTester.m */,
+				755613240A209100003428C2 /* CryptographicTester.m */,
+				75EE821C0837443E00D8CF7B /* CSSMUtilsTester.m */,
+				75C6E9030A3BDD1A009201FB /* KeychainSearchTester.m */,
+				7588AC8A0CA391B500466BEF /* KeychainTester.m */,
+				75D1B95E08A8E74200D77A20 /* MDSProber.m */,
+				751EAB570839B75500690BA7 /* NSCalendarDateAdditionsTester.m */,
+				753F8AB80841F08F0060298F /* OutputStreamsTester.m */,
+				7506C0510A3DB606000DB6BD /* PolicyProber.m */,
+				7540B3FD0999D1D600469F46 /* SKeyPlusTester.m */,
+				7563708D08444F4F00F9E7D7 /* StringsTester.m */,
+				751EAB2C0839B2B300690BA7 /* TestingCommon.h */,
+			);
+			name = Testers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		75A0749309438F8E008B9D9E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757A97E80CB98BCD00513299 /* CSSMACLEntry.h in Headers */,
+				757A97EA0CB98BCD00513299 /* CSSMControl.h in Headers */,
+				757A97EC0CB98BCD00513299 /* CSSMControlInternal.h in Headers */,
+				757A97F10CB98BCD00513299 /* CSSMDefaults.h in Headers */,
+				757A97F30CB98BCD00513299 /* CSSMInfo.h in Headers */,
+				757A97F50CB98BCD00513299 /* CSSMManagedModule.h in Headers */,
+				757A97F70CB98BCD00513299 /* CSSMModule.h in Headers */,
+				757A97F90CB98BCD00513299 /* CSSMOpenDataStore.h in Headers */,
+				757A97FB0CB98BCD00513299 /* CSSMTypes.h in Headers */,
+				757A97FC0CB98BCD00513299 /* CSSMUtils.h in Headers */,
+				757A97FE0CB98BCD00513299 /* MDS.h in Headers */,
+				757A98A40CB98BF300513299 /* ABPersonAdditions.h in Headers */,
+				757A98A60CB98BF300513299 /* Certificate.h in Headers */,
+				757A98AA0CB98BF300513299 /* CertificateExtensions.h in Headers */,
+				757A98AC0CB98BF300513299 /* CertificateGeneration.h in Headers */,
+				757A98AE0CB98BF300513299 /* Policy.h in Headers */,
+				757A98B00CB98BF300513299 /* Trust.h in Headers */,
+				757A98B20CB98BF300513299 /* FileUtilities.h in Headers */,
+				757A98B40CB98BF300513299 /* Key.h in Headers */,
+				757A98B60CB98BF300513299 /* KeychainUtils.h in Headers */,
+				757A98B80CB98BF300513299 /* MutableKey.h in Headers */,
+				757A98BA0CB98BF300513299 /* NSDataAdditions.h in Headers */,
+				757A98BC0CB98BF300513299 /* ChainedOutputStream.h in Headers */,
+				757A98BE0CB98BF300513299 /* DigestOutputStream.h in Headers */,
+				757A98C00CB98BF300513299 /* Hashcash.h in Headers */,
+				757A98C20CB98BF300513299 /* Access.h in Headers */,
+				757A98C40CB98BF300513299 /* AccessControlList.h in Headers */,
+				757A98C60CB98BF300513299 /* Identity.h in Headers */,
+				757A98C80CB98BF300513299 /* Keychain.h in Headers */,
+				757A98CA0CB98BF300513299 /* KeychainItem.h in Headers */,
+				757A98CC0CB98BF300513299 /* KeychainSearch.h in Headers */,
+				757A98CE0CB98BF300513299 /* TrustedApplication.h in Headers */,
+				757A98FE0CB98BF300513299 /* SKeyPlus.h in Headers */,
+				757A99000CB98BF300513299 /* CompilerIndependence.h in Headers */,
+				757A99010CB98BF300513299 /* LocalisationUtils.h in Headers */,
+				757A99030CB98BF300513299 /* Logging.h in Headers */,
+				757A99050CB98BF300513299 /* MultiThreading.h in Headers */,
+				757A99070CB98BF300513299 /* MultiThreadingInternal.h in Headers */,
+				757A99080CB98BF300513299 /* NSCachedObject.h in Headers */,
+				757A990A0CB98BF300513299 /* NSCalendarDateAdditions.h in Headers */,
+				757A990C0CB98BF300513299 /* SecurityUtils.h in Headers */,
+				757A990E0CB98BF300513299 /* UtilitySupport.h in Headers */,
+				757A99100CB98BF300513299 /* x509.h in Headers */,
+				75331C320D9EE27A00588D3C /* KeychainSearchInternal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7506C0340A3DB5A8000DB6BD /* PolicyProber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7506C0390A3DB5A8000DB6BD /* Build configuration list for PBXNativeTarget "PolicyProber" */;
+			buildPhases = (
+				7506C0350A3DB5A8000DB6BD /* Sources */,
+				7506C0370A3DB5A8000DB6BD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				754E37470A553CD000005844 /* PBXTargetDependency */,
+			);
+			name = PolicyProber;
+			productName = OutputStreamsTester;
+			productReference = 7506C03D0A3DB5A8000DB6BD /* PolicyProber */;
+			productType = "com.apple.product-type.tool";
+		};
+		7540B3E90999D1C000469F46 /* SKeyPlusTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7540B3EE0999D1C000469F46 /* Build configuration list for PBXNativeTarget "SKeyPlusTester" */;
+			buildPhases = (
+				7540B3EA0999D1C000469F46 /* Sources */,
+				7540B3EC0999D1C000469F46 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				754E374F0A553CDE00005844 /* PBXTargetDependency */,
+			);
+			name = SKeyPlusTester;
+			productName = OutputStreamsTester;
+			productReference = 7540B3F20999D1C000469F46 /* SKeyPlusTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		755613160A2090B5003428C2 /* CryptographyTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7556131B0A2090B5003428C2 /* Build configuration list for PBXNativeTarget "CryptographyTester" */;
+			buildPhases = (
+				755613170A2090B5003428C2 /* Sources */,
+				755613190A2090B5003428C2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				754E374B0A553CD700005844 /* PBXTargetDependency */,
+			);
+			name = CryptographyTester;
+			productName = CSSMUtilsTester;
+			productReference = 7556131F0A2090B5003428C2 /* CryptographyTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		7588AC6B0CA3916D00466BEF /* KeychainTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7588AC720CA3916D00466BEF /* Build configuration list for PBXNativeTarget "KeychainTester" */;
+			buildPhases = (
+				7588AC6E0CA3916D00466BEF /* Sources */,
+				7588AC700CA3916D00466BEF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7588AC6C0CA3916D00466BEF /* PBXTargetDependency */,
+			);
+			name = KeychainTester;
+			productName = CSSMUtilsTester;
+			productReference = 7588AC770CA3916D00466BEF /* KeychainTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		7594D4880A2045E00090E497 /* CertificateGenerationTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7594D48D0A2045E00090E497 /* Build configuration list for PBXNativeTarget "CertificateGenerationTester" */;
+			buildPhases = (
+				7594D4890A2045E00090E497 /* Sources */,
+				7594D48B0A2045E00090E497 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				754E374D0A553CDA00005844 /* PBXTargetDependency */,
+			);
+			name = CertificateGenerationTester;
+			productName = CSSMUtilsTester;
+			productReference = 7594D4910A2045E00090E497 /* CertificateGenerationTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		75A0749209438F8E008B9D9E /* Keychain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A074FD09438F8E008B9D9E /* Build configuration list for PBXNativeTarget "Keychain" */;
+			buildPhases = (
+				75A0749309438F8E008B9D9E /* Headers */,
+				75A074BD09438F8E008B9D9E /* Resources */,
+				75A074D109438F8E008B9D9E /* Sources */,
+				75A074F709438F8E008B9D9E /* Frameworks */,
+				75A074FC09438F8E008B9D9E /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Keychain;
+			productName = Keychain;
+			productReference = 75A0750209438F8E008B9D9E /* Keychain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		75A0750309438F8E008B9D9E /* CSSMUtilsTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A0750809438F8E008B9D9E /* Build configuration list for PBXNativeTarget "CSSMUtilsTester" */;
+			buildPhases = (
+				75A0750409438F8E008B9D9E /* Sources */,
+				75A0750609438F8E008B9D9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				754E373A0A553CC700005844 /* PBXTargetDependency */,
+			);
+			name = CSSMUtilsTester;
+			productName = CSSMUtilsTester;
+			productReference = 75A0750C09438F8E008B9D9E /* CSSMUtilsTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		75A0750E09438F8E008B9D9E /* NSCalendarDateAdditionsTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A0751309438F8E008B9D9E /* Build configuration list for PBXNativeTarget "NSCalendarDateAdditionsTester" */;
+			buildPhases = (
+				75A0750F09438F8E008B9D9E /* Sources */,
+				75A0751109438F8E008B9D9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				754E37450A553CCD00005844 /* PBXTargetDependency */,
+			);
+			name = NSCalendarDateAdditionsTester;
+			productName = NSCalendarDateAdditionsTester;
+			productReference = 75A0751709438F8E008B9D9E /* NSCalendarDateAdditionsTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		75A0751909438F8F008B9D9E /* OutputStreamsTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A0751E09438F8F008B9D9E /* Build configuration list for PBXNativeTarget "OutputStreamsTester" */;
+			buildPhases = (
+				75A0751A09438F8F008B9D9E /* Sources */,
+				75A0751C09438F8F008B9D9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				754E37550A553CE600005844 /* PBXTargetDependency */,
+			);
+			name = OutputStreamsTester;
+			productName = OutputStreamsTester;
+			productReference = 75A0752209438F8F008B9D9E /* OutputStreamsTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		75A0752409438F8F008B9D9E /* StringsTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A0752A09438F8F008B9D9E /* Build configuration list for PBXNativeTarget "StringsTester" */;
+			buildPhases = (
+				75A0752509438F8F008B9D9E /* Sources */,
+				75A0752709438F8F008B9D9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				754E37530A553CE300005844 /* PBXTargetDependency */,
+			);
+			name = StringsTester;
+			productName = StringsTester;
+			productReference = 75A0752E09438F8F008B9D9E /* StringsTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		75A0753009438F8F008B9D9E /* MDSProber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A0753609438F8F008B9D9E /* Build configuration list for PBXNativeTarget "MDSProber" */;
+			buildPhases = (
+				75A0753109438F8F008B9D9E /* Sources */,
+				75A0753309438F8F008B9D9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				754E37510A553CE100005844 /* PBXTargetDependency */,
+			);
+			name = MDSProber;
+			productName = MDSTester;
+			productReference = 75A0753A09438F8F008B9D9E /* MDSProber */;
+			productType = "com.apple.product-type.tool";
+		};
+		75C6E8EE0A3BDCD8009201FB /* KeychainSearchTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75C6E8F30A3BDCD8009201FB /* Build configuration list for PBXNativeTarget "KeychainSearchTester" */;
+			buildPhases = (
+				75C6E8EF0A3BDCD8009201FB /* Sources */,
+				75C6E8F10A3BDCD8009201FB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				754E37490A553CD400005844 /* PBXTargetDependency */,
+			);
+			name = KeychainSearchTester;
+			productName = CSSMUtilsTester;
+			productReference = 75C6E8F70A3BDCD8009201FB /* KeychainSearchTester */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7528103408569F6900FEFBDC /* Build configuration list for PBXProject "Keychain" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* Keychain */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75A0764A0943BA09008B9D9E /* World */,
+				75A0749209438F8E008B9D9E /* Keychain */,
+				75A0750309438F8E008B9D9E /* CSSMUtilsTester */,
+				75A0750E09438F8E008B9D9E /* NSCalendarDateAdditionsTester */,
+				75A0751909438F8F008B9D9E /* OutputStreamsTester */,
+				75A0752409438F8F008B9D9E /* StringsTester */,
+				75A0753009438F8F008B9D9E /* MDSProber */,
+				7540B3E90999D1C000469F46 /* SKeyPlusTester */,
+				7594D4880A2045E00090E497 /* CertificateGenerationTester */,
+				755613160A2090B5003428C2 /* CryptographyTester */,
+				75C6E8EE0A3BDCD8009201FB /* KeychainSearchTester */,
+				7506C0340A3DB5A8000DB6BD /* PolicyProber */,
+				7588AC6B0CA3916D00466BEF /* KeychainTester */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75A074BD09438F8E008B9D9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757A98D00CB98BF300513299 /* Algorithm Constants.strings in Resources */,
+				757A98D10CB98BF300513299 /* Algorithm Mode Constants.strings in Resources */,
+				757A98D20CB98BF300513299 /* Algorithm Mode Names.strings in Resources */,
+				757A98D30CB98BF300513299 /* Algorithm Names.strings in Resources */,
+				757A98D40CB98BF300513299 /* Authentication Type Constants.strings in Resources */,
+				757A98D50CB98BF300513299 /* Authentication Type Names.strings in Resources */,
+				75D25AA60CC1643600C8B443 /* Authorization Tag Constants.strings in Resources */,
+				75D25AA70CC1643600C8B443 /* Authorization Tag Names.strings in Resources */,
+				757A98D60CB98BF300513299 /* BER Code Constants.strings in Resources */,
+				757A98D70CB98BF300513299 /* BER Code Names.strings in Resources */,
+				757A98D80CB98BF300513299 /* Certificate Encoding Constants.strings in Resources */,
+				757A98D90CB98BF300513299 /* Certificate Encoding Names.strings in Resources */,
+				757A98DA0CB98BF300513299 /* Certificate Type Constants.strings in Resources */,
+				757A98DB0CB98BF300513299 /* Certificate Type Names.strings in Resources */,
+				757A98DC0CB98BF300513299 /* CRL Encoding Constants.strings in Resources */,
+				757A98DD0CB98BF300513299 /* CRL Encoding Names.strings in Resources */,
+				757A98DE0CB98BF300513299 /* CRL Type Constants.strings in Resources */,
+				757A98DF0CB98BF300513299 /* CRL Type Names.strings in Resources */,
+				757A98E00CB98BF300513299 /* CSSM Error Base Names.strings in Resources */,
+				757A98E10CB98BF300513299 /* CSSM Error Constants.strings in Resources */,
+				757A98E20CB98BF300513299 /* CSSM Error Core Names.strings in Resources */,
+				757A98E30CB98BF300513299 /* CSSM Error Descriptions.strings in Resources */,
+				757A98E40CB98BF300513299 /* CSSM Error Names.strings in Resources */,
+				757A98E50CB98BF300513299 /* Extension Format Constants.strings in Resources */,
+				757A98E60CB98BF300513299 /* Extension Format Names.strings in Resources */,
+				757A98E70CB98BF300513299 /* GUID Names.strings in Resources */,
+				757A98E80CB98BF300513299 /* InfoPlist.strings in Resources */,
+				757A98E90CB98BF300513299 /* Key Attribute Constants.strings in Resources */,
+				757A98EA0CB98BF300513299 /* Key Attribute Names.strings in Resources */,
+				757A98EB0CB98BF300513299 /* Key Class Constants.strings in Resources */,
+				757A98EC0CB98BF300513299 /* Key Class Names.strings in Resources */,
+				757A98ED0CB98BF300513299 /* Key Usage Constants.strings in Resources */,
+				757A98EE0CB98BF300513299 /* Key Usage Names.strings in Resources */,
+				757A98EF0CB98BF300513299 /* Keyblob Formats.strings in Resources */,
+				757A98F00CB98BF300513299 /* Keyblob Type Constants.strings in Resources */,
+				757A98F10CB98BF300513299 /* Keyblob Type Names.strings in Resources */,
+				757A98F20CB98BF300513299 /* Keychain Attribute Type Constants.strings in Resources */,
+				757A98F30CB98BF300513299 /* Keychain Attribute Type Names.strings in Resources */,
+				757A98F40CB98BF300513299 /* KeychainItem Class Constants.strings in Resources */,
+				757A98F50CB98BF300513299 /* KeychainItem Class Names.strings in Resources */,
+				757A98F60CB98BF300513299 /* Misc Names.strings in Resources */,
+				757A98F70CB98BF300513299 /* OID Names.strings in Resources */,
+				757A98F80CB98BF300513299 /* OSStatus Constants.strings in Resources */,
+				757A98F90CB98BF300513299 /* OSStatus Descriptions.strings in Resources */,
+				757A98FA0CB98BF300513299 /* Protocol Type Constants.strings in Resources */,
+				757A98FB0CB98BF300513299 /* Protocol Type Long Names.strings in Resources */,
+				757A98FC0CB98BF300513299 /* Protocol Type Short Names.strings in Resources */,
+				7554346E0D037157003D0C29 /* External Item Type Names.strings in Resources */,
+				7554346F0D037157003D0C29 /* External Item Type Constants.strings in Resources */,
+				755434700D037157003D0C29 /* External Format Names.strings in Resources */,
+				755434710D037157003D0C29 /* External Format Constants.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		75A074FC09438F8E008B9D9E /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7506C0350A3DB5A8000DB6BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7506C0520A3DB606000DB6BD /* PolicyProber.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7540B3EA0999D1C000469F46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7540B3FE0999D1D600469F46 /* SKeyPlusTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		755613170A2090B5003428C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755613250A209100003428C2 /* CryptographicTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7588AC6E0CA3916D00466BEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7588AC8C0CA391BC00466BEF /* KeychainTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7594D4890A2045E00090E497 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755613260A20910C003428C2 /* CertificateGenerationTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A074D109438F8E008B9D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7588AC8B0CA391B500466BEF /* KeychainTester.m in Sources */,
+				757A97E90CB98BCD00513299 /* CSSMACLEntry.m in Sources */,
+				757A97EB0CB98BCD00513299 /* CSSMControl.m in Sources */,
+				757A97F20CB98BCD00513299 /* CSSMDefaults.m in Sources */,
+				757A97F40CB98BCD00513299 /* CSSMInfo.m in Sources */,
+				757A97F60CB98BCD00513299 /* CSSMManagedModule.m in Sources */,
+				757A97F80CB98BCD00513299 /* CSSMModule.m in Sources */,
+				757A97FA0CB98BCD00513299 /* CSSMOpenDataStore.m in Sources */,
+				757A97FD0CB98BCD00513299 /* CSSMUtils.m in Sources */,
+				757A97FF0CB98BCD00513299 /* MDS.m in Sources */,
+				757A98A50CB98BF300513299 /* ABPersonAdditions.m in Sources */,
+				757A98A70CB98BF300513299 /* Certificate.m in Sources */,
+				757A98AB0CB98BF300513299 /* CertificateExtensions.m in Sources */,
+				757A98AD0CB98BF300513299 /* CertificateGeneration.m in Sources */,
+				757A98AF0CB98BF300513299 /* Policy.m in Sources */,
+				757A98B10CB98BF300513299 /* Trust.m in Sources */,
+				757A98B30CB98BF300513299 /* FileUtilities.m in Sources */,
+				757A98B50CB98BF300513299 /* Key.m in Sources */,
+				757A98B70CB98BF300513299 /* KeychainUtils.m in Sources */,
+				757A98B90CB98BF300513299 /* MutableKey.m in Sources */,
+				757A98BB0CB98BF300513299 /* NSDataAdditions.m in Sources */,
+				757A98BD0CB98BF300513299 /* ChainedOutputStream.m in Sources */,
+				757A98BF0CB98BF300513299 /* DigestOutputStream.m in Sources */,
+				757A98C10CB98BF300513299 /* Hashcash.m in Sources */,
+				757A98C30CB98BF300513299 /* Access.m in Sources */,
+				757A98C50CB98BF300513299 /* AccessControlList.m in Sources */,
+				757A98C70CB98BF300513299 /* Identity.m in Sources */,
+				757A98C90CB98BF300513299 /* Keychain.m in Sources */,
+				757A98CB0CB98BF300513299 /* KeychainItem.m in Sources */,
+				757A98CD0CB98BF300513299 /* KeychainSearch.m in Sources */,
+				757A98CF0CB98BF300513299 /* TrustedApplication.m in Sources */,
+				757A98FF0CB98BF300513299 /* SKeyPlus.m in Sources */,
+				757A99020CB98BF300513299 /* LocalisationUtils.m in Sources */,
+				757A99040CB98BF300513299 /* Logging.m in Sources */,
+				757A99060CB98BF300513299 /* MultiThreading.m in Sources */,
+				757A99090CB98BF300513299 /* NSCachedObject.m in Sources */,
+				757A990B0CB98BF300513299 /* NSCalendarDateAdditions.m in Sources */,
+				757A990D0CB98BF300513299 /* SecurityUtils.m in Sources */,
+				757A990F0CB98BF300513299 /* UtilitySupport.m in Sources */,
+				757A99110CB98BF300513299 /* x509.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0750409438F8E008B9D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0750509438F8E008B9D9E /* CSSMUtilsTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0750F09438F8E008B9D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0751009438F8E008B9D9E /* NSCalendarDateAdditionsTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0751A09438F8F008B9D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0751B09438F8F008B9D9E /* OutputStreamsTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0752509438F8F008B9D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0752609438F8F008B9D9E /* StringsTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A0753109438F8F008B9D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A0753209438F8F008B9D9E /* MDSProber.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C6E8EF0A3BDCD8009201FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C6E9040A3BDD1A009201FB /* KeychainSearchTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7506C0400A3DB5EA000DB6BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7506C0340A3DB5A8000DB6BD /* PolicyProber */;
+			targetProxy = 7506C03F0A3DB5EA000DB6BD /* PBXContainerItemProxy */;
+		};
+		754E373A0A553CC700005844 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 754E37390A553CC700005844 /* PBXContainerItemProxy */;
+		};
+		754E37450A553CCD00005844 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 754E37440A553CCD00005844 /* PBXContainerItemProxy */;
+		};
+		754E37470A553CD000005844 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 754E37460A553CD000005844 /* PBXContainerItemProxy */;
+		};
+		754E37490A553CD400005844 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 754E37480A553CD400005844 /* PBXContainerItemProxy */;
+		};
+		754E374B0A553CD700005844 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 754E374A0A553CD700005844 /* PBXContainerItemProxy */;
+		};
+		754E374D0A553CDA00005844 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 754E374C0A553CDA00005844 /* PBXContainerItemProxy */;
+		};
+		754E374F0A553CDE00005844 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 754E374E0A553CDE00005844 /* PBXContainerItemProxy */;
+		};
+		754E37510A553CE100005844 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 754E37500A553CE100005844 /* PBXContainerItemProxy */;
+		};
+		754E37530A553CE300005844 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 754E37520A553CE300005844 /* PBXContainerItemProxy */;
+		};
+		754E37550A553CE600005844 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 754E37540A553CE600005844 /* PBXContainerItemProxy */;
+		};
+		755CFABD0A1F672D008C69A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7540B3E90999D1C000469F46 /* SKeyPlusTester */;
+			targetProxy = 755CFABC0A1F672D008C69A9 /* PBXContainerItemProxy */;
+		};
+		755DE3320A20A2B9002EAC2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7594D4880A2045E00090E497 /* CertificateGenerationTester */;
+			targetProxy = 755DE3310A20A2B9002EAC2B /* PBXContainerItemProxy */;
+		};
+		755DE3340A20A2B9002EAC2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 755613160A2090B5003428C2 /* CryptographyTester */;
+			targetProxy = 755DE3330A20A2B9002EAC2B /* PBXContainerItemProxy */;
+		};
+		7588AC6C0CA3916D00466BEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 7588AC6D0CA3916D00466BEF /* PBXContainerItemProxy */;
+		};
+		75A0764C0943BA13008B9D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0749209438F8E008B9D9E /* Keychain */;
+			targetProxy = 75A0764B0943BA13008B9D9E /* PBXContainerItemProxy */;
+		};
+		75A0764E0943BA16008B9D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0750309438F8E008B9D9E /* CSSMUtilsTester */;
+			targetProxy = 75A0764D0943BA16008B9D9E /* PBXContainerItemProxy */;
+		};
+		75A076500943BA18008B9D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0750E09438F8E008B9D9E /* NSCalendarDateAdditionsTester */;
+			targetProxy = 75A0764F0943BA18008B9D9E /* PBXContainerItemProxy */;
+		};
+		75A076520943BA1A008B9D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0751909438F8F008B9D9E /* OutputStreamsTester */;
+			targetProxy = 75A076510943BA1A008B9D9E /* PBXContainerItemProxy */;
+		};
+		75A076540943BA1C008B9D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0752409438F8F008B9D9E /* StringsTester */;
+			targetProxy = 75A076530943BA1C008B9D9E /* PBXContainerItemProxy */;
+		};
+		75A076560943BA1D008B9D9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A0753009438F8F008B9D9E /* MDSProber */;
+			targetProxy = 75A076550943BA1D008B9D9E /* PBXContainerItemProxy */;
+		};
+		75C6E9300A3BE210009201FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75C6E8EE0A3BDCD8009201FB /* KeychainSearchTester */;
+			targetProxy = 75C6E92F0A3BE210009201FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		755434660D037157003D0C29 /* External Item Type Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				755434670D037157003D0C29 /* English */,
+			);
+			name = "External Item Type Names.strings";
+			sourceTree = "<group>";
+		};
+		755434680D037157003D0C29 /* External Item Type Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				755434690D037157003D0C29 /* English */,
+			);
+			name = "External Item Type Constants.strings";
+			sourceTree = "<group>";
+		};
+		7554346A0D037157003D0C29 /* External Format Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7554346B0D037157003D0C29 /* English */,
+			);
+			name = "External Format Names.strings";
+			sourceTree = "<group>";
+		};
+		7554346C0D037157003D0C29 /* External Format Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7554346D0D037157003D0C29 /* English */,
+			);
+			name = "External Format Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98320CB98BF300513299 /* Algorithm Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98330CB98BF300513299 /* English */,
+			);
+			name = "Algorithm Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98340CB98BF300513299 /* Algorithm Mode Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98350CB98BF300513299 /* English */,
+			);
+			name = "Algorithm Mode Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98360CB98BF300513299 /* Algorithm Mode Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98370CB98BF300513299 /* English */,
+			);
+			name = "Algorithm Mode Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98380CB98BF300513299 /* Algorithm Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98390CB98BF300513299 /* English */,
+			);
+			name = "Algorithm Names.strings";
+			sourceTree = "<group>";
+		};
+		757A983A0CB98BF300513299 /* Authentication Type Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A983B0CB98BF300513299 /* English */,
+			);
+			name = "Authentication Type Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A983C0CB98BF300513299 /* Authentication Type Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A983D0CB98BF300513299 /* English */,
+			);
+			name = "Authentication Type Names.strings";
+			sourceTree = "<group>";
+		};
+		757A983E0CB98BF300513299 /* BER Code Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A983F0CB98BF300513299 /* English */,
+			);
+			name = "BER Code Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98400CB98BF300513299 /* BER Code Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98410CB98BF300513299 /* English */,
+			);
+			name = "BER Code Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98420CB98BF300513299 /* Certificate Encoding Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98430CB98BF300513299 /* English */,
+			);
+			name = "Certificate Encoding Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98440CB98BF300513299 /* Certificate Encoding Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98450CB98BF300513299 /* English */,
+			);
+			name = "Certificate Encoding Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98460CB98BF300513299 /* Certificate Type Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98470CB98BF300513299 /* English */,
+			);
+			name = "Certificate Type Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98480CB98BF300513299 /* Certificate Type Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98490CB98BF300513299 /* English */,
+			);
+			name = "Certificate Type Names.strings";
+			sourceTree = "<group>";
+		};
+		757A984A0CB98BF300513299 /* CRL Encoding Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A984B0CB98BF300513299 /* English */,
+			);
+			name = "CRL Encoding Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A984C0CB98BF300513299 /* CRL Encoding Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A984D0CB98BF300513299 /* English */,
+			);
+			name = "CRL Encoding Names.strings";
+			sourceTree = "<group>";
+		};
+		757A984E0CB98BF300513299 /* CRL Type Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A984F0CB98BF300513299 /* English */,
+			);
+			name = "CRL Type Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98500CB98BF300513299 /* CRL Type Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98510CB98BF300513299 /* English */,
+			);
+			name = "CRL Type Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98520CB98BF300513299 /* CSSM Error Base Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98530CB98BF300513299 /* English */,
+			);
+			name = "CSSM Error Base Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98540CB98BF300513299 /* CSSM Error Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98550CB98BF300513299 /* English */,
+			);
+			name = "CSSM Error Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98560CB98BF300513299 /* CSSM Error Core Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98570CB98BF300513299 /* English */,
+			);
+			name = "CSSM Error Core Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98580CB98BF300513299 /* CSSM Error Descriptions.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98590CB98BF300513299 /* English */,
+			);
+			name = "CSSM Error Descriptions.strings";
+			sourceTree = "<group>";
+		};
+		757A985A0CB98BF300513299 /* CSSM Error Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A985B0CB98BF300513299 /* English */,
+			);
+			name = "CSSM Error Names.strings";
+			sourceTree = "<group>";
+		};
+		757A985C0CB98BF300513299 /* Extension Format Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A985D0CB98BF300513299 /* English */,
+			);
+			name = "Extension Format Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A985E0CB98BF300513299 /* Extension Format Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A985F0CB98BF300513299 /* English */,
+			);
+			name = "Extension Format Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98600CB98BF300513299 /* GUID Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98610CB98BF300513299 /* English */,
+			);
+			name = "GUID Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98620CB98BF300513299 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98630CB98BF300513299 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		757A98640CB98BF300513299 /* Key Attribute Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98650CB98BF300513299 /* English */,
+			);
+			name = "Key Attribute Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98660CB98BF300513299 /* Key Attribute Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98670CB98BF300513299 /* English */,
+			);
+			name = "Key Attribute Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98680CB98BF300513299 /* Key Class Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98690CB98BF300513299 /* English */,
+			);
+			name = "Key Class Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A986A0CB98BF300513299 /* Key Class Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A986B0CB98BF300513299 /* English */,
+			);
+			name = "Key Class Names.strings";
+			sourceTree = "<group>";
+		};
+		757A986C0CB98BF300513299 /* Key Usage Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A986D0CB98BF300513299 /* English */,
+			);
+			name = "Key Usage Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A986E0CB98BF300513299 /* Key Usage Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A986F0CB98BF300513299 /* English */,
+			);
+			name = "Key Usage Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98700CB98BF300513299 /* Keyblob Formats.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98710CB98BF300513299 /* English */,
+			);
+			name = "Keyblob Formats.strings";
+			sourceTree = "<group>";
+		};
+		757A98720CB98BF300513299 /* Keyblob Type Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98730CB98BF300513299 /* English */,
+			);
+			name = "Keyblob Type Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98740CB98BF300513299 /* Keyblob Type Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98750CB98BF300513299 /* English */,
+			);
+			name = "Keyblob Type Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98760CB98BF300513299 /* Keychain Attribute Type Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98770CB98BF300513299 /* English */,
+			);
+			name = "Keychain Attribute Type Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98780CB98BF300513299 /* Keychain Attribute Type Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98790CB98BF300513299 /* English */,
+			);
+			name = "Keychain Attribute Type Names.strings";
+			sourceTree = "<group>";
+		};
+		757A987A0CB98BF300513299 /* KeychainItem Class Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A987B0CB98BF300513299 /* English */,
+			);
+			name = "KeychainItem Class Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A987C0CB98BF300513299 /* KeychainItem Class Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A987D0CB98BF300513299 /* English */,
+			);
+			name = "KeychainItem Class Names.strings";
+			sourceTree = "<group>";
+		};
+		757A987E0CB98BF300513299 /* Misc Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A987F0CB98BF300513299 /* English */,
+			);
+			name = "Misc Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98800CB98BF300513299 /* OID Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98810CB98BF300513299 /* English */,
+			);
+			name = "OID Names.strings";
+			sourceTree = "<group>";
+		};
+		757A98820CB98BF300513299 /* OSStatus Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98830CB98BF300513299 /* English */,
+			);
+			name = "OSStatus Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98840CB98BF300513299 /* OSStatus Descriptions.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98850CB98BF300513299 /* English */,
+			);
+			name = "OSStatus Descriptions.strings";
+			sourceTree = "<group>";
+		};
+		757A98860CB98BF300513299 /* Protocol Type Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98870CB98BF300513299 /* English */,
+			);
+			name = "Protocol Type Constants.strings";
+			sourceTree = "<group>";
+		};
+		757A98880CB98BF300513299 /* Protocol Type Long Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A98890CB98BF300513299 /* English */,
+			);
+			name = "Protocol Type Long Names.strings";
+			sourceTree = "<group>";
+		};
+		757A988A0CB98BF300513299 /* Protocol Type Short Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757A988B0CB98BF300513299 /* English */,
+			);
+			name = "Protocol Type Short Names.strings";
+			sourceTree = "<group>";
+		};
+		75D25AA20CC1643600C8B443 /* Authorization Tag Constants.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75D25AA30CC1643600C8B443 /* English */,
+			);
+			name = "Authorization Tag Constants.strings";
+			sourceTree = "<group>";
+		};
+		75D25AA40CC1643600C8B443 /* Authorization Tag Names.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75D25AA50CC1643600C8B443 /* English */,
+			);
+			name = "Authorization Tag Names.strings";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7506C03A0A3DB5A8000DB6BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = PolicyProber;
+			};
+			name = Debug;
+		};
+		7506C03B0A3DB5A8000DB6BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = PolicyProber;
+			};
+			name = Release;
+		};
+		7528103508569F6900FEFBDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+					ppc64,
+					x86_64,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
+				OTHER_CFLAGS = "-ggdb3";
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				"SDKROOT[arch=i386]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				"SDKROOT[arch=ppc]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = "-Wno-import";
+			};
+			name = Debug;
+		};
+		7528103608569F6900FEFBDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+					ppc64,
+					x86_64,
+				);
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
+				OTHER_CFLAGS = "-ggdb3";
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				"SDKROOT[arch=i386]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				"SDKROOT[arch=ppc]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = "-Wno-import";
+			};
+			name = Release;
+		};
+		7540B3EF0999D1C000469F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				PRODUCT_NAME = SKeyPlusTester;
+			};
+			name = Debug;
+		};
+		7540B3F00999D1C000469F46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				PRODUCT_NAME = SKeyPlusTester;
+			};
+			name = Release;
+		};
+		7556131C0A2090B5003428C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = CryptographyTester;
+			};
+			name = Debug;
+		};
+		7556131D0A2090B5003428C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = CryptographyTester;
+			};
+			name = Release;
+		};
+		757709E90B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 757709C20B12D4AA00E926A4 /* FrameworkDebug.xcconfig */;
+			buildSettings = {
+				INSTALL_PATH = "@executable_path/../Frameworks/";
+			};
+			name = "Debug (Embedded)";
+		};
+		757709EA0B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 757709CA0B12DE2000E926A4 /* FrameworkRelease.xcconfig */;
+			buildSettings = {
+				INSTALL_PATH = "@executable_path/../Frameworks/";
+			};
+			name = "Release (Embedded)";
+		};
+		757709EB0B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = CSSMUtilsTester;
+			};
+			name = "Debug (Embedded)";
+		};
+		757709EC0B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = CSSMUtilsTester;
+			};
+			name = "Release (Embedded)";
+		};
+		757709ED0B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = NSCalendarDateAdditionsTester;
+			};
+			name = "Debug (Embedded)";
+		};
+		757709EE0B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = NSCalendarDateAdditionsTester;
+			};
+			name = "Release (Embedded)";
+		};
+		757709EF0B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = OutputStreamsTester;
+			};
+			name = "Debug (Embedded)";
+		};
+		757709F00B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = OutputStreamsTester;
+			};
+			name = "Release (Embedded)";
+		};
+		757709F10B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = StringsTester;
+			};
+			name = "Debug (Embedded)";
+		};
+		757709F20B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = StringsTester;
+			};
+			name = "Release (Embedded)";
+		};
+		757709F30B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = MDSProber;
+			};
+			name = "Debug (Embedded)";
+		};
+		757709F40B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = MDSProber;
+			};
+			name = "Release (Embedded)";
+		};
+		757709F50B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				PRODUCT_NAME = SKeyPlusTester;
+			};
+			name = "Debug (Embedded)";
+		};
+		757709F60B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				PRODUCT_NAME = SKeyPlusTester;
+			};
+			name = "Release (Embedded)";
+		};
+		757709F70B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = CertificateGenerationTester;
+			};
+			name = "Debug (Embedded)";
+		};
+		757709F80B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = CertificateGenerationTester;
+			};
+			name = "Release (Embedded)";
+		};
+		757709F90B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = CryptographyTester;
+			};
+			name = "Debug (Embedded)";
+		};
+		757709FA0B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = CryptographyTester;
+			};
+			name = "Release (Embedded)";
+		};
+		757709FB0B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = KeychainSearchTester;
+			};
+			name = "Debug (Embedded)";
+		};
+		757709FC0B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = KeychainSearchTester;
+			};
+			name = "Release (Embedded)";
+		};
+		757709FD0B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = PolicyProber;
+			};
+			name = "Debug (Embedded)";
+		};
+		757709FE0B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = PolicyProber;
+			};
+			name = "Release (Embedded)";
+		};
+		757709FF0B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = World;
+			};
+			name = "Debug (Embedded)";
+		};
+		75770A000B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = World;
+				ZERO_LINK = NO;
+			};
+			name = "Release (Embedded)";
+		};
+		75770A010B12E0EB00E926A4 /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+					ppc64,
+					x86_64,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/build/Development\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_PEDANTIC = NO;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
+				OTHER_CFLAGS = "-ggdb3";
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				"SDKROOT[arch=i386]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				"SDKROOT[arch=ppc]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = "-Wno-import";
+			};
+			name = "Debug (Embedded)";
+		};
+		75770A020B12E0EB00E926A4 /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+					ppc64,
+					x86_64,
+				);
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/build/Development\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
+				OTHER_CFLAGS = "-ggdb3";
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				"SDKROOT[arch=i386]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				"SDKROOT[arch=ppc]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				VERSIONING_SYSTEM = "apple-generic";
+				WARNING_CFLAGS = "-Wno-import";
+			};
+			name = "Release (Embedded)";
+		};
+		7588AC730CA3916D00466BEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = KeychainTester;
+			};
+			name = Debug;
+		};
+		7588AC740CA3916D00466BEF /* Debug (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = KeychainTester;
+			};
+			name = "Debug (Embedded)";
+		};
+		7588AC750CA3916D00466BEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = KeychainTester;
+			};
+			name = Release;
+		};
+		7588AC760CA3916D00466BEF /* Release (Embedded) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = KeychainTester;
+			};
+			name = "Release (Embedded)";
+		};
+		7594D48E0A2045E00090E497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = CertificateGenerationTester;
+			};
+			name = Debug;
+		};
+		7594D48F0A2045E00090E497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = CertificateGenerationTester;
+			};
+			name = Release;
+		};
+		75A074FE09438F8E008B9D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 757709C20B12D4AA00E926A4 /* FrameworkDebug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		75A074FF09438F8E008B9D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 757709CA0B12DE2000E926A4 /* FrameworkRelease.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		75A0750909438F8E008B9D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = CSSMUtilsTester;
+			};
+			name = Debug;
+		};
+		75A0750A09438F8E008B9D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = CSSMUtilsTester;
+			};
+			name = Release;
+		};
+		75A0751409438F8E008B9D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = NSCalendarDateAdditionsTester;
+			};
+			name = Debug;
+		};
+		75A0751509438F8E008B9D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = NSCalendarDateAdditionsTester;
+			};
+			name = Release;
+		};
+		75A0751F09438F8F008B9D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = OutputStreamsTester;
+			};
+			name = Debug;
+		};
+		75A0752009438F8F008B9D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = OutputStreamsTester;
+			};
+			name = Release;
+		};
+		75A0752B09438F8F008B9D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = StringsTester;
+			};
+			name = Debug;
+		};
+		75A0752C09438F8F008B9D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = StringsTester;
+			};
+			name = Release;
+		};
+		75A0753709438F8F008B9D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = MDSProber;
+			};
+			name = Debug;
+		};
+		75A0753809438F8F008B9D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = MDSProber;
+			};
+			name = Release;
+		};
+		75A076590943BA3D008B9D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = World;
+			};
+			name = Debug;
+		};
+		75A0765A0943BA3D008B9D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = World;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		75C6E8F40A3BDCD8009201FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = KeychainSearchTester;
+			};
+			name = Debug;
+		};
+		75C6E8F50A3BDCD8009201FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_MODEL_CPU = G3;
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = KeychainSearchTester;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7506C0390A3DB5A8000DB6BD /* Build configuration list for PBXNativeTarget "PolicyProber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7506C03A0A3DB5A8000DB6BD /* Debug */,
+				757709FD0B12E0EB00E926A4 /* Debug (Embedded) */,
+				7506C03B0A3DB5A8000DB6BD /* Release */,
+				757709FE0B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7528103408569F6900FEFBDC /* Build configuration list for PBXProject "Keychain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7528103508569F6900FEFBDC /* Debug */,
+				75770A010B12E0EB00E926A4 /* Debug (Embedded) */,
+				7528103608569F6900FEFBDC /* Release */,
+				75770A020B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7540B3EE0999D1C000469F46 /* Build configuration list for PBXNativeTarget "SKeyPlusTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7540B3EF0999D1C000469F46 /* Debug */,
+				757709F50B12E0EB00E926A4 /* Debug (Embedded) */,
+				7540B3F00999D1C000469F46 /* Release */,
+				757709F60B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7556131B0A2090B5003428C2 /* Build configuration list for PBXNativeTarget "CryptographyTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7556131C0A2090B5003428C2 /* Debug */,
+				757709F90B12E0EB00E926A4 /* Debug (Embedded) */,
+				7556131D0A2090B5003428C2 /* Release */,
+				757709FA0B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7588AC720CA3916D00466BEF /* Build configuration list for PBXNativeTarget "KeychainTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7588AC730CA3916D00466BEF /* Debug */,
+				7588AC740CA3916D00466BEF /* Debug (Embedded) */,
+				7588AC750CA3916D00466BEF /* Release */,
+				7588AC760CA3916D00466BEF /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7594D48D0A2045E00090E497 /* Build configuration list for PBXNativeTarget "CertificateGenerationTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7594D48E0A2045E00090E497 /* Debug */,
+				757709F70B12E0EB00E926A4 /* Debug (Embedded) */,
+				7594D48F0A2045E00090E497 /* Release */,
+				757709F80B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		75A074FD09438F8E008B9D9E /* Build configuration list for PBXNativeTarget "Keychain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A074FE09438F8E008B9D9E /* Debug */,
+				757709E90B12E0EB00E926A4 /* Debug (Embedded) */,
+				75A074FF09438F8E008B9D9E /* Release */,
+				757709EA0B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		75A0750809438F8E008B9D9E /* Build configuration list for PBXNativeTarget "CSSMUtilsTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A0750909438F8E008B9D9E /* Debug */,
+				757709EB0B12E0EB00E926A4 /* Debug (Embedded) */,
+				75A0750A09438F8E008B9D9E /* Release */,
+				757709EC0B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		75A0751309438F8E008B9D9E /* Build configuration list for PBXNativeTarget "NSCalendarDateAdditionsTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A0751409438F8E008B9D9E /* Debug */,
+				757709ED0B12E0EB00E926A4 /* Debug (Embedded) */,
+				75A0751509438F8E008B9D9E /* Release */,
+				757709EE0B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		75A0751E09438F8F008B9D9E /* Build configuration list for PBXNativeTarget "OutputStreamsTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A0751F09438F8F008B9D9E /* Debug */,
+				757709EF0B12E0EB00E926A4 /* Debug (Embedded) */,
+				75A0752009438F8F008B9D9E /* Release */,
+				757709F00B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		75A0752A09438F8F008B9D9E /* Build configuration list for PBXNativeTarget "StringsTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A0752B09438F8F008B9D9E /* Debug */,
+				757709F10B12E0EB00E926A4 /* Debug (Embedded) */,
+				75A0752C09438F8F008B9D9E /* Release */,
+				757709F20B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		75A0753609438F8F008B9D9E /* Build configuration list for PBXNativeTarget "MDSProber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A0753709438F8F008B9D9E /* Debug */,
+				757709F30B12E0EB00E926A4 /* Debug (Embedded) */,
+				75A0753809438F8F008B9D9E /* Release */,
+				757709F40B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		75A076580943BA3D008B9D9E /* Build configuration list for PBXAggregateTarget "World" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A076590943BA3D008B9D9E /* Debug */,
+				757709FF0B12E0EB00E926A4 /* Debug (Embedded) */,
+				75A0765A0943BA3D008B9D9E /* Release */,
+				75770A000B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		75C6E8F30A3BDCD8009201FB /* Build configuration list for PBXNativeTarget "KeychainSearchTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75C6E8F40A3BDCD8009201FB /* Debug */,
+				757709FB0B12E0EB00E926A4 /* Debug (Embedded) */,
+				75C6E8F50A3BDCD8009201FB /* Release */,
+				757709FC0B12E0EB00E926A4 /* Release (Embedded) */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

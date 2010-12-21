@@ -1,0 +1,35 @@
+/* Protocol Type Constants. */
+
+/* The key is the four-character code, the value is the Security.framework constant corresponding to that code. */
+
+"ftp " = "kSecProtocolTypeFTP";
+"ftpa" = "kSecProtocolTypeFTPAccount";
+"http" = "kSecProtocolTypeHTTP";
+"irc " = "kSecProtocolTypeIRC";
+"nntp" = "kSecProtocolTypeNNTP";
+"pop3" = "kSecProtocolTypePOP3";
+"smtp" = "kSecProtocolTypeSMTP";
+"sox " = "kSecProtocolTypeSOCKS";
+"imap" = "kSecProtocolTypeIMAP";
+"ldap" = "kSecProtocolTypeLDAP";
+"atlk" = "kSecProtocolTypeAppleTalk";
+"afp " = "kSecProtocolTypeAFP";
+"teln" = "kSecProtocolTypeTelnet";
+"ssh " = "kSecProtocolTypeSSH";
+"ftps" = "kSecProtocolTypeFTPS";
+"htps" = "kSecProtocolTypeHTTPS";
+"htpx" = "kSecProtocolTypeHTTPProxy";
+"htsx" = "kSecProtocolTypeHTTPSProxy";
+"ftpx" = "kSecProtocolTypeFTPProxy";
+"smb " = "kSecProtocolTypeSMB";
+"rtsp" = "kSecProtocolTypeRTSP";
+"rtsx" = "kSecProtocolTypeRTSPProxy";
+"daap" = "kSecProtocolTypeDAAP";
+"eppc" = "kSecProtocolTypeEPPC";
+"ipp " = "kSecProtocolTypeIPP";
+"ntps" = "kSecProtocolTypeNNTPS";
+"ldps" = "kSecProtocolTypeLDAPS";
+"tels" = "kSecProtocolTypeTelnetS";
+"imps" = "kSecProtocolTypeIMAPS";
+"ircs" = "kSecProtocolTypeIRCS";
+"pops" = "kSecProtocolTypePOP3S";

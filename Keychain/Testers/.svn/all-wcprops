@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Testers
+END
+CertificateGenerationTester.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/keychain/!svn/ver/452/trunk/Frameworks/Keychain/Testers/CertificateGenerationTester.m
+END
+CryptographicTester.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Testers/CryptographicTester.m
+END
+OutputStreamsTester.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Testers/OutputStreamsTester.m
+END
+SKeyPlusTester.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/keychain/!svn/ver/338/trunk/Frameworks/Keychain/Testers/SKeyPlusTester.m
+END
+KeychainSearchTester.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Testers/KeychainSearchTester.m
+END
+PolicyProber.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/keychain/!svn/ver/338/trunk/Frameworks/Keychain/Testers/PolicyProber.m
+END
+CSSMUtilsTester.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Testers/CSSMUtilsTester.m
+END
+MDSProber.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Testers/MDSProber.m
+END
+NSCalendarDateAdditionsTester.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Testers/NSCalendarDateAdditionsTester.m
+END
+StringsTester.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/keychain/!svn/ver/393/trunk/Frameworks/Keychain/Testers/StringsTester.m
+END
+TestingCommon.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/keychain/!svn/ver/413/trunk/Frameworks/Keychain/Testers/TestingCommon.h
+END
+KeychainTester.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/keychain/!svn/ver/453/trunk/Frameworks/Keychain/Testers/KeychainTester.m
+END
