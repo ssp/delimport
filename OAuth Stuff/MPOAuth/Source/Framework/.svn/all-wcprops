@@ -1,0 +1,251 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/131/trunk/Source/Framework
+END
+MPOAuthAuthenticationMethodXAuth.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/129/trunk/Source/Framework/MPOAuthAuthenticationMethodXAuth.m
+END
+NSURL+MPURLParameterAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/118/trunk/Source/Framework/NSURL+MPURLParameterAdditions.h
+END
+MPOAuthCredentialConcreteStore+KeychainAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/118/trunk/Source/Framework/MPOAuthCredentialConcreteStore+KeychainAdditions.h
+END
+NSURL+MPURLParameterAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/118/trunk/Source/Framework/NSURL+MPURLParameterAdditions.m
+END
+MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/118/trunk/Source/Framework/MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m
+END
+MPOAuthAPI.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/129/trunk/Source/Framework/MPOAuthAPI.h
+END
+MPOAuthCredentialConcreteStore.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/118/trunk/Source/Framework/MPOAuthCredentialConcreteStore.h
+END
+MPOAuthURLRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/118/trunk/Source/Framework/MPOAuthURLRequest.h
+END
+MPOAuthAPI.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/131/trunk/Source/Framework/MPOAuthAPI.m
+END
+MPOAuthCredentialConcreteStore.m
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/118/trunk/Source/Framework/MPOAuthCredentialConcreteStore.m
+END
+MPOAuthURLRequest.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/118/trunk/Source/Framework/MPOAuthURLRequest.m
+END
+NSString+URLEscapingAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/90/trunk/Source/Framework/NSString+URLEscapingAdditions.h
+END
+MPOAuthAuthenticationMethod.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/118/trunk/Source/Framework/MPOAuthAuthenticationMethod.h
+END
+MPOAuthURLResponse.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/Source/Framework/MPOAuthURLResponse.h
+END
+NSString+URLEscapingAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/90/trunk/Source/Framework/NSString+URLEscapingAdditions.m
+END
+MPDebug.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/106/trunk/Source/Framework/MPDebug.h
+END
+MPOAuthAuthenticationMethod.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/118/trunk/Source/Framework/MPOAuthAuthenticationMethod.m
+END
+MPOAuthURLResponse.m
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/Source/Framework/MPOAuthURLResponse.m
+END
+MPOAuthCredentialStore.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/118/trunk/Source/Framework/MPOAuthCredentialStore.h
+END
+MPOAuthConnection.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/Source/Framework/MPOAuthConnection.h
+END
+MPOAuthSignatureParameter.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/26/trunk/Source/Framework/MPOAuthSignatureParameter.h
+END
+MPOAuthConnection.m
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2/trunk/Source/Framework/MPOAuthConnection.m
+END
+MPOAuthAuthenticationMethodAuthExchange.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/118/trunk/Source/Framework/MPOAuthAuthenticationMethodAuthExchange.h
+END
+MPWSXRDDocument.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/111/trunk/Source/Framework/MPWSXRDDocument.h
+END
+NSURLResponse+Encoding.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Source/Framework/NSURLResponse+Encoding.h
+END
+MPOAuthSignatureParameter.m
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/122/trunk/Source/Framework/MPOAuthSignatureParameter.m
+END
+MPOAuthParameterFactory.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Source/Framework/MPOAuthParameterFactory.h
+END
+MPOAuthAPIRequestLoader.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/118/trunk/Source/Framework/MPOAuthAPIRequestLoader.h
+END
+MPWSXRDDocument.m
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/117/trunk/Source/Framework/MPWSXRDDocument.m
+END
+MPOAuthAuthenticationMethodAuthExchange.m
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/129/trunk/Source/Framework/MPOAuthAuthenticationMethodAuthExchange.m
+END
+MPURLRequestParameter.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/21/trunk/Source/Framework/MPURLRequestParameter.h
+END
+NSURLResponse+Encoding.m
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2/trunk/Source/Framework/NSURLResponse+Encoding.m
+END
+MPOAuthAPIRequestLoader.m
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/123/trunk/Source/Framework/MPOAuthAPIRequestLoader.m
+END
+MPOAuth.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/125/trunk/Source/Framework/MPOAuth.h
+END
+MPWSLRDDiscoverer.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/111/trunk/Source/Framework/MPWSLRDDiscoverer.h
+END
+MPURLRequestParameter.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/118/trunk/Source/Framework/MPURLRequestParameter.m
+END
+MPOAuthAuthenticationMethodOAuth.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/123/trunk/Source/Framework/MPOAuthAuthenticationMethodOAuth.h
+END
+MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/118/trunk/Source/Framework/MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m
+END
+MPWSLRDDiscoverer.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/111/trunk/Source/Framework/MPWSLRDDiscoverer.m
+END
+MPOAuthAuthenticationMethodOAuth.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/131/trunk/Source/Framework/MPOAuthAuthenticationMethodOAuth.m
+END
+MPOAuthAuthenticationMethodXAuth.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/129/trunk/Source/Framework/MPOAuthAuthenticationMethodXAuth.h
+END

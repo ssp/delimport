@@ -1,0 +1,206 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* MPOAuthMobile */ = {
+		activeExec = 0;
+		executables = (
+			6C5A3F3111D88E5D00F8D4EE /* MPOAuthMobile */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 6C5A3F3311D88E5D00F8D4EE /* MPOAuthTestApp */;
+		activeSDKPreference = macosx10.5;
+		activeTarget = CBD26483111F46580003486C /* MPOAuthTestApp */;
+		codeSenseManager = 6C5A3F4511D88EA800F8D4EE /* Code sense */;
+		executables = (
+			6C5A3F3111D88E5D00F8D4EE /* MPOAuthMobile */,
+			6C5A3F3211D88E5D00F8D4EE /* MPOAuthMobile+Tests */,
+			6C5A3F3311D88E5D00F8D4EE /* MPOAuthTestApp */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					486,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 299404896;
+			PBXWorkspaceStateSaveDate = 299404896;
+		};
+		perUserProjectItems = {
+			6C5A3F6511D88FB200F8D4EE /* PBXBookmark */ = 6C5A3F6511D88FB200F8D4EE /* PBXBookmark */;
+			6C5A40CD11D89BA100F8D4EE /* PBXTextBookmark */ = 6C5A40CD11D89BA100F8D4EE /* PBXTextBookmark */;
+		};
+		sourceControlManager = 6C5A3F4411D88EA800F8D4EE /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	6C5A3F3111D88E5D00F8D4EE /* MPOAuthMobile */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = MPOAuthMobile;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	6C5A3F3211D88E5D00F8D4EE /* MPOAuthMobile+Tests */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "MPOAuthMobile+Tests";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	6C5A3F3311D88E5D00F8D4EE /* MPOAuthTestApp */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = MPOAuthTestApp;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	6C5A3F4411D88EA800F8D4EE /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "svn 1";
+			};
+		};
+	};
+	6C5A3F4511D88EA800F8D4EE /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	6C5A3F6511D88FB200F8D4EE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = CBD2648F111F46910003486C /* OAuthClientController.m */;
+	};
+	6C5A40CD11D89BA100F8D4EE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = CBD2648F111F46910003486C /* OAuthClientController.m */;
+		name = "OAuthClientController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1425;
+		vrLoc = 627;
+	};
+	CB36C2DF1124CE51005CF675 /* libMPOAuthMac */ = {
+		activeExec = 0;
+	};
+	CB36C3061124CE8F005CF675 /* Unit Tests Static Library */ = {
+		activeExec = 0;
+	};
+	CB36C3481124D01E005CF675 /* Build All */ = {
+		activeExec = 0;
+	};
+	CB36C3AA1124D425005CF675 /* MPOAuthMobile+Tests */ = {
+		activeExec = 0;
+		executables = (
+			6C5A3F3211D88E5D00F8D4EE /* MPOAuthMobile+Tests */,
+		);
+	};
+	CBCF41A411240C5600E90EE8 /* Mobile Unit Tests */ = {
+		activeExec = 0;
+	};
+	CBCF41D711240EF300E90EE8 /* Unit Tests */ = {
+		activeExec = 0;
+	};
+	CBD262D4111E412E0003486C /* libMPOAuth */ = {
+		activeExec = 0;
+	};
+	CBD26483111F46580003486C /* MPOAuthTestApp */ = {
+		activeExec = 0;
+		executables = (
+			6C5A3F3311D88E5D00F8D4EE /* MPOAuthTestApp */,
+		);
+	};
+	CBD2648F111F46910003486C /* OAuthClientController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {664, 1050}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{627, 1425}";
+		};
+	};
+	CBD26516111F4B180003486C /* MPOAuth */ = {
+		activeExec = 0;
+	};
+}

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/125/trunk/Source/Mobile%20Test%20App
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/125/trunk/Source/Mobile%20Test%20App/main.m
+END
+UserAuthViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/125/trunk/Source/Mobile%20Test%20App/UserAuthViewController.h
+END
+MPOAuthMobileAppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/125/trunk/Source/Mobile%20Test%20App/MPOAuthMobileAppDelegate.h
+END
+RootViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/125/trunk/Source/Mobile%20Test%20App/RootViewController.h
+END
+UserAuthViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/125/trunk/Source/Mobile%20Test%20App/UserAuthViewController.m
+END
+MPOAuthMobileAppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/125/trunk/Source/Mobile%20Test%20App/MPOAuthMobileAppDelegate.m
+END
+RootViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/125/trunk/Source/Mobile%20Test%20App/RootViewController.m
+END
