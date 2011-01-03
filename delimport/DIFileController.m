@@ -7,12 +7,26 @@
 //
 
 #import "DIFileController.h"
-
+#import "DIWebWindowController.h"
 
 @implementation DIFileController
 
+- (id) init {
+	self = [super init];
+	if (self) {
+		webWindowController = [[DIWebWindowController alloc] initWithWindowNibName:@"FileWindow"];
+	}
 
-- (NSString *) metadataPathForSubfolder: (NSString *) folderName {
+	return self;
+}
+
+- (void) dealloc {
+	[webWindowController dealloc];
+	[super dealloc];
+}
+
+
++ (NSString *) metadataPathForSubfolder: (NSString *) folderName {
 	NSString *metadataPath = [[@"~/Library/Metadata/" stringByExpandingTildeInPath] stringByAppendingPathComponent: folderName];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	BOOL isDir;
@@ -30,10 +44,9 @@
 }
 
 
-
-- (NSString *) pathForHash: (NSString*) hash {
++ (NSString *) bookmarkPathForHash: (NSString*) hash {
 	NSString * fileName = [hash stringByAppendingPathExtension: DIDeliciousFileNameExtension];
-	NSString * metadataPath = [self metadataPathForSubfolder:@"delimport"];
+	NSString * metadataPath = [[self class] metadataPathForSubfolder:@"delimport"];
 	NSString * path = nil;
 	if (metadataPath) {
 		path = [metadataPath stringByAppendingPathComponent:fileName];
@@ -43,9 +56,20 @@
 }
 
 
++ (NSString *) webarchivePathForHash: (NSString*) hash {
+	NSString * fileName = [hash stringByAppendingPathExtension: @"webarchive"];
+	NSString * metadataWebarchivePath = [[self class] metadataPathForSubfolder:@"delimport-webarchives"];
+	NSString * path = nil;
+	if (metadataWebarchivePath) {
+		path = [metadataWebarchivePath stringByAppendingPathComponent:fileName];
+	}
+	
+	return path;
+}
 
-- (NSDictionary*) readDictionaryForHash:(NSString*) hash {
-	NSString * path = [self pathForHash: hash];
+
+- (NSDictionary*) readDictionaryForHash: (NSString*) hash {
+	NSString * path = [[self class] bookmarkPathForHash: hash];
 	NSMutableDictionary * fileBookmark = [NSMutableDictionary dictionaryWithContentsOfFile:path];
 	[fileBookmark setObject:hash forKey: DIHashKey];
 	return fileBookmark;
@@ -53,10 +77,9 @@
 
 
 
-- (void)saveDictionary:(NSDictionary *)dictionary
-{
+- (void) saveDictionary: (NSDictionary *) dictionary {
 	NSMutableDictionary *mutable = [[dictionary mutableCopy] autorelease];
-	NSString *path = [self pathForHash: [mutable objectForKey: DIHashKey]];
+	NSString *path = [[self class] bookmarkPathForHash: [mutable objectForKey: DIHashKey]];
 
 	if ( path != nil ) {
 		NSNumber *osType = [NSNumber numberWithUnsignedLong:'DELi'];
@@ -78,9 +101,8 @@
 
 
 
-- (void)deleteDictionary:(NSDictionary *)dictionary
-{
-	NSString *path = [self pathForHash: [dictionary objectForKey: DIHashKey]];
+- (void) deleteDictionary: (NSDictionary *) dictionary {
+	NSString *path = [[self class] bookmarkPathForHash: [dictionary objectForKey: DIHashKey]];
 	if ( path != nil) {
 		[[NSFileManager defaultManager] removeFileAtPath:path handler:nil];
 	}
@@ -88,14 +110,16 @@
 
 
 
-- (void)saveDictionaries:(NSArray *)dictionaries
-{
+- (void) saveDictionaries: (NSArray *) dictionaries {
 	NSEnumerator *dictEnumerator = [dictionaries objectEnumerator];
 	NSDictionary *dictionary;
 	while (dictionary = [dictEnumerator nextObject]) {
-		[self saveDictionary:dictionary];
+		[self saveDictionary: dictionary];
+		[webWindowController fetchWebArchiveForDictionary: dictionary];
 	}
 }
+
+
 
 - (void)deleteDictionaries:(NSArray *)dictionaries
 {
@@ -105,6 +129,8 @@
 		[self deleteDictionary:dictionary];
 	}
 }
+
+
 
 - (BOOL)openFile:(NSString *)filename
 {
@@ -120,6 +146,7 @@
 			return NO;
 		}
 	}
+	
 	return [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:URLString]];
 }
 

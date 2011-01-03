@@ -25,9 +25,12 @@
 /* Begin PBXBuildFile section */
 		6C21E9A412D24F4C00091671 /* DIServiceTypeToIconPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C21E9A312D24F4C00091671 /* DIServiceTypeToIconPath.m */; };
 		6C21EA2112D2592900091671 /* pinboard.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6C21EA2012D2592900091671 /* pinboard.gif */; };
+		6C21EB9112D27F5C00091671 /* DIWebWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C21EB9012D27F5C00091671 /* DIWebWindowController.m */; };
 		6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C2FC9670CD9396900C1FD91 /* Localizable.strings */; };
 		6CA955C2104AA40200F225D2 /* LogIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA955C0104AA40200F225D2 /* LogIn.xib */; };
 		6CA95704104AB8B000F225D2 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA95703104AB8B000F225D2 /* Keychain.framework */; };
+		6CCFAD1112BE394200B6A09A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCFAD1012BE394200B6A09A /* WebKit.framework */; };
+		6CCFAEF012C0125F00B6A09A /* FileWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CCFAEEF12C0125F00B6A09A /* FileWindow.xib */; };
 		6CD57B260CEC5261009D3862 /* del.icio.us Spotlight Interface.mdimporter in Copy mdimporter */ = {isa = PBXBuildFile; fileRef = 6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */; };
 		6CE1A7CE104AC5130078D932 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA955BD104AA3E100F225D2 /* MainMenu.xib */; };
 		6CE1A7F4104AD04A0078D932 /* Keychain.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA95703104AB8B000F225D2 /* Keychain.framework */; };
@@ -191,6 +194,8 @@
 		6C21E9A212D24F4C00091671 /* DIServiceTypeToIconPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIServiceTypeToIconPath.h; sourceTree = "<group>"; };
 		6C21E9A312D24F4C00091671 /* DIServiceTypeToIconPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIServiceTypeToIconPath.m; sourceTree = "<group>"; };
 		6C21EA2012D2592900091671 /* pinboard.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pinboard.gif; sourceTree = "<group>"; };
+		6C21EB8F12D27F5C00091671 /* DIWebWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIWebWindowController.h; sourceTree = "<group>"; };
+		6C21EB9012D27F5C00091671 /* DIWebWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIWebWindowController.m; sourceTree = "<group>"; };
 		6C2FC9680CD9396900C1FD91 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C383FF21066F2370001AAAD /* Readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Readme.markdown; path = ../Readme.markdown; sourceTree = "<group>"; };
 		6C5A9C66104D9A030092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -203,6 +208,9 @@
 		6CA955C1104AA40200F225D2 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/LogIn.xib; sourceTree = "<group>"; };
 		6CA95690104AADDB00F225D2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6CA95703104AB8B000F225D2 /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = ../../../builds/Deployment/Keychain.framework; sourceTree = SOURCE_ROOT; };
+		6CCFAD1012BE394200B6A09A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		6CCFAE0E12BE462D00B6A09A /* org.ianhenderson.delimport.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = org.ianhenderson.delimport.plist; path = ../../../../Library/Preferences/org.ianhenderson.delimport.plist; sourceTree = SOURCE_ROOT; };
+		6CCFAEEF12C0125F00B6A09A /* FileWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileWindow.xib; sourceTree = "<group>"; };
 		6CE1A7CA104AC4E70078D932 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/LogIn.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* delimport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delimport.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +230,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				6CA95704104AB8B000F225D2 /* Keychain.framework in Frameworks */,
+				6CCFAD1112BE394200B6A09A /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +242,8 @@
 			children = (
 				BFAA6A2A0821F9F300828D28 /* DIFileController.h */,
 				BFAA6A2B0821F9F300828D28 /* DIFileController.m */,
+				6C21EB8F12D27F5C00091671 /* DIWebWindowController.h */,
+				6C21EB9012D27F5C00091671 /* DIWebWindowController.m */,
 				BF5D10050824537F0096CC1B /* DIBookmarksController.h */,
 				BF5D10060824537F0096CC1B /* DIBookmarksController.m */,
 				BF138E6E082587BA009D55C5 /* DILoginController.h */,
@@ -248,6 +259,7 @@
 			children = (
 				6CA95703104AB8B000F225D2 /* Keychain.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				6CCFAD1012BE394200B6A09A /* WebKit.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -274,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				6C383FF21066F2370001AAAD /* Readme.markdown */,
+				6CCFAE0E12BE462D00B6A09A /* org.ianhenderson.delimport.plist */,
 				6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */,
 				6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -302,6 +315,7 @@
 				6C2FC9670CD9396900C1FD91 /* Localizable.strings */,
 				6CA955C0104AA40200F225D2 /* LogIn.xib */,
 				6CA955BD104AA3E100F225D2 /* MainMenu.xib */,
+				6CCFAEEF12C0125F00B6A09A /* FileWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
@@ -398,6 +412,7 @@
 					ProjectRef = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 				},
 			);
+			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* delimport */,
 				6C0CA2BF0CEC8221000B18FC /* Release */,
@@ -509,6 +524,7 @@
 				BFAA6A60082210D500828D28 /* delicious.icns in Resources */,
 				6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */,
 				6CA955C2104AA40200F225D2 /* LogIn.xib in Resources */,
+				6CCFAEF012C0125F00B6A09A /* FileWindow.xib in Resources */,
 				6C21EA2112D2592900091671 /* pinboard.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,6 +572,7 @@
 				BF5D10070824537F0096CC1B /* DIBookmarksController.m in Sources */,
 				BF138E70082587BA009D55C5 /* DILoginController.m in Sources */,
 				6C21E9A412D24F4C00091671 /* DIServiceTypeToIconPath.m in Sources */,
+				6C21EB9112D27F5C00091671 /* DIWebWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

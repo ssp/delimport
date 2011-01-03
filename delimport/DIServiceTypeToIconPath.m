@@ -1,10 +1,10 @@
-//
-//  DIServiceTypeToIconPath.m
-//  delimport
-//
-//  Created by  Sven on 03.01.11.
-//  Copyright 2011 earthlingsoft. All rights reserved.
-//
+/*
+ DIServiceTypeToIconPath.m
+ delimport
+
+ Created by Sven-S. Porst <ssp-web@earthlingsoft.net> on 2011-01-03.
+ Copyright 2011 earthlingsoft. All rights reserved.
+*/
 
 #import "DIServiceTypeToIconPath.h"
 #import "DILoginController.h"

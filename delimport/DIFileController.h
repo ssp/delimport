@@ -18,18 +18,19 @@
 #define DITimeKey @"time"
 #define DITagKey @"tag"
 
+@class DIWebWindowController;
 
 @interface DIFileController : NSObject {
-
+	DIWebWindowController * webWindowController;
 }
 
 
-- (NSString *) metadataPathForSubfolder: (NSString *) folderName;
-- (NSString *) pathForHash: (NSString*) hash;
++ (NSString *) metadataPathForSubfolder: (NSString *) folderName;
++ (NSString *) bookmarkPathForHash: (NSString*) hash;
++ (NSString *) webarchivePathForHash: (NSString*) hash;
 
 - (NSDictionary*) readDictionaryForHash:(NSString*) hash;
 - (void) saveDictionary:(NSDictionary *)dictionary;
-
 - (void) saveDictionaries:(NSArray *)dictionaries;
 - (void) deleteDictionaries:(NSArray *)dictionaries;
 
