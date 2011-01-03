@@ -299,7 +299,7 @@
 	}
 	
 	// the work gets done here and data could be lost, so disable sudden termination
-	[self disableSuddenTermination];
+	[DIBookmarksController disableSuddenTermination];
 	NSXMLDocument *allPostsDoc = [self deliciousAPIResponseToRequest:@"posts/all"];
 	if (allPostsDoc != nil) {
 		NSXMLElement *root = [allPostsDoc rootElement];
@@ -347,7 +347,7 @@
 		[self setBookmarks:updatedPosts];
 		}
 	}
-	[self enableSuddenTermination];
+	[DIBookmarksController enableSuddenTermination];
 }
 
 
@@ -461,7 +461,7 @@
 /*
  uglyuglyugly but sudden termination seems worth the hassle
 */
-- (void) enableSuddenTermination {
++ (void) enableSuddenTermination {
 	NSProcessInfo * pI = [NSProcessInfo processInfo];
 	SEL enableSuddenTerminationSelector = @selector(enableSuddenTermination);
 	if ([pI respondsToSelector:enableSuddenTerminationSelector]) { // we're running X.6 or higher
@@ -469,7 +469,7 @@
 	}
 }
 
-- (void) disableSuddenTermination {
++ (void) disableSuddenTermination {
 	NSProcessInfo * pI = [NSProcessInfo processInfo];
 	SEL enableSuddenTerminationSelector = @selector(disableSuddenTermination);
 	if ([pI respondsToSelector:enableSuddenTerminationSelector]) { // we're running X.6 or higher

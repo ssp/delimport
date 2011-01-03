@@ -42,6 +42,6 @@
 - (NSString*) serverAddress;
 - (NSString*) versionNumber;
 
-- (void) enableSuddenTermination;
-- (void) disableSuddenTermination;
++ (void) enableSuddenTermination;
++ (void) disableSuddenTermination;
 @end
