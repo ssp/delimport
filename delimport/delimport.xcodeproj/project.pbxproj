@@ -398,7 +398,6 @@
 					ProjectRef = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
 				},
 			);
-			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* delimport */,
 				6C0CA2BF0CEC8221000B18FC /* Release */,
