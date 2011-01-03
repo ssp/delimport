@@ -39,8 +39,9 @@
 - (void) setupTimer:(NSTimer*) timer;
 - (NSTimeInterval) currentUpdateInterval;
 
-- (NSString*) serverAddress;
-- (NSString*) versionNumber;
++ (NSString *) serverAddress;
++ (NSString *) serviceName;
++ (NSString *) versionString;
 
 + (void) enableSuddenTermination;
 + (void) disableSuddenTermination;

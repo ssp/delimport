@@ -124,7 +124,7 @@
 {
 	KeychainSearch * search = [[KeychainSearch alloc] init];
 	
-	[search setServer:[self serverAddress]];
+	[search setServer:[DIBookmarksController serverAddress]];
 
 	NSArray *results = [search internetSearchResults];
 	[search release];
@@ -208,11 +208,11 @@
 
 - (NSXMLDocument *)deliciousAPIResponseToRequest:(NSString *)request
 {
-	NSString *URLString = [NSString stringWithFormat:@"https://%@:%@@%@/v1/%@", username, password, [self serverAddress], request];
+	NSString *URLString = [NSString stringWithFormat:@"https://%@:%@@%@/v1/%@", username, password, [DIBookmarksController serverAddress], request];
 	NSError *error;
 	NSURL *requestURL = [NSURL URLWithString:URLString];
 	NSMutableURLRequest *URLRequest = [NSMutableURLRequest requestWithURL:requestURL];
-	NSString *userAgentName = [NSString stringWithFormat:@"delimport/%@", [self versionNumber]];
+	NSString *userAgentName = [NSString stringWithFormat:@"delimport/%@", [DIBookmarksController versionString]];
 	[URLRequest setValue:userAgentName forHTTPHeaderField: @"User-Agent"];
 	// NSLog(@"%f", [URLRequest timeoutInterval]);
 	
@@ -262,7 +262,7 @@
 
 	Keychain *keychain = [Keychain defaultKeychain];
 
-	[keychain addInternetPassword:password onServer:[self serverAddress] forAccount:username port:80 path:@"" inSecurityDomain:@"" protocol:kSecProtocolTypeHTTP auth:kSecAuthenticationTypeHTTPDigest replaceExisting:YES];
+	[keychain addInternetPassword:password onServer:[DIBookmarksController serverAddress] forAccount:username port:80 path:@"" inSecurityDomain:@"" protocol:kSecProtocolTypeHTTP auth:kSecAuthenticationTypeHTTPDigest replaceExisting:YES];
 
 }
 
@@ -420,7 +420,7 @@
 }
 
 
-- (NSString*) serverAddress {
++ (NSString *) serverAddress {
 	NSString * address = @"api.del.icio.us";
 	
 	NSNumber * serviceTypeValue = [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:DIDefaultsServiceTypeKey];
@@ -433,7 +433,23 @@
 }
 
 
-- (NSString*) versionNumber {
+
++ (NSString *) serviceName {
+	NSString * name = @"delicious";
+	
+	NSNumber * serviceTypeValue = [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:DIDefaultsServiceTypeKey];
+	
+	if (serviceTypeValue && [serviceTypeValue integerValue] == DIServiceTypePinboard) {
+		name = @"pinboard";
+	}
+	
+	return name;
+}
+
+
+
+
++ (NSString *) versionString {
 	return @"0.5";
 }
 
