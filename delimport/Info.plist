@@ -44,9 +44,9 @@
 	<key>CFBundleSignature</key>
 	<string>DeLi</string>
 	<key>CFBundleVersion</key>
-	<string>0.4</string>
+	<string>0.5b</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.4</string>
+	<string>0.5b</string>
 	<key>LSUIElement</key>
 	<integer>1</integer>
 	<key>NSMainNibFile</key>
@@ -63,11 +63,9 @@
 				<string>com.apple.safari.bookmark</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>delicious Bookmark</string>
+			<string>Bookmarking Service Bookmark</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.ianhenderson.delicious.bookmark</string>
-			<key>UTTypeReferenceURL</key>
-			<string>http://del.icio.us/</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>com.apple.ostype</key>
