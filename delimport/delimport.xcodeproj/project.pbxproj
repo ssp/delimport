@@ -651,13 +651,6 @@
 			};
 			name = Deployment;
 		};
-		6C0CA2C20CEC8222000B18FC /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = Release;
-			};
-			name = Default;
-		};
 		6CCC64300A40CC7F00540A50 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -711,28 +704,6 @@
 			};
 			name = Deployment;
 		};
-		6CCC64320A40CC7F00540A50 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "earthlingsoft Software";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = delimport_Prefix.pch;
-				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
-				GCC_USE_REGISTER_FUNCTION_CALLS = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
-				GCC_WARN_SHADOW = NO;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = delimport;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Default;
-		};
 		6CCC64340A40CC7F00540A50 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -743,6 +714,10 @@
 				"GCC_VERSION[arch=i386]" = 4.2;
 				"GCC_VERSION[arch=ppc]" = 4.0;
 				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
 				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
 				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
@@ -763,6 +738,10 @@
 				"GCC_VERSION[arch=i386]" = 4.2;
 				"GCC_VERSION[arch=ppc]" = 4.0;
 				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
 				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
 				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
@@ -773,25 +752,6 @@
 			};
 			name = Deployment;
 		};
-		6CCC64360A40CC7F00540A50 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
-				GCC_VERSION = 4.0;
-				"GCC_VERSION[arch=i386]" = 4.2;
-				"GCC_VERSION[arch=ppc]" = 4.0;
-				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
-				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
-				SDKROOT = macosx10.4;
-				"SDKROOT[arch=i386]" = macosx10.4;
-				"SDKROOT[arch=ppc]" = macosx10.4;
-				"SDKROOT[arch=x86_64]" = macosx10.5;
-			};
-			name = Default;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -800,30 +760,27 @@
 			buildConfigurations = (
 				6C0CA2C00CEC8222000B18FC /* Development */,
 				6C0CA2C10CEC8222000B18FC /* Deployment */,
-				6C0CA2C20CEC8222000B18FC /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Development;
 		};
 		6CCC642F0A40CC7F00540A50 /* Build configuration list for PBXNativeTarget "delimport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6CCC64300A40CC7F00540A50 /* Development */,
 				6CCC64310A40CC7F00540A50 /* Deployment */,
-				6CCC64320A40CC7F00540A50 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Development;
 		};
 		6CCC64330A40CC7F00540A50 /* Build configuration list for PBXProject "delimport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6CCC64340A40CC7F00540A50 /* Development */,
 				6CCC64350A40CC7F00540A50 /* Deployment */,
-				6CCC64360A40CC7F00540A50 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Development;
 		};
 /* End XCConfigurationList section */
 	};
