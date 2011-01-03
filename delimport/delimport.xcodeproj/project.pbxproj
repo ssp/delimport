@@ -184,7 +184,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -196,7 +195,9 @@
 		6C21EA2012D2592900091671 /* pinboard.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pinboard.gif; sourceTree = "<group>"; };
 		6C21EB8F12D27F5C00091671 /* DIWebWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIWebWindowController.h; sourceTree = "<group>"; };
 		6C21EB9012D27F5C00091671 /* DIWebWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIWebWindowController.m; sourceTree = "<group>"; };
-		6C2FC9680CD9396900C1FD91 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C21EC5A12D2909500091671 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C21EC6912D290A100091671 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LogIn.xib; sourceTree = "<group>"; };
+		6C21EC6A12D290B100091671 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C383FF21066F2370001AAAD /* Readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Readme.markdown; path = ../Readme.markdown; sourceTree = "<group>"; };
 		6C5A9C66104D9A030092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C5A9C67104D9A090092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/LogIn.xib; sourceTree = "<group>"; };
@@ -205,7 +206,6 @@
 		6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "del.icio.us Spotlight Interface.xcodeproj"; path = "spotlight_interface/del.icio.us Spotlight Interface.xcodeproj"; sourceTree = "<group>"; };
 		6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Keychain.xcodeproj; path = ../Keychain/Keychain.xcodeproj; sourceTree = SOURCE_ROOT; };
 		6CA955BD104AA3E100F225D2 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		6CA955C1104AA40200F225D2 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/LogIn.xib; sourceTree = "<group>"; };
 		6CA95690104AADDB00F225D2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6CA95703104AB8B000F225D2 /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = ../../../builds/Deployment/Keychain.framework; sourceTree = SOURCE_ROOT; };
 		6CCFAD1012BE394200B6A09A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
@@ -399,6 +399,7 @@
 				German,
 				de,
 				fr,
+				en,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* delimport */;
 			projectDirPath = "";
@@ -600,7 +601,7 @@
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C165DFE840E0CC02AAC07 /* English */,
+				6C21EC6A12D290B100091671 /* en */,
 				6C5AA488104E91210092E350 /* de */,
 				6C5AA489104E912A0092E350 /* fr */,
 			);
@@ -610,7 +611,7 @@
 		6C2FC9670CD9396900C1FD91 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6C2FC9680CD9396900C1FD91 /* English */,
+				6C21EC5A12D2909500091671 /* en */,
 				6CA95690104AADDB00F225D2 /* de */,
 				6C5A9C66104D9A030092E350 /* fr */,
 			);
@@ -620,7 +621,7 @@
 		6CA955C0104AA40200F225D2 /* LogIn.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6CA955C1104AA40200F225D2 /* English */,
+				6C21EC6912D290A100091671 /* en */,
 				6CE1A7CA104AC4E70078D932 /* de */,
 				6C5A9C67104D9A090092E350 /* fr */,
 			);

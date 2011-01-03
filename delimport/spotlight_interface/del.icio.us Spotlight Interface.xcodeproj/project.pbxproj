@@ -8,22 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2C05A19C06CAA52B00D84F6F /* GetMetadataForFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */; };
+		6C21ECAF12D295A400091671 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C21ECAB12D295A400091671 /* InfoPlist.strings */; };
+		6C21ECB012D295A400091671 /* schema.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C21ECAD12D295A400091671 /* schema.strings */; };
 		6C5AA553104EAA120092E350 /* DIFileController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5AA552104EAA120092E350 /* DIFileController.h */; };
 		6C5AA555104EAA180092E350 /* DIBookmarksController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5AA554104EAA180092E350 /* DIBookmarksController.h */; };
 		8D576312048677EA00EA77CD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 08FB77B6FE84183AC02AAC07 /* main.c */; settings = {ATTRIBUTES = (); }; };
 		8D576314048677EA00EA77CD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
-		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
 		BFAA6A150821F44D00828D28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAA6A140821F44D00828D28 /* Foundation.framework */; };
 		C86B05270671AA6E00DD9006 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86B05260671AA6E00DD9006 /* CoreServices.framework */; };
 		C88FB7D8067446EC006EBB30 /* schema.xml in Resources */ = {isa = PBXBuildFile; fileRef = C88FB7D7067446EC006EBB30 /* schema.xml */; };
-		C88FB7E40674480E006EBB30 /* schema.strings in Resources */ = {isa = PBXBuildFile; fileRef = C88FB7E30674480E006EBB30 /* schema.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08FB77B6FE84183AC02AAC07 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		2C05A19B06CAA52B00D84F6F /* GetMetadataForFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMetadataForFile.m; sourceTree = "<group>"; };
+		6C21ECAC12D295A400091671 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6C21ECAE12D295A400091671 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/schema.strings; sourceTree = "<group>"; };
 		6C5AA552104EAA120092E350 /* DIFileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIFileController.h; path = ../DIFileController.h; sourceTree = SOURCE_ROOT; };
 		6C5AA554104EAA180092E350 /* DIBookmarksController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DIBookmarksController.h; path = ../DIBookmarksController.h; sourceTree = SOURCE_ROOT; };
 		8D576316048677EA00EA77CD /* del.icio.us Spotlight Interface.mdimporter */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "del.icio.us Spotlight Interface.mdimporter"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,7 +32,6 @@
 		BFAA6A140821F44D00828D28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		C86B05260671AA6E00DD9006 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		C88FB7D7067446EC006EBB30 /* schema.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = schema.xml; sourceTree = "<group>"; };
-		C88FB7DB0674470F006EBB30 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/schema.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +72,10 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C88FB7E30674480E006EBB30 /* schema.strings */,
 				C88FB7D7067446EC006EBB30 /* schema.xml */,
 				8D576317048677EA00EA77CD /* Info.plist */,
-				8D5B49A704867FD3000E48DA /* InfoPlist.strings */,
+				6C21ECAB12D295A400091671 /* InfoPlist.strings */,
+				6C21ECAD12D295A400091671 /* schema.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -141,10 +141,17 @@
 			isa = PBXProject;
 			buildConfigurationList = 6CCC644D0A40CCF800540A50 /* Build configuration list for PBXProject "del.icio.us Spotlight Interface" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* del.icio.us Spotlight Interface */;
 			projectDirPath = "";
-			projectRoot = "";
 			targets = (
 				8D57630D048677EA00EA77CD /* del.icio.us Spotlight Interface */,
 			);
@@ -156,9 +163,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */,
 				C88FB7D8067446EC006EBB30 /* schema.xml in Resources */,
-				C88FB7E40674480E006EBB30 /* schema.strings in Resources */,
+				6C21ECAF12D295A400091671 /* InfoPlist.strings in Resources */,
+				6C21ECB012D295A400091671 /* schema.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,18 +194,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8D5B49A704867FD3000E48DA /* InfoPlist.strings */ = {
+		6C21ECAB12D295A400091671 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C167EFE841241C02AAC07 /* English */,
+				6C21ECAC12D295A400091671 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		C88FB7E30674480E006EBB30 /* schema.strings */ = {
+		6C21ECAD12D295A400091671 /* schema.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C88FB7DB0674470F006EBB30 /* English */,
+				6C21ECAE12D295A400091671 /* en */,
 			);
 			name = schema.strings;
 			sourceTree = "<group>";
@@ -275,37 +282,6 @@
 			};
 			name = Deployment;
 		};
-		6CCC644C0A40CCF800540A50 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
-				GCC_WARN_UNKNOWN_PRAGMAS = NO;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = /Library/Spotlight;
-				LIBRARY_SEARCH_PATHS = "";
-				LIBRARY_STYLE = Bundle;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "";
-				PREBINDING = NO;
-				PRODUCT_NAME = "del.icio.us Spotlight Interface";
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = mdimporter;
-				ZERO_LINK = NO;
-			};
-			name = Default;
-		};
 		6CCC644E0A40CCF800540A50 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -342,24 +318,6 @@
 			};
 			name = Deployment;
 		};
-		6CCC64500A40CCF800540A50 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_VERSION = 4.0;
-				"GCC_VERSION[arch=i386]" = 4.0;
-				"GCC_VERSION[arch=ppc]" = 4.0;
-				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
-				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
-				SDKROOT = macosx10.4;
-				"SDKROOT[arch=i386]" = macosx10.4;
-				"SDKROOT[arch=ppc]" = macosx10.4;
-				"SDKROOT[arch=x86_64]" = macosx10.5;
-			};
-			name = Default;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -368,20 +326,18 @@
 			buildConfigurations = (
 				6CCC644A0A40CCF800540A50 /* Development */,
 				6CCC644B0A40CCF800540A50 /* Deployment */,
-				6CCC644C0A40CCF800540A50 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Deployment;
 		};
 		6CCC644D0A40CCF800540A50 /* Build configuration list for PBXProject "del.icio.us Spotlight Interface" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6CCC644E0A40CCF800540A50 /* Development */,
 				6CCC644F0A40CCF800540A50 /* Deployment */,
-				6CCC64500A40CCF800540A50 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Deployment;
 		};
 /* End XCConfigurationList section */
 	};
