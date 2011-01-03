@@ -10,14 +10,12 @@
 
 #define DIMinutesBetweenChecks @"MinutesBetweenChecks"
 #define DIDisplayErrorMessages @"DisplayErrorMessages"
-#define DILoginAlertSuppressedKey @"Suppress Add To Login Items Aler"
+#define DILoginAlertSuppressedKey @"Suppress Add To Login Items Alert"
 
 #define DIDefaultsBookmarksKey @"DeliciousBookmarks"
+#define DIDefaultsBookmarksDictKey @"BookmarksDictionary"
 #define DIDefaultsLastUpdateKey @"DeliciousLastUpdate"
-
-#define DITagKey @"tag"
-
-
+#define DIDefaultsServiceTypeKey @"serviceType"
 
 @class DIFileController, DILoginController;
 
@@ -28,19 +26,21 @@
 	NSString *username;
 	NSString *password;
 
-	NSSet *bookmarks;
+	NSMutableDictionary *bookmarks;
 	NSDate *lastUpdate;
 	NSDate *throttleTimepoint;
 }
 
-- (void)logIn;
-- (void) updateMetadataCache;
-- (void)verifyMetadataCache;
-- (void)updateList:(NSTimer *)timer;
-- (void)setBookmarks:(NSSet *)newMarks;
+- (void) logIn;
+- (void) verifyMetadataCache;
+- (void) updateList:(NSTimer *)timer;
+- (void) setBookmarks:(NSDictionary *)newMarks;
 
 - (void) setupTimer:(NSTimer*) timer;
 - (NSTimeInterval) currentUpdateInterval;
+
+- (NSString*) serverAddress;
+- (NSString*) versionNumber;
 
 - (void) enableSuddenTermination;
 - (void) disableSuddenTermination;

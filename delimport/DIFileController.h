@@ -16,6 +16,7 @@
 #define DIDeliciousNameKey @"description"
 #define DIHashKey @"hash"
 #define DITimeKey @"time"
+#define DITagKey @"tag"
 
 
 @interface DIFileController : NSObject {
@@ -23,14 +24,14 @@
 }
 
 
-- (NSString *) cachePath;
+- (NSString *) metadataPathForSubfolder: (NSString *) folderName;
 - (NSString *) pathForHash: (NSString*) hash;
 
 - (NSDictionary*) readDictionaryForHash:(NSString*) hash;
-- (void)saveDictionary:(NSDictionary *)dictionary;
+- (void) saveDictionary:(NSDictionary *)dictionary;
 
-- (void)saveDictionaries:(NSSet *)dictionaries;
-- (void)deleteDictionaries:(NSSet *)dictionaries;
+- (void) saveDictionaries:(NSArray *)dictionaries;
+- (void) deleteDictionaries:(NSArray *)dictionaries;
 
 - (BOOL)openFile:(NSString *)filename;
 

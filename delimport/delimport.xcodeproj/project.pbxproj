@@ -23,6 +23,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		6C21E9A412D24F4C00091671 /* DIServiceTypeToIconPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C21E9A312D24F4C00091671 /* DIServiceTypeToIconPath.m */; };
+		6C21EA2112D2592900091671 /* pinboard.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6C21EA2012D2592900091671 /* pinboard.gif */; };
 		6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C2FC9670CD9396900C1FD91 /* Localizable.strings */; };
 		6CA955C2104AA40200F225D2 /* LogIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA955C0104AA40200F225D2 /* LogIn.xib */; };
 		6CA95704104AB8B000F225D2 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA95703104AB8B000F225D2 /* Keychain.framework */; };
@@ -130,26 +132,26 @@
 			remoteGlobalIDString = 75C6E8F70A3BDCD8009201FB;
 			remoteInfo = KeychainSearchTester;
 		};
-		6C38405D1066F5850001AAAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7506C03D0A3DB5A8000DB6BD;
-			remoteInfo = PolicyProber;
-		};
-		6C38405F1066F5850001AAAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7588AC770CA3916D00466BEF;
-			remoteInfo = KeychainTester;
-		};
 		6C38B3450CCF5C4400E5933D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8D576316048677EA00EA77CD;
 			remoteInfo = "del.icio.us Spotlight Interface";
+		};
+		6C5A40A711D896FD00F8D4EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7506C03D0A3DB5A8000DB6BD;
+			remoteInfo = PolicyProber;
+		};
+		6C5A40A911D896FD00F8D4EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7588AC770CA3916D00466BEF;
+			remoteInfo = KeychainTester;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -186,8 +188,11 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* delimport_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delimport_Prefix.pch; sourceTree = "<group>"; };
+		6C21E9A212D24F4C00091671 /* DIServiceTypeToIconPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIServiceTypeToIconPath.h; sourceTree = "<group>"; };
+		6C21E9A312D24F4C00091671 /* DIServiceTypeToIconPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIServiceTypeToIconPath.m; sourceTree = "<group>"; };
+		6C21EA2012D2592900091671 /* pinboard.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pinboard.gif; sourceTree = "<group>"; };
 		6C2FC9680CD9396900C1FD91 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6C383FF21066F2370001AAAD /* History & Notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "History & Notes"; sourceTree = "<group>"; };
+		6C383FF21066F2370001AAAD /* Readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Readme.markdown; path = ../Readme.markdown; sourceTree = "<group>"; };
 		6C5A9C66104D9A030092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C5A9C67104D9A090092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/LogIn.xib; sourceTree = "<group>"; };
 		6C5AA488104E91210092E350 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -232,6 +237,8 @@
 				BF5D10060824537F0096CC1B /* DIBookmarksController.m */,
 				BF138E6E082587BA009D55C5 /* DILoginController.h */,
 				BF138E6F082587BA009D55C5 /* DILoginController.m */,
+				6C21E9A212D24F4C00091671 /* DIServiceTypeToIconPath.h */,
+				6C21E9A312D24F4C00091671 /* DIServiceTypeToIconPath.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -266,7 +273,7 @@
 		29B97314FDCFA39411CA2CEA /* delimport */ = {
 			isa = PBXGroup;
 			children = (
-				6C383FF21066F2370001AAAD /* History & Notes */,
+				6C383FF21066F2370001AAAD /* Readme.markdown */,
 				6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */,
 				6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -291,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				BFAA6A5F082210D500828D28 /* delicious.icns */,
+				6C21EA2012D2592900091671 /* pinboard.gif */,
 				6C2FC9670CD9396900C1FD91 /* Localizable.strings */,
 				6CA955C0104AA40200F225D2 /* LogIn.xib */,
 				6CA955BD104AA3E100F225D2 /* MainMenu.xib */,
@@ -322,8 +330,8 @@
 				6C3840581066F5850001AAAD /* CertificateGenerationTester */,
 				6C38405A1066F5850001AAAD /* CryptographyTester */,
 				6C38405C1066F5850001AAAD /* KeychainSearchTester */,
-				6C38405E1066F5850001AAAD /* PolicyProber */,
-				6C3840601066F5850001AAAD /* KeychainTester */,
+				6C5A40A811D896FD00F8D4EE /* PolicyProber */,
+				6C5A40AA11D896FD00F8D4EE /* KeychainTester */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -368,6 +376,7 @@
 			isa = PBXProject;
 			buildConfigurationList = 6CCC64330A40CC7F00540A50 /* Build configuration list for PBXProject "delimport" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -468,25 +477,25 @@
 			remoteRef = 6C38405B1066F5850001AAAD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6C38405E1066F5850001AAAD /* PolicyProber */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = PolicyProber;
-			remoteRef = 6C38405D1066F5850001AAAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C3840601066F5850001AAAD /* KeychainTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = KeychainTester;
-			remoteRef = 6C38405F1066F5850001AAAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "del.icio.us Spotlight Interface.mdimporter";
 			remoteRef = 6C38B3450CCF5C4400E5933D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C5A40A811D896FD00F8D4EE /* PolicyProber */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = PolicyProber;
+			remoteRef = 6C5A40A711D896FD00F8D4EE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C5A40AA11D896FD00F8D4EE /* KeychainTester */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = KeychainTester;
+			remoteRef = 6C5A40A911D896FD00F8D4EE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -501,6 +510,7 @@
 				BFAA6A60082210D500828D28 /* delicious.icns in Resources */,
 				6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */,
 				6CA955C2104AA40200F225D2 /* LogIn.xib in Resources */,
+				6C21EA2112D2592900091671 /* pinboard.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +556,7 @@
 				BFAA6A2C0821F9F300828D28 /* DIFileController.m in Sources */,
 				BF5D10070824537F0096CC1B /* DIBookmarksController.m in Sources */,
 				BF138E70082587BA009D55C5 /* DILoginController.m in Sources */,
+				6C21E9A412D24F4C00091671 /* DIServiceTypeToIconPath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,7 +723,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
 				GCC_VERSION = 4.0;
-				"GCC_VERSION[arch=i386]" = 4.0;
+				"GCC_VERSION[arch=i386]" = 4.2;
 				"GCC_VERSION[arch=ppc]" = 4.0;
 				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
 				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
@@ -732,7 +743,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
 				GCC_VERSION = 4.0;
-				"GCC_VERSION[arch=i386]" = 4.0;
+				"GCC_VERSION[arch=i386]" = 4.2;
 				"GCC_VERSION[arch=ppc]" = 4.0;
 				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
 				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
@@ -751,7 +762,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
 				GCC_VERSION = 4.0;
-				"GCC_VERSION[arch=i386]" = 4.0;
+				"GCC_VERSION[arch=i386]" = 4.2;
 				"GCC_VERSION[arch=ppc]" = 4.0;
 				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
 				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;

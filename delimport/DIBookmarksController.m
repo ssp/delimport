@@ -124,7 +124,7 @@
 {
 	KeychainSearch * search = [[KeychainSearch alloc] init];
 	
-	[search setServer:@"del.icio.us"];
+	[search setServer:[self serverAddress]];
 
 	NSArray *results = [search internetSearchResults];
 	[search release];
@@ -145,12 +145,13 @@
 	if (self != nil) {
 		username = nil;
 		password = nil;
-		NSArray *bookmarkArray = [[NSUserDefaults standardUserDefaults] objectForKey:DIDefaultsBookmarksKey];
-		if (!bookmarkArray) {
-			bookmarks = [[NSSet alloc] init];
+		NSDictionary *bookmarkDictionary = [[NSUserDefaults standardUserDefaults] objectForKey: DIDefaultsBookmarksDictKey];
+		if (!bookmarkDictionary) {
+			bookmarks = [[NSMutableDictionary alloc] init];
 		} else {
-			bookmarks = [[NSSet alloc] initWithArray:bookmarkArray];
+			bookmarks = [[NSMutableDictionary alloc] initWithDictionary: bookmarkDictionary];
 		}
+		
 		lastUpdate = [[NSUserDefaults standardUserDefaults] objectForKey:DIDefaultsLastUpdateKey];
 		if (!lastUpdate) {
 			lastUpdate = [[NSDate distantPast] retain];
@@ -169,50 +170,20 @@
 {
 	[self addToLoginItems];
 	[self getKeychainUserAndPass];
-	[self updateMetadataCache];
 	[self verifyMetadataCache];
 	[self updateList:nil];
 }
 
 
 
-
-/*
- The keys for the URL and page Name were changed for v 0.4 to conform to Apple's Safari bookmarks (and no longer to the keys used by delicious). In case the some stored bookmark still contains an old-style key, upgrade the whole cache.
-*/
-- (void) updateMetadataCache {
-	NSDictionary * bookmark = [bookmarks anyObject];
-	if (bookmark != nil) {
-		if ( [bookmark objectForKey: DIDeliciousURLKey] ) {
-			// old style key => convert
-			NSMutableSet * updatedBookmarks = [NSMutableSet setWithCapacity:[bookmarks count]];
-			NSEnumerator * bookmarkEnumerator = [bookmarks objectEnumerator];
-			while ( bookmark = [bookmarkEnumerator nextObject] ) {
-				NSMutableDictionary * newBookmark = [[bookmark mutableCopy] autorelease];
-				NSString * URL = [newBookmark objectForKey: DIDeliciousURLKey];
-				[newBookmark removeObjectForKey: DIDeliciousURLKey];
-				[newBookmark setValue:URL forKey: DIURLKey];
-				NSString * Name = [newBookmark objectForKey: DIDeliciousNameKey];
-				[newBookmark removeObjectForKey: DIDeliciousNameKey];
-				[newBookmark setValue:Name forKey: DINameKey];
-				[updatedBookmarks addObject:newBookmark];
-			}
-			[self setBookmarks: updatedBookmarks];
-		}
-	}
-}
-
-
-
-
 /*
  Check whether all our metadata files exist and are correct. 
  Make metadata consistent if they are not.
- In particular this ensures none of the Metadata files are lost in case Caches are deleted. Unfortunately Apple consider it wise to store Spotlight Metadata inside the Caches folder.
 */  
 - (void) verifyMetadataCache {	
 	NSEnumerator * bookmarkEnumerator = [bookmarks objectEnumerator];
 	NSDictionary * bookmark;
+	NSMutableArray * bookmarksNeedingUpdate = [NSMutableArray array];
 	
 	while ( bookmark = [bookmarkEnumerator nextObject] ) {
 		NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
@@ -223,22 +194,26 @@
 			if (fileBookmark == nil || [bookmark isEqualToDictionary:fileBookmark] == NO) {
 				// we don't have a bookmkark or the bookmark ist not in sync with the cache
 				// NSLog(@"replacing cache file %@", hash);
-				[fileController saveDictionary:bookmark];
+				[bookmarksNeedingUpdate addObject:bookmark];
 			}
 		}
+		
 		[pool release];
 	}
+
+	[fileController saveDictionaries:bookmarksNeedingUpdate];
 }
 
 
 
 - (NSXMLDocument *)deliciousAPIResponseToRequest:(NSString *)request
 {
-	NSString *apiPath = [NSString stringWithFormat:@"https://%@:%@@api.del.icio.us/v1/", username, password, nil];
+	NSString *URLString = [NSString stringWithFormat:@"https://%@:%@@%@/v1/%@", username, password, [self serverAddress], request];
 	NSError *error;
-	NSURL *requestURL = [NSURL URLWithString:[apiPath stringByAppendingString:request]];
+	NSURL *requestURL = [NSURL URLWithString:URLString];
 	NSMutableURLRequest *URLRequest = [NSMutableURLRequest requestWithURL:requestURL];
-	[URLRequest setValue: @"delimport/0.4" forHTTPHeaderField: @"User-Agent"];
+	NSString *userAgentName = [NSString stringWithFormat:@"delimport/%@", [self versionNumber]];
+	[URLRequest setValue:userAgentName forHTTPHeaderField: @"User-Agent"];
 	// NSLog(@"%f", [URLRequest timeoutInterval]);
 	
 	NSHTTPURLResponse *response;
@@ -287,7 +262,7 @@
 
 	Keychain *keychain = [Keychain defaultKeychain];
 
-	[keychain addInternetPassword:password onServer:@"del.icio.us" forAccount:username port:80 path:@"" inSecurityDomain:@"" protocol:kSecProtocolTypeHTTP auth:kSecAuthenticationTypeHTTPDigest replaceExisting:YES];
+	[keychain addInternetPassword:password onServer:[self serverAddress] forAccount:username port:80 path:@"" inSecurityDomain:@"" protocol:kSecProtocolTypeHTTP auth:kSecAuthenticationTypeHTTPDigest replaceExisting:YES];
 
 }
 
@@ -332,16 +307,20 @@
 		if (![[root name] isEqualTo:@"html"]) {
 			// it seems that error pages may come through without the right status code but an error message HTML page
 			// avoid reading those as they'll destroy our metadata cache
-			NSMutableSet *updatedPosts = [NSMutableSet set];
-			NSEnumerator *postEnumerator = [[root children] objectEnumerator], *attributeEnumerator;
+			NSMutableDictionary *updatedPosts = [NSMutableDictionary dictionary];
+
+			NSEnumerator *postEnumerator = [[root children] objectEnumerator];
 			NSXMLElement *post;
-			NSXMLNode *attribute;
-			NSMutableDictionary *postDictionary;
 			while (post = [postEnumerator nextObject]) {
 				NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-				postDictionary = [[NSMutableDictionary alloc] init];
-				attributeEnumerator = [[post attributes] objectEnumerator];
+				
+				NSMutableDictionary * postDictionary = [NSMutableDictionary dictionary];
+				
+				NSString * hash;
+				NSEnumerator * attributeEnumerator = [[post attributes] objectEnumerator];
+				NSXMLNode * attribute;
 				while (attribute = [attributeEnumerator nextObject]) {
+					hash = nil;
 					if ([[attribute name] isEqualToString: DITimeKey]) {
 						[postDictionary setObject:[self dateFromXMLDateString:[attribute stringValue]] forKey:[attribute name]];
 					} else if ([[attribute name] isEqualToString: DITagKey]) {
@@ -352,13 +331,17 @@
 					} else if ([[attribute name] isEqualToString: DIDeliciousNameKey]) {
 						// use Safari-style key for Name
 						[postDictionary setObject:[attribute stringValue] forKey:DINameKey];
+					} else if ([[attribute name] isEqualToString: DIHashKey]) {
+						hash = [attribute stringValue];
+						[postDictionary setObject:hash forKey: DIHashKey];
 					} else {
 						[postDictionary setObject:[attribute stringValue] forKey:[attribute name]];
 					}
 				}
 				
-				[updatedPosts addObject:[NSDictionary dictionaryWithDictionary:postDictionary]];
-				[postDictionary release];
+				if (hash) {
+					[updatedPosts setObject:[NSDictionary dictionaryWithDictionary:postDictionary] forKey:hash];
+				}
 				[pool release];
 			}
 		[self setBookmarks:updatedPosts];
@@ -367,24 +350,42 @@
 	[self enableSuddenTermination];
 }
 
-- (void)setBookmarks:(NSSet *)newMarks
-{
-	NSMutableSet *postsToAdd = [[newMarks mutableCopy] autorelease];
-	NSMutableSet *postsToDelete = [[bookmarks mutableCopy] autorelease];
-	[postsToDelete minusSet:newMarks];
-	[postsToAdd minusSet:bookmarks];
-	// NSLog(@"Deleting %d entries, then adding %d...", [postsToDelete count], [postsToAdd count]);
-	[fileController deleteDictionaries:postsToDelete];
-	[fileController saveDictionaries:postsToAdd];
 
-	[bookmarks release];
-	bookmarks = [[NSSet alloc] initWithSet:newMarks];
+- (void)setBookmarks:(NSDictionary *) newMarks
+{
+	NSMutableDictionary *postsToWrite = [NSMutableDictionary dictionary];
+	NSMutableDictionary *postsToDelete = [[bookmarks mutableCopy] autorelease];
+	
+	NSEnumerator * newMarksEnumerator = [newMarks keyEnumerator];
+	NSString * hash;
+	while (hash = [newMarksEnumerator nextObject]) {
+		NSDictionary * newMark = [newMarks objectForKey:hash];
+		NSDictionary * oldMark = [bookmarks objectForKey:hash];
+		
+		if (oldMark) {
+			if (![newMark isEqualToDictionary:oldMark]) {
+				[postsToWrite setObject:newMark forKey:hash];
+			}
+			[postsToDelete removeObjectForKey:hash];
+		}
+		else {
+			[postsToWrite setObject:newMark forKey:hash];
+		}
+	}
+	
+	NSLog(@"Deleting %lu entries, then adding %lu...", [postsToDelete count], [postsToWrite count]);
+	[fileController deleteDictionaries:[postsToDelete allValues]];
+	[fileController saveDictionaries:[postsToWrite allValues]];
+
+	[bookmarks removeObjectsForKeys:[postsToDelete allKeys]];
+	[bookmarks addEntriesFromDictionary:postsToWrite];
+	
 	[lastUpdate release];
 	lastUpdate = [NSDate new];
 	NSData *archivedDate = [NSArchiver archivedDataWithRootObject:lastUpdate];
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	[defaults setObject:[bookmarks allObjects] forKey:DIDefaultsBookmarksKey];
+	[defaults setObject:bookmarks forKey:DIDefaultsBookmarksDictKey];
 	[defaults setObject:archivedDate forKey:DIDefaultsLastUpdateKey];
 	[defaults synchronize];
 }
@@ -414,7 +415,26 @@
 	else {
 		minutes = 30.0;
 	}
+	
 	return (minutes * 60.0);
+}
+
+
+- (NSString*) serverAddress {
+	NSString * address = @"api.del.icio.us";
+	
+	NSNumber * serviceTypeValue = [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:DIDefaultsServiceTypeKey];
+	
+	if (serviceTypeValue && [serviceTypeValue integerValue] == DIServiceTypePinboard) {
+		address = @"api.pinboard.in";
+	}
+	
+	return address;
+}
+
+
+- (NSString*) versionNumber {
+	return @"0.5";
 }
 
 

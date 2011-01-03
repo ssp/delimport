@@ -9,6 +9,12 @@
 #import <Cocoa/Cocoa.h>
 
 
+enum serviceIDs {
+	DIServiceTypeDelicious = 0,
+	DIServiceTypePinboard = 1
+} serviceID;
+
+
 @interface DILoginController : NSWindowController {
 	IBOutlet NSTextField *userField;
 	IBOutlet NSTextField *passField;

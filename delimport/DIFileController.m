@@ -12,30 +12,31 @@
 @implementation DIFileController
 
 
-- (NSString *) cachePath
-{
-	NSString *cachePath = [@"~/Library/Caches/Metadata/delimport" stringByExpandingTildeInPath];
+- (NSString *) metadataPathForSubfolder: (NSString *) folderName {
+	NSString *metadataPath = [[@"~/Library/Metadata/" stringByExpandingTildeInPath] stringByAppendingPathComponent: folderName];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	BOOL isDir;
+	NSString * result = nil;
 	
-	if ([fileManager fileExistsAtPath:cachePath isDirectory:&isDir]) {
+	if ([fileManager fileExistsAtPath:metadataPath isDirectory:&isDir]) {
 		if (isDir) {
-			return cachePath;
+			result = metadataPath;
 		}
-	} else if ([fileManager createDirectoryAtPath:cachePath attributes:nil]) {
-		return cachePath;
+	} else if ([fileManager createDirectoryAtPath:metadataPath attributes:nil]) {
+		result = metadataPath;
 	}
 	
-	return nil;
+	return result;
 }
+
 
 
 - (NSString *) pathForHash: (NSString*) hash {
 	NSString * fileName = [hash stringByAppendingPathExtension: DIDeliciousFileNameExtension];
-	NSString * cachePath = [self cachePath];
+	NSString * metadataPath = [self metadataPathForSubfolder:@"delimport"];
 	NSString * path = nil;
-	if (cachePath) {
-		path = [cachePath stringByAppendingPathComponent:fileName];
+	if (metadataPath) {
+		path = [metadataPath stringByAppendingPathComponent:fileName];
 	}
 	
 	return path;
@@ -87,7 +88,7 @@
 
 
 
-- (void)saveDictionaries:(NSSet *)dictionaries
+- (void)saveDictionaries:(NSArray *)dictionaries
 {
 	NSEnumerator *dictEnumerator = [dictionaries objectEnumerator];
 	NSDictionary *dictionary;
@@ -96,7 +97,7 @@
 	}
 }
 
-- (void)deleteDictionaries:(NSSet *)dictionaries
+- (void)deleteDictionaries:(NSArray *)dictionaries
 {
 	NSEnumerator *dictEnumerator = [dictionaries objectEnumerator];
 	NSDictionary *dictionary;
