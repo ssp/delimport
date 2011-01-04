@@ -8,6 +8,7 @@
 
 #import "DIFileController.h"
 #import "DIWebWindowController.h"
+#import "DIBookmarksController.h"
 
 @implementation DIFileController
 
@@ -57,7 +58,8 @@
 
 
 + (NSString *) webarchivePathForHash: (NSString*) hash {
-	NSString * fileName = [hash stringByAppendingPathExtension: @"webarchive"];
+	NSString * fileName = [hash stringByAppendingFormat:@"-%@", [DIBookmarksController serviceName]];
+	fileName = [fileName stringByAppendingPathExtension: @"webarchive"];
 	NSString * metadataWebarchivePath = [[self class] metadataPathForSubfolder:@"delimport-webarchives"];
 	NSString * path = nil;
 	if (metadataWebarchivePath) {
