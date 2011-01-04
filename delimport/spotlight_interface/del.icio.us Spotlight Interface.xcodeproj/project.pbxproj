@@ -152,6 +152,7 @@
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* del.icio.us Spotlight Interface */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D57630D048677EA00EA77CD /* del.icio.us Spotlight Interface */,
 			);
