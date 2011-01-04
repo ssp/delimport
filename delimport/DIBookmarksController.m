@@ -65,7 +65,7 @@
 			// OK, Create item and add it - should work even if no pref existed
 			NSDictionary	*myAppItem;
 			FSRef			myFSRef;
-			OSStatus		fsResult = FSPathMakeRef([kDTMyAppAppPath fileSystemRepresentation], &myFSRef,NULL);
+			OSStatus		fsResult = FSPathMakeRef((const UInt8 *)[kDTMyAppAppPath fileSystemRepresentation], &myFSRef,NULL);
 			
 			if (loginItems) {
 				loginItems = [[loginItems autorelease] mutableCopy]; // mutable copy we can work on, autorelease the original
