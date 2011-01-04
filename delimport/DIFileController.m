@@ -46,7 +46,7 @@
 
 
 + (NSString *) bookmarkPathForHash: (NSString*) hash {
-	NSString * fileName = [hash stringByAppendingPathExtension: DIDeliciousFileNameExtension];
+	NSString * fileName = [hash stringByAppendingPathExtension: [DIFileController filenameExtensionForPreferredService]];
 	NSString * metadataPath = [[self class] metadataPathForSubfolder:@"delimport"];
 	NSString * path = nil;
 	if (metadataPath) {
@@ -67,6 +67,11 @@
 	}
 	
 	return path;
+}
+
+
++ (NSString *) filenameExtensionForPreferredService {
+	return [DIBookmarksController serviceName];
 }
 
 

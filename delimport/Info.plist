@@ -30,6 +30,30 @@
 			<key>NSPersistentStoreTypeKey</key>
 			<string>XML</string>
 		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>pinboard</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>pinboard</string>
+			<key>CFBundleTypeName</key>
+			<string>pinboard Bookmark</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>DELp</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.ianhenderson.pinboard.bookmark</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<true/>
+			<key>NSPersistentStoreTypeKey</key>
+			<string>XML</string>
+		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>delimport</string>
@@ -48,7 +72,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>0.5b</string>
 	<key>LSUIElement</key>
-	<integer>1</integer>
+	<false/>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
@@ -63,7 +87,7 @@
 				<string>com.apple.safari.bookmark</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>Bookmarking Service Bookmark</string>
+			<string>delicious Bookmark</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.ianhenderson.delicious.bookmark</string>
 			<key>UTTypeTagSpecification</key>
@@ -73,6 +97,25 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>delicious</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>com.apple.safari.bookmark</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>pinboard Bookmark</string>
+			<key>UTTypeIdentifier</key>
+			<string>org.ianhenderson.pinboard.bookmark</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>com.apple.ostype</key>
+				<string>DELp</string>
+				<key>public.filename-extension</key>
+				<array>
+					<string>pinboard</string>
 				</array>
 			</dict>
 		</dict>

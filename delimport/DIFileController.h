@@ -8,8 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#define DIDeliciousFileNameExtension @"delicious"
-
 #define DIURLKey @"URL"
 #define DIDeliciousURLKey @"href"
 #define DINameKey @"Name"
@@ -28,6 +26,7 @@
 + (NSString *) metadataPathForSubfolder: (NSString *) folderName;
 + (NSString *) bookmarkPathForHash: (NSString*) hash;
 + (NSString *) webarchivePathForHash: (NSString*) hash;
++ (NSString *) filenameExtensionForPreferredService;
 
 - (NSDictionary*) readDictionaryForHash:(NSString*) hash;
 - (void) saveDictionary:(NSDictionary *)dictionary;
