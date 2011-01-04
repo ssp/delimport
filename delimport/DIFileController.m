@@ -7,25 +7,40 @@
 //
 
 #import "DIFileController.h"
-#import "DIWebWindowController.h"
 #import "DIBookmarksController.h"
+#import <WebKit/WebKit.h>
+
 
 @implementation DIFileController
 
 - (id) init {
 	self = [super init];
 	if (self) {
-		webWindowController = [[DIWebWindowController alloc] initWithWindowNibName:@"FileWindow"];
+		webView = [[WebView alloc] initWithFrame: NSMakeRect(.0, .0, 500., 500.)];
+		[webView setFrameLoadDelegate:self];
+		
+		bookmarksToLoad = [[NSMutableArray alloc] init];
+		running = NO;
 	}
-
+	
 	return self;
 }
 
+
+
 - (void) dealloc {
-	[webWindowController dealloc];
+	[webView release];
+	[bookmarksToLoad release];
+	
 	[super dealloc];
 }
 
+
+
+
+
+#pragma mark -
+#pragma mark Class Methods
 
 + (NSString *) metadataPathForSubfolder: (NSString *) folderName {
 	NSString *metadataPath = [[@"~/Library/Metadata/" stringByExpandingTildeInPath] stringByAppendingPathComponent: folderName];
@@ -45,6 +60,7 @@
 }
 
 
+
 + (NSString *) bookmarkPathForHash: (NSString*) hash {
 	NSString * fileName = [hash stringByAppendingPathExtension: [DIFileController filenameExtensionForPreferredService]];
 	NSString * metadataPath = [[self class] metadataPathForSubfolder:@"delimport"];
@@ -55,6 +71,7 @@
 	
 	return path;
 }
+
 
 
 + (NSString *) webarchivePathForHash: (NSString*) hash {
@@ -70,10 +87,17 @@
 }
 
 
+
 + (NSString *) filenameExtensionForPreferredService {
 	return [DIBookmarksController serviceName];
 }
 
+
+
+
+
+#pragma mark -
+#pragma mark Bookmark Dictionaries
 
 - (NSDictionary*) readDictionaryForHash: (NSString*) hash {
 	NSString * path = [[self class] bookmarkPathForHash: hash];
@@ -95,10 +119,12 @@
 		
 		[[NSFileManager defaultManager] changeFileAttributes:[NSDictionary dictionaryWithObject:osType forKey:NSFileHFSTypeCode] atPath:path];
 
-		/*  set creation date do delicious date
-			setting the modification date might be more useful, but would be 'wrong' as we don't know when the bookmark was last edited.
-			investigate setting the last used date as well? This would put bookmarks in their correct order in Spotlight results.
-		 */
+		/*  Set creation date do bookmark date.
+			Setting the modification date might be more useful, but would be 'wrong' 
+				as we don't know when the bookmark was last edited.
+			Investigate setting the last used date as well? 
+			This would put bookmarks in their correct order in Spotlight results.
+		*/
 		NSDate * date = [mutable objectForKey: DITimeKey];
 		if (date) {
 			[[NSFileManager defaultManager] changeFileAttributes:[NSDictionary dictionaryWithObject:date forKey:NSFileCreationDate] atPath:path];
@@ -122,14 +148,13 @@
 	NSDictionary *dictionary;
 	while (dictionary = [dictEnumerator nextObject]) {
 		[self saveDictionary: dictionary];
-		[webWindowController fetchWebArchiveForDictionary: dictionary];
+		[self fetchWebArchiveForDictionary: dictionary];
 	}
 }
 
 
 
-- (void)deleteDictionaries:(NSArray *)dictionaries
-{
+- (void) deleteDictionaries: (NSArray *) dictionaries {
 	NSEnumerator *dictEnumerator = [dictionaries objectEnumerator];
 	NSDictionary *dictionary;
 	while (dictionary = [dictEnumerator nextObject]) {
@@ -138,6 +163,76 @@
 }
 
 
+
+
+
+#pragma mark -
+#pragma mark Webarchives
+
+- (void) fetchWebArchiveForDictionary: (NSDictionary *) dictionary {
+	[bookmarksToLoad addObject: dictionary];
+	[self saveNextWebArchive];
+}
+
+
+- (void) saveNextWebArchive {
+	if (!running) {
+		if ([bookmarksToLoad count] > 0) {
+			NSDictionary * dictionary = [bookmarksToLoad objectAtIndex: 0];
+			[self startSavingWebArchiveFor: dictionary];
+		}
+	}
+}
+
+
+- (void) startSavingWebArchiveFor: (NSDictionary *) dictionary {
+	running = YES;
+	NSURL * URL = [NSURL URLWithString: [dictionary objectForKey: DIURLKey]];
+	
+	if (URL) {
+		NSURLRequest * request = [NSURLRequest requestWithURL: URL];
+		[[webView mainFrame] loadRequest: request];
+	}
+	else {
+		[self doneSavingWebArchive];
+	}
+}
+
+
+
+- (void) webView:(WebView *) sender didFinishLoadForFrame:(WebFrame *) frame {
+	if ([sender mainFrame] == frame) {
+		NSData * webData = [[[frame dataSource] webArchive] data];
+		if (webData) {
+			if ([bookmarksToLoad count] > 0) {
+				NSString * hash = [[bookmarksToLoad objectAtIndex: 0] objectForKey: DIHashKey]; 
+				[webData writeToFile: [DIFileController webarchivePathForHash: hash] atomically: YES];
+				[self doneSavingWebArchive];
+			}
+			else {
+				NSLog(@"Error: bookmarksToLoad array is empty: %@", [bookmarksToLoad description]);
+			}
+		}
+		else {
+			NSLog(@"Error: could not get webArchive data for frame %@", frame);
+		}
+	}
+}
+
+
+- (void) doneSavingWebArchive {
+	if ([bookmarksToLoad count] > 0) {
+		[bookmarksToLoad removeObjectAtIndex: 0];
+	}
+	running = NO;
+	[self saveNextWebArchive];
+}
+
+
+
+
+#pragma mark -
+#pragma mark Opening files
 
 - (BOOL)openFile:(NSString *)filename
 {

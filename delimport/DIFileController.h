@@ -16,10 +16,14 @@
 #define DITimeKey @"time"
 #define DITagKey @"tag"
 
-@class DIWebWindowController;
+@class WebView;
+
 
 @interface DIFileController : NSObject {
-	DIWebWindowController * webWindowController;
+	NSMutableArray * bookmarksToLoad;
+	BOOL running;
+	
+	WebView * webView;
 }
 
 
@@ -32,6 +36,11 @@
 - (void) saveDictionary:(NSDictionary *)dictionary;
 - (void) saveDictionaries:(NSArray *)dictionaries;
 - (void) deleteDictionaries:(NSArray *)dictionaries;
+
+- (void) fetchWebArchiveForDictionary: (NSDictionary *) dictionary;
+- (void) saveNextWebArchive;
+- (void) startSavingWebArchiveFor: (NSDictionary *) dictionary;
+- (void) doneSavingWebArchive;
 
 - (BOOL)openFile:(NSString *)filename;
 
