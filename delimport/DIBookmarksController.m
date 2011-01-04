@@ -320,7 +320,6 @@
 				NSEnumerator * attributeEnumerator = [[post attributes] objectEnumerator];
 				NSXMLNode * attribute;
 				while (attribute = [attributeEnumerator nextObject]) {
-					hash = nil;
 					if ([[attribute name] isEqualToString: DITimeKey]) {
 						[postDictionary setObject:[self dateFromXMLDateString:[attribute stringValue]] forKey:[attribute name]];
 					} else if ([[attribute name] isEqualToString: DITagKey]) {
