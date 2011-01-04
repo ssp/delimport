@@ -22,7 +22,7 @@
 - (id) transformedValue: (id) value {
 	NSString * iconFileName = @"delicious.icns";
 	
-	if (value != nil && [value integerValue] == DIServiceTypePinboard) {
+	if (value != nil && [value intValue] == DIServiceTypePinboard) {
 		iconFileName = @"pinboard.gif";
 	}
 	

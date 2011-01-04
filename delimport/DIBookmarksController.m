@@ -425,7 +425,7 @@
 	
 	NSNumber * serviceTypeValue = [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:DIDefaultsServiceTypeKey];
 	
-	if (serviceTypeValue && [serviceTypeValue integerValue] == DIServiceTypePinboard) {
+	if (serviceTypeValue && [serviceTypeValue intValue] == DIServiceTypePinboard) {
 		address = @"api.pinboard.in";
 	}
 	
@@ -439,7 +439,7 @@
 	
 	NSNumber * serviceTypeValue = [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:DIDefaultsServiceTypeKey];
 	
-	if (serviceTypeValue && [serviceTypeValue integerValue] == DIServiceTypePinboard) {
+	if (serviceTypeValue && [serviceTypeValue intValue] == DIServiceTypePinboard) {
 		name = @"pinboard";
 	}
 	
