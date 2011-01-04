@@ -7,6 +7,7 @@ Originally developed by Ian Henderson, with most changes since version 0.3 by Sv
 <dt>current 2010-12</dt>
 <dd>
 * Use Pinboard URLs
+* Try downloading webarchives for the URLs
 </dd>
 
 <dt>v0.4, 2009-09</dt>
