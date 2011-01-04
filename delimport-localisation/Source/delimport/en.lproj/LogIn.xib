@@ -35,7 +35,7 @@
 			<object class="NSWindowTemplate" id="671401286">
 				<int key="NSWindowStyleMask">3</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{571, 269}, {482, 265}}</string>
+				<string key="NSWindowRect">{{571, 245}, {455, 289}}</string>
 				<int key="NSWTFlags">1886912512</int>
 				<string key="NSWindowTitle">delimport</string>
 				<string key="NSWindowClass">NSPanel</string>
@@ -52,14 +52,14 @@
 						<object class="NSButton" id="852050924">
 							<reference key="NSNextResponder" ref="187686986"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{310, 12}, {158, 32}}</string>
+							<string key="NSFrame">{{359, 12}, {82, 32}}</string>
 							<reference key="NSSuperview" ref="187686986"/>
 							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="684396400">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Ouvrir une session</string>
+								<string key="NSContents">Log In</string>
 								<object class="NSFont" key="NSSupport" id="264567399">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">13</double>
@@ -78,7 +78,7 @@
 						<object class="NSTextField" id="436629768">
 							<reference key="NSNextResponder" ref="187686986"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{207, 130}, {255, 22}}</string>
+							<string key="NSFrame">{{183, 132}, {252, 22}}</string>
 							<reference key="NSSuperview" ref="187686986"/>
 							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
@@ -112,7 +112,7 @@
 						<object class="NSTextField" id="251048793">
 							<reference key="NSNextResponder" ref="187686986"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{207, 100}, {255, 22}}</string>
+							<string key="NSFrame">{{183, 100}, {252, 22}}</string>
 							<reference key="NSSuperview" ref="187686986"/>
 							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
@@ -130,14 +130,14 @@
 						<object class="NSTextField" id="1012527428">
 							<reference key="NSNextResponder" ref="187686986"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{101, 102}, {101, 17}}</string>
+							<string key="NSFrame">{{107, 102}, {71, 17}}</string>
 							<reference key="NSSuperview" ref="187686986"/>
 							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="941095723">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">71303168</int>
-								<string key="NSContents">Mot de passe :</string>
+								<string key="NSContents">Password:</string>
 								<reference key="NSSupport" ref="264567399"/>
 								<reference key="NSControlView" ref="1012527428"/>
 								<object class="NSColor" key="NSBackgroundColor" id="445464486">
@@ -160,14 +160,14 @@
 						<object class="NSTextField" id="635311682">
 							<reference key="NSNextResponder" ref="187686986"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{125, 132}, {77, 17}}</string>
+							<string key="NSFrame">{{101, 134}, {77, 17}}</string>
 							<reference key="NSSuperview" ref="187686986"/>
 							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="64565302">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">71303168</int>
-								<string key="NSContents">Utilisateur :</string>
+								<string key="NSContents">User Name:</string>
 								<reference key="NSSupport" ref="264567399"/>
 								<reference key="NSControlView" ref="635311682"/>
 								<reference key="NSBackgroundColor" ref="445464486"/>
@@ -177,14 +177,14 @@
 						<object class="NSButton" id="941514175">
 							<reference key="NSNextResponder" ref="187686986"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{160, 12}, {150, 32}}</string>
+							<string key="NSFrame">{{226, 12}, {133, 32}}</string>
 							<reference key="NSSuperview" ref="187686986"/>
 							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="460115319">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Quitter delimport</string>
+								<string key="NSContents">Quit delimport</string>
 								<reference key="NSSupport" ref="264567399"/>
 								<reference key="NSControlView" ref="941514175"/>
 								<int key="NSButtonFlags">-2038284033</int>
@@ -213,7 +213,7 @@
 									<string>NeXT TIFF v4.0 pasteboard type</string>
 								</object>
 							</object>
-							<string key="NSFrame">{{24, 181}, {64, 64}}</string>
+							<string key="NSFrame">{{24, 205}, {64, 64}}</string>
 							<reference key="NSSuperview" ref="187686986"/>
 							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
@@ -230,14 +230,14 @@
 						<object class="NSTextField" id="975092148">
 							<reference key="NSNextResponder" ref="187686986"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{101, 228}, {364, 17}}</string>
+							<string key="NSFrame">{{101, 235}, {337, 34}}</string>
 							<reference key="NSSuperview" ref="187686986"/>
 							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="497812024">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">272629760</int>
-								<string key="NSContents">Veuillez entrer vos informations du compte delicious.</string>
+								<string key="NSContents">Please select the service you are using and enter your login information.</string>
 								<object class="NSFont" key="NSSupport">
 									<string key="NSName">LucidaGrande-Bold</string>
 									<double key="NSSize">13</double>
@@ -251,14 +251,14 @@
 						<object class="NSTextField" id="92635022">
 							<reference key="NSNextResponder" ref="187686986"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{101, 60}, {364, 28}}</string>
+							<string key="NSFrame">{{101, 60}, {337, 28}}</string>
 							<reference key="NSSuperview" ref="187686986"/>
 							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="524953579">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">272760832</int>
-								<string key="NSContents">Votre nom d’utilisateur et mot de passe seront stockés dans le trousseau et réutilisés lorsque delimport est lancé à nouveau.</string>
+								<string key="NSContents">Your user name and password will be stored in the keychain and re-used when delimport is launched again.</string>
 								<object class="NSFont" key="NSSupport" id="26">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">11</double>
@@ -272,7 +272,7 @@
 						<object class="NSMatrix" id="292314538">
 							<reference key="NSNextResponder" ref="187686986"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{207, 160}, {162, 18}}</string>
+							<string key="NSFrame">{{183, 162}, {162, 18}}</string>
 							<reference key="NSSuperview" ref="187686986"/>
 							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
@@ -289,10 +289,6 @@
 									<int key="NSTag">1</int>
 									<int key="NSButtonFlags">1211912703</int>
 									<int key="NSButtonFlags2">0</int>
-									<object class="NSCustomResource" key="NSNormalImage" id="114074824">
-										<string key="NSClassName">NSImage</string>
-										<string key="NSResourceName">NSRadioButton</string>
-									</object>
 									<object class="NSButtonImageSource" key="NSAlternateImage" id="17990829">
 										<string key="NSImageName">NSRadioButton</string>
 									</object>
@@ -309,9 +305,7 @@
 									<reference key="NSControlView" ref="292314538"/>
 									<int key="NSButtonFlags">1211912703</int>
 									<int key="NSButtonFlags2">0</int>
-									<reference key="NSNormalImage" ref="114074824"/>
 									<reference key="NSAlternateImage" ref="17990829"/>
-									<string key="NSAlternateContents"/>
 									<int key="NSPeriodicDelay">400</int>
 									<int key="NSPeriodicInterval">75</int>
 								</object>
@@ -327,9 +321,51 @@
 								<reference key="NSSupport" ref="264567399"/>
 								<int key="NSButtonFlags">1211912703</int>
 								<int key="NSButtonFlags2">0</int>
-								<reference key="NSNormalImage" ref="114074824"/>
+								<object class="NSImage" key="NSNormalImage">
+									<int key="NSImageFlags">549453824</int>
+									<string key="NSSize">{18, 18}</string>
+									<object class="NSMutableArray" key="NSReps">
+										<bool key="EncodedWithXMLCoder">YES</bool>
+										<object class="NSArray">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<integer value="0"/>
+											<object class="NSBitmapImageRep">
+												<object class="NSData" key="NSTIFFRepresentation">
+													<bytes key="NS.bytes">TU0AKgAABRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAMAAAADAAAAAwAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAADwRERGLJycnySsrK/A1NTXw
+IyMjyRwcHIsJCQk8AAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFFRUVdVBQUOCoqKj/
+29vb//n5+f/6+vr/2tra/6qqqv9UVFTgHx8fdQAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUZGRl5
+dXV198PDw//8/Pz////////////////////////////U1NT/fHx89yUlJXkAAAAFAAAAAAAAAAAAAAAA
+AAAAAxEREUZqamrmtbW1/+3t7f/+/v7//v7+//7+/v/9/f3//f39//39/f/39/f/xMTE/3d3d+YZGRlG
+AAAAAwAAAAAAAAAAAAAACkJCQqGtra3/xsbG/+vr6//y8vL/9fX1//X19f/z8/P/9fX1//Ly8v/u7u7/
+0tLS/6+vr/9KSkqhAAAACgAAAAAAAAAAAAAAF3h4eN2/v7//z8/P/93d3f/q6ur/7+/v/+/v7//w8PD/
+7e3t/+3t7f/i4uL/zs7O/8XFxf98fHzdAAAAFwAAAAAAAAADAAAAJKSkpPjOzs7/2dnZ/+Dg4P/i4uL/
+5eXl/+bm5v/n5+f/5eXl/+Li4v/e3t7/2tra/9DQ0P+srKz4AAAAJAAAAAMAAAADAAAALrCwsPrW1tb/
+3t7e/+Tk5P/p6en/6+vr/+zs7P/p6en/6+vr/+fn5//k5OT/4ODg/9nZ2f+zs7P6AAAALgAAAAMAAAAD
+AAAALp2dnezg4OD/5eXl/+rq6v/u7u7/8PDw//Dw8P/x8fH/8PDw/+7u7v/q6ur/5ubm/+Hh4f+ZmZns
+AAAALgAAAAMAAAADAAAAJG5ubs/l5eX/6enp/+/v7//y8vL/9vb2//r6+v/5+fn/9/f3//b29v/x8fH/
+6+vr/+Tk5P9ra2vPAAAAJAAAAAMAAAAAAAAAFy4uLpPCwsL67Ozs//Pz8//5+fn//v7+//7+/v/+/v7/
+/v7+//v7+//19fX/8PDw/8LCwvosLCyTAAAAFwAAAAAAAAAAAAAACgAAAENfX1/S5OTk/vn5+f/+/v7/
+///////////////////////////8/Pz/5ubm/l9fX9IAAABDAAAACgAAAAAAAAAAAAAAAwAAABcAAABl
+YmJi3NLS0v3////////////////////////////////V1dX9ZGRk3AAAAGUAAAAXAAAAAwAAAAAAAAAA
+AAAAAAAAAAUAAAAfAAAAZTMzM8KAgIDwv7+//O3t7f/t7e3/v7+//ICAgPAzMzPCAAAAZQAAAB8AAAAF
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAFwAAAEMAAAB3AAAAnwAAALMAAACzAAAAnwAAAHcAAABD
+AAAAFwAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAoAAAAXAAAAJAAAAC4AAAAu
+AAAAJAAAABcAAAAKAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAwAAAAMAAAADAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQEAAAMAAAABABIAAAEB
+AAMAAAABABIAAAECAAMAAAAEAAAFugEDAAMAAAABAAEAAAEGAAMAAAABAAIAAAERAAQAAAABAAAACAES
+AAMAAAABAAEAAAEVAAMAAAABAAQAAAEWAAMAAAABABIAAAEXAAQAAAABAAAFEAEcAAMAAAABAAEAAAFS
+AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="NSColor" key="NSColor">
+										<int key="NSColorSpace">3</int>
+										<bytes key="NSWhite">MCAwAA</bytes>
+									</object>
+								</object>
 								<reference key="NSAlternateImage" ref="17990829"/>
-								<string key="NSAlternateContents"/>
 								<int key="NSPeriodicDelay">400</int>
 								<int key="NSPeriodicInterval">75</int>
 							</object>
@@ -341,14 +377,14 @@
 						<object class="NSTextField" id="148805405">
 							<reference key="NSNextResponder" ref="187686986"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{125, 161}, {77, 17}}</string>
+							<string key="NSFrame">{{101, 163}, {77, 17}}</string>
 							<reference key="NSSuperview" ref="187686986"/>
 							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="707259291">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">71303168</int>
-								<string key="NSContents">Service :</string>
+								<string key="NSContents">Service:</string>
 								<reference key="NSSupport" ref="264567399"/>
 								<reference key="NSControlView" ref="148805405"/>
 								<reference key="NSBackgroundColor" ref="445464486"/>
@@ -358,7 +394,7 @@
 						<object class="NSTextField" id="946024143">
 							<reference key="NSNextResponder" ref="187686986"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{101, 186}, {337, 34}}</string>
+							<string key="NSFrame">{{101, 193}, {337, 34}}</string>
 							<reference key="NSSuperview" ref="187686986"/>
 							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
@@ -373,7 +409,7 @@
 							</object>
 						</object>
 					</object>
-					<string key="NSFrameSize">{482, 265}</string>
+					<string key="NSFrameSize">{455, 289}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 				</object>
@@ -815,7 +851,6 @@
 					<string>5.IBWindowTemplateEditedContentRect</string>
 					<string>5.ImportedFromIB2</string>
 					<string>5.windowTemplate.hasMinSize</string>
-					<string>5.windowTemplate.maxSize</string>
 					<string>5.windowTemplate.minSize</string>
 					<string>50.IBPluginDependency</string>
 					<string>53.IBPluginDependency</string>
@@ -843,17 +878,17 @@
 					<string>NSSecureTextField</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDWwAAw1wAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDNwAAw00AAA</bytes>
 					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDWwAAw3oAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDNwAAw20AAA</bytes>
 					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDOgAAwogAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDVgAAwigAAA</bytes>
 					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -861,55 +896,54 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDPQAAwxYAAA</bytes>
-					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDWwAAwzAAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDUQAAwjgAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{96, 425}, {482, 265}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{96, 425}, {482, 265}}</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABDNwAAwzIAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>{{96, 444}, {455, 289}}</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>{{96, 444}, {455, 289}}</string>
 					<boolean value="YES"/>
 					<boolean value="YES"/>
-					<string>{1.79769e+308, 1.79769e+308}</string>
 					<string>{213, 107}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABC+gAAw4oAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABCygAAw4MAAA</bytes>
 					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABCygAAw6wAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDJQAAw6yAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABC+gAAw3cAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABCygAAw2oAAA</bytes>
 					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABDqAAAwogAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABDrYAAwigAAA</bytes>
 					</object>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABCygAAw1kAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABC1gAAw0oAAA</bytes>
 					</object>
 					<boolean value="YES"/>
 				</object>
@@ -1612,9 +1646,5 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<string key="IBDocument.LastKnownRelativeProjectPath">../delimport.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">NSRadioButton</string>
-			<string key="NS.object.0">{16, 15}</string>
-		</object>
 	</data>
 </archive>

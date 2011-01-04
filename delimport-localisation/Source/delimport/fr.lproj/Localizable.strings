@@ -1,0 +1,13 @@
+﻿/* Add */
+"Add" = "Lancer en ouvrant la session";
+
+/* Headline for add to login items dialogue */
+"Automatically launch delimport on login?" = "Lancer delimport en ouvrant la session?";
+
+/* Explanatory text for add to login items dialogue */
+"delimport will be added to your login items. This will ensure delimport runs and downloads your del.icio.us bookmarks whenever you are using this account." = "delimport sera ajouté à vos Éléments d’ouverture et s’exécute en arrière-plan pour télécharger des nouveaux signets de delicious.
+Vous pouvez supprimer l’Élément d’ouverture delimport dans le panneau » Comptes « des Préférences Système.";
+
+
+/* Don't Add */
+"Don't Add" = "Ne pas lancer en ouvrant la session";

@@ -1,3 +1,30 @@
 *.mode1v3
 *.pbxuser
 
+delimport-localisation/Source/delimport/DIBookmarksController.h
+delimport-localisation/Source/delimport/DIBookmarksController.m
+delimport-localisation/Source/delimport/DIFileController.h
+delimport-localisation/Source/delimport/DIFileController.m
+delimport-localisation/Source/delimport/DILoginController.h
+delimport-localisation/Source/delimport/DILoginController.m
+delimport-localisation/Source/delimport/DIServiceTypeToIconPath.h
+delimport-localisation/Source/delimport/DIServiceTypeToIconPath.m
+delimport-localisation/Source/delimport/DIWebWindowController.h
+delimport-localisation/Source/delimport/DIWebWindowController.m
+delimport-localisation/Source/delimport/FileWindow.xib
+delimport-localisation/Source/delimport/Info.plist
+delimport-localisation/Source/delimport/MainMenu.xib
+delimport-localisation/Source/delimport/delicious.icns
+delimport-localisation/Source/delimport/delimport.xcodeproj/project.pbxproj
+delimport-localisation/Source/delimport/delimport_Prefix.pch
+delimport-localisation/Source/delimport/main.m
+delimport-localisation/Source/delimport/pinboard.icns
+delimport-localisation/Source/delimport/spotlight_interface/GetMetadataForFile.m
+delimport-localisation/Source/delimport/spotlight_interface/Info.plist
+delimport-localisation/Source/delimport/spotlight_interface/Version
+delimport-localisation/Source/delimport/spotlight_interface/del.icio.us Spotlight Interface.xcodeproj/project.pbxproj
+delimport-localisation/Source/delimport/spotlight_interface/main.c
+delimport-localisation/Source/delimport/spotlight_interface/schema.xml
+delimport-localisation/Source/delimport/spotlight_interface/version.plist
+delimport-localisation/delimport-localisation~.ilocalize
+delimport-localisation/delimport-localisation.console

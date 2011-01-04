@@ -1,0 +1,13 @@
+﻿/* Add */
+"Add" = "Launch at Login";
+
+/* Headline for add to login items dialogue */
+"Automatically launch delimport on login?" = "Launch delimport at login?";
+
+/* Explanatory text for add to login items dialogue */
+"delimport will be added to your login items. This will ensure delimport runs and downloads your del.icio.us bookmarks whenever you are using this account." = "delimport will be added to your Login Items and run in the background to download new bookmarks from delicious.
+You can remove the delimport Login Item in the “Users” pane of System Preferences.";
+
+/* Don't Add */
+"Don't Add" = "Don’t Launch at Login";
+

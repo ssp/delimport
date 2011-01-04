@@ -1,0 +1,8 @@
+﻿/* Localized versions of Info.plist keys */
+
+CFBundleName = "delimport";
+NSHumanReadableCopyright = "© Ian Henderson, 2005-2011";
+
+/* Document name for Bookmarks */
+"delicious Bookmark" = "delicious Bookmark";
+"pinboard Bookmark" = "pinboard Bookmark";
