@@ -316,7 +316,7 @@
 				
 				NSMutableDictionary * postDictionary = [NSMutableDictionary dictionary];
 				
-				NSString * hash;
+				NSString * hash = nil;
 				NSEnumerator * attributeEnumerator = [[post attributes] objectEnumerator];
 				NSXMLNode * attribute;
 				while (attribute = [attributeEnumerator nextObject]) {
