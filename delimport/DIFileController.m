@@ -9,6 +9,7 @@
 #import "DIFileController.h"
 #import "DIBookmarksController.h"
 #import <WebKit/WebKit.h>
+#import <sys/xattr.h>
 
 
 @implementation DIFileController
@@ -205,8 +206,10 @@
 		NSData * webData = [[[frame dataSource] webArchive] data];
 		if (webData) {
 			if ([bookmarksToLoad count] > 0) {
-				NSString * hash = [[bookmarksToLoad objectAtIndex: 0] objectForKey: DIHashKey]; 
-				[webData writeToFile: [DIFileController webarchivePathForHash: hash] atomically: YES];
+				NSString * hash = [[bookmarksToLoad objectAtIndex: 0] objectForKey:DIHashKey];
+				if ([webData writeToFile:[DIFileController webarchivePathForHash:hash] atomically:YES]) {
+					[self writeWhereFromsXattrForHash:hash];
+				}
 				[self doneSavingWebArchive];
 			}
 			else {
@@ -218,6 +221,22 @@
 		}
 	}
 }
+
+
+
+- (void) writeWhereFromsXattrForHash: (NSString*) hash {
+	NSString * errorDescription = nil;
+	NSData * xAttrPlistData = [NSPropertyListSerialization dataFromPropertyList:[webView mainFrameURL] format:NSPropertyListBinaryFormat_v1_0 errorDescription:&errorDescription];
+	if (errorDescription != nil) {
+		NSLog(@"Could not convert URL for extended attributes when saving web archive: %@", errorDescription);
+		[errorDescription release];
+	}
+	
+	setxattr([[DIFileController webarchivePathForHash:hash] fileSystemRepresentation],
+			 "com.apple.metadata:kMDItemWhereFroms",
+			 [xAttrPlistData bytes], [xAttrPlistData length], 0, 0);
+}
+
 
 
 - (void) doneSavingWebArchive {

@@ -40,6 +40,7 @@
 - (void) fetchWebArchiveForDictionary: (NSDictionary *) dictionary;
 - (void) saveNextWebArchive;
 - (void) startSavingWebArchiveFor: (NSDictionary *) dictionary;
+- (void) writeWhereFromsXattrForHash: (NSString*) hash;
 - (void) doneSavingWebArchive;
 
 - (BOOL)openFile:(NSString *)filename;
