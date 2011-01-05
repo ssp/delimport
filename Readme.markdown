@@ -5,13 +5,13 @@ Originally developed by [Ian Henderson](http://ianhenderson.org/), with most cha
 
 ### History
 <dl>
-<dt>current 2010-12</dt>
+<dt>current 2011-01</dt>
 <dd>
 <ul>
 <li>
-Use Pinboard URLs
+Use Pinboard URLs.
 </li><li>
-Try downloading webarchives for the URLs
+Save webarchives for the URLs.
 <li>
 </ul>
 </dd>
