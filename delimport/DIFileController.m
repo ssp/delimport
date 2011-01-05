@@ -43,6 +43,10 @@
 #pragma mark -
 #pragma mark Class Methods
 
+/*
+ Returns path to subfolder with the given name in the current user’s Library/Metadata folder.
+ Create the folder if necessary.
+*/
 + (NSString *) metadataPathForSubfolder: (NSString *) folderName {
 	NSString *metadataPath = [[@"~/Library/Metadata/" stringByExpandingTildeInPath] stringByAppendingPathComponent: folderName];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -62,6 +66,10 @@
 
 
 
+/*
+ Returns path to file for a bookmark with the given hash.
+ Use file name extension according to the bookmarking service we are using.
+*/
 + (NSString *) bookmarkPathForHash: (NSString*) hash {
 	NSString * fileName = [hash stringByAppendingPathExtension: [DIFileController filenameExtensionForPreferredService]];
 	NSString * metadataPath = [[self class] metadataPathForSubfolder:@"delimport"];
@@ -75,6 +83,10 @@
 
 
 
+/*
+ Returns path to file for a bookmark with the given hash.
+ The file name includes the name of the bookmarking service we are using.
+*/
 + (NSString *) webarchivePathForHash: (NSString*) hash {
 	NSString * fileName = [hash stringByAppendingFormat:@"-%@", [DIBookmarksController serviceName]];
 	fileName = [fileName stringByAppendingPathExtension: @"webarchive"];
@@ -89,6 +101,10 @@
 
 
 
+/*
+ Helper returning the filename extension for bookmarks of the service we are using.
+ Uses the service name for this, which works well for delicious/pinboard.
+*/
 + (NSString *) filenameExtensionForPreferredService {
 	return [DIBookmarksController serviceName];
 }
@@ -160,6 +176,7 @@
 	NSDictionary *dictionary;
 	while (dictionary = [dictEnumerator nextObject]) {
 		[self deleteDictionary:dictionary];
+		// for the moment don’t delete web archives
 	}
 }
 
@@ -170,12 +187,23 @@
 #pragma mark -
 #pragma mark Webarchives
 
+/*
+ Used to add a dictionary to the queue.
+ Adds the dictionary and kicks off saving process.
+*/
 - (void) fetchWebArchiveForDictionary: (NSDictionary *) dictionary {
 	[bookmarksToLoad addObject: dictionary];
 	[self saveNextWebArchive];
 }
 
 
+
+/*
+ Kick off saving of the next web archive.
+ Only run one of these at a time.
+ If we’re already running, this method will be called again from -doneSavingWebArchive
+ after finishing.
+*/
 - (void) saveNextWebArchive {
 	if (!running) {
 		if ([bookmarksToLoad count] > 0) {
@@ -187,6 +215,13 @@
 
 
 
+/*
+ Called for each web archive to be loaded.
+ Only does its job if no webarchive is already present for this hash.
+  (So we have an archiving nature.)
+ Starts loading the web page in the webView. The rest is handled in the webView’s callback.
+ Makes sure to call -doneSavingWebArchive in case things go wrong, to ensure the next download can start.
+*/
 - (void) startSavingWebArchiveFor: (NSDictionary *) dictionary {
 	running = YES;
 	NSString * filePath = [DIFileController webarchivePathForHash:[dictionary objectForKey:DIHashKey]];
@@ -205,6 +240,12 @@
 
 
 
+/*
+ WebView frame delegate callback.
+ 1. Check whether the right frame finished loading.
+ 2. Write the data of its dataSource to a webArchive.
+ 3. Add the URL to extended attributes (as Safari does).
+*/
 - (void) webView:(WebView *) sender didFinishLoadForFrame:(WebFrame *) frame {
 	if ([sender mainFrame] == frame) {
 		NSData * webData = [[[frame dataSource] webArchive] data];
@@ -228,6 +269,10 @@
 
 
 
+/*
+ Helper function to write "com.apple.metadata:kMDItemWhereFroms" extended attribute for a given hash.
+ Assumes the that the hash exists in our data and that its webarchive file exists.
+*/
 - (void) writeWhereFromsXattrForHash: (NSString*) hash {
 	NSString * errorDescription = nil;
 	NSData * xAttrPlistData = [NSPropertyListSerialization dataFromPropertyList:[webView mainFrameURL] format:NSPropertyListBinaryFormat_v1_0 errorDescription:&errorDescription];
@@ -243,6 +288,10 @@
 
 
 
+/*
+ Called at the end of all web loading cycles.
+ Removes the current bookmark from the list and kicks off the next save.
+*/
 - (void) doneSavingWebArchive {
 	if ([bookmarksToLoad count] > 0) {
 		[bookmarksToLoad removeObjectAtIndex: 0];
