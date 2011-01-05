@@ -186,17 +186,21 @@
 }
 
 
+
 - (void) startSavingWebArchiveFor: (NSDictionary *) dictionary {
 	running = YES;
-	NSURL * URL = [NSURL URLWithString: [dictionary objectForKey: DIURLKey]];
-	
-	if (URL) {
-		NSURLRequest * request = [NSURLRequest requestWithURL: URL];
-		[[webView mainFrame] loadRequest: request];
+	NSString * filePath = [DIFileController webarchivePathForHash:[dictionary objectForKey:DIHashKey]];
+	if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+		NSURL * URL = [NSURL URLWithString: [dictionary objectForKey: DIURLKey]];
+		
+		if (URL) {
+			NSURLRequest * request = [NSURLRequest requestWithURL: URL];
+			[[webView mainFrame] loadRequest: request];
+			return;
+		}
 	}
-	else {
-		[self doneSavingWebArchive];
-	}
+
+	[self doneSavingWebArchive];
 }
 
 
