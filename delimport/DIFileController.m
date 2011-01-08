@@ -52,12 +52,13 @@
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	BOOL isDir;
 	NSString * result = nil;
+	NSError * myError;
 	
 	if ([fileManager fileExistsAtPath:metadataPath isDirectory:&isDir]) {
 		if (isDir) {
 			result = metadataPath;
 		}
-	} else if ([fileManager createDirectoryAtPath:metadataPath attributes:nil]) {
+	} else if ([fileManager createDirectoryAtPath:metadataPath withIntermediateDirectories:YES attributes:nil error:&myError]) {
 		result = metadataPath;
 	}
 	
