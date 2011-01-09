@@ -184,16 +184,22 @@
 	NSEnumerator * bookmarkEnumerator = [bookmarks objectEnumerator];
 	NSDictionary * bookmark;
 	NSMutableArray * bookmarksNeedingUpdate = [NSMutableArray array];
+	NSFileManager * fM = [[[NSFileManager alloc] init] autorelease];
 	
 	while ( bookmark = [bookmarkEnumerator nextObject] ) {
 		NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 		
 		NSString * hash = [bookmark objectForKey: DIHashKey];
-		if ( hash != nil) {
-			NSDictionary * fileBookmark = [fileController readDictionaryForHash: hash];
+		if (hash != nil) {
+			// bookmark files
+			NSDictionary * fileBookmark = [fileController readDictionaryForHash:hash];
 			if (fileBookmark == nil || [bookmark isEqualToDictionary:fileBookmark] == NO) {
 				// we don't have a bookmkark or the bookmark ist not in sync with the cache
 				// NSLog(@"replacing cache file %@", hash);
+				[bookmarksNeedingUpdate addObject:bookmark];
+			}
+			
+			if (![fM fileExistsAtPath:[DIFileController webarchivePathForHash:hash]]) {
 				[bookmarksNeedingUpdate addObject:bookmark];
 			}
 		}
