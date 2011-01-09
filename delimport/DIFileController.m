@@ -51,7 +51,7 @@
 */
 + (NSString *) metadataPathForSubfolder: (NSString *) folderName {
 	NSString *metadataPath = [[@"~/Library/Metadata/" stringByExpandingTildeInPath] stringByAppendingPathComponent: folderName];
-	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSFileManager * fileManager = [[[NSFileManager alloc] init] autorelease];
 	BOOL isDir;
 	NSString * result = nil;
 	NSError * myError;
@@ -136,8 +136,9 @@
 		NSNumber *osType = [NSNumber numberWithUnsignedLong:'DELi'];
 		[mutable removeObjectForKey: DIHashKey];
 		[mutable writeToFile:path atomically:YES];
+		NSFileManager * fM = [[[NSFileManager alloc] init] autorelease];
 		
-		[[NSFileManager defaultManager] changeFileAttributes:[NSDictionary dictionaryWithObject:osType forKey:NSFileHFSTypeCode] atPath:path];
+		[fM changeFileAttributes:[NSDictionary dictionaryWithObject:osType forKey:NSFileHFSTypeCode] atPath:path];
 
 		/*  Set creation date do bookmark date.
 			Setting the modification date might be more useful, but would be 'wrong' 
@@ -147,7 +148,7 @@
 		*/
 		NSDate * date = [mutable objectForKey: DITimeKey];
 		if (date) {
-			[[NSFileManager defaultManager] changeFileAttributes:[NSDictionary dictionaryWithObject:date forKey:NSFileCreationDate] atPath:path];
+			[fM changeFileAttributes:[NSDictionary dictionaryWithObject:date forKey:NSFileCreationDate] atPath:path];
 		}
 	}
 }
@@ -157,7 +158,7 @@
 - (void) deleteDictionary: (NSDictionary *) dictionary {
 	NSString *path = [[self class] bookmarkPathForHash: [dictionary objectForKey: DIHashKey]];
 	if ( path != nil) {
-		[[NSFileManager defaultManager] removeFileAtPath:path handler:nil];
+		[[[[NSFileManager alloc] init] autorelease] removeFileAtPath:path handler:nil];
 	}
 }
 
@@ -228,7 +229,7 @@
 - (void) startSavingWebArchiveFor: (NSDictionary *) dictionary {
 	running = YES;
 	NSString * filePath = [DIFileController webarchivePathForHash:[dictionary objectForKey:DIHashKey]];
-	if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+	if (![[[[NSFileManager alloc] init] autorelease] fileExistsAtPath:filePath]) {
 		NSURL * URL = [NSURL URLWithString: [dictionary objectForKey: DIURLKey]];
 
 		if (URL) {
