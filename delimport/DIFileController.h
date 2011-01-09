@@ -16,7 +16,14 @@
 #define DITimeKey @"time"
 #define DITagKey @"tag"
 
+#define DIDefaultsFAILKey @"failed web page downloads"
+#define DIFAILStateNumberKey @"error code"
+#define DIFAILDateKey @"date"
+
+
 @class WebView;
+@class DIBookmarksController;
+
 
 
 @interface DIFileController : NSObject {
@@ -25,7 +32,6 @@
 	
 	WebView * webView;
 }
-
 
 + (NSString *) metadataPathForSubfolder: (NSString *) folderName;
 + (NSString *) bookmarkPathForHash: (NSString*) hash;
@@ -41,7 +47,7 @@
 - (void) saveNextWebArchive;
 - (void) startSavingWebArchiveFor: (NSDictionary *) dictionary;
 - (void) writeWhereFromsXattrForHash: (NSString*) hash;
-- (void) doneSavingWebArchive;
+- (void) doneSavingWebArchiveWithStatus: (long) status;
 
 - (BOOL)openFile:(NSString *)filename;
 

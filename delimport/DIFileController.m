@@ -11,6 +11,11 @@
 #import <WebKit/WebKit.h>
 #import <sys/xattr.h>
 
+#define DIInvalidURLStatus -1
+#define DISaveWebArchiveDataFAILStatus -2
+#define DINonHTTPResponseStatus 200 // dodgy?
+
+
 
 @implementation DIFileController
 
@@ -199,7 +204,7 @@
 /*
  Kick off saving of the next web archive.
  Only run one of these at a time.
- If we’re already running, this method will be called again from -doneSavingWebArchive
+ If we’re already running, this method will be called again from -doneSavingWebArchiveWithStatus:
  after finishing.
 */
 - (void) saveNextWebArchive {
@@ -218,15 +223,16 @@
  Only does its job if no webarchive is already present for this hash.
   (So we have an archiving nature.)
  Starts loading the web page in the webView. The rest is handled in the webView’s callback.
- Makes sure to call -doneSavingWebArchive in case things go wrong, to ensure the next download can start.
+ Makes sure to call -doneSavingWebArchiveWithStatus: in case things go wrong, to ensure the next download can start.
 */
 - (void) startSavingWebArchiveFor: (NSDictionary *) dictionary {
 	running = YES;
 	NSString * filePath = [DIFileController webarchivePathForHash:[dictionary objectForKey:DIHashKey]];
 	if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
 		NSURL * URL = [NSURL URLWithString: [dictionary objectForKey: DIURLKey]];
-		
+
 		if (URL) {
+			NSLog(@"starting download of %@", [URL absoluteURL]);
 			NSURLRequest * request = [NSURLRequest requestWithURL: URL];
 
 			webView = [[WebView alloc] initWithFrame: NSMakeRect(.0, .0, 500., 500.)];
@@ -237,27 +243,35 @@
 		}
 	}
 
-	[self doneSavingWebArchive];
+	[self doneSavingWebArchiveWithStatus: DIInvalidURLStatus];
 }
 
 
 
 /*
- WebView frame delegate callback.
+ WebFrameLoadDelegate callback.
  1. Check whether the right frame finished loading.
  2. Write the data of its dataSource to a webArchive.
  3. Add the URL to extended attributes (as Safari does).
 */
 - (void) webView:(WebView *) sender didFinishLoadForFrame:(WebFrame *) frame {
 	if ([sender mainFrame] == frame) {
+		NSInteger status = DISaveWebArchiveDataFAILStatus;
+		
 		NSData * webData = [[[frame dataSource] webArchive] data];
 		if (webData) {
 			if ([bookmarksToLoad count] > 0) {
 				NSString * hash = [[bookmarksToLoad objectAtIndex: 0] objectForKey:DIHashKey];
 				if ([webData writeToFile:[DIFileController webarchivePathForHash:hash] atomically:YES]) {
+					NSURLResponse * response = [[frame dataSource] response];
+					if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+						status = [(NSHTTPURLResponse *) response statusCode];
+					}
+					else {
+						status = DINonHTTPResponseStatus;
+					}
 					[self writeWhereFromsXattrForHash:hash];
 				}
-				[self doneSavingWebArchive];
 			}
 			else {
 				NSLog(@"Error: bookmarksToLoad array is empty: %@", [bookmarksToLoad description]);
@@ -266,7 +280,32 @@
 		else {
 			NSLog(@"Error: could not get webArchive data for frame %@", frame);
 		}
+		[self doneSavingWebArchiveWithStatus:status];
 	}
+}
+
+
+
+/*
+ WebFrameLoadDelegate callback.
+ 1. Log that there was an error.
+ 2. Go to next round of loading.
+*/
+- (void) webView: (WebView *) sender didFailLoadWithError: (NSError *) error forFrame: (WebFrame *) frame {
+	NSLog(@"-webView:didFailLoadWithError: (%lx) %@", [error code], (long)[error localizedDescription]);
+	[self doneSavingWebArchiveWithStatus:[error code]];
+}
+
+
+
+/*
+ WebFrameLoadDelegate callback.
+ 1. Log that there was an error.
+ 2. Go to next round of loading.
+*/
+- (void)webView:(WebView *)sender didFailProvisionalLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
+	NSLog(@"-webView:didFailProvisionalLoadWithError: (%lx) %@", [error code], (long)[error localizedDescription]);
+	[self doneSavingWebArchiveWithStatus:[error code]];
 }
 
 
@@ -292,10 +331,31 @@
 
 /*
  Called at the end of all web loading cycles.
+ If the the status information is not 200, save it, along with the current date to the FAIL dictionary in user defaults.
+ This way we can avoid reloading broken pages over and over again (which can be lengthy if the sites don't exist anymore).
  Removes the current bookmark from the list and kicks off the next save.
 */
-- (void) doneSavingWebArchive {
+- (void) doneSavingWebArchiveWithStatus: (long) status {
 	if ([bookmarksToLoad count] > 0) {
+		NSString * hash = [[bookmarksToLoad objectAtIndex: 0] objectForKey:DIHashKey];
+		
+		if (status != 200) {
+			NSDictionary * failState = [NSDictionary dictionaryWithObjectsAndKeys:
+										[NSNumber numberWithInteger: status], DIFAILStateNumberKey,
+										[NSDate date], DIFAILDateKey, nil];
+			
+			NSArray * failStates = [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:hash];
+			if (failStates) {
+				failStates = [failStates arrayByAddingObject:failState];
+			}
+			else {
+				failStates = [NSArray arrayWithObject:failState];
+			}
+
+			[[[NSUserDefaultsController sharedUserDefaultsController] values] setValue:failStates forKey:hash];
+			[webView stopLoading:self];
+		}
+		
 		[bookmarksToLoad removeObjectAtIndex: 0];
 	}
 	[webView setFrameLoadDelegate:nil];
