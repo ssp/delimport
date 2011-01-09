@@ -17,9 +17,6 @@
 - (id) init {
 	self = [super init];
 	if (self) {
-		webView = [[WebView alloc] initWithFrame: NSMakeRect(.0, .0, 500., 500.)];
-		[webView setFrameLoadDelegate:self];
-		
 		bookmarksToLoad = [[NSMutableArray alloc] init];
 		running = NO;
 	}
@@ -231,6 +228,10 @@
 		
 		if (URL) {
 			NSURLRequest * request = [NSURLRequest requestWithURL: URL];
+
+			webView = [[WebView alloc] initWithFrame: NSMakeRect(.0, .0, 500., 500.)];
+			[webView setFrameLoadDelegate:self];
+			[webView setResourceLoadDelegate:self];
 			[[webView mainFrame] loadRequest: request];
 			return;
 		}
@@ -297,6 +298,9 @@
 	if ([bookmarksToLoad count] > 0) {
 		[bookmarksToLoad removeObjectAtIndex: 0];
 	}
+	[webView setFrameLoadDelegate:nil];
+	[webView setResourceLoadDelegate:nil];
+	[webView release];
 	running = NO;
 	[self saveNextWebArchive];
 }
