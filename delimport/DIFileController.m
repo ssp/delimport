@@ -229,7 +229,10 @@
 - (void) startSavingWebArchiveFor: (NSDictionary *) dictionary {
 	running = YES;
 	NSString * filePath = [DIFileController webarchivePathForHash:[dictionary objectForKey:DIHashKey]];
-	if (![[[[NSFileManager alloc] init] autorelease] fileExistsAtPath:filePath]) {
+	
+	// Only proceed if (1) the web archive doesn't exist yet and (2) loading the file didn't fail previously
+	if (![[[[NSFileManager alloc] init] autorelease] fileExistsAtPath:filePath]
+		&& [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKeyPath:[NSString stringWithFormat:@"%@.%@", DIDefaultsFAILKey, [dictionary objectForKey:DIHashKey]]] == nil ) {
 		NSURL * URL = [NSURL URLWithString: [dictionary objectForKey: DIURLKey]];
 
 		if (URL) {
@@ -345,15 +348,8 @@
 										[NSNumber numberWithInteger: status], DIFAILStateNumberKey,
 										[NSDate date], DIFAILDateKey, nil];
 			
-			NSArray * failStates = [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:hash];
-			if (failStates) {
-				failStates = [failStates arrayByAddingObject:failState];
-			}
-			else {
-				failStates = [NSArray arrayWithObject:failState];
-			}
+			[[[NSUserDefaultsController sharedUserDefaultsController] values] setValue:failState forKeyPath:[NSString stringWithFormat:@"%@.%@", DIDefaultsFAILKey, hash]];
 
-			[[[NSUserDefaultsController sharedUserDefaultsController] values] setValue:failStates forKey:hash];
 			[webView stopLoading:self];
 		}
 		
