@@ -16,6 +16,7 @@
 #define DITimeKey @"time"
 #define DITagKey @"tag"
 
+#define DIDownloadWebarchivesKey @"download web archives"
 #define DIDefaultsFAILKey @"failed web page downloads"
 #define DIFAILStateNumberKey @"error code"
 #define DIFAILDateKey @"date"

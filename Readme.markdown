@@ -5,14 +5,21 @@ Originally developed by [Ian Henderson](http://ianhenderson.org/), with most cha
 
 ### History
 <dl>
-<dt>current 2011-01</dt>
+<dt>upcoming</dt>
+<dd>
+<ul>
+<li>
+Save webarchives for the URLs.
+<li>
+</ul>
+</dd>
+
+<dt>v0.5, 2011-04 [download](http://earthlingsoft.net/beta/delimport0.5.zip)</dt>
 <dd>
 <ul>
 <li>
 Use Pinboard URLs.
-</li><li>
-Save webarchives for the URLs.
-<li>
+</li>
 </ul>
 </dd>
 

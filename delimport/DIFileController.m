@@ -16,7 +16,6 @@
 #define DINonHTTPResponseStatus 200 // dodgy?
 
 
-
 @implementation DIFileController
 
 - (id) init {
@@ -210,7 +209,8 @@
 */
 - (void) saveNextWebArchive {
 	if (!running) {
-		if ([bookmarksToLoad count] > 0) {
+		if ([bookmarksToLoad count] > 0 &&
+			[[[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:DIDownloadWebarchivesKey] boolValue]) {
 			NSDictionary * dictionary = [bookmarksToLoad objectAtIndex: 0];
 			[self startSavingWebArchiveFor: dictionary];
 		}
