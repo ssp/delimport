@@ -296,7 +296,7 @@
  2. Go to next round of loading.
 */
 - (void) webView: (WebView *) sender didFailLoadWithError: (NSError *) error forFrame: (WebFrame *) frame {
-	NSLog(@"-webView:didFailLoadWithError: (%lx) %@", [error code], (long)[error localizedDescription]);
+	NSLog(@"-webView:didFailLoadWithError: (%ld) %@", [error code], (long)[error localizedDescription]);
 	[self doneSavingWebArchiveWithStatus:[error code]];
 }
 
@@ -308,7 +308,7 @@
  2. Go to next round of loading.
 */
 - (void)webView:(WebView *)sender didFailProvisionalLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
-	NSLog(@"-webView:didFailProvisionalLoadWithError: (%lx) %@", [error code], (long)[error localizedDescription]);
+	NSLog(@"-webView:didFailProvisionalLoadWithError: (%ld) %@", [error code], (long)[error localizedDescription]);
 	[self doneSavingWebArchiveWithStatus:[error code]];
 }
 
