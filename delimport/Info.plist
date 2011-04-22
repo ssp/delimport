@@ -7,50 +7,30 @@
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeExtensions</key>
-			<array>
-				<string>delicious</string>
-			</array>
 			<key>CFBundleTypeIconFile</key>
 			<string>delicious</string>
 			<key>CFBundleTypeName</key>
 			<string>delicious Bookmark</string>
-			<key>CFBundleTypeOSTypes</key>
-			<array>
-				<string>DELi</string>
-			</array>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>org.ianhenderson.delicious.bookmark</string>
 			</array>
-			<key>LSTypeIsPackage</key>
-			<false/>
 			<key>NSPersistentStoreTypeKey</key>
 			<string>XML</string>
 		</dict>
 		<dict>
-			<key>CFBundleTypeExtensions</key>
-			<array>
-				<string>pinboard</string>
-			</array>
 			<key>CFBundleTypeIconFile</key>
 			<string>pinboard</string>
 			<key>CFBundleTypeName</key>
 			<string>pinboard Bookmark</string>
-			<key>CFBundleTypeOSTypes</key>
-			<array>
-				<string>DELp</string>
-			</array>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>org.ianhenderson.pinboard.bookmark</string>
 			</array>
-			<key>LSTypeIsPackage</key>
-			<true/>
 			<key>NSPersistentStoreTypeKey</key>
 			<string>XML</string>
 		</dict>
