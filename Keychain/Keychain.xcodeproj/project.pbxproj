@@ -34,7 +34,6 @@
 		7506C0380A3DB5A8000DB6BD /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
 		7506C0520A3DB606000DB6BD /* PolicyProber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7506C0510A3DB606000DB6BD /* PolicyProber.m */; };
 		751166810CA6012400A619CF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F566C81003E0D92B015C51F3 /* Security.framework */; };
-		75331C320D9EE27A00588D3C /* KeychainSearchInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 75331C310D9EE27A00588D3C /* KeychainSearchInternal.h */; };
 		7540B3ED0999D1C000469F46 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
 		7540B3FE0999D1D600469F46 /* SKeyPlusTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7540B3FD0999D1D600469F46 /* SKeyPlusTester.m */; };
 		7554346E0D037157003D0C29 /* External Item Type Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 755434660D037157003D0C29 /* External Item Type Names.strings */; };
@@ -44,67 +43,35 @@
 		7556131A0A2090B5003428C2 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
 		755613250A209100003428C2 /* CryptographicTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 755613240A209100003428C2 /* CryptographicTester.m */; };
 		755613260A20910C003428C2 /* CertificateGenerationTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7594D49C0A20467E0090E497 /* CertificateGenerationTester.m */; };
-		757A97E80CB98BCD00513299 /* CSSMACLEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97D00CB98BCD00513299 /* CSSMACLEntry.h */; };
 		757A97E90CB98BCD00513299 /* CSSMACLEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97D10CB98BCD00513299 /* CSSMACLEntry.m */; };
-		757A97EA0CB98BCD00513299 /* CSSMControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97D20CB98BCD00513299 /* CSSMControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A97EB0CB98BCD00513299 /* CSSMControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97D30CB98BCD00513299 /* CSSMControl.m */; };
-		757A97EC0CB98BCD00513299 /* CSSMControlInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97D40CB98BCD00513299 /* CSSMControlInternal.h */; };
-		757A97F10CB98BCD00513299 /* CSSMDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97D90CB98BCD00513299 /* CSSMDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A97F20CB98BCD00513299 /* CSSMDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97DA0CB98BCD00513299 /* CSSMDefaults.m */; };
-		757A97F30CB98BCD00513299 /* CSSMInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97DB0CB98BCD00513299 /* CSSMInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A97F40CB98BCD00513299 /* CSSMInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97DC0CB98BCD00513299 /* CSSMInfo.m */; };
-		757A97F50CB98BCD00513299 /* CSSMManagedModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97DD0CB98BCD00513299 /* CSSMManagedModule.h */; };
 		757A97F60CB98BCD00513299 /* CSSMManagedModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97DE0CB98BCD00513299 /* CSSMManagedModule.m */; };
-		757A97F70CB98BCD00513299 /* CSSMModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97DF0CB98BCD00513299 /* CSSMModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A97F80CB98BCD00513299 /* CSSMModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97E00CB98BCD00513299 /* CSSMModule.m */; };
-		757A97F90CB98BCD00513299 /* CSSMOpenDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97E10CB98BCD00513299 /* CSSMOpenDataStore.h */; settings = {ATTRIBUTES = (); }; };
 		757A97FA0CB98BCD00513299 /* CSSMOpenDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97E20CB98BCD00513299 /* CSSMOpenDataStore.m */; };
-		757A97FB0CB98BCD00513299 /* CSSMTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97E30CB98BCD00513299 /* CSSMTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		757A97FC0CB98BCD00513299 /* CSSMUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97E40CB98BCD00513299 /* CSSMUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A97FD0CB98BCD00513299 /* CSSMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97E50CB98BCD00513299 /* CSSMUtils.m */; };
-		757A97FE0CB98BCD00513299 /* MDS.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A97E60CB98BCD00513299 /* MDS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A97FF0CB98BCD00513299 /* MDS.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A97E70CB98BCD00513299 /* MDS.m */; };
-		757A98A40CB98BF300513299 /* ABPersonAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98010CB98BF200513299 /* ABPersonAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98A50CB98BF300513299 /* ABPersonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98020CB98BF200513299 /* ABPersonAdditions.m */; };
-		757A98A60CB98BF300513299 /* Certificate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98030CB98BF200513299 /* Certificate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98A70CB98BF300513299 /* Certificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98040CB98BF200513299 /* Certificate.m */; };
-		757A98AA0CB98BF300513299 /* CertificateExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98070CB98BF200513299 /* CertificateExtensions.h */; settings = {ATTRIBUTES = (); }; };
 		757A98AB0CB98BF300513299 /* CertificateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98080CB98BF200513299 /* CertificateExtensions.m */; };
-		757A98AC0CB98BF300513299 /* CertificateGeneration.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98090CB98BF200513299 /* CertificateGeneration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98AD0CB98BF300513299 /* CertificateGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A980A0CB98BF200513299 /* CertificateGeneration.m */; };
-		757A98AE0CB98BF300513299 /* Policy.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A980B0CB98BF200513299 /* Policy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98AF0CB98BF300513299 /* Policy.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A980C0CB98BF200513299 /* Policy.m */; };
-		757A98B00CB98BF300513299 /* Trust.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A980D0CB98BF300513299 /* Trust.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98B10CB98BF300513299 /* Trust.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A980E0CB98BF300513299 /* Trust.m */; };
-		757A98B20CB98BF300513299 /* FileUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98100CB98BF300513299 /* FileUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98B30CB98BF300513299 /* FileUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98110CB98BF300513299 /* FileUtilities.m */; };
-		757A98B40CB98BF300513299 /* Key.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98120CB98BF300513299 /* Key.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98B50CB98BF300513299 /* Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98130CB98BF300513299 /* Key.m */; };
-		757A98B60CB98BF300513299 /* KeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98140CB98BF300513299 /* KeychainUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98B70CB98BF300513299 /* KeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98150CB98BF300513299 /* KeychainUtils.m */; };
-		757A98B80CB98BF300513299 /* MutableKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98160CB98BF300513299 /* MutableKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98B90CB98BF300513299 /* MutableKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98170CB98BF300513299 /* MutableKey.m */; };
-		757A98BA0CB98BF300513299 /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98180CB98BF300513299 /* NSDataAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98BB0CB98BF300513299 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98190CB98BF300513299 /* NSDataAdditions.m */; };
-		757A98BC0CB98BF300513299 /* ChainedOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A981B0CB98BF300513299 /* ChainedOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98BD0CB98BF300513299 /* ChainedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A981C0CB98BF300513299 /* ChainedOutputStream.m */; };
-		757A98BE0CB98BF300513299 /* DigestOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A981D0CB98BF300513299 /* DigestOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98BF0CB98BF300513299 /* DigestOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A981E0CB98BF300513299 /* DigestOutputStream.m */; };
-		757A98C00CB98BF300513299 /* Hashcash.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98200CB98BF300513299 /* Hashcash.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98C10CB98BF300513299 /* Hashcash.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98210CB98BF300513299 /* Hashcash.m */; };
-		757A98C20CB98BF300513299 /* Access.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98230CB98BF300513299 /* Access.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98C30CB98BF300513299 /* Access.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98240CB98BF300513299 /* Access.m */; };
-		757A98C40CB98BF300513299 /* AccessControlList.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98250CB98BF300513299 /* AccessControlList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98C50CB98BF300513299 /* AccessControlList.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98260CB98BF300513299 /* AccessControlList.m */; };
-		757A98C60CB98BF300513299 /* Identity.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98270CB98BF300513299 /* Identity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98C70CB98BF300513299 /* Identity.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98280CB98BF300513299 /* Identity.m */; };
-		757A98C80CB98BF300513299 /* Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98290CB98BF300513299 /* Keychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98C90CB98BF300513299 /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A982A0CB98BF300513299 /* Keychain.m */; };
-		757A98CA0CB98BF300513299 /* KeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A982B0CB98BF300513299 /* KeychainItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98CB0CB98BF300513299 /* KeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A982C0CB98BF300513299 /* KeychainItem.m */; };
-		757A98CC0CB98BF300513299 /* KeychainSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A982D0CB98BF300513299 /* KeychainSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98CD0CB98BF300513299 /* KeychainSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A982E0CB98BF300513299 /* KeychainSearch.m */; };
-		757A98CE0CB98BF300513299 /* TrustedApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A982F0CB98BF300513299 /* TrustedApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98CF0CB98BF300513299 /* TrustedApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98300CB98BF300513299 /* TrustedApplication.m */; };
 		757A98D00CB98BF300513299 /* Algorithm Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98320CB98BF300513299 /* Algorithm Constants.strings */; };
 		757A98D10CB98BF300513299 /* Algorithm Mode Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98340CB98BF300513299 /* Algorithm Mode Constants.strings */; };
@@ -151,25 +118,14 @@
 		757A98FA0CB98BF300513299 /* Protocol Type Constants.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98860CB98BF300513299 /* Protocol Type Constants.strings */; };
 		757A98FB0CB98BF300513299 /* Protocol Type Long Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A98880CB98BF300513299 /* Protocol Type Long Names.strings */; };
 		757A98FC0CB98BF300513299 /* Protocol Type Short Names.strings in Resources */ = {isa = PBXBuildFile; fileRef = 757A988A0CB98BF300513299 /* Protocol Type Short Names.strings */; };
-		757A98FE0CB98BF300513299 /* SKeyPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A988E0CB98BF300513299 /* SKeyPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A98FF0CB98BF300513299 /* SKeyPlus.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A988F0CB98BF300513299 /* SKeyPlus.m */; };
-		757A99000CB98BF300513299 /* CompilerIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98910CB98BF300513299 /* CompilerIndependence.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		757A99010CB98BF300513299 /* LocalisationUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98920CB98BF300513299 /* LocalisationUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A99020CB98BF300513299 /* LocalisationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98930CB98BF300513299 /* LocalisationUtils.m */; };
-		757A99030CB98BF300513299 /* Logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98940CB98BF300513299 /* Logging.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		757A99040CB98BF300513299 /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98950CB98BF300513299 /* Logging.m */; };
-		757A99050CB98BF300513299 /* MultiThreading.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98960CB98BF300513299 /* MultiThreading.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A99060CB98BF300513299 /* MultiThreading.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98970CB98BF300513299 /* MultiThreading.m */; };
-		757A99070CB98BF300513299 /* MultiThreadingInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98980CB98BF300513299 /* MultiThreadingInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		757A99080CB98BF300513299 /* NSCachedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98990CB98BF300513299 /* NSCachedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A99090CB98BF300513299 /* NSCachedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A989A0CB98BF300513299 /* NSCachedObject.m */; };
-		757A990A0CB98BF300513299 /* NSCalendarDateAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A989B0CB98BF300513299 /* NSCalendarDateAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A990B0CB98BF300513299 /* NSCalendarDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A989C0CB98BF300513299 /* NSCalendarDateAdditions.m */; };
-		757A990C0CB98BF300513299 /* SecurityUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A989D0CB98BF300513299 /* SecurityUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A990D0CB98BF300513299 /* SecurityUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A989E0CB98BF300513299 /* SecurityUtils.m */; };
-		757A990E0CB98BF300513299 /* UtilitySupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A989F0CB98BF300513299 /* UtilitySupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A990F0CB98BF300513299 /* UtilitySupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98A00CB98BF300513299 /* UtilitySupport.m */; };
-		757A99100CB98BF300513299 /* x509.h in Headers */ = {isa = PBXBuildFile; fileRef = 757A98A20CB98BF300513299 /* x509.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757A99110CB98BF300513299 /* x509.m in Sources */ = {isa = PBXBuildFile; fileRef = 757A98A30CB98BF300513299 /* x509.m */; };
 		7588AC710CA3916D00466BEF /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A0750209438F8E008B9D9E /* Keychain.framework */; };
 		7588AC8B0CA391B500466BEF /* KeychainTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 7588AC8A0CA391B500466BEF /* KeychainTester.m */; };
@@ -964,60 +920,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		75A0749309438F8E008B9D9E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				757A97E80CB98BCD00513299 /* CSSMACLEntry.h in Headers */,
-				757A97EA0CB98BCD00513299 /* CSSMControl.h in Headers */,
-				757A97EC0CB98BCD00513299 /* CSSMControlInternal.h in Headers */,
-				757A97F10CB98BCD00513299 /* CSSMDefaults.h in Headers */,
-				757A97F30CB98BCD00513299 /* CSSMInfo.h in Headers */,
-				757A97F50CB98BCD00513299 /* CSSMManagedModule.h in Headers */,
-				757A97F70CB98BCD00513299 /* CSSMModule.h in Headers */,
-				757A97F90CB98BCD00513299 /* CSSMOpenDataStore.h in Headers */,
-				757A97FB0CB98BCD00513299 /* CSSMTypes.h in Headers */,
-				757A97FC0CB98BCD00513299 /* CSSMUtils.h in Headers */,
-				757A97FE0CB98BCD00513299 /* MDS.h in Headers */,
-				757A98A40CB98BF300513299 /* ABPersonAdditions.h in Headers */,
-				757A98A60CB98BF300513299 /* Certificate.h in Headers */,
-				757A98AA0CB98BF300513299 /* CertificateExtensions.h in Headers */,
-				757A98AC0CB98BF300513299 /* CertificateGeneration.h in Headers */,
-				757A98AE0CB98BF300513299 /* Policy.h in Headers */,
-				757A98B00CB98BF300513299 /* Trust.h in Headers */,
-				757A98B20CB98BF300513299 /* FileUtilities.h in Headers */,
-				757A98B40CB98BF300513299 /* Key.h in Headers */,
-				757A98B60CB98BF300513299 /* KeychainUtils.h in Headers */,
-				757A98B80CB98BF300513299 /* MutableKey.h in Headers */,
-				757A98BA0CB98BF300513299 /* NSDataAdditions.h in Headers */,
-				757A98BC0CB98BF300513299 /* ChainedOutputStream.h in Headers */,
-				757A98BE0CB98BF300513299 /* DigestOutputStream.h in Headers */,
-				757A98C00CB98BF300513299 /* Hashcash.h in Headers */,
-				757A98C20CB98BF300513299 /* Access.h in Headers */,
-				757A98C40CB98BF300513299 /* AccessControlList.h in Headers */,
-				757A98C60CB98BF300513299 /* Identity.h in Headers */,
-				757A98C80CB98BF300513299 /* Keychain.h in Headers */,
-				757A98CA0CB98BF300513299 /* KeychainItem.h in Headers */,
-				757A98CC0CB98BF300513299 /* KeychainSearch.h in Headers */,
-				757A98CE0CB98BF300513299 /* TrustedApplication.h in Headers */,
-				757A98FE0CB98BF300513299 /* SKeyPlus.h in Headers */,
-				757A99000CB98BF300513299 /* CompilerIndependence.h in Headers */,
-				757A99010CB98BF300513299 /* LocalisationUtils.h in Headers */,
-				757A99030CB98BF300513299 /* Logging.h in Headers */,
-				757A99050CB98BF300513299 /* MultiThreading.h in Headers */,
-				757A99070CB98BF300513299 /* MultiThreadingInternal.h in Headers */,
-				757A99080CB98BF300513299 /* NSCachedObject.h in Headers */,
-				757A990A0CB98BF300513299 /* NSCalendarDateAdditions.h in Headers */,
-				757A990C0CB98BF300513299 /* SecurityUtils.h in Headers */,
-				757A990E0CB98BF300513299 /* UtilitySupport.h in Headers */,
-				757A99100CB98BF300513299 /* x509.h in Headers */,
-				75331C320D9EE27A00588D3C /* KeychainSearchInternal.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		7506C0340A3DB5A8000DB6BD /* PolicyProber */ = {
 			isa = PBXNativeTarget;
@@ -1108,7 +1010,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75A074FD09438F8E008B9D9E /* Build configuration list for PBXNativeTarget "Keychain" */;
 			buildPhases = (
-				75A0749309438F8E008B9D9E /* Headers */,
 				75A074BD09438F8E008B9D9E /* Resources */,
 				75A074D109438F8E008B9D9E /* Sources */,
 				75A074F709438F8E008B9D9E /* Frameworks */,
@@ -1232,7 +1133,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 7528103408569F6900FEFBDC /* Build configuration list for PBXProject "Keychain" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* Keychain */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
