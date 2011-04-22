@@ -258,8 +258,9 @@
  2. Write the data of its dataSource to a webArchive.
  3. Add the URL to extended attributes (as Safari does).
 */
-- (void) webView:(WebView *) sender didFinishLoadForFrame:(WebFrame *) frame {
+- (void) webView: (WebView *) sender didFinishLoadForFrame: (WebFrame *) frame {
 	if ([sender mainFrame] == frame) {
+		NSLog(@"-webView:didFinishLoadForFrame: mainFrame");
 		NSInteger status = DISaveWebArchiveDataFAILStatus;
 		
 		NSData * webData = [[[frame dataSource] webArchive] data];
@@ -293,11 +294,14 @@
 /*
  WebFrameLoadDelegate callback.
  1. Log that there was an error.
- 2. Go to next round of loading.
+ 2. If we are on the main frame proceed to next round of loading.
 */
 - (void) webView: (WebView *) sender didFailLoadWithError: (NSError *) error forFrame: (WebFrame *) frame {
 	NSLog(@"-webView:didFailLoadWithError: (%ld) %@", [error code], (long)[error localizedDescription]);
-	[self doneSavingWebArchiveWithStatus:[error code]];
+	if ([sender mainFrame] == frame) {
+		NSLog(@"-webView:didFailLoadWithError: error occured on the main frame: cancel");
+		[self doneSavingWebArchiveWithStatus:[error code]];
+	}
 }
 
 
@@ -305,11 +309,14 @@
 /*
  WebFrameLoadDelegate callback.
  1. Log that there was an error.
- 2. Go to next round of loading.
+ 2. If we are on the main frame proceed to next round of loading.
 */
-- (void)webView:(WebView *)sender didFailProvisionalLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
+- (void) webView: (WebView *) sender didFailProvisionalLoadWithError: (NSError *) error forFrame: (WebFrame *) frame {
 	NSLog(@"-webView:didFailProvisionalLoadWithError: (%ld) %@", [error code], (long)[error localizedDescription]);
-	[self doneSavingWebArchiveWithStatus:[error code]];
+	if ([sender mainFrame] == frame) {
+		NSLog(@"-webView:didFailProvisionalLoadWithError: error occured on the main frame: cancel");
+		[self doneSavingWebArchiveWithStatus:[error code]];
+	}
 }
 
 
@@ -340,6 +347,7 @@
  Removes the current bookmark from the list and kicks off the next save.
 */
 - (void) doneSavingWebArchiveWithStatus: (long) status {
+	[webView stopLoading: self];
 	if ([bookmarksToLoad count] > 0) {
 		NSString * hash = [[bookmarksToLoad objectAtIndex: 0] objectForKey:DIHashKey];
 		
