@@ -198,9 +198,8 @@
 				// NSLog(@"replacing cache file %@", hash);
 				[bookmarksNeedingUpdate addObject:bookmark];
 			}
-			
-			if (![fM fileExistsAtPath:[DIFileController webarchivePathForHash:hash]]) {
-				[bookmarksNeedingUpdate addObject:bookmark];
+			else if (![fM fileExistsAtPath:[DIFileController webarchivePathForHash:hash]]) {
+				[fileController fetchWebArchiveForDictionary:bookmark];
 			}
 		}
 		
