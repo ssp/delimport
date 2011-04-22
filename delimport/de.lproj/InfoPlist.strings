@@ -1,6 +1,5 @@
 ﻿/* Localized versions of Info.plist keys */
 
-CFBundleName = "delimport";
 NSHumanReadableCopyright = "© 2005-2011 Ian Henderson";
 
 /* Document name for Bookmarks */
