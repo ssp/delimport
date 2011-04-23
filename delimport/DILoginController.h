@@ -20,8 +20,9 @@ enum serviceIDs {
 	IBOutlet NSTextField *passField;
 }
 
-- (IBAction)logIn:sender;
-- (IBAction)quit:sender;
+- (IBAction) logIn: (id) sender;
+- (IBAction) quit: (id) sender;
+- (IBAction) showWebPage: (id) sender;
 - (void)getUsername:(NSString **)username password:(NSString **)password;
 
 @end

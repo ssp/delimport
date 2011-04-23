@@ -12,11 +12,6 @@
 @implementation DILoginController
 
 
-- (IBAction)quit:sender
-{
-	[NSApp terminate:self];
-}
-
 - init
 {
 	return [super initWithWindowNibName:@"LogIn"];
@@ -33,9 +28,21 @@
 	[self close];
 }
 
-- (IBAction)logIn:sender
-{
+
+- (IBAction) logIn: (id) sender {
 	[NSApp stopModal];
 }
+
+
+- (IBAction) quit: (id) sender {
+	[NSApp terminate:self];
+}
+
+
+- (IBAction) showWebPage: (id) sender {
+	NSURL * delimportURL = [NSURL URLWithString:@"https://github.com/ssp/delimport/wiki"];
+	[[NSWorkspace sharedWorkspace] openURL:delimportURL];
+}
+
 
 @end
