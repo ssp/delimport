@@ -75,6 +75,10 @@
 
 
 - (void) finishedWithStatus: (NSNumber*) status {
+	[self performSelector:@selector(reallyFinishedWithStatus:) withObject:status afterDelay:0];
+}	
+	
+- (void) reallyFinishedWithStatus: (NSNumber*) status {
 	[timer invalidate];
 	
 	if (webView) {
