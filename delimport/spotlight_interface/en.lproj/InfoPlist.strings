@@ -1,6 +1,6 @@
 ﻿/* Localized versions of Info.plist keys */
 
 CFBundleName = "delicious Spotlight Importer";
-CFBundleShortVersionString = "2";
-CFBundleGetInfoString = "delicious Spotlight Interface version 2.1, © 2005-2011 Ian Henderson.";
+CFBundleShortVersionString = "3";
+CFBundleGetInfoString = "delicious Spotlight Interface version 2.2, © 2005-2011 Ian Henderson.";
 NSHumanReadableCopyright = "Copyright © 2005-2011 Ian Henderson.";
