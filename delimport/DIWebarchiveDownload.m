@@ -67,8 +67,8 @@
 
 
 - (void) timeout {
-	[self finishedWithStatus:[NSNumber numberWithInteger:DITimeoutStatus]];
 	NSLog(@"timeout");
+	[self finishedWithStatus:[NSNumber numberWithInteger:DITimeoutStatus]];
 }
 
 
@@ -161,6 +161,21 @@
 	[[challenge sender] cancelAuthenticationChallenge:challenge]; 
 }
 
+
+
+/*
+ WebResourceLoadDelegate callback.
+*/
+- (void)webView:(WebView *)sender resource:(id)identifier didFailLoadingWithError:(NSError *)error fromDataSource:(WebDataSource *)dataSource {
+	NSLog(@"resource:didFailLoadingWithError:");
+}
+
+/*
+ WebResourceLoadDelegate callback.
+*/
+- (void) webView: (WebView*) sender plugInFailedWithError: (NSError*) error dataSource: (WebDataSource*) dataSource {
+	NSLog(@"plugInFailedWithError:");
+}
 
 
 
