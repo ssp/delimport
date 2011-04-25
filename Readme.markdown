@@ -6,7 +6,8 @@ Originally developed by [Ian Henderson](http://ianhenderson.org/), with most cha
 ### TODO
 * Sparkle?
 * Put data cache in separate files (instead of the preferences)
-* Use keychain to download password protected pages
+* Use keychain to download password protected pages?
+* Improve App Delegate structure?
 
 ### History
 <dl>
@@ -18,6 +19,15 @@ Save webarchives for the URLs.
 <li>
 </ul>
 </dd>
+
+<dt>v0.6 <a href="http://earthlingsoft.net/beta/delimport0.6.zip">download</a> / brave-new-world branch</dt>
+<dd>
+<ul>
+<li>Officially be X.5 and garbage collected.</li>
+<li>Implement queue for webarchive downloading.</li>
+<li>Hold option key at launch to see settings window.</li>
+<li>Add timeout for downloads to cancel them.</li>
+</ul>
 
 <dt>v0.5, 2011-04 (<a href="http://earthlingsoft.net/beta/delimport0.5.zip">download</a>)</dt>
 <dd>

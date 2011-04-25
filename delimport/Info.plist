@@ -48,9 +48,9 @@
 	<key>CFBundleSignature</key>
 	<string>DeLi</string>
 	<key>CFBundleVersion</key>
-	<string>0.5b</string>
+	<string>54</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.5b</string>
+	<string>0.6a2</string>
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSMainNibFile</key>
