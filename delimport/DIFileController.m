@@ -28,6 +28,7 @@
 
 - (void) finalize {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	[super finalize];
 }
 
 #pragma mark -
