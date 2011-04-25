@@ -244,20 +244,20 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BFAA6A2A0821F9F300828D28 /* DIFileController.h */,
-				BFAA6A2B0821F9F300828D28 /* DIFileController.m */,
 				BF5D10050824537F0096CC1B /* DIBookmarksController.h */,
 				BF5D10060824537F0096CC1B /* DIBookmarksController.m */,
 				BF138E6E082587BA009D55C5 /* DILoginController.h */,
 				BF138E6F082587BA009D55C5 /* DILoginController.m */,
-				6C21E9A212D24F4C00091671 /* DIServiceTypeToIconPath.h */,
-				6C21E9A312D24F4C00091671 /* DIServiceTypeToIconPath.m */,
-				6C41DF3313632F0200EB6477 /* DIWebarchiveDownload.h */,
-				6C41DF3413632F0200EB6477 /* DIWebarchiveDownload.m */,
+				BFAA6A2A0821F9F300828D28 /* DIFileController.h */,
+				BFAA6A2B0821F9F300828D28 /* DIFileController.m */,
 				6C41E01E1364335C00EB6477 /* DIQueue.h */,
 				6C41E01F1364335C00EB6477 /* DIQueue.m */,
 				6C41E04B13643B5300EB6477 /* DIQueueItem.h */,
 				6C41E04C13643B5300EB6477 /* DIQueueItem.m */,
+				6C41DF3313632F0200EB6477 /* DIWebarchiveDownload.h */,
+				6C41DF3413632F0200EB6477 /* DIWebarchiveDownload.m */,
+				6C21E9A212D24F4C00091671 /* DIServiceTypeToIconPath.h */,
+				6C21E9A312D24F4C00091671 /* DIServiceTypeToIconPath.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
