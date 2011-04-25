@@ -22,6 +22,8 @@
 	[self showWindow:self];
 	[[self window] makeKeyAndOrderFront:self];
 	[[self window] center];
+	[userField setStringValue:*username];
+	[passField setStringValue:*password];
 	[NSApp runModalForWindow:[self window]];
 	*username = [userField stringValue];
 	*password = [passField stringValue];

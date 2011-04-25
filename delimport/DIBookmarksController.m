@@ -170,6 +170,11 @@
 {
 	[self addToLoginItems];
 	[self getKeychainUserAndPass];
+	CGEventRef event = CGEventCreate(NULL);
+	CGEventFlags modifiers = CGEventGetFlags(event);
+	if (modifiers & kCGEventFlagMaskAlternate) {
+		[self logIn];
+	}
 	[self verifyMetadataCache];
 	[self updateList:nil];
 }
@@ -256,23 +261,16 @@
 
 
 
-- (void)logIn
-{
-	[username release];
-	[password release];
+- (void) logIn {
 	[loginController getUsername:&username password:&password];
-	
-	[username retain];
-	[password retain];
 
 	Keychain *keychain = [Keychain defaultKeychain];
 
 	[keychain addInternetPassword:password onServer:[DIBookmarksController serverAddress] forAccount:username port:80 path:@"" inSecurityDomain:@"" protocol:kSecProtocolTypeHTTP auth:kSecAuthenticationTypeHTTPDigest replaceExisting:YES];
-
 }
 
-- (NSDate *)dateFromXMLDateString:(NSString *)string
-{
+
+- (NSDate*) dateFromXMLDateString: (NSString *) string {
 	NSMutableString *dateString = [[string mutableCopy] autorelease];
 	[dateString replaceOccurrencesOfString:@"T" withString:@" " options:NSLiteralSearch range:NSMakeRange(0, [dateString length])];
 	[dateString replaceOccurrencesOfString:@"Z" withString:@" " options:NSLiteralSearch range:NSMakeRange(0, [dateString length])];
