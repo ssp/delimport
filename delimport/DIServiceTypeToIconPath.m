@@ -23,7 +23,7 @@
 	NSString * iconFileName = @"delicious.icns";
 	
 	if (value != nil && [value intValue] == DIServiceTypePinboard) {
-		iconFileName = @"pinboard.gif";
+		iconFileName = @"pinboard.icns";
 	}
 	
     return [[NSBundle mainBundle] pathForImageResource:iconFileName];
