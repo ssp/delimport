@@ -452,7 +452,7 @@
 
 
 + (NSString *) versionString {
-	return @"0.5";
+	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 }
 
 
