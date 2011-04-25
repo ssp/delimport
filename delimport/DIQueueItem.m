@@ -16,7 +16,7 @@
 @synthesize queue;
 
 - (void) start {
-	[self performSelector:@selector(finsihed) withObject:nil afterDelay:0];
+	[self performSelector:@selector(finished) withObject:nil afterDelay:0];
 }
 
 - (void) finished {
