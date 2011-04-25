@@ -34,6 +34,7 @@
 	[webPrefs setPlugInsEnabled:NO];
 	[webPrefs setJavaScriptCanOpenWindowsAutomatically:NO];
 	[webPrefs setUsesPageCache:NO];
+	[webPrefs setCacheModel:WebCacheModelDocumentViewer];
 }
 
 - (id) init {
