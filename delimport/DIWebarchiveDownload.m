@@ -49,12 +49,11 @@
 	
 	if (!started && self.URL && self.webarchivePath
 		&& ![[[NSFileManager alloc] init] fileExistsAtPath:self.webarchivePath] ) {
-		NSURLRequest * request = [NSURLRequest requestWithURL:self.URL];
-		
 		webView = [[WebView alloc] initWithFrame:NSMakeRect(.0, .0, 500., 500.)];
+		[webView setMaintainsBackForwardList:NO];
 		[webView setFrameLoadDelegate:self];
 		[webView setResourceLoadDelegate:self];
-		[[webView mainFrame] loadRequest:request];
+		[webView setMainFrameURL:[self.URL absoluteString]];
 		
 		started = YES;
 		NSLog(@"starting download of %@", [self.URL absoluteString]);
