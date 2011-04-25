@@ -31,7 +31,7 @@
 		
 		// Detirmine if myApp is in list
 		enumer=[loginItems objectEnumerator];
-		while (itemDict=[enumer nextObject]) {
+		while ((itemDict=[enumer nextObject])) {
 			if ([[itemDict objectForKey:@"Path"] isEqualToString:kDTMyAppAppPath]) {
 				foundMyAppItem = YES;
 				break;
@@ -186,7 +186,7 @@
 	NSMutableArray * bookmarksNeedingUpdate = [NSMutableArray array];
 	NSFileManager * fM = [[[NSFileManager alloc] init] autorelease];
 	
-	while ( bookmark = [bookmarkEnumerator nextObject] ) {
+	while ((bookmark = [bookmarkEnumerator nextObject])) {
 		NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 		
 		NSString * hash = [bookmark objectForKey: DIHashKey];
@@ -316,7 +316,7 @@
 
 			NSEnumerator *postEnumerator = [[root children] objectEnumerator];
 			NSXMLElement *post;
-			while (post = [postEnumerator nextObject]) {
+			while ((post = [postEnumerator nextObject])) {
 				NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 				
 				NSMutableDictionary * postDictionary = [NSMutableDictionary dictionary];
@@ -324,7 +324,7 @@
 				NSString * hash = nil;
 				NSEnumerator * attributeEnumerator = [[post attributes] objectEnumerator];
 				NSXMLNode * attribute;
-				while (attribute = [attributeEnumerator nextObject]) {
+				while ((attribute = [attributeEnumerator nextObject])) {
 					if ([[attribute name] isEqualToString: DITimeKey]) {
 						[postDictionary setObject:[self dateFromXMLDateString:[attribute stringValue]] forKey:[attribute name]];
 					} else if ([[attribute name] isEqualToString: DITagKey]) {
@@ -362,7 +362,7 @@
 	
 	NSEnumerator * newMarksEnumerator = [newMarks keyEnumerator];
 	NSString * hash;
-	while (hash = [newMarksEnumerator nextObject]) {
+	while ((hash = [newMarksEnumerator nextObject])) {
 		NSDictionary * newMark = [newMarks objectForKey:hash];
 		NSDictionary * oldMark = [bookmarks objectForKey:hash];
 		

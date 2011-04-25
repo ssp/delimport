@@ -173,7 +173,7 @@
 - (void) saveDictionaries: (NSArray *) dictionaries {
 	NSEnumerator *dictEnumerator = [dictionaries objectEnumerator];
 	NSDictionary *dictionary;
-	while (dictionary = [dictEnumerator nextObject]) {
+	while ((dictionary = [dictEnumerator nextObject])) {
 		[self saveDictionary: dictionary];
 		[self fetchWebarchiveForDictionary: dictionary];
 	}
@@ -184,7 +184,7 @@
 - (void) deleteDictionaries: (NSArray *) dictionaries {
 	NSEnumerator *dictEnumerator = [dictionaries objectEnumerator];
 	NSDictionary *dictionary;
-	while (dictionary = [dictEnumerator nextObject]) {
+	while ((dictionary = [dictEnumerator nextObject])) {
 		[self deleteDictionary:dictionary];
 		// for the moment don’t delete web archives
 	}

@@ -58,7 +58,12 @@
 
 - (void) itemFinished: (DIQueueItem*) item {
 	if ([queue count] > 0) {
-		[queue removeObjectAtIndex:0];
+		if ([queue objectAtIndex:0] == item) {
+			[queue removeObjectAtIndex:0];
+		}
+		else {
+			NSLog(@"DIQueue -itemFinished: Wrong item at the beginning of the queue. This shouldn't happen.");
+		}
 		[self nextItem];
 	}
 }
