@@ -20,6 +20,7 @@
 @interface DIWebarchiveDownload (Private)
 - (void) finishedWithStatus: (NSNumber*) status;
 - (void) writeWhereFromsXattr;
+- (void) timeout;
 @end
 
 
