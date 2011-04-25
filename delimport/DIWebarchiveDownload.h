@@ -24,6 +24,7 @@
 	NSString * hash;
 	
 	BOOL started;
+	NSTimer * timer;
 	WebView * webView;
 }
 

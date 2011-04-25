@@ -13,8 +13,9 @@
 #define DIInvalidURLStatus -1
 #define DISaveWebarchiveDataFAILStatus -2
 #define DIDidNotStartStatus -3
+#define DITimeoutStatus -4
 #define DINonHTTPResponseStatus 200 // dodgy?
-
+#define DIWebarchiveDownloadTimeout 120 // allow two minutes for the download
 
 @interface DIWebarchiveDownload (Private)
 - (void) finishedWithStatus: (NSNumber*) status;
@@ -44,6 +45,8 @@
 }
 
 - (void) start {
+	timer = [NSTimer scheduledTimerWithTimeInterval:DIWebarchiveDownloadTimeout target:self selector:@selector(timeout) userInfo:nil repeats:NO];
+	
 	if (!started && self.URL && self.webarchivePath
 		&& ![[[NSFileManager alloc] init] fileExistsAtPath:self.webarchivePath] ) {
 		NSURLRequest * request = [NSURLRequest requestWithURL:self.URL];
@@ -60,11 +63,19 @@
 	if (!started) {
 		[self performSelector:@selector(finishedWithStatus:) withObject:[NSNumber numberWithInteger:DIDidNotStartStatus] afterDelay:0];
 	}
-	
 }
 
 
+- (void) timeout {
+	[self finishedWithStatus:[NSNumber numberWithInteger:DITimeoutStatus]];
+	NSLog(@"timeout");
+}
+
+
+
 - (void) finishedWithStatus: (NSNumber*) status {
+	[timer invalidate];
+	
 	if (webView) {
 		[webView close];
 		webView = nil;
