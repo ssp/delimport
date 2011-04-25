@@ -82,7 +82,7 @@
 	}
 	
 	NSDictionary * result = [NSDictionary dictionaryWithObjectsAndKeys:
-							self.URL, DIStatusURLKey,
+							[self.URL absoluteString], DIStatusURLKey,
 							self.hash, DIStatusHashKey,
 							status, DIStatusCodeKey,
 							[NSDate date], DIStatusDateKey,
