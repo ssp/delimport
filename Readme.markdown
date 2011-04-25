@@ -3,6 +3,11 @@
 Originally developed by [Ian Henderson](http://ianhenderson.org/), with most changes since version 0.3 by [Sven-S. Porst](http://earthlingsoft.net/ssp/).
 
 
+### TODO
+* Sparkle?
+* Put data cache in separate files (instead of the preferences)
+* Use keychain to download password protected pages
+
 ### History
 <dl>
 <dt>upcoming</dt>
@@ -14,7 +19,7 @@ Save webarchives for the URLs.
 </ul>
 </dd>
 
-<dt>v0.5, 2011-04 [download](http://earthlingsoft.net/beta/delimport0.5.zip)</dt>
+<dt>v0.5, 2011-04 (<a href="http://earthlingsoft.net/beta/delimport0.5.zip">download</a>)</dt>
 <dd>
 <ul>
 <li>

@@ -18,20 +18,12 @@
 
 #define DIDownloadWebarchivesKey @"download web archives"
 #define DIDefaultsFAILKey @"failed web page downloads"
-#define DIFAILStateNumberKey @"error code"
-#define DIFAILDateKey @"date"
 
-
-@class WebView;
-@class DIBookmarksController;
-
+@class DIQueue;
 
 
 @interface DIFileController : NSObject {
-	NSMutableArray * bookmarksToLoad;
-	BOOL running;
-	
-	WebView * webView;
+	DIQueue * downloadQueue;
 }
 
 + (NSString *) metadataPathForSubfolder: (NSString *) folderName;
@@ -44,12 +36,8 @@
 - (void) saveDictionaries:(NSArray *)dictionaries;
 - (void) deleteDictionaries:(NSArray *)dictionaries;
 
-- (void) fetchWebArchiveForDictionary: (NSDictionary *) dictionary;
-- (void) saveNextWebArchive;
-- (void) startSavingWebArchiveFor: (NSDictionary *) dictionary;
-- (void) writeWhereFromsXattrForHash: (NSString*) hash;
-- (void) doneSavingWebArchiveWithStatus: (long) status;
+- (void) fetchWebarchiveForDictionary: (NSDictionary *) dictionary;
 
-- (BOOL)openFile:(NSString *)filename;
+- (BOOL) openFile:(NSString *)filename;
 
 @end

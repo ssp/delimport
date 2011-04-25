@@ -8,12 +8,9 @@
 
 #import "DIFileController.h"
 #import "DIBookmarksController.h"
-#import <WebKit/WebKit.h>
+#import "DIQueue.h"
+#import "DIWebarchiveDownload.h"
 #import <sys/xattr.h>
-
-#define DIInvalidURLStatus -1
-#define DISaveWebArchiveDataFAILStatus -2
-#define DINonHTTPResponseStatus 200 // dodgy?
 
 
 @implementation DIFileController
@@ -21,23 +18,33 @@
 - (id) init {
 	self = [super init];
 	if (self) {
-		bookmarksToLoad = [[NSMutableArray alloc] init];
-		running = NO;
+		downloadQueue = [[DIQueue alloc] init];
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(downloadFinishedWithStatus:) name:DIWebarchiveDownloadFinishedNotification object:nil];
 	}
 	
 	return self;
 }
 
 
-
-- (void) dealloc {
-	[webView release];
-	[bookmarksToLoad release];
-	
-	[super dealloc];
+- (void) finalize {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+#pragma mark -
+#pragma mark Notifications
 
+
+- (void) downloadFinishedWithStatus: (NSNotification*) notification {
+	NSDictionary * statusDictionary = [notification userInfo];
+	
+	NSInteger status = [[statusDictionary objectForKey:DIStatusCodeKey] integerValue];
+	if (status != 200) {
+		NSString * hash = [statusDictionary objectForKey:DIStatusHashKey];
+		NSString * defaultsKey = [NSString stringWithFormat:@"%@.%@", DIDefaultsFAILKey, hash];
+		[[[NSUserDefaultsController sharedUserDefaultsController] values] setValue:statusDictionary forKeyPath:defaultsKey];
+	}
+	
+}
 
 
 
@@ -168,7 +175,7 @@
 	NSDictionary *dictionary;
 	while (dictionary = [dictEnumerator nextObject]) {
 		[self saveDictionary: dictionary];
-		[self fetchWebArchiveForDictionary: dictionary];
+		[self fetchWebarchiveForDictionary: dictionary];
 	}
 }
 
@@ -191,184 +198,21 @@
 #pragma mark Webarchives
 
 /*
- Used to add a dictionary to the queue.
- Adds the dictionary and kicks off saving process.
+ Queue download of the dictionary item if it hasn't been marked as problematic.
 */
-- (void) fetchWebArchiveForDictionary: (NSDictionary *) dictionary {
-	[bookmarksToLoad addObject: dictionary];
-	[self saveNextWebArchive];
-}
-
-
-
-/*
- Kick off saving of the next web archive.
- Only run one of these at a time.
- If we’re already running, this method will be called again from -doneSavingWebArchiveWithStatus:
- after finishing.
-*/
-- (void) saveNextWebArchive {
-	if (!running) {
-		if ([bookmarksToLoad count] > 0 &&
-			[[[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:DIDownloadWebarchivesKey] boolValue]) {
-			NSDictionary * dictionary = [bookmarksToLoad objectAtIndex: 0];
-			[self startSavingWebArchiveFor: dictionary];
-		}
+- (void) fetchWebarchiveForDictionary: (NSDictionary *) dictionary {
+	NSString * bookmarkFailKey = [NSString stringWithFormat:@"%@.%@", DIDefaultsFAILKey, [dictionary objectForKey:DIHashKey]];
+	BOOL isProblematic = ([[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKeyPath:bookmarkFailKey] != nil);
+	if (!isProblematic) {
+		DIWebarchiveDownload * download = [[DIWebarchiveDownload alloc] init];
+		NSURL * URL = [NSURL URLWithString:[dictionary objectForKey:DIURLKey]];
+		download.URL = URL;
+		download.webarchivePath = [DIFileController webarchivePathForHash:[dictionary objectForKey:DIHashKey]];
+		download.hash = [dictionary objectForKey:DIHashKey];
+		[downloadQueue addToQueue:download];
 	}
 }
 
-
-
-/*
- Called for each web archive to be loaded.
- Only does its job if no webarchive is already present for this hash.
-  (So we have an archiving nature.)
- Starts loading the web page in the webView. The rest is handled in the webView’s callback.
- Makes sure to call -doneSavingWebArchiveWithStatus: in case things go wrong, to ensure the next download can start.
-*/
-- (void) startSavingWebArchiveFor: (NSDictionary *) dictionary {
-	running = YES;
-	NSString * filePath = [DIFileController webarchivePathForHash:[dictionary objectForKey:DIHashKey]];
-	
-	// Only proceed if (1) the web archive doesn't exist yet and (2) loading the file didn't fail previously
-	if (![[[[NSFileManager alloc] init] autorelease] fileExistsAtPath:filePath]
-		&& [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKeyPath:[NSString stringWithFormat:@"%@.%@", DIDefaultsFAILKey, [dictionary objectForKey:DIHashKey]]] == nil ) {
-		NSURL * URL = [NSURL URLWithString: [dictionary objectForKey: DIURLKey]];
-
-		if (URL) {
-			NSLog(@"starting download of %@", [URL absoluteURL]);
-			NSURLRequest * request = [NSURLRequest requestWithURL: URL];
-
-			webView = [[WebView alloc] initWithFrame: NSMakeRect(.0, .0, 500., 500.)];
-			[webView setFrameLoadDelegate:self];
-			[webView setResourceLoadDelegate:self];
-			[[webView mainFrame] loadRequest: request];
-			return;
-		}
-	}
-
-	[self doneSavingWebArchiveWithStatus: DIInvalidURLStatus];
-}
-
-
-
-/*
- WebFrameLoadDelegate callback.
- 1. Check whether the right frame finished loading.
- 2. Write the data of its dataSource to a webArchive.
- 3. Add the URL to extended attributes (as Safari does).
-*/
-- (void) webView: (WebView *) sender didFinishLoadForFrame: (WebFrame *) frame {
-	if ([sender mainFrame] == frame) {
-		NSLog(@"-webView:didFinishLoadForFrame: mainFrame");
-		NSInteger status = DISaveWebArchiveDataFAILStatus;
-		
-		NSData * webData = [[[frame dataSource] webArchive] data];
-		if (webData) {
-			if ([bookmarksToLoad count] > 0) {
-				NSString * hash = [[bookmarksToLoad objectAtIndex: 0] objectForKey:DIHashKey];
-				if ([webData writeToFile:[DIFileController webarchivePathForHash:hash] atomically:YES]) {
-					NSURLResponse * response = [[frame dataSource] response];
-					if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-						status = [(NSHTTPURLResponse *) response statusCode];
-					}
-					else {
-						status = DINonHTTPResponseStatus;
-					}
-					[self writeWhereFromsXattrForHash:hash];
-				}
-			}
-			else {
-				NSLog(@"Error: bookmarksToLoad array is empty: %@", [bookmarksToLoad description]);
-			}
-		}
-		else {
-			NSLog(@"Error: could not get webArchive data for frame %@", frame);
-		}
-		[self doneSavingWebArchiveWithStatus:status];
-	}
-}
-
-
-
-/*
- WebFrameLoadDelegate callback.
- 1. Log that there was an error.
- 2. If we are on the main frame proceed to next round of loading.
-*/
-- (void) webView: (WebView *) sender didFailLoadWithError: (NSError *) error forFrame: (WebFrame *) frame {
-	NSLog(@"-webView:didFailLoadWithError: (%ld) %@", [error code], (long)[error localizedDescription]);
-	if ([sender mainFrame] == frame) {
-		NSLog(@"-webView:didFailLoadWithError: error occured on the main frame: cancel");
-		[self doneSavingWebArchiveWithStatus:[error code]];
-	}
-}
-
-
-
-/*
- WebFrameLoadDelegate callback.
- 1. Log that there was an error.
- 2. If we are on the main frame proceed to next round of loading.
-*/
-- (void) webView: (WebView *) sender didFailProvisionalLoadWithError: (NSError *) error forFrame: (WebFrame *) frame {
-	NSLog(@"-webView:didFailProvisionalLoadWithError: (%ld) %@", [error code], (long)[error localizedDescription]);
-	if ([sender mainFrame] == frame) {
-		NSLog(@"-webView:didFailProvisionalLoadWithError: error occured on the main frame: cancel");
-		[self doneSavingWebArchiveWithStatus:[error code]];
-	}
-}
-
-
-
-/*
- Helper function to write "com.apple.metadata:kMDItemWhereFroms" extended attribute for a given hash.
- Assumes the that the hash exists in our data and that its webarchive file exists.
-*/
-- (void) writeWhereFromsXattrForHash: (NSString*) hash {
-	NSString * errorDescription = nil;
-	NSData * xAttrPlistData = [NSPropertyListSerialization dataFromPropertyList:[webView mainFrameURL] format:NSPropertyListBinaryFormat_v1_0 errorDescription:&errorDescription];
-	if (errorDescription != nil) {
-		NSLog(@"Could not convert URL for extended attributes when saving web archive: %@", errorDescription);
-		[errorDescription release];
-	}
-	
-	setxattr([[DIFileController webarchivePathForHash:hash] fileSystemRepresentation],
-			 "com.apple.metadata:kMDItemWhereFroms",
-			 [xAttrPlistData bytes], [xAttrPlistData length], 0, 0);
-}
-
-
-
-/*
- Called at the end of all web loading cycles.
- If the the status information is not 200, save it, along with the current date to the FAIL dictionary in user defaults.
- This way we can avoid reloading broken pages over and over again (which can be lengthy if the sites don't exist anymore).
- Removes the current bookmark from the list and kicks off the next save.
-*/
-- (void) doneSavingWebArchiveWithStatus: (long) status {
-	[webView stopLoading: self];
-	if ([bookmarksToLoad count] > 0) {
-		NSString * hash = [[bookmarksToLoad objectAtIndex: 0] objectForKey:DIHashKey];
-		
-		if (status != 200) {
-			NSDictionary * failState = [NSDictionary dictionaryWithObjectsAndKeys:
-										[NSNumber numberWithInteger: status], DIFAILStateNumberKey,
-										[NSDate date], DIFAILDateKey, nil];
-			
-			[[[NSUserDefaultsController sharedUserDefaultsController] values] setValue:failState forKeyPath:[NSString stringWithFormat:@"%@.%@", DIDefaultsFAILKey, hash]];
-
-			[webView stopLoading:self];
-		}
-		
-		[bookmarksToLoad removeObjectAtIndex: 0];
-	}
-	[webView setFrameLoadDelegate:nil];
-	[webView setResourceLoadDelegate:nil];
-	[webView release];
-	running = NO;
-	[self saveNextWebArchive];
-}
 
 
 

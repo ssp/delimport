@@ -1232,7 +1232,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 7528103408569F6900FEFBDC /* Build configuration list for PBXProject "Keychain" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* Keychain */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -1989,152 +1996,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7506C03A0A3DB5A8000DB6BD /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = "";
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = PolicyProber;
-			};
-			name = "Debug (Original)";
-		};
-		7506C03B0A3DB5A8000DB6BD /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = G3;
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = PolicyProber;
-			};
-			name = "Release (Original)";
-		};
-		7528103508569F6900FEFBDC /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = 4.0;
-				"GCC_VERSION[arch=i386]" = 4.0;
-				"GCC_VERSION[arch=ppc]" = 4.0;
-				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
-				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_MISSING_PARENTHESES = NO;
-				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
-				GCC_WARN_PEDANTIC = NO;
-				GCC_WARN_SIGN_COMPARE = YES;
-				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
-				GCC_WARN_UNKNOWN_PRAGMAS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_PARAMETER = YES;
-				GCC_WARN_UNUSED_VALUE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
-				"MACOSX_DEPLOYMENT_TARGET[sdk=*][arch=i386]" = 10.4;
-				OTHER_CFLAGS = "-ggdb3";
-				PREBINDING = NO;
-				SDKROOT = macosx10.4;
-				"SDKROOT[arch=i386]" = macosx10.4;
-				"SDKROOT[arch=ppc]" = macosx10.4;
-				"SDKROOT[arch=x86_64]" = macosx10.5;
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = "Debug (Original)";
-		};
-		7528103608569F6900FEFBDC /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_VERSION = 4.0;
-				"GCC_VERSION[arch=i386]" = 4.0;
-				"GCC_VERSION[arch=ppc]" = 4.0;
-				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
-				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_MISSING_PARENTHESES = NO;
-				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
-				GCC_WARN_SIGN_COMPARE = YES;
-				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNKNOWN_PRAGMAS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_PARAMETER = YES;
-				GCC_WARN_UNUSED_VALUE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
-				"MACOSX_DEPLOYMENT_TARGET[sdk=*][arch=i386]" = 10.4;
-				OTHER_CFLAGS = "-ggdb3";
-				PREBINDING = NO;
-				SDKROOT = macosx10.4;
-				"SDKROOT[arch=i386]" = macosx10.4;
-				"SDKROOT[arch=ppc]" = macosx10.4;
-				"SDKROOT[arch=x86_64]" = macosx10.5;
-				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = "Release (Original)";
-		};
-		7540B3EF0999D1C000469F46 /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = "";
-				PRODUCT_NAME = SKeyPlusTester;
-			};
-			name = "Debug (Original)";
-		};
-		7540B3F00999D1C000469F46 /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = G3;
-				PRODUCT_NAME = SKeyPlusTester;
-			};
-			name = "Release (Original)";
-		};
-		7556131C0A2090B5003428C2 /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = "";
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = CryptographyTester;
-			};
-			name = "Debug (Original)";
-		};
-		7556131D0A2090B5003428C2 /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = G3;
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = CryptographyTester;
-			};
-			name = "Release (Original)";
-		};
 		757709E90B12E0EB00E926A4 /* Development */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 757709C20B12D4AA00E926A4 /* FrameworkDebug.xcconfig */;
@@ -2352,20 +2213,16 @@
 		75770A010B12E0EB00E926A4 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/build/Development\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_MODEL_TUNING = G5;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = 4.0;
-				"GCC_VERSION[arch=i386]" = 4.0;
-				"GCC_VERSION[arch=ppc]" = 4.0;
-				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
@@ -2384,16 +2241,10 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
-				"MACOSX_DEPLOYMENT_TARGET[sdk=*][arch=i386]" = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = "-ggdb3";
 				PREBINDING = NO;
-				SDKROOT = macosx10.4;
-				"SDKROOT[arch=i386]" = macosx10.4;
-				"SDKROOT[arch=ppc]" = macosx10.4;
-				"SDKROOT[arch=x86_64]" = macosx10.5;
+				SDKROOT = macosx10.5;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Development;
@@ -2405,14 +2256,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/build/Development\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_FAST_OBJC_DISPATCH = YES;
-				GCC_MODEL_TUNING = G5;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_VERSION = 4.0;
-				"GCC_VERSION[arch=i386]" = 4.0;
-				"GCC_VERSION[arch=ppc]" = 4.0;
-				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
@@ -2431,28 +2278,13 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=x86_64]" = 10.5;
-				"MACOSX_DEPLOYMENT_TARGET[sdk=*][arch=i386]" = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_CFLAGS = "-ggdb3";
 				PREBINDING = NO;
-				SDKROOT = macosx10.4;
-				"SDKROOT[arch=i386]" = macosx10.4;
-				"SDKROOT[arch=ppc]" = macosx10.4;
-				"SDKROOT[arch=x86_64]" = macosx10.5;
+				SDKROOT = macosx10.5;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Deployment;
-		};
-		7588AC730CA3916D00466BEF /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = "";
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = KeychainTester;
-			};
-			name = "Debug (Original)";
 		};
 		7588AC740CA3916D00466BEF /* Development */ = {
 			isa = XCBuildConfiguration;
@@ -2463,15 +2295,6 @@
 			};
 			name = Development;
 		};
-		7588AC750CA3916D00466BEF /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = G3;
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = KeychainTester;
-			};
-			name = "Release (Original)";
-		};
 		7588AC760CA3916D00466BEF /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2481,322 +2304,134 @@
 			};
 			name = Deployment;
 		};
-		7594D48E0A2045E00090E497 /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = "";
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = CertificateGenerationTester;
-			};
-			name = "Debug (Original)";
-		};
-		7594D48F0A2045E00090E497 /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = G3;
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = CertificateGenerationTester;
-			};
-			name = "Release (Original)";
-		};
-		75A074FE09438F8E008B9D9E /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 757709C20B12D4AA00E926A4 /* FrameworkDebug.xcconfig */;
-			buildSettings = {
-			};
-			name = "Debug (Original)";
-		};
-		75A074FF09438F8E008B9D9E /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 757709CA0B12DE2000E926A4 /* FrameworkRelease.xcconfig */;
-			buildSettings = {
-			};
-			name = "Release (Original)";
-		};
-		75A0750909438F8E008B9D9E /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = "";
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = CSSMUtilsTester;
-			};
-			name = "Debug (Original)";
-		};
-		75A0750A09438F8E008B9D9E /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = G3;
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = CSSMUtilsTester;
-			};
-			name = "Release (Original)";
-		};
-		75A0751409438F8E008B9D9E /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = "";
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = NSCalendarDateAdditionsTester;
-			};
-			name = "Debug (Original)";
-		};
-		75A0751509438F8E008B9D9E /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = G3;
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = NSCalendarDateAdditionsTester;
-			};
-			name = "Release (Original)";
-		};
-		75A0751F09438F8F008B9D9E /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = "";
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = OutputStreamsTester;
-			};
-			name = "Debug (Original)";
-		};
-		75A0752009438F8F008B9D9E /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = G3;
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = OutputStreamsTester;
-			};
-			name = "Release (Original)";
-		};
-		75A0752B09438F8F008B9D9E /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = "";
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = StringsTester;
-			};
-			name = "Debug (Original)";
-		};
-		75A0752C09438F8F008B9D9E /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = G3;
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = StringsTester;
-			};
-			name = "Release (Original)";
-		};
-		75A0753709438F8F008B9D9E /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = MDSProber;
-			};
-			name = "Debug (Original)";
-		};
-		75A0753809438F8F008B9D9E /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = MDSProber;
-			};
-			name = "Release (Original)";
-		};
-		75A076590943BA3D008B9D9E /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = World;
-			};
-			name = "Debug (Original)";
-		};
-		75A0765A0943BA3D008B9D9E /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				PRODUCT_NAME = World;
-				ZERO_LINK = NO;
-			};
-			name = "Release (Original)";
-		};
-		75C6E8F40A3BDCD8009201FB /* Debug (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = "";
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = KeychainSearchTester;
-			};
-			name = "Debug (Original)";
-		};
-		75C6E8F50A3BDCD8009201FB /* Release (Original) */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_MODEL_CPU = G3;
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_NAME = KeychainSearchTester;
-			};
-			name = "Release (Original)";
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		7506C0390A3DB5A8000DB6BD /* Build configuration list for PBXNativeTarget "PolicyProber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7506C03A0A3DB5A8000DB6BD /* Debug (Original) */,
 				757709FD0B12E0EB00E926A4 /* Development */,
-				7506C03B0A3DB5A8000DB6BD /* Release (Original) */,
 				757709FE0B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		7528103408569F6900FEFBDC /* Build configuration list for PBXProject "Keychain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7528103508569F6900FEFBDC /* Debug (Original) */,
 				75770A010B12E0EB00E926A4 /* Development */,
-				7528103608569F6900FEFBDC /* Release (Original) */,
 				75770A020B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		7540B3EE0999D1C000469F46 /* Build configuration list for PBXNativeTarget "SKeyPlusTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7540B3EF0999D1C000469F46 /* Debug (Original) */,
 				757709F50B12E0EB00E926A4 /* Development */,
-				7540B3F00999D1C000469F46 /* Release (Original) */,
 				757709F60B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		7556131B0A2090B5003428C2 /* Build configuration list for PBXNativeTarget "CryptographyTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7556131C0A2090B5003428C2 /* Debug (Original) */,
 				757709F90B12E0EB00E926A4 /* Development */,
-				7556131D0A2090B5003428C2 /* Release (Original) */,
 				757709FA0B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		7588AC720CA3916D00466BEF /* Build configuration list for PBXNativeTarget "KeychainTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7588AC730CA3916D00466BEF /* Debug (Original) */,
 				7588AC740CA3916D00466BEF /* Development */,
-				7588AC750CA3916D00466BEF /* Release (Original) */,
 				7588AC760CA3916D00466BEF /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		7594D48D0A2045E00090E497 /* Build configuration list for PBXNativeTarget "CertificateGenerationTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7594D48E0A2045E00090E497 /* Debug (Original) */,
 				757709F70B12E0EB00E926A4 /* Development */,
-				7594D48F0A2045E00090E497 /* Release (Original) */,
 				757709F80B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		75A074FD09438F8E008B9D9E /* Build configuration list for PBXNativeTarget "Keychain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75A074FE09438F8E008B9D9E /* Debug (Original) */,
 				757709E90B12E0EB00E926A4 /* Development */,
-				75A074FF09438F8E008B9D9E /* Release (Original) */,
 				757709EA0B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		75A0750809438F8E008B9D9E /* Build configuration list for PBXNativeTarget "CSSMUtilsTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75A0750909438F8E008B9D9E /* Debug (Original) */,
 				757709EB0B12E0EB00E926A4 /* Development */,
-				75A0750A09438F8E008B9D9E /* Release (Original) */,
 				757709EC0B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		75A0751309438F8E008B9D9E /* Build configuration list for PBXNativeTarget "NSCalendarDateAdditionsTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75A0751409438F8E008B9D9E /* Debug (Original) */,
 				757709ED0B12E0EB00E926A4 /* Development */,
-				75A0751509438F8E008B9D9E /* Release (Original) */,
 				757709EE0B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		75A0751E09438F8F008B9D9E /* Build configuration list for PBXNativeTarget "OutputStreamsTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75A0751F09438F8F008B9D9E /* Debug (Original) */,
 				757709EF0B12E0EB00E926A4 /* Development */,
-				75A0752009438F8F008B9D9E /* Release (Original) */,
 				757709F00B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		75A0752A09438F8F008B9D9E /* Build configuration list for PBXNativeTarget "StringsTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75A0752B09438F8F008B9D9E /* Debug (Original) */,
 				757709F10B12E0EB00E926A4 /* Development */,
-				75A0752C09438F8F008B9D9E /* Release (Original) */,
 				757709F20B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		75A0753609438F8F008B9D9E /* Build configuration list for PBXNativeTarget "MDSProber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75A0753709438F8F008B9D9E /* Debug (Original) */,
 				757709F30B12E0EB00E926A4 /* Development */,
-				75A0753809438F8F008B9D9E /* Release (Original) */,
 				757709F40B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		75A076580943BA3D008B9D9E /* Build configuration list for PBXAggregateTarget "World" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75A076590943BA3D008B9D9E /* Debug (Original) */,
 				757709FF0B12E0EB00E926A4 /* Development */,
-				75A0765A0943BA3D008B9D9E /* Release (Original) */,
 				75770A000B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 		75C6E8F30A3BDCD8009201FB /* Build configuration list for PBXNativeTarget "KeychainSearchTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75C6E8F40A3BDCD8009201FB /* Debug (Original) */,
 				757709FB0B12E0EB00E926A4 /* Development */,
-				75C6E8F50A3BDCD8009201FB /* Release (Original) */,
 				757709FC0B12E0EB00E926A4 /* Deployment */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug (Original)";
+			defaultConfigurationName = Development;
 		};
 /* End XCConfigurationList section */
 	};

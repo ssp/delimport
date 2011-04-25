@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Deployment;
+		activeBuildConfigurationName = Development;
 		activeExecutable = 6CE1A77F104ABE770078D932 /* CSSMUtilsTester */;
 		activeSDKPreference = macosx10.5;
 		activeTarget = 75A0749209438F8E008B9D9E /* Keychain */;
@@ -64,8 +64,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 314458886;
-			PBXWorkspaceStateSaveDate = 314458886;
+			PBXPerProjectTemplateStateSaveDate = 325329527;
+			PBXWorkspaceStateSaveDate = 325329527;
 		};
 		sourceControlManager = 6CE1A799104ABE990078D932 /* Source Control */;
 		userBuildSettings = {

@@ -199,7 +199,7 @@
 				[bookmarksNeedingUpdate addObject:bookmark];
 			}
 			else if (![fM fileExistsAtPath:[DIFileController webarchivePathForHash:hash]]) {
-				[fileController fetchWebArchiveForDictionary:bookmark];
+				[fileController fetchWebarchiveForDictionary:bookmark];
 			}
 		}
 		

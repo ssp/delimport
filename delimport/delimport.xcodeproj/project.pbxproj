@@ -26,6 +26,9 @@
 		6C21E9A412D24F4C00091671 /* DIServiceTypeToIconPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C21E9A312D24F4C00091671 /* DIServiceTypeToIconPath.m */; };
 		6C21EA2112D2592900091671 /* pinboard.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6C21EA2012D2592900091671 /* pinboard.icns */; };
 		6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C2FC9670CD9396900C1FD91 /* Localizable.strings */; };
+		6C41DF3513632F0200EB6477 /* DIWebarchiveDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C41DF3413632F0200EB6477 /* DIWebarchiveDownload.m */; };
+		6C41E0201364335C00EB6477 /* DIQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C41E01F1364335C00EB6477 /* DIQueue.m */; };
+		6C41E04D13643B5300EB6477 /* DIQueueItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C41E04C13643B5300EB6477 /* DIQueueItem.m */; };
 		6CA955C2104AA40200F225D2 /* LogIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA955C0104AA40200F225D2 /* LogIn.xib */; };
 		6CA95704104AB8B000F225D2 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA95703104AB8B000F225D2 /* Keychain.framework */; };
 		6CCFAD1112BE394200B6A09A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCFAD1012BE394200B6A09A /* WebKit.framework */; };
@@ -195,6 +198,12 @@
 		6C21EC6912D290A100091671 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LogIn.xib; sourceTree = "<group>"; };
 		6C21EC6A12D290B100091671 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C383FF21066F2370001AAAD /* Readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Readme.markdown; path = ../Readme.markdown; sourceTree = "<group>"; };
+		6C41DF3313632F0200EB6477 /* DIWebarchiveDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIWebarchiveDownload.h; sourceTree = "<group>"; };
+		6C41DF3413632F0200EB6477 /* DIWebarchiveDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIWebarchiveDownload.m; sourceTree = "<group>"; };
+		6C41E01E1364335C00EB6477 /* DIQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIQueue.h; sourceTree = "<group>"; };
+		6C41E01F1364335C00EB6477 /* DIQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIQueue.m; sourceTree = "<group>"; };
+		6C41E04B13643B5300EB6477 /* DIQueueItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIQueueItem.h; sourceTree = "<group>"; };
+		6C41E04C13643B5300EB6477 /* DIQueueItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIQueueItem.m; sourceTree = "<group>"; };
 		6C5A9C66104D9A030092E350 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C5A9C67104D9A090092E350 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/LogIn.xib; sourceTree = "<group>"; };
 		6C5AA488104E91210092E350 /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -243,6 +252,12 @@
 				BF138E6F082587BA009D55C5 /* DILoginController.m */,
 				6C21E9A212D24F4C00091671 /* DIServiceTypeToIconPath.h */,
 				6C21E9A312D24F4C00091671 /* DIServiceTypeToIconPath.m */,
+				6C41DF3313632F0200EB6477 /* DIWebarchiveDownload.h */,
+				6C41DF3413632F0200EB6477 /* DIWebarchiveDownload.m */,
+				6C41E01E1364335C00EB6477 /* DIQueue.h */,
+				6C41E01F1364335C00EB6477 /* DIQueue.m */,
+				6C41E04B13643B5300EB6477 /* DIQueueItem.h */,
+				6C41E04C13643B5300EB6477 /* DIQueueItem.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -564,6 +579,9 @@
 				BF5D10070824537F0096CC1B /* DIBookmarksController.m in Sources */,
 				BF138E70082587BA009D55C5 /* DILoginController.m in Sources */,
 				6C21E9A412D24F4C00091671 /* DIServiceTypeToIconPath.m in Sources */,
+				6C41DF3513632F0200EB6477 /* DIWebarchiveDownload.m in Sources */,
+				6C41E0201364335C00EB6477 /* DIQueue.m in Sources */,
+				6C41E04D13643B5300EB6477 /* DIQueueItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,8 +715,9 @@
 		6CCC64340A40CC7F00540A50 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_UNUSED_LABEL = YES;
@@ -714,8 +733,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
