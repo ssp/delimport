@@ -116,6 +116,17 @@
 	if ([sender mainFrame] == frame) {
 		NSInteger status = DISaveWebarchiveDataFAILStatus;
 		
+		/*
+		 There are two ways to get hold of a web archive:
+		 1) Using the dataSource and 2) using the DOMDocument of the main frame.
+		 According to comments in the webarchiver project the latter is less prone to unexpected
+		 crashing (a statement I couldn't confirm). In addition, the web archives provided by the
+		 dataSource seem to be more complete and contain more of the external resources (those loaded by
+		 JavaScript) which are missing in the DOMDocument provided ones.
+		 (Interestingly these two kinds of web archives also end up providing files with slightly
+		 differing markup, e.g. in the quotation mark style or, occasionally, linebreaks.
+		*/
+		// NSData * webData = [[[frame DOMDocument] webArchive] data];
 		NSData * webData = [[[frame dataSource] webArchive] data];
 		if (webData) {
 			if ([webData writeToFile:self.webarchivePath atomically:YES]) {
