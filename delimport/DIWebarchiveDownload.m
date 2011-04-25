@@ -77,6 +77,8 @@
 	[timer invalidate];
 	
 	if (webView) {
+		[webView setFrameLoadDelegate:nil];
+		[webView setResourceLoadDelegate:nil];
 		[webView close];
 		webView = nil;
 	}
