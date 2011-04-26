@@ -51,7 +51,7 @@
 	
 	if (!started && self.URL && self.webarchivePath
 		&& ![[[NSFileManager alloc] init] fileExistsAtPath:self.webarchivePath] ) {
-		webView = [[WebView alloc] initWithFrame:NSMakeRect(.0, .0, 500., 500.)];
+		webView = [[WebView alloc] initWithFrame:NSMakeRect(0, 0, 500, 500)];
 		[webView setMaintainsBackForwardList:NO];
 		[webView setFrameLoadDelegate:self];
 		[webView setResourceLoadDelegate:self];
@@ -109,10 +109,11 @@
 }
 
 
-#pragma mark WebView Delegate Callbacks
+
+
+#pragma mark WebFrameLoadDelegate Delegate Callbacks
 
 /*
- WebFrameLoadDelegate callback.
  1. Check whether the right frame finished loading.
  2. Write the data of its dataSource to a webarchive.
  3. Add the URL to extended attributes (as Safari does).
@@ -155,7 +156,6 @@
 
 
 /*
- WebFrameLoadDelegate callback.
  1. Log that there was an error.
  2. If we are on the main frame proceed to next round of loading.
 */
@@ -170,33 +170,6 @@
 
 
 /*
- WebResourceLoadDelegate callback.
-*/
-- (void) webView: (WebView*) sender resource: (id) identifier didReceiveAuthenticationChallenge: (NSURLAuthenticationChallenge*) challenge fromDataSource: (WebDataSource*) dataSource {
-	NSLog(@"didReceiveAuthenticationChallenge:");
-	[[challenge sender] cancelAuthenticationChallenge:challenge]; 
-}
-
-
-
-/*
- WebResourceLoadDelegate callback.
-*/
-- (void)webView:(WebView *)sender resource:(id)identifier didFailLoadingWithError:(NSError *)error fromDataSource:(WebDataSource *)dataSource {
-	NSLog(@"resource:didFailLoadingWithError:");
-}
-
-/*
- WebResourceLoadDelegate callback.
-*/
-- (void) webView: (WebView*) sender plugInFailedWithError: (NSError*) error dataSource: (WebDataSource*) dataSource {
-	NSLog(@"plugInFailedWithError:");
-}
-
-
-
-/*
- WebFrameLoadDelegate callback.
  1. Log that there was an error.
  2. If we are on the main frame proceed to next round of loading.
 */
@@ -206,6 +179,26 @@
 		NSLog(@"-webView:didFailProvisionalLoadWithError: error occured on the main frame: cancel");
 		[self finishedWithStatus:[NSNumber numberWithInteger:[error code]]];
 	}
+}
+
+
+
+
+#pragma mark WebResourceLoadDelegate Delegate Callbacks
+
+/*
+ 1. Cancel authentication (so no authentication dialogues pop up)
+ TODO: Consider using the keychain here.
+*/
+- (void) webView: (WebView*) sender resource: (id) identifier didReceiveAuthenticationChallenge: (NSURLAuthenticationChallenge*) challenge fromDataSource: (WebDataSource*) dataSource {
+	NSLog(@"didReceiveAuthenticationChallenge:");
+	[[challenge sender] cancelAuthenticationChallenge:challenge];
+}
+
+
+
+/*
+*/
 }
 
 
@@ -229,10 +222,6 @@
 	setxattr([self.webarchivePath fileSystemRepresentation], "com.apple.metadata:kMDItemWhereFroms",
 			 [xAttrPlistData bytes], [xAttrPlistData length], 0, 0);
 }
-
-
-
-
 
 
 @end
