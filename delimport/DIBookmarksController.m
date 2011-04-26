@@ -47,19 +47,7 @@
 		[NSApp activateIgnoringOtherApps:YES];
 		[[alert window] makeKeyAndOrderFront:self];
 		[[alert window] center];
-
-		// suppression button for X.5 and above
-		SEL suppressionSelector = @selector(setShowsSuppressionButton:);
-		if ([alert respondsToSelector:suppressionSelector]) {
-			NSMethodSignature * sig = [alert methodSignatureForSelector:suppressionSelector];
-									   
-			NSInvocation * inv = [NSInvocation invocationWithMethodSignature:sig];
-			[inv setSelector:suppressionSelector];
-			[inv setTarget:alert];
-			BOOL yes = YES;
-			[inv setArgument:&yes atIndex:2];
-			[inv invoke];
-		}
+		[alert setShowsSuppressionButton:YES];
 		
 		if ([alert runModal] == NSAlertDefaultReturn) {
 			// OK, Create item and add it - should work even if no pref existed
@@ -68,7 +56,7 @@
 			OSStatus		fsResult = FSPathMakeRef((const UInt8 *)[kDTMyAppAppPath fileSystemRepresentation], &myFSRef,NULL);
 			
 			if (loginItems) {
-				loginItems = [[loginItems autorelease] mutableCopy]; // mutable copy we can work on, autorelease the original
+				loginItems = [loginItems mutableCopy];
 			} else {
 				loginItems = [[NSMutableArray alloc] init];	// didn't find this pref, make from scratch
 			}
@@ -91,23 +79,10 @@
 			}
 		}
 		
-		// For X.5 and higher evaluate the suppression button
-		SEL suppressionButtonSelector = @selector(suppressionButton);
-		if ([alert respondsToSelector:suppressionButtonSelector]) {
-			NSMethodSignature * sig = [alert methodSignatureForSelector:suppressionButtonSelector];
-			
-			NSInvocation * inv = [NSInvocation invocationWithMethodSignature:sig];
-			[inv setSelector:suppressionButtonSelector];
-			[inv setTarget:alert];
-			[inv invoke];
-			NSButton * suppressionButton;
-			[inv getReturnValue:&suppressionButton];
-			if ([suppressionButton state] == NSOnState) {
-				[[NSUserDefaults standardUserDefaults] setBool:YES forKey:DILoginAlertSuppressedKey];
-				[[NSUserDefaults standardUserDefaults] synchronize];
-			}		
+		if ([[alert suppressionButton] state] == NSOnState) {
+			[[NSUserDefaults standardUserDefaults] setBool:YES forKey:DILoginAlertSuppressedKey];
+			[[NSUserDefaults standardUserDefaults] synchronize];
 		}
-	
 	}
 	
 	if (changed) {
@@ -117,30 +92,26 @@
 							  @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost); 
 		CFPreferencesSynchronize((CFStringRef) @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost); 
 	}
-	[loginItems release]; 
 }
 
-- (KeychainItem *)getKeychainUserAndPass
-{
-	KeychainSearch * search = [[KeychainSearch alloc] init];
-	
-	[search setServer:[DIBookmarksController serverAddress]];
 
+
+- (KeychainItem *) getKeychainUserAndPass {
+	KeychainSearch * search = [[KeychainSearch alloc] init];
+	[search setServer:[DIBookmarksController serverAddress]];
 	NSArray *results = [search internetSearchResults];
-	[search release];
 	if ([results count] <= 0) {
 		return nil;
 	}
 	KeychainItem *item = [results objectAtIndex:0];
-	[username release];
-	username = [[item account] retain];
-	[password release];
-	password = [[item dataAsString] retain];
+	username = [item account];
+	password = [item dataAsString];
 	return item;
 }
 
-- init
-{
+
+
+- (id) init {
 	self = [super init];
 	if (self != nil) {
 		username = nil;
@@ -154,27 +125,31 @@
 		
 		lastUpdate = [[NSUserDefaults standardUserDefaults] objectForKey:DIDefaultsLastUpdateKey];
 		if (!lastUpdate) {
-			lastUpdate = [[NSDate distantPast] retain];
+			lastUpdate = [NSDate distantPast];
 		} else if (![lastUpdate isKindOfClass:[NSDate class]]) {
-			lastUpdate = [[NSUnarchiver unarchiveObjectWithData:(NSData *)lastUpdate] retain];
+			lastUpdate = [NSUnarchiver unarchiveObjectWithData:(NSData *)lastUpdate];
 		}
+		
 		fileController = [[DIFileController alloc] init];
 		loginController = [[DILoginController alloc] init];
-		throttleTimepoint = [[NSDate distantPast] retain];
+		throttleTimepoint = [NSDate distantPast];
 	}
 	return self;
 }
 
 
-- (void)applicationDidFinishLaunching:(NSNotification *)notification
-{
+
+- (void) applicationDidFinishLaunching: (NSNotification *) notification {
 	[self addToLoginItems];
 	[self getKeychainUserAndPass];
+	
+	// Show login/preferences window in case the Option key is held on launch.
 	CGEventRef event = CGEventCreate(NULL);
 	CGEventFlags modifiers = CGEventGetFlags(event);
 	if (modifiers & kCGEventFlagMaskAlternate) {
 		[self logIn];
 	}
+	
 	[self verifyMetadataCache];
 	[self updateList:nil];
 }
@@ -186,14 +161,10 @@
  Make metadata consistent if they are not.
 */  
 - (void) verifyMetadataCache {	
-	NSEnumerator * bookmarkEnumerator = [bookmarks objectEnumerator];
-	NSDictionary * bookmark;
+	NSFileManager * fM = [[NSFileManager alloc] init];
 	NSMutableArray * bookmarksNeedingUpdate = [NSMutableArray array];
-	NSFileManager * fM = [[[NSFileManager alloc] init] autorelease];
 	
-	while ((bookmark = [bookmarkEnumerator nextObject])) {
-		NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-		
+	for (NSDictionary * bookmark in bookmarks) {
 		NSString * hash = [bookmark objectForKey: DIHashKey];
 		if (hash != nil) {
 			// bookmark files
@@ -207,8 +178,6 @@
 				[fileController fetchWebarchiveForDictionary:bookmark];
 			}
 		}
-		
-		[pool release];
 	}
 
 	[fileController saveDictionaries:bookmarksNeedingUpdate];
@@ -216,31 +185,28 @@
 
 
 
-- (NSXMLDocument *)deliciousAPIResponseToRequest:(NSString *)request
-{
+- (NSXMLDocument *) deliciousAPIResponseToRequest: (NSString *) request {
 	NSString *URLString = [NSString stringWithFormat:@"https://%@:%@@%@/v1/%@", username, password, [DIBookmarksController serverAddress], request];
-	NSError *error;
 	NSURL *requestURL = [NSURL URLWithString:URLString];
 	NSMutableURLRequest *URLRequest = [NSMutableURLRequest requestWithURL:requestURL];
-	NSString *userAgentName = [NSString stringWithFormat:@"delimport/%@", [DIBookmarksController versionString]];
-	[URLRequest setValue:userAgentName forHTTPHeaderField: @"User-Agent"];
-	// NSLog(@"%f", [URLRequest timeoutInterval]);
+	[URLRequest setValue:[DIBookmarksController userAgentName] forHTTPHeaderField: @"User-Agent"];
 	
-	NSHTTPURLResponse *response;
+	NSError * error;
+	NSHTTPURLResponse * response;
 	NSData * xmlData = [NSURLConnection sendSynchronousRequest:URLRequest returningResponse:&response error:&error];
 	// NSLog(@"API request: '%@', response: %i, d/l size: %i", request, [response statusCode], [xmlData length], nil);
 	if ([response statusCode] == 401) {
 		[self logIn];
 		return nil;
 	}
-	if ([response statusCode] == 503) {
+	else if ([response statusCode] == 503) {
 		// we've been throttled
 		[self setValue:[NSDate date] forKey:@"throttleTimepoint"];
 		NSLog(@"503 http error: throttled");
 		return nil;
 	}
 	
-	NSXMLDocument *document = [[[NSXMLDocument alloc] initWithData:xmlData options:NSXMLDocumentTidyXML error:&error] autorelease];
+	NSXMLDocument *document = [[NSXMLDocument alloc] initWithData:xmlData options:NSXMLDocumentTidyXML error:&error];
 
 	if (document == nil) {
 		// Display or log the problem (just sliently retrying seems preferable to me)
@@ -254,7 +220,6 @@
 		else {
 			NSLog(@"Download failed: %@", [error localizedDescription]);
 		}
-		return nil;
 	}
 	return document;
 }
@@ -271,15 +236,14 @@
 
 
 - (NSDate*) dateFromXMLDateString: (NSString *) string {
-	NSMutableString *dateString = [[string mutableCopy] autorelease];
+	NSMutableString *dateString = [string mutableCopy];
 	[dateString replaceOccurrencesOfString:@"T" withString:@" " options:NSLiteralSearch range:NSMakeRange(0, [dateString length])];
 	[dateString replaceOccurrencesOfString:@"Z" withString:@" " options:NSLiteralSearch range:NSMakeRange(0, [dateString length])];
 	[dateString appendString:@"+0000"];
 	return [NSDate dateWithString:dateString];
 }
 
-- (NSDate *)remoteLastUpdate
-{
+- (NSDate *) remoteLastUpdate {
 	NSXMLDocument *updateDoc = [self deliciousAPIResponseToRequest:@"posts/update"];
 	if (!updateDoc) {
 		return [NSDate distantFuture];
@@ -288,8 +252,9 @@
 	return [self dateFromXMLDateString:[[updateElement attributeForName: DITimeKey] stringValue]];
 }
 
-- (void)updateList:(NSTimer *)timer
-{
+
+
+- (void) updateList: (NSTimer *) timer {
 	[self setupTimer:timer];
 
 	if (!username) {
@@ -315,8 +280,6 @@
 			NSEnumerator *postEnumerator = [[root children] objectEnumerator];
 			NSXMLElement *post;
 			while ((post = [postEnumerator nextObject])) {
-				NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-				
 				NSMutableDictionary * postDictionary = [NSMutableDictionary dictionary];
 				
 				NSString * hash = nil;
@@ -344,7 +307,6 @@
 				if (hash) {
 					[updatedPosts setObject:[NSDictionary dictionaryWithDictionary:postDictionary] forKey:hash];
 				}
-				[pool release];
 			}
 		[self setBookmarks:updatedPosts];
 		}
@@ -353,14 +315,12 @@
 }
 
 
-- (void)setBookmarks:(NSDictionary *) newMarks
-{
-	NSMutableDictionary *postsToWrite = [NSMutableDictionary dictionary];
-	NSMutableDictionary *postsToDelete = [[bookmarks mutableCopy] autorelease];
+
+- (void) setBookmarks: (NSDictionary *) newMarks {
+	NSMutableDictionary * postsToWrite = [NSMutableDictionary dictionary];
+	NSMutableDictionary * postsToDelete = [bookmarks mutableCopy];
 	
-	NSEnumerator * newMarksEnumerator = [newMarks keyEnumerator];
-	NSString * hash;
-	while ((hash = [newMarksEnumerator nextObject])) {
+	for (NSString * hash in newMarks) {
 		NSDictionary * newMark = [newMarks objectForKey:hash];
 		NSDictionary * oldMark = [bookmarks objectForKey:hash];
 		
@@ -376,13 +336,13 @@
 	}
 	
 	NSLog(@"Deleting %lu entries, then adding %lu...", [postsToDelete count], [postsToWrite count]);
+
 	[fileController deleteDictionaries:[postsToDelete allValues]];
 	[fileController saveDictionaries:[postsToWrite allValues]];
 
 	[bookmarks removeObjectsForKeys:[postsToDelete allKeys]];
 	[bookmarks addEntriesFromDictionary:postsToWrite];
 	
-	[lastUpdate release];
 	lastUpdate = [NSDate new];
 	NSData *archivedDate = [NSArchiver archivedDataWithRootObject:lastUpdate];
 	
@@ -393,14 +353,16 @@
 }
 
 
-- (void) setupTimer:(NSTimer*) timer {
+
+- (void) setupTimer: (NSTimer *) timer {
 	// get rid of the old timer
 	[timer invalidate];
 	// set up a new timer, potentially using an updated time interval
 	[NSTimer scheduledTimerWithTimeInterval:[self currentUpdateInterval] target:self selector:@selector(updateList:) userInfo:nil repeats:NO];
 	// NSLog(@"-setupTimer: Timer set to trigger in %fs", [self currentUpdateInterval]);
 }	
-	
+
+
 
 - (NSTimeInterval) currentUpdateInterval {
 	[[NSUserDefaults standardUserDefaults] synchronize];
@@ -420,6 +382,7 @@
 	
 	return (minutes * 60.0);
 }
+
 
 
 + (NSString *) serverAddress {
@@ -449,29 +412,18 @@
 }
 
 
-
-
 + (NSString *) versionString {
 	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 }
 
 
-- (void)dealloc
-{
-	[username release];
-	[password release];
-	[bookmarks release];
-	[lastUpdate release];
-	[fileController release];
-	[loginController release];
-	[throttleTimepoint release];
-	
-	[super dealloc];
++ (NSString *) userAgentName {
+	return [NSString stringWithFormat:@"delimport/%@", [DIBookmarksController versionString]];
 }
 
 
-- (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
-{
+
+- (BOOL) application: (NSApplication *) theApplication openFile: (NSString *) filename {
 	return [fileController openFile:filename];
 }
 

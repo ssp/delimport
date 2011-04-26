@@ -59,6 +59,8 @@
 	<string>NSApplication</string>
 	<key>NSSupportsSuddenTermination</key>
 	<string>YES</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.5</string>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>

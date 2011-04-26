@@ -31,9 +31,12 @@
 	[super finalize];
 }
 
-#pragma mark -
-#pragma mark Notifications
 
+
+
+
+#pragma mark -
+#pragma mark Notification
 
 - (void) downloadFinishedWithStatus: (NSNotification*) notification {
 	NSDictionary * statusDictionary = [notification userInfo];
@@ -221,8 +224,7 @@
 #pragma mark -
 #pragma mark Opening files
 
-- (BOOL)openFile:(NSString *)filename
-{
+- (BOOL) openFile: (NSString *) filename {
 	NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filename];
 	if (!dict) {
 		return NO;

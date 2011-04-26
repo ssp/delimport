@@ -42,6 +42,7 @@
 + (NSString *) serverAddress;
 + (NSString *) serviceName;
 + (NSString *) versionString;
++ (NSString *) userAgentName;
 
 + (void) enableSuddenTermination;
 + (void) disableSuddenTermination;
