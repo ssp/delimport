@@ -198,7 +198,12 @@
 
 
 /*
+ Prevent caching of requests.
 */
+- (NSURLRequest*) webView: (WebView*) sender resource: (id) identifier willSendRequest: (NSURLRequest*) request redirectResponse: (NSURLResponse*) redirectResponse fromDataSource: (WebDataSource*) dataSource {
+	NSMutableURLRequest * myRequest = [request mutableCopy];
+	[myRequest setCachePolicy:NSURLCacheStorageNotAllowed];
+	return myRequest;
 }
 
 
