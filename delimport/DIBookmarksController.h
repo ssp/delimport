@@ -32,6 +32,10 @@
 }
 
 - (void) logIn;
+
+- (NSDictionary *) loadBookmarksDictionary;
+- (void) saveBookmarksDictionary: (NSDictionary *) list;
+
 - (void) verifyMetadataCache;
 - (void) updateList:(NSTimer *)timer;
 - (void) setBookmarks:(NSDictionary *)newMarks;
@@ -43,6 +47,7 @@
 + (NSString *) serviceName;
 + (NSString *) versionString;
 + (NSString *) userAgentName;
++ (NSString *) DIApplicationSupportFolderPath;
 
 + (void) enableSuddenTermination;
 + (void) disableSuddenTermination;

@@ -24,11 +24,13 @@
 
 @interface DIFileController : NSObject {
 	DIQueue * downloadQueue;
+	NSMutableDictionary * failDict;
 }
 
 + (NSString *) metadataPathForSubfolder: (NSString *) folderName;
 + (NSString *) bookmarkPathForHash: (NSString*) hash;
 + (NSString *) webarchivePathForHash: (NSString*) hash;
++ (NSString *) failDictPath;
 + (NSString *) filenameExtensionForPreferredService;
 
 - (NSDictionary*) readDictionaryForHash:(NSString*) hash;

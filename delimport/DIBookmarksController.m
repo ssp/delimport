@@ -13,6 +13,9 @@
 #import <Keychain/KeychainSearch.h>
 #import <Keychain/KeychainItem.h>
 
+#define DIBookmarksPlistFileName @"Bookmarks.plist"
+
+
 
 @implementation DIBookmarksController
 
@@ -116,12 +119,8 @@
 	if (self != nil) {
 		username = nil;
 		password = nil;
-		NSDictionary *bookmarkDictionary = [[NSUserDefaults standardUserDefaults] objectForKey: DIDefaultsBookmarksDictKey];
-		if (!bookmarkDictionary) {
-			bookmarks = [[NSMutableDictionary alloc] init];
-		} else {
-			bookmarks = [[NSMutableDictionary alloc] initWithDictionary: bookmarkDictionary];
-		}
+		
+		bookmarks = [[self loadBookmarksDictionary] mutableCopy];
 		
 		lastUpdate = [[NSUserDefaults standardUserDefaults] objectForKey:DIDefaultsLastUpdateKey];
 		if (!lastUpdate) {
@@ -337,13 +336,50 @@
 	[bookmarks removeObjectsForKeys:[postsToDelete allKeys]];
 	[bookmarks addEntriesFromDictionary:postsToWrite];
 	
-	lastUpdate = [NSDate new];
-	NSData *archivedDate = [NSArchiver archivedDataWithRootObject:lastUpdate];
+	[self saveBookmarksDictionary:bookmarks];
+	[[NSUserDefaults standardUserDefaults] setObject:[NSDate new] forKey:DIDefaultsLastUpdateKey];
+}
+
+
+
+- (NSDictionary *) loadBookmarksDictionary {
+	NSString * DIApplicationSupportPath = [DIBookmarksController DIApplicationSupportFolderPath];
+	NSString * dictionaryPath = [DIApplicationSupportPath stringByAppendingPathComponent:DIBookmarksPlistFileName];
+
+	NSDictionary * bookmarksList = [NSMutableDictionary dictionaryWithContentsOfFile:dictionaryPath];
+
+	if (!bookmarksList) {
+		NSLog(@"Could not find stored bookmarks at %@, starting with an empty list.", dictionaryPath);
+		bookmarksList = [NSMutableDictionary dictionary];
+	}
 	
-	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	[defaults setObject:bookmarks forKey:DIDefaultsBookmarksDictKey];
-	[defaults setObject:archivedDate forKey:DIDefaultsLastUpdateKey];
-	[defaults synchronize];
+	return bookmarksList;
+}
+
+
+
+- (void) saveBookmarksDictionary: (NSDictionary *) list {
+	if (list) {
+		NSString * DIApplicationSupportPath = [DIBookmarksController DIApplicationSupportFolderPath]; 
+		NSFileManager * fM = [[NSFileManager alloc] init];
+		
+		if (![fM fileExistsAtPath:DIApplicationSupportPath]) {
+			NSError * error;
+			if (![fM createDirectoryAtPath:DIApplicationSupportPath withIntermediateDirectories:YES attributes:nil error:&error]) {
+				NSLog(@"Could not create Application Support subfolder %@: %@", DIApplicationSupportPath, [error localizedDescription]);
+			}
+		}
+
+		if ([fM fileExistsAtPath:DIApplicationSupportPath]) {
+			NSString * plistPath = [DIApplicationSupportPath stringByAppendingPathComponent:DIBookmarksPlistFileName];
+			if (![list writeToFile:plistPath atomically:YES]) {
+				NSLog(@"Failed to write the bookmarks dictionary at %@.", plistPath);
+			}
+		}
+		else {
+			NSLog(@"Could not store bookmarks because delimport’s Application support subfolder %@ does not exist.", DIApplicationSupportPath);
+		}
+	}
 }
 
 
@@ -415,6 +451,10 @@
 	return [NSString stringWithFormat:@"delimport/%@", [DIBookmarksController versionString]];
 }
 
+
++ (NSString *) DIApplicationSupportFolderPath {
+	return [@"~/Library/Application Support/delimport/" stringByExpandingTildeInPath];
+}
 
 
 - (BOOL) application: (NSApplication *) theApplication openFile: (NSString *) filename {

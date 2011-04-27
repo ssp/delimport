@@ -210,6 +210,8 @@
 		6C5AA489104E912A0092E350 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "del.icio.us Spotlight Interface.xcodeproj"; path = "spotlight_interface/del.icio.us Spotlight Interface.xcodeproj"; sourceTree = "<group>"; };
 		6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Keychain.xcodeproj; path = ../Keychain/Keychain.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6CA65EAC13679C9E003D9F82 /* Bookmarks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Bookmarks.plist; path = "../../../../Library/Application Support/delimport/Bookmarks.plist"; sourceTree = SOURCE_ROOT; };
+		6CA65EAD13679CA5003D9F82 /* Failed Downloads.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Failed Downloads.plist"; path = "../../../../Library/Application Support/delimport/Failed Downloads.plist"; sourceTree = SOURCE_ROOT; };
 		6CA955BD104AA3E100F225D2 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		6CA95690104AADDB00F225D2 /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6CA95703104AB8B000F225D2 /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = ../../../builds/Deployment/Keychain.framework; sourceTree = SOURCE_ROOT; };
@@ -295,6 +297,8 @@
 			children = (
 				6C383FF21066F2370001AAAD /* Readme.markdown */,
 				6CCFAE0E12BE462D00B6A09A /* org.ianhenderson.delimport.plist */,
+				6CA65EAC13679C9E003D9F82 /* Bookmarks.plist */,
+				6CA65EAD13679CA5003D9F82 /* Failed Downloads.plist */,
 				6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */,
 				6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,

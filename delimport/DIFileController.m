@@ -12,6 +12,9 @@
 #import "DIWebarchiveDownload.h"
 #import <sys/xattr.h>
 
+#define DIFAILPlistFileName @"Failed Downloads.plist"
+
+
 
 @implementation DIFileController
 
@@ -19,11 +22,16 @@
 	self = [super init];
 	if (self) {
 		downloadQueue = [[DIQueue alloc] init];
+		failDict = [NSMutableDictionary dictionaryWithContentsOfFile:[DIFileController failDictPath]];
+		if (!failDict) {
+			failDict = [NSMutableDictionary dictionary];
+		}
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(downloadFinishedWithStatus:) name:DIWebarchiveDownloadFinishedNotification object:nil];
 	}
 	
 	return self;
 }
+
 
 
 - (void) finalize {
@@ -44,11 +52,14 @@
 	NSInteger status = [[statusDictionary objectForKey:DIStatusCodeKey] integerValue];
 	if (status != 200) {
 		NSString * hash = [statusDictionary objectForKey:DIStatusHashKey];
-		NSString * defaultsKey = [NSString stringWithFormat:@"%@.%@", DIDefaultsFAILKey, hash];
-		[[[NSUserDefaultsController sharedUserDefaultsController] values] setValue:statusDictionary forKeyPath:defaultsKey];
+		[failDict setObject:statusDictionary forKey:hash];
+		if (![failDict writeToFile:[DIFileController failDictPath] atomically:YES]) {
+			NSLog(@"Could not write Failure Dictionary at %@", [DIFileController failDictPath]);
+		}
 	}
-	
 }
+
+
 
 
 
@@ -110,6 +121,15 @@
 	}
 	
 	return path;
+}
+
+
+
+/*
+ Helper returning the path to the property list file containing information about download failures.
+*/
++ (NSString *) failDictPath {
+	return [[DIBookmarksController DIApplicationSupportFolderPath] stringByAppendingPathComponent:DIFAILPlistFileName];
 }
 
 
@@ -201,9 +221,7 @@
  Queue download of the dictionary item if it hasn't been marked as problematic.
 */
 - (void) fetchWebarchiveForDictionary: (NSDictionary *) dictionary {
-	NSString * bookmarkFailKey = [NSString stringWithFormat:@"%@.%@", DIDefaultsFAILKey, [dictionary objectForKey:DIHashKey]];
-	BOOL isProblematic = ([[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKeyPath:bookmarkFailKey] != nil);
-	if (!isProblematic) {
+	if (![failDict objectForKey:[dictionary objectForKey:DIHashKey]]) {
 		DIWebarchiveDownload * download = [[DIWebarchiveDownload alloc] init];
 		NSURL * URL = [NSURL URLWithString:[dictionary objectForKey:DIURLKey]];
 		download.URL = URL;
