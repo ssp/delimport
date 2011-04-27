@@ -164,19 +164,17 @@
 	NSFileManager * fM = [[NSFileManager alloc] init];
 	NSMutableArray * bookmarksNeedingUpdate = [NSMutableArray array];
 	
-	for (NSDictionary * bookmark in bookmarks) {
-		NSString * hash = [bookmark objectForKey: DIHashKey];
-		if (hash != nil) {
-			// bookmark files
-			NSDictionary * fileBookmark = [fileController readDictionaryForHash:hash];
-			if (fileBookmark == nil || [bookmark isEqualToDictionary:fileBookmark] == NO) {
-				// we don't have a bookmkark or the bookmark ist not in sync with the cache
-				// NSLog(@"replacing cache file %@", hash);
-				[bookmarksNeedingUpdate addObject:bookmark];
-			}
-			else if (![fM fileExistsAtPath:[DIFileController webarchivePathForHash:hash]]) {
-				[fileController fetchWebarchiveForDictionary:bookmark];
-			}
+	for (NSString * hash in bookmarks) {
+		NSDictionary *  bookmark = [bookmarks objectForKey:hash];
+		// bookmark files
+		NSDictionary * fileBookmark = [fileController readDictionaryForHash:hash];
+		if (fileBookmark == nil || [bookmark isEqualToDictionary:fileBookmark] == NO) {
+			// we don't have a bookmark or the bookmark ist not in sync with the cache
+			// NSLog(@"replacing cache file %@", hash);
+			[bookmarksNeedingUpdate addObject:bookmark];
+		}
+		else if (![fM fileExistsAtPath:[DIFileController webarchivePathForHash:hash]]) {
+			[fileController fetchWebarchiveForDictionary:bookmark];
 		}
 	}
 
@@ -277,15 +275,11 @@
 			// avoid reading those as they'll destroy our metadata cache
 			NSMutableDictionary *updatedPosts = [NSMutableDictionary dictionary];
 
-			NSEnumerator *postEnumerator = [[root children] objectEnumerator];
-			NSXMLElement *post;
-			while ((post = [postEnumerator nextObject])) {
+			for (NSXMLElement * post in [root children]) {
 				NSMutableDictionary * postDictionary = [NSMutableDictionary dictionary];
-				
 				NSString * hash = nil;
-				NSEnumerator * attributeEnumerator = [[post attributes] objectEnumerator];
-				NSXMLNode * attribute;
-				while ((attribute = [attributeEnumerator nextObject])) {
+		
+				for (NSXMLNode * attribute in [post attributes]) {
 					if ([[attribute name] isEqualToString: DITimeKey]) {
 						[postDictionary setObject:[self dateFromXMLDateString:[attribute stringValue]] forKey:[attribute name]];
 					} else if ([[attribute name] isEqualToString: DITagKey]) {
