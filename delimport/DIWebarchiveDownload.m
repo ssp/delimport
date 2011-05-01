@@ -37,6 +37,9 @@
 	[webPrefs setJavaScriptCanOpenWindowsAutomatically:NO];
 	[webPrefs setUsesPageCache:NO];
 	[webPrefs setCacheModel:WebCacheModelDocumentViewer];
+	
+	NSURLCache * urlCache = [[NSURLCache alloc] initWithMemoryCapacity:0 diskCapacity:0 diskPath:nil];
+	[NSURLCache setSharedURLCache:urlCache];
 }
 
 - (id) init {
