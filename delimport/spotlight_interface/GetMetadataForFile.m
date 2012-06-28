@@ -52,12 +52,12 @@ Boolean GetMetadataForFile(void* thisInterface,
 			   CFStringRef pathToFile)
 {
 	NSDictionary *dictionary;
-	NSMutableDictionary *attributes = (NSMutableDictionary*) attrs;
+	NSMutableDictionary *attributes = (__bridge NSMutableDictionary*) attrs;
 	NSAutoreleasePool *pool;
 	pool = [[NSAutoreleasePool alloc] init];
 	BOOL result = NO;
 	
-	dictionary = [[[NSDictionary alloc] initWithContentsOfFile:(NSString *)pathToFile] autorelease];
+	dictionary = [[[NSDictionary alloc] initWithContentsOfFile:(__bridge NSString *)pathToFile] autorelease];
 	if (dictionary != nil) {
 		NSString * displayName = [dictionary objectForKey: DINameKey];
 		if ( displayName == nil ) { // try old-style key if no name is found

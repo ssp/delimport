@@ -90,10 +90,10 @@
 	
 	if (changed) {
 		// Set new value in pref
-		CFPreferencesSetValue((CFStringRef) 
-							  @"AutoLaunchedApplicationDictionary", loginItems, (CFStringRef) 
-							  @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost); 
-		CFPreferencesSynchronize((CFStringRef) @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost); 
+		CFPreferencesSetValue((CFStringRef)@"AutoLaunchedApplicationDictionary", (__bridge CFArrayRef) loginItems,
+							  (CFStringRef)@"loginwindow", kCFPreferencesCurrentUser,
+							  kCFPreferencesAnyHost);
+		CFPreferencesSynchronize((CFStringRef) @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
 	}
 }
 
@@ -227,8 +227,14 @@
 
 
 - (void) logIn {
-	[loginController getUsername:&username password:&password];
+	NSString * myUsername;
+	NSString * myPassword;
+	
+	[loginController getUsername:&myUsername password:&myPassword];
 
+	username = myUsername;
+	password = myPassword;
+	
 	Keychain *keychain = [Keychain defaultKeychain];
 
 	[keychain addInternetPassword:password onServer:[DIBookmarksController serverAddress] forAccount:username port:80 path:@"" inSecurityDomain:@"" protocol:kSecProtocolTypeHTTP auth:kSecAuthenticationTypeHTTPDigest replaceExisting:YES];
