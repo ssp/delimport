@@ -49,6 +49,4 @@
 + (NSString *) userAgentName;
 + (NSString *) DIApplicationSupportFolderPath;
 
-+ (void) enableSuddenTermination;
-+ (void) disableSuddenTermination;
 @end
