@@ -53,37 +53,36 @@ Boolean GetMetadataForFile(void* thisInterface,
 {
 	NSDictionary *dictionary;
 	NSMutableDictionary *attributes = (__bridge NSMutableDictionary*) attrs;
-	NSAutoreleasePool *pool;
-	pool = [[NSAutoreleasePool alloc] init];
 	BOOL result = NO;
-	
-	dictionary = [[[NSDictionary alloc] initWithContentsOfFile:(__bridge NSString *)pathToFile] autorelease];
-	if (dictionary != nil) {
-		NSString * displayName = [dictionary objectForKey: DINameKey];
-		if ( displayName == nil ) { // try old-style key if no name is found
-			displayName = [dictionary objectForKey: DIDeliciousNameKey];
-		}
-		[attributes setObject: displayName forKey:(NSString *)kMDItemDisplayName];			
 
-		NSString * URLString = [dictionary objectForKey: DIURLKey ];
-		if ( URLString == nil ) { // try old-style key if no URL is found
-			URLString = [dictionary objectForKey: DIDeliciousURLKey ];
-		}
-		[attributes setObject: URLString forKey:@"kMDItemURL"];			
-		
-		NSString * description = [dictionary objectForKey:@"extended"];
-		if ( description != nil) {
-			[attributes setObject:description forKey:(NSString *)kMDItemDescription];
-		} else {
-			[attributes setObject:@"" forKey:(NSString *)kMDItemDescription];
-		}
-		
-		[attributes setObject:[dictionary objectForKey: DITagKey ] forKey:(NSString *)kMDItemKeywords];
-		[attributes setObject:[dictionary objectForKey: DITimeKey ] forKey:(NSString *)kMDItemContentCreationDate];
-		[attributes setObject:[dictionary objectForKey: DITimeKey ] forKey:(NSString *)kMDItemContentModificationDate];
+	@autoreleasepool {
+		dictionary = [[NSDictionary alloc] initWithContentsOfFile:(__bridge NSString *)pathToFile];
+		if (dictionary != nil) {
+			NSString * displayName = [dictionary objectForKey: DINameKey];
+			if ( displayName == nil ) { // try old-style key if no name is found
+				displayName = [dictionary objectForKey: DIDeliciousNameKey];
+			}
+			[attributes setObject: displayName forKey:(NSString *)kMDItemDisplayName];
 
-		result = YES;
-	}	
-	[pool release];
+			NSString * URLString = [dictionary objectForKey: DIURLKey ];
+			if ( URLString == nil ) { // try old-style key if no URL is found
+				URLString = [dictionary objectForKey: DIDeliciousURLKey ];
+			}
+			[attributes setObject: URLString forKey:@"kMDItemURL"];
+			
+			NSString * description = [dictionary objectForKey:@"extended"];
+			if ( description != nil) {
+				[attributes setObject:description forKey:(NSString *)kMDItemDescription];
+			} else {
+				[attributes setObject:@"" forKey:(NSString *)kMDItemDescription];
+			}
+			
+			[attributes setObject:[dictionary objectForKey: DITagKey ] forKey:(NSString *)kMDItemKeywords];
+			[attributes setObject:[dictionary objectForKey: DITimeKey ] forKey:(NSString *)kMDItemContentCreationDate];
+			[attributes setObject:[dictionary objectForKey: DITimeKey ] forKey:(NSString *)kMDItemContentModificationDate];
+
+			result = YES;
+		}
+    }
     return result;
 }

@@ -22,7 +22,7 @@
 // Shamelessly stolen from http://www.cocoadev.com/index.pl?AddingYourAppToLoginWindow
 - (void)addToLoginItems {
 	// First, get the login items from loginwindow pref
-	NSMutableArray* loginItems = (NSMutableArray*) CFPreferencesCopyValue((CFStringRef) @"AutoLaunchedApplicationDictionary",
+	NSMutableArray* loginItems = (__bridge_transfer NSMutableArray*) CFPreferencesCopyValue((CFStringRef) @"AutoLaunchedApplicationDictionary",
 		(CFStringRef) @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
 	BOOL changed = NO, foundMyAppItem = NO;
 	int myAppItemIndex = 0;

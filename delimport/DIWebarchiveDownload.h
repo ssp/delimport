@@ -28,8 +28,8 @@
 	WebView * webView;
 }
 
-@property (retain) NSURL * URL;
-@property (retain) NSString * webarchivePath;
-@property (retain) NSString * hash;
+@property  NSURL * URL;
+@property  NSString * webarchivePath;
+@property  NSString * hash;
 
 @end

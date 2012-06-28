@@ -38,9 +38,8 @@
 
 
 
-- (void) finalize {
+- (void) dealloc {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	[super finalize];
 }
 
 
@@ -76,7 +75,7 @@
 */
 + (NSString *) metadataPathForSubfolder: (NSString *) folderName {
 	NSString *metadataPath = [[@"~/Library/Metadata/" stringByExpandingTildeInPath] stringByAppendingPathComponent: folderName];
-	NSFileManager * fileManager = [[[NSFileManager alloc] init] autorelease];
+	NSFileManager * fileManager = [[NSFileManager alloc] init];
 	BOOL isDir;
 	NSString * result = nil;
 	NSError * myError;
@@ -163,7 +162,7 @@
 
 
 - (void) saveDictionary: (NSDictionary *) dictionary {
-	NSMutableDictionary *mutable = [[dictionary mutableCopy] autorelease];
+	NSMutableDictionary *mutable = [dictionary mutableCopy];
 	NSString *path = [[self class] bookmarkPathForHash: [mutable objectForKey: DIHashKey]];
 
 	if ( path != nil ) {
@@ -171,7 +170,7 @@
 		[mutable removeObjectForKey: DIHashKey];
 		[mutable writeToFile:path atomically:YES];
 
-		NSFileManager * fM = [[[NSFileManager alloc] init] autorelease];
+		NSFileManager * fM = [[NSFileManager alloc] init];
 		NSError * error;
 		
 		if (![fM setAttributes:[NSDictionary dictionaryWithObject:osType forKey:NSFileHFSTypeCode] ofItemAtPath:path error:&error]) {
@@ -200,7 +199,7 @@
 - (void) deleteDictionary: (NSDictionary *) dictionary {
 	NSString *path = [[self class] bookmarkPathForHash: [dictionary objectForKey: DIHashKey]];
 	if ( path != nil) {
-		[[[[NSFileManager alloc] init] autorelease] removeFileAtPath:path handler:nil];
+		[[[NSFileManager alloc] init] removeFileAtPath:path handler:nil];
 	}
 }
 
