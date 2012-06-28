@@ -15,6 +15,10 @@
 #define DIFAILPlistFileName @"Failed Downloads.plist"
 
 
+@interface DIFileController (Callback)
+- (void) downloadFinishedWithStatus: (NSNotification*) notification;
+@end
+
 
 @implementation DIFileController
 
@@ -166,11 +170,16 @@
 		NSNumber *osType = [NSNumber numberWithUnsignedLong:'DELi'];
 		[mutable removeObjectForKey: DIHashKey];
 		[mutable writeToFile:path atomically:YES];
-		NSFileManager * fM = [[[NSFileManager alloc] init] autorelease];
-		
-		[fM changeFileAttributes:[NSDictionary dictionaryWithObject:osType forKey:NSFileHFSTypeCode] atPath:path];
 
-		/*  Set creation date do bookmark date.
+		NSFileManager * fM = [[[NSFileManager alloc] init] autorelease];
+		NSError * error;
+		
+		if (![fM setAttributes:[NSDictionary dictionaryWithObject:osType forKey:NSFileHFSTypeCode] ofItemAtPath:path error:&error]) {
+			NSLog(@"Failed to set HFS Type Code for file %@ (%@)", path, [error localizedDescription]);
+		}
+		
+
+		/*  Set creation date to bookmark date.
 			Setting the modification date might be more useful, but would be 'wrong' 
 				as we don't know when the bookmark was last edited.
 			Investigate setting the last used date as well? 
@@ -178,7 +187,10 @@
 		*/
 		NSDate * date = [mutable objectForKey: DITimeKey];
 		if (date) {
-			[fM changeFileAttributes:[NSDictionary dictionaryWithObject:date forKey:NSFileCreationDate] atPath:path];
+			if (![fM setAttributes:[NSDictionary dictionaryWithObject:date forKey:NSFileCreationDate] ofItemAtPath:path error:&error]) {
+				NSLog(@"Failed to set creation date for file %@ (%@)", path, [error localizedDescription]);
+
+			}
 		}
 	}
 }

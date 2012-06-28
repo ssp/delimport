@@ -17,8 +17,6 @@
 			<array>
 				<string>org.ianhenderson.delicious.bookmark</string>
 			</array>
-			<key>NSPersistentStoreTypeKey</key>
-			<string>XML</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeIconFile</key>
@@ -31,8 +29,6 @@
 			<array>
 				<string>org.ianhenderson.pinboard.bookmark</string>
 			</array>
-			<key>NSPersistentStoreTypeKey</key>
-			<string>XML</string>
 		</dict>
 	</array>
 	<key>CFBundleExecutable</key>
@@ -45,22 +41,26 @@
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
-	<key>CFBundleSignature</key>
-	<string>DeLi</string>
-	<key>CFBundleVersion</key>
-	<string>55</string>
 	<key>CFBundleShortVersionString</key>
 	<string>0.6a3</string>
+	<key>CFBundleSignature</key>
+	<string>DeLi</string>
+	<key>CFBundleURLTypes</key>
+	<array/>
+	<key>CFBundleVersion</key>
+	<string>55</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.5</string>
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSServices</key>
+	<array/>
 	<key>NSSupportsSuddenTermination</key>
 	<string>YES</string>
-	<key>LSMinimumSystemVersion</key>
-	<string>10.5</string>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
@@ -70,6 +70,8 @@
 			</array>
 			<key>UTTypeDescription</key>
 			<string>delicious Bookmark</string>
+			<key>UTTypeIconFile</key>
+			<string>delicious</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.ianhenderson.delicious.bookmark</string>
 			<key>UTTypeTagSpecification</key>
@@ -89,6 +91,8 @@
 			</array>
 			<key>UTTypeDescription</key>
 			<string>pinboard Bookmark</string>
+			<key>UTTypeIconFile</key>
+			<string>pinboard</string>
 			<key>UTTypeIdentifier</key>
 			<string>org.ianhenderson.pinboard.bookmark</string>
 			<key>UTTypeTagSpecification</key>
@@ -102,5 +106,7 @@
 			</dict>
 		</dict>
 	</array>
+	<key>UTImportedTypeDeclarations</key>
+	<array/>
 </dict>
 </plist>

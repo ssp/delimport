@@ -102,13 +102,16 @@
 - (KeychainItem *) getKeychainUserAndPass {
 	KeychainSearch * search = [[KeychainSearch alloc] init];
 	[search setServer:[DIBookmarksController serverAddress]];
+
 	NSArray *results = [search internetSearchResults];
 	if ([results count] <= 0) {
 		return nil;
 	}
+
 	KeychainItem *item = [results objectAtIndex:0];
 	username = [item account];
 	password = [item dataAsString];
+
 	return item;
 }
 
