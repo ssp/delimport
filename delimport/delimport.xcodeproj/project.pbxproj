@@ -25,6 +25,7 @@
 /* Begin PBXBuildFile section */
 		6C21E9A412D24F4C00091671 /* DIServiceTypeToIconPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C21E9A312D24F4C00091671 /* DIServiceTypeToIconPath.m */; };
 		6C21EA2112D2592900091671 /* pinboard.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6C21EA2012D2592900091671 /* pinboard.icns */; };
+		6C2D48CB159C8CB8003C1019 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2D48CA159C8CB8003C1019 /* CoreServices.framework */; };
 		6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C2FC9670CD9396900C1FD91 /* Localizable.strings */; };
 		6C41DF3513632F0200EB6477 /* DIWebarchiveDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C41DF3413632F0200EB6477 /* DIWebarchiveDownload.m */; };
 		6C41E0201364335C00EB6477 /* DIQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C41E01F1364335C00EB6477 /* DIQueue.m */; };
@@ -185,7 +186,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = ../../../../../../../../../System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -197,6 +198,8 @@
 		6C21EC5A12D2909500091671 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C21EC6912D290A100091671 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LogIn.xib; sourceTree = "<group>"; };
 		6C21EC6A12D290B100091671 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6C2D48C7159C71F9003C1019 /* delimport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = delimport.entitlements; sourceTree = "<group>"; };
+		6C2D48CA159C8CB8003C1019 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		6C383FF21066F2370001AAAD /* Readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Readme.markdown; path = ../Readme.markdown; sourceTree = "<group>"; };
 		6C41DF3313632F0200EB6477 /* DIWebarchiveDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIWebarchiveDownload.h; sourceTree = "<group>"; };
 		6C41DF3413632F0200EB6477 /* DIWebarchiveDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DIWebarchiveDownload.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -237,6 +240,7 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				6CA95704104AB8B000F225D2 /* Keychain.framework in Frameworks */,
 				6CCFAD1112BE394200B6A09A /* WebKit.framework in Frameworks */,
+				6C2D48CB159C8CB8003C1019 /* CoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +271,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C2D48CA159C8CB8003C1019 /* CoreServices.framework */,
 				6CA95703104AB8B000F225D2 /* Keychain.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				6CCFAD1012BE394200B6A09A /* WebKit.framework */,
@@ -295,6 +300,7 @@
 		29B97314FDCFA39411CA2CEA /* delimport */ = {
 			isa = PBXGroup;
 			children = (
+				6C2D48C7159C71F9003C1019 /* delimport.entitlements */,
 				6C383FF21066F2370001AAAD /* Readme.markdown */,
 				6CCFAE0E12BE462D00B6A09A /* org.ianhenderson.delimport.plist */,
 				6CA65EAC13679C9E003D9F82 /* Bookmarks.plist */,
@@ -400,7 +406,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 6CCC64330A40CC7F00540A50 /* Build configuration list for PBXProject "delimport" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -670,10 +676,14 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = delimport.entitlements;
 				CODE_SIGN_IDENTITY = "earthlingsoft Software";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Versions/A/Frameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -699,7 +709,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = delimport.entitlements;
 				CODE_SIGN_IDENTITY = "earthlingsoft Software";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Versions/A/Frameworks\"",
+				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = delimport_Prefix.pch;
@@ -724,15 +739,12 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CODE_SIGN_IDENTITY = earthlingsoft;
 				COPY_PHASE_STRIP = NO;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_GLOBAL_CONSTRUCTORS = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
-				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = YES;
 				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_MISSING_PARENTHESES = YES;
@@ -758,15 +770,12 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CODE_SIGN_IDENTITY = earthlingsoft;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_GLOBAL_CONSTRUCTORS = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
-				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = YES;
 				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_MISSING_PARENTHESES = YES;

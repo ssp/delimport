@@ -220,7 +220,9 @@
 		NSError * error;
 		
 		if (![fM setAttributes:[NSDictionary dictionaryWithObject:osType forKey:NSFileHFSTypeCode] ofItemAtPath:path error:&error]) {
-			NSLog(@"Failed to set HFS Type Code for file %@ (%@)", path, [error localizedDescription]);
+			if (error) {
+				NSLog(@"Failed to set HFS Type Code for file %@ (%@)", path, [error localizedDescription]);
+			}
 		}
 		
 
@@ -233,8 +235,9 @@
 		NSDate * date = [mutable objectForKey: DITimeKey];
 		if (date) {
 			if (![fM setAttributes:[NSDictionary dictionaryWithObject:date forKey:NSFileCreationDate] ofItemAtPath:path error:&error]) {
-				NSLog(@"Failed to set creation date for file %@ (%@)", path, [error localizedDescription]);
-
+				if (error) {
+					NSLog(@"Failed to set creation date for file %@ (%@)", path, [error localizedDescription]);
+				}
 			}
 		}
 	}

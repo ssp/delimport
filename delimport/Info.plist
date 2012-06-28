@@ -42,23 +42,19 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.6a3</string>
+	<string>0.7a</string>
 	<key>CFBundleSignature</key>
 	<string>DeLi</string>
-	<key>CFBundleURLTypes</key>
-	<array/>
 	<key>CFBundleVersion</key>
 	<string>55</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.5</string>
+	<string>10.7</string>
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>NSServices</key>
-	<array/>
 	<key>NSSupportsSuddenTermination</key>
 	<string>YES</string>
 	<key>UTExportedTypeDeclarations</key>
@@ -106,7 +102,5 @@
 			</dict>
 		</dict>
 	</array>
-	<key>UTImportedTypeDeclarations</key>
-	<array/>
 </dict>
 </plist>
