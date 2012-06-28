@@ -9,6 +9,7 @@
 #import "DIBookmarksController.h"
 #import "DIFileController.h"
 #import "DILoginController.h"
+#import <LaunchServices/LSSharedFileList.h>
 #import <Keychain/Keychain.h>
 #import <Keychain/KeychainSearch.h>
 #import <Keychain/KeychainItem.h>
@@ -19,67 +20,24 @@
 
 @implementation DIBookmarksController
 
-// Shamelessly stolen from http://www.cocoadev.com/index.pl?AddingYourAppToLoginWindow
-- (void)addToLoginItems {
-	// First, get the login items from loginwindow pref
-	NSMutableArray* loginItems = (__bridge_transfer NSMutableArray*) CFPreferencesCopyValue((CFStringRef) @"AutoLaunchedApplicationDictionary",
-		(CFStringRef) @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
-	BOOL changed = NO, foundMyAppItem = NO;
-	int myAppItemIndex = 0;
-	NSString *kDTMyAppAppPath = [[NSBundle mainBundle] bundlePath]; 
-	
-	if (loginItems) {
-		NSEnumerator *enumer;
-		NSDictionary *itemDict;
-		
-		// Detirmine if myApp is in list
-		enumer=[loginItems objectEnumerator];
-		while ((itemDict=[enumer nextObject])) {
-			if ([[itemDict objectForKey:@"Path"] isEqualToString:kDTMyAppAppPath]) {
-				foundMyAppItem = YES;
-				break;
-			}
-			myAppItemIndex++;
-		}
-	}
-	if (!foundMyAppItem && ![[NSUserDefaults standardUserDefaults] boolForKey:DILoginAlertSuppressedKey]) {
-		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Automatically launch delimport on login?", @"Headline for add to login items dialogue") defaultButton:NSLocalizedString(@"Add", @"Add") alternateButton:NSLocalizedString(@"Don't Add", @"Don't Add") 
-			otherButton:nil 
-			informativeTextWithFormat:NSLocalizedString(@"delimport will be added to your login items. This will ensure delimport runs and downloads your del.icio.us bookmarks whenever you are using this account.", @"Explanatory text for add to login items dialogue")
+- (void) addToLoginItems {
+	LSSharedFileListItemRef myLoginItem = [self mainBundleLoginItem];
+
+	if (myLoginItem == NULL
+		&& ![[NSUserDefaults standardUserDefaults] boolForKey:DILoginAlertSuppressedKey]) {
+		NSAlert *alert = [NSAlert 
+						  alertWithMessageText:NSLocalizedString(@"Automatically launch delimport on login?", @"Headline for add to login items dialogue") defaultButton:NSLocalizedString(@"Add", @"Add") alternateButton:NSLocalizedString(@"Don't Add", @"Don't Add") 
+						  otherButton:nil 
+						  informativeTextWithFormat:NSLocalizedString(@"delimport will be added to your login items. This will ensure delimport runs and downloads your del.icio.us bookmarks whenever you are using this account.", @"Explanatory text for add to login items dialogue")
 			];
+		
 		[NSApp activateIgnoringOtherApps:YES];
 		[[alert window] makeKeyAndOrderFront:self];
 		[[alert window] center];
 		[alert setShowsSuppressionButton:YES];
 		
 		if ([alert runModal] == NSAlertDefaultReturn) {
-			// OK, Create item and add it - should work even if no pref existed
-			NSDictionary	*myAppItem;
-			FSRef			myFSRef;
-			OSStatus		fsResult = FSPathMakeRef((const UInt8 *)[kDTMyAppAppPath fileSystemRepresentation], &myFSRef,NULL);
-			
-			if (loginItems) {
-				loginItems = [loginItems mutableCopy];
-			} else {
-				loginItems = [[NSMutableArray alloc] init];	// didn't find this pref, make from scratch
-			}
-			// ref from path as NSString 
-			if (fsResult == noErr) {
-				AliasHandle myAliasHndl = NULL;
-				
-				//make alias record, a handle of variable length			
-				fsResult = FSNewAlias(NULL, &myFSRef, &myAliasHndl);
-				if (fsResult == noErr && myAliasHndl != NULL) {
-					// Add the item
-					myAppItem = [NSDictionary dictionaryWithObjectsAndKeys:
-						[NSData dataWithBytes:*myAliasHndl length:GetHandleSize((Handle)myAliasHndl)],
-						@"AliasData", [NSNumber numberWithBool:NO], @"Hide", kDTMyAppAppPath, @"Path", nil];
-					[loginItems addObject:myAppItem];
-					// release the new alias handle
-					DisposeHandle((Handle)myAliasHndl);
-					changed = YES;
-				}
-			}
+			[self addMainBundleToLoginItems];
 		}
 		
 		if ([[alert suppressionButton] state] == NSOnState) {
@@ -87,14 +45,55 @@
 			[[NSUserDefaults standardUserDefaults] synchronize];
 		}
 	}
+}
+
+
+
+// Return a LSSharedFileListItemRef item for our bundle, if there is one in the list of login items.
+// See http://rhult.github.com/preference-to-launch-on-login.html for explanations.
+- (LSSharedFileListItemRef) mainBundleLoginItem {
+	LSSharedFileListItemRef result = NULL;
+	NSURL * mainBundleURL = [[NSBundle mainBundle] bundleURL];
+
+	LSSharedFileListRef loginItemsListRef = 
+			LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
 	
-	if (changed) {
-		// Set new value in pref
-		CFPreferencesSetValue((CFStringRef)@"AutoLaunchedApplicationDictionary", (__bridge CFArrayRef) loginItems,
-							  (CFStringRef)@"loginwindow", kCFPreferencesCurrentUser,
-							  kCFPreferencesAnyHost);
-		CFPreferencesSynchronize((CFStringRef) @"loginwindow", kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
-	}
+	NSArray * loginItems = (__bridge NSArray *) LSSharedFileListCopySnapshot(loginItemsListRef, NULL);
+    
+    for (id item in loginItems) {
+        LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef) item;
+
+        CFURLRef itemURLRef;
+        if (LSSharedFileListItemResolve(itemRef, 0, &itemURLRef, NULL) == noErr) {
+            NSURL * itemURL = (__bridge NSURL *) itemURLRef;
+            if ([itemURL isEqual:mainBundleURL]) {
+				result = itemRef;
+				break;
+            }
+        }
+    }
+    
+    return result;
+}
+
+
+
+// Add our application to the list of login items and return its LSSharedFileListItemRef.
+// See http://rhult.github.com/preference-to-launch-on-login.html for explanations.
+- (LSSharedFileListItemRef) addMainBundleToLoginItems {
+	LSSharedFileListRef loginItemsListRef =
+			LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
+	
+	LSSharedFileListItemRef itemRef =
+			LSSharedFileListInsertItemURL(loginItemsListRef,
+										  kLSSharedFileListItemLast,
+										  NULL,
+										  NULL,
+										  (__bridge CFURLRef)[[NSBundle mainBundle] bundleURL],
+										  NULL,
+										  NULL);
+	
+	return itemRef;
 }
 
 
