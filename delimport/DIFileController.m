@@ -70,25 +70,75 @@
 #pragma mark Class Methods
 
 /*
- Returns path to subfolder with the given name in the current user’s Library/Metadata folder.
+ Returns path to subfolder with the given name in our container’s Documents folder.
  Create the folder if necessary.
 */
-+ (NSString *) metadataPathForSubfolder: (NSString *) folderName {
-	NSString *metadataPath = [[@"~/Library/Metadata/" stringByExpandingTildeInPath] stringByAppendingPathComponent: folderName];
-	NSFileManager * fileManager = [[NSFileManager alloc] init];
-	BOOL isDir;
++ (NSString *) pathForName: (NSString *) fileName
+			   inSubfolder: (NSString *) subfolderName
+			   withExtension: (NSString *) filenameExtension {
 	NSString * result = nil;
-	NSError * myError;
+	NSError * error;
 	
-	if ([fileManager fileExistsAtPath:metadataPath isDirectory:&isDir]) {
-		if (isDir) {
-			result = metadataPath;
+	NSFileManager * fileManager = [NSFileManager defaultManager];
+	NSURL * documentsFolderURL = [fileManager URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:NULL create:YES error:&error];
+	NSString * documentsFolderPath = [documentsFolderURL path];
+	
+	if (documentsFolderURL) {
+		// Subfolder name.
+		NSString * subfolderPath = [documentsFolderPath stringByAppendingPathComponent:subfolderName];
+		
+		// Create 256 subfolders with names given by the beginning of fileName (the hash) to avoid overcrowded folders.
+		if ([fileName length] >= 2) {
+			subfolderPath = [subfolderPath stringByAppendingPathComponent:[fileName substringWithRange:NSMakeRange(0, 2)]];
 		}
-	} else if ([fileManager createDirectoryAtPath:metadataPath withIntermediateDirectories:YES attributes:nil error:&myError]) {
-		result = metadataPath;
+
+		// Add the file name and extension to the path.
+		if (subfolderPath) {
+			NSString * filePath = [subfolderPath stringByAppendingPathComponent:fileName];
+			if (filenameExtension) {
+			   result = [filePath stringByAppendingPathExtension:filenameExtension];
+			}
+		}
+	}
+	else {
+		if (error) {
+			NSLog(@"Could not get URL for documents folder: %@", [error localizedDescription]);
+		}
 	}
 	
 	return result;
+}
+
+
+
+// Determine whether the folders containing the path exist and try to create it if necessary.
+// Return YES if the containing folder exists and NO otherwise.
++ (BOOL) createSubfoldersForFilePath: (NSString*) filePath {
+	BOOL success = NO;
+
+	NSFileManager * fileManager = [NSFileManager defaultManager];
+	NSString * folderPath = [filePath stringByDeletingLastPathComponent];
+	
+	NSError * error;
+	BOOL isDir;
+	if ([fileManager fileExistsAtPath:folderPath isDirectory:&isDir]) {
+		if (isDir) {
+			success = YES;
+		}
+		else {
+			NSLog(@"%@ exists but is not a folder: we need to store files inside it.", folderPath);
+		}
+	}
+	else {
+		if ([fileManager createDirectoryAtPath:folderPath withIntermediateDirectories:YES attributes:nil error:&error]) {
+			success = YES;
+		}
+		else if (error) {
+			NSLog(@"Could not create folder %@: %@", folderPath, [error localizedDescription]);
+		}
+	}
+
+	return success;
 }
 
 
@@ -98,13 +148,11 @@
  Use file name extension according to the bookmarking service we are using.
 */
 + (NSString *) bookmarkPathForHash: (NSString*) hash {
-	NSString * fileName = [hash stringByAppendingPathExtension: [DIFileController filenameExtensionForPreferredService]];
-	NSString * metadataPath = [[self class] metadataPathForSubfolder:@"delimport"];
-	NSString * path = nil;
-	if (metadataPath) {
-		path = [metadataPath stringByAppendingPathComponent:fileName];
-	}
-	
+	NSString * path = [[self class] pathForName:hash
+									inSubfolder:@"delimport-bookmarks"
+									withExtension:[DIFileController filenameExtensionForPreferredService]
+					   ];
+
 	return path;
 }
 
@@ -116,12 +164,10 @@
 */
 + (NSString *) webarchivePathForHash: (NSString*) hash {
 	NSString * fileName = [hash stringByAppendingFormat:@"-%@", [DIBookmarksController serviceName]];
-	fileName = [fileName stringByAppendingPathExtension: @"webarchive"];
-	NSString * metadataWebarchivePath = [[self class] metadataPathForSubfolder:@"delimport-webarchives"];
-	NSString * path = nil;
-	if (metadataWebarchivePath) {
-		path = [metadataWebarchivePath stringByAppendingPathComponent:fileName];
-	}
+	NSString * path = [[self class] pathForName:fileName
+									inSubfolder:@"delimport-webarchives"
+									withExtension:@"webarchive"
+					   ];
 	
 	return path;
 }
@@ -162,11 +208,11 @@
 
 
 - (void) saveDictionary: (NSDictionary *) dictionary {
-	NSMutableDictionary *mutable = [dictionary mutableCopy];
-	NSString *path = [[self class] bookmarkPathForHash: [mutable objectForKey: DIHashKey]];
-
-	if ( path != nil ) {
-		NSNumber *osType = [NSNumber numberWithUnsignedLong:'DELi'];
+	NSMutableDictionary * mutable = [dictionary mutableCopy];
+	NSString * path = [[self class] bookmarkPathForHash: [mutable objectForKey: DIHashKey]];
+	
+	if ([[self class] createSubfoldersForFilePath:path]) {
+		NSNumber * osType = [NSNumber numberWithUnsignedLong:'DELi'];
 		[mutable removeObjectForKey: DIHashKey];
 		[mutable writeToFile:path atomically:YES];
 
@@ -197,9 +243,15 @@
 
 
 - (void) deleteDictionary: (NSDictionary *) dictionary {
-	NSString *path = [[self class] bookmarkPathForHash: [dictionary objectForKey: DIHashKey]];
-	if ( path != nil) {
-		[[[NSFileManager alloc] init] removeFileAtPath:path handler:nil];
+	NSString * path = [[self class] bookmarkPathForHash: [dictionary objectForKey: DIHashKey]];
+	NSURL * pathURL = [NSURL fileURLWithPath:path];
+	if (pathURL != nil) {
+		NSError * error;
+		if (![[NSFileManager defaultManager] removeItemAtURL:pathURL error:&error]) {
+			if (error != nil) {
+				NSLog(@"Error deleting file %@: %@", path, [error localizedDescription]);
+			}
+		}
 	}
 }
 

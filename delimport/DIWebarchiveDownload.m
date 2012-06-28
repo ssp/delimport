@@ -7,6 +7,7 @@
 */
 
 #import "DIWebarchiveDownload.h"
+#import "DIFileController.h"
 #import <WebKit/WebKit.h>
 #import <sys/xattr.h>
 
@@ -139,15 +140,17 @@
 		// NSData * webData = [[[frame DOMDocument] webArchive] data];
 		NSData * webData = [[[frame dataSource] webArchive] data];
 		if (webData) {
-			if ([webData writeToFile:self.webarchivePath atomically:YES]) {
-				NSURLResponse * response = [[frame dataSource] response];
-				if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-					status = [(NSHTTPURLResponse *) response statusCode];
+			if ([DIFileController createSubfoldersForFilePath:self.webarchivePath]) {
+				if ([webData writeToFile:self.webarchivePath atomically:YES]) {
+					NSURLResponse * response = [[frame dataSource] response];
+					if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+						status = [(NSHTTPURLResponse *) response statusCode];
+					}
+					else {
+						status = DINonHTTPResponseStatus;
+					}
+					[self writeWhereFromsXattr];
 				}
-				else {
-					status = DINonHTTPResponseStatus;
-				}
-				[self writeWhereFromsXattr];
 			}
 		}
 		else {

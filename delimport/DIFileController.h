@@ -27,7 +27,8 @@
 	NSMutableDictionary * failDict;
 }
 
-+ (NSString *) metadataPathForSubfolder: (NSString *) folderName;
++ (NSString *) pathForName: (NSString *) fileName inSubfolder: (NSString *) subfolderName withExtension: (NSString *) filenameExtension;
++ (BOOL) createSubfoldersForFilePath: (NSString*) filePath;
 + (NSString *) bookmarkPathForHash: (NSString*) hash;
 + (NSString *) webarchivePathForHash: (NSString*) hash;
 + (NSString *) failDictPath;

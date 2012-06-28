@@ -463,7 +463,19 @@
 
 
 + (NSString *) DIApplicationSupportFolderPath {
-	return [@"~/Library/Application Support/delimport/" stringByExpandingTildeInPath];
+	NSError * error;
+	NSFileManager * fileManager = [NSFileManager defaultManager];
+	NSURL * applicationSupportURL = [fileManager URLForDirectory: NSApplicationSupportDirectory inDomain:NSUserDomainMask appropriateForURL:NULL create:YES error:&error];
+
+	NSString * result = NULL;
+	if (applicationSupportURL) {
+		result = [[applicationSupportURL path] stringByAppendingPathComponent:@"delimport"];
+	}
+	else if (error) {
+		NSLog(@"Could not get path to Application Support folder: %@", [error localizedDescription]);
+	}
+	
+	return result;
 }
 
 
