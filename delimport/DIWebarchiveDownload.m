@@ -67,7 +67,7 @@
 	}
 	
 	if (!started) {
-		[self performSelector:@selector(finishedWithStatus:) withObject:[NSNumber numberWithInteger:DIDidNotStartStatus] afterDelay:0];
+		[self finishedWithStatus:[NSNumber numberWithInteger:DIDidNotStartStatus]];
 	}
 }
 
@@ -85,6 +85,8 @@
 	
 - (void) reallyFinishedWithStatus: (NSNumber*) status {
 	[timer invalidate];
+	
+	[[NSURLCache sharedURLCache] removeAllCachedResponses];
 	
 	if (webView) {
 		[webView setFrameLoadDelegate:nil];
@@ -167,7 +169,7 @@
  2. If we are on the main frame proceed to next round of loading.
 */
 - (void) webView: (WebView*) sender didFailLoadWithError: (NSError*) error forFrame: (WebFrame*) frame {
-	NSLog(@"-webView:didFailLoadWithError: (%ld) %@", [error code], (long)[error localizedDescription]);
+	NSLog(@"-webView:didFailLoadWithError: (%ld) %@", [error code], [error localizedDescription]);
 	if ([sender mainFrame] == frame) {
 		NSLog(@"-webView:didFailLoadWithError: error occured on the main frame: cancel");
 		[self finishedWithStatus:[NSNumber numberWithInteger:[error code]]];
@@ -181,7 +183,7 @@
  2. If we are on the main frame proceed to next round of loading.
 */
 - (void) webView:(WebView*)sender didFailProvisionalLoadWithError:(NSError*)error forFrame:(WebFrame*)frame {
-	NSLog(@"-webView:didFailProvisionalLoadWithError: (%ld) %@", [error code], (long)[error localizedDescription]);
+	NSLog(@"-webView:didFailProvisionalLoadWithError: (%ld) %@", [error code], [error localizedDescription]);
 	if ([sender mainFrame] == frame) {
 		NSLog(@"-webView:didFailProvisionalLoadWithError: error occured on the main frame: cancel");
 		[self finishedWithStatus:[NSNumber numberWithInteger:[error code]]];

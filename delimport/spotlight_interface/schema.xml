@@ -8,28 +8,21 @@
         <type name="org.ianhenderson.delicious.bookmark">
 			<note>
             </note>
-            <previewattrs>
-kMDItemDisplayName
-kMDItemURL
-kMDItemContentCreationDate
-kMDItemKeywords
-kMDItemDescription
-            </previewattrs>
             <allattrs>
-kMDItemURL
-kMDItemContentCreationDate
-kMDItemContentModificationDate
-kMDItemDisplayName
-kMDItemKeywords
-kMDItemDescription
-kMDItemKind
+                kMDItemDisplayName
+                kMDItemURL
+                kMDItemKeywords
+                kMDItemDescription
+                kMDItemContentCreationDate
+                kMDItemContentModificationDate
+                kMDItemKind
             </allattrs>
             <displayattrs>
-kMDItemDisplayName
-kMDItemURL
-kMDItemContentCreationDate
-kMDItemKeywords
-kMDItemDescription
+                kMDItemDisplayName
+                kMDItemURL
+                kMDItemKeywords
+                kMDItemDescription
+                kMDItemContentCreationDate
             </displayattrs>
         </type>
     </types>

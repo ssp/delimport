@@ -1,9 +1,0 @@
-/* CRL Type Constants. */
-
-/* Key is the [unsigned] decimal representation of the type, value is the constant corresponding to the code. */
-
-0 = "CSSM_CRL_TYPE_UNKNOWN";
-1 = "CSSM_CRL_TYPE_X_509v1";
-2 = "CSSM_CRL_TYPE_X_509v2";
-3 = "CSSM_CRL_TYPE_SPKI";
-32766 = "CSSM_CRL_TYPE_MULTIPLE";

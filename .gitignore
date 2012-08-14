@@ -1,6 +1,7 @@
 *.mode1v3
 *.pbxuser
-
+*xcuserdata*
+DerivedData*
 delimport-localisation/Source/delimport/DIBookmarksController.h
 delimport-localisation/Source/delimport/DIBookmarksController.m
 delimport-localisation/Source/delimport/DIFileController.h

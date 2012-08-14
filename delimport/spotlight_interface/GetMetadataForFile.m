@@ -53,7 +53,7 @@ Boolean GetMetadataForFile(void* thisInterface,
 {
 	NSDictionary *dictionary;
 	NSMutableDictionary *attributes = (__bridge NSMutableDictionary*) attrs;
-	BOOL result = NO;
+	Boolean result = false;
 
 	@autoreleasepool {
 		dictionary = [[NSDictionary alloc] initWithContentsOfFile:(__bridge NSString *)pathToFile];
@@ -81,7 +81,7 @@ Boolean GetMetadataForFile(void* thisInterface,
 			[attributes setObject:[dictionary objectForKey: DITimeKey ] forKey:(NSString *)kMDItemContentCreationDate];
 			[attributes setObject:[dictionary objectForKey: DITimeKey ] forKey:(NSString *)kMDItemContentModificationDate];
 
-			result = YES;
+			result = true;
 		}
     }
     return result;

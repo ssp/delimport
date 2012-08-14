@@ -28,19 +28,20 @@
 }
 
 + (NSString *) pathForName: (NSString *) fileName inSubfolder: (NSString *) subfolderName withExtension: (NSString *) filenameExtension;
-+ (BOOL) createSubfoldersForFilePath: (NSString*) filePath;
-+ (NSString *) bookmarkPathForHash: (NSString*) hash;
-+ (NSString *) webarchivePathForHash: (NSString*) hash;
++ (BOOL) createSubfoldersForFilePath: (NSString *) filePath;
++ (NSString *) bookmarkPathForHash: (NSString *) hash;
++ (NSString *) webarchivePathForHash: (NSString *) hash;
 + (NSString *) failDictPath;
 + (NSString *) filenameExtensionForPreferredService;
++ (NSString *) accountString;
 
-- (NSDictionary*) readDictionaryForHash:(NSString*) hash;
-- (void) saveDictionary:(NSDictionary *)dictionary;
-- (void) saveDictionaries:(NSArray *)dictionaries;
-- (void) deleteDictionaries:(NSArray *)dictionaries;
+- (NSDictionary *) readDictionaryForHash:(NSString *) hash;
+- (void) saveDictionary: (NSDictionary *) dictionary;
+- (void) saveDictionaries: (NSArray *) dictionaries;
+- (void) deleteDictionaries: (NSArray *) dictionaries;
 
 - (void) fetchWebarchiveForDictionary: (NSDictionary *) dictionary;
 
-- (BOOL) openFile:(NSString *)filename;
+- (BOOL) openFile: (NSString *) filename;
 
 @end

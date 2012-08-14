@@ -1,8 +1,0 @@
-/* Extension Format Constants. */
-
-/* The key is the numeric value as defined in x509defs.h in Apple's Security framework.  Last updated for 10.4.10. */
-/* The value is the constant corresponding to the code. */
-
-0 = "CSSM_X509_DATAFORMAT_ENCODED";
-1 = "CSSM_X509_DATAFORMAT_PARSED";
-2 = "CSSM_X509_DATAFORMAT_PAIR";

@@ -15,7 +15,7 @@
 	DIQueue * queue;
 }
 
-@property  DIQueue * queue;
+@property DIQueue * queue;
 
 - (void) start;
 - (void) finished;

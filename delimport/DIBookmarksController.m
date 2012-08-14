@@ -9,10 +9,7 @@
 #import "DIBookmarksController.h"
 #import "DIFileController.h"
 #import "DILoginController.h"
-#import <LaunchServices/LSSharedFileList.h>
-#import <Keychain/Keychain.h>
-#import <Keychain/KeychainSearch.h>
-#import <Keychain/KeychainItem.h>
+#import "SSKeychain.h"
 
 #define DIBookmarksPlistFileName @"Bookmarks.plist"
 
@@ -58,7 +55,7 @@
 	LSSharedFileListRef loginItemsListRef = 
 			LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
 	
-	NSArray * loginItems = (__bridge NSArray *) LSSharedFileListCopySnapshot(loginItemsListRef, NULL);
+	NSArray * loginItems = (__bridge_transfer NSArray *) LSSharedFileListCopySnapshot(loginItemsListRef, NULL);
     
     for (id item in loginItems) {
         LSSharedFileListItemRef itemRef = (__bridge LSSharedFileListItemRef) item;
@@ -98,20 +95,25 @@
 
 
 
-- (KeychainItem *) getKeychainUserAndPass {
-	KeychainSearch * search = [[KeychainSearch alloc] init];
-	[search setServer:[DIBookmarksController serverAddress]];
-
-	NSArray *results = [search internetSearchResults];
-	if ([results count] <= 0) {
-		return nil;
+- (void) getKeychainUserAndPass {
+	NSError * error = nil;
+	NSArray * accounts = [SSKeychain accountsForService:[DIBookmarksController serverAddress] ofClass:kSecClassInternetPassword error:&error];
+	if (accounts) {
+		NSDictionary * firstAccount = [accounts objectAtIndex:0];
+		username = [firstAccount objectForKey: kSecAttrAccount];
+		password = [SSKeychain passwordForService:[DIBookmarksController serverAddress] ofClass:kSecClassInternetPassword account:username error:&error];
+		
+		if (password == nil) {
+			if (error != nil) {
+				NSLog(@"No password available for account %@ on server %@.", username, [DIBookmarksController serverAddress]);
+			}
+		}
 	}
-
-	KeychainItem *item = [results objectAtIndex:0];
-	username = [item account];
-	password = [item dataAsString];
-
-	return item;
+	else {
+		if (error != nil) {
+			NSLog(@"Could not get accounts for service %@ from keychain: %@", [DIBookmarksController serverAddress], [error localizedDescription]);
+		}
+	}
 }
 
 
@@ -147,6 +149,7 @@
 	// Show login/preferences window in case the Option key is held on launch.
 	CGEventRef event = CGEventCreate(NULL);
 	CGEventFlags modifiers = CGEventGetFlags(event);
+	CFRelease(event);
 	if (modifiers & kCGEventFlagMaskAlternate) {
 		[self logIn];
 	}
@@ -170,7 +173,7 @@
 		// bookmark files
 		NSDictionary * fileBookmark = [fileController readDictionaryForHash:hash];
 		if (fileBookmark == nil || [bookmark isEqualToDictionary:fileBookmark] == NO) {
-			// we don't have a bookmark or the bookmark ist not in sync with the cache
+			// we don't have a bookmark or the bookmark is not in sync with the cache
 			// NSLog(@"replacing cache file %@", hash);
 			[bookmarksNeedingUpdate addObject:bookmark];
 		}
@@ -185,6 +188,7 @@
 
 
 - (NSXMLDocument *) deliciousAPIResponseToRequest: (NSString *) request {
+	NSXMLDocument * result = nil;
 	NSString *URLString = [NSString stringWithFormat:@"https://%@:%@@%@/v1/%@", username, password, [DIBookmarksController serverAddress], request];
 	NSURL *requestURL = [NSURL URLWithString:URLString];
 	NSMutableURLRequest *URLRequest = [NSMutableURLRequest requestWithURL:requestURL];
@@ -196,31 +200,34 @@
 	// NSLog(@"API request: '%@', response: %i, d/l size: %i", request, [response statusCode], [xmlData length], nil);
 	if ([response statusCode] == 401) {
 		[self logIn];
-		return nil;
 	}
 	else if ([response statusCode] == 503) {
 		// we've been throttled
 		[self setValue:[NSDate date] forKey:@"throttleTimepoint"];
 		NSLog(@"503 http error: throttled");
-		return nil;
+	}
+	else if (xmlData) {
+		result = [[NSXMLDocument alloc] initWithData:xmlData options:NSXMLDocumentTidyXML error:&error];
+
+		if (result == nil) {
+			// Display or log the problem (just sliently retrying seems preferable to me)
+			[[NSUserDefaults standardUserDefaults] synchronize];
+			if ([[NSUserDefaults standardUserDefaults] boolForKey:DIDisplayErrorMessages]) {
+				NSAlert *alert = [NSAlert alertWithError:error];
+				[[alert window] makeKeyAndOrderFront:self];
+				[[alert window] center];
+				[alert runModal];
+			}
+			else {
+				NSLog(@"Could not parse downloaded data as XML: %@", [error localizedDescription]);
+			}
+		}
+	}
+	else if (error) {
+		NSLog(@"Download of %@ failed: %@", [requestURL absoluteString],[error localizedDescription]);
 	}
 	
-	NSXMLDocument *document = [[NSXMLDocument alloc] initWithData:xmlData options:NSXMLDocumentTidyXML error:&error];
-
-	if (document == nil) {
-		// Display or log the problem (just sliently retrying seems preferable to me)
-		[[NSUserDefaults standardUserDefaults] synchronize];
-		if ([[NSUserDefaults standardUserDefaults] boolForKey:DIDisplayErrorMessages]) {
-			NSAlert *alert = [NSAlert alertWithError:error];
-			[[alert window] makeKeyAndOrderFront:self];
-			[[alert window] center];
-			[alert runModal];
-		}
-		else {
-			NSLog(@"Download failed: %@", [error localizedDescription]);
-		}
-	}
-	return document;
+	return result;
 }
 
 
@@ -234,9 +241,12 @@
 	username = myUsername;
 	password = myPassword;
 	
-	Keychain *keychain = [Keychain defaultKeychain];
-
-	[keychain addInternetPassword:password onServer:[DIBookmarksController serverAddress] forAccount:username port:80 path:@"" inSecurityDomain:@"" protocol:kSecProtocolTypeHTTP auth:kSecAuthenticationTypeHTTPDigest replaceExisting:YES];
+	NSError * error;
+	if (![SSKeychain setPassword:myPassword forService:[DIBookmarksController serverAddress] ofClass:kSecClassInternetPassword account:username error:&error]) {
+		if (error) {
+			NSLog(@"Could not save password for user %@ on service %@: %@", username, [DIBookmarksController serverAddress], [error localizedDescription]);
+		}
+	}
 }
 
 
@@ -247,6 +257,7 @@
 	[dateString appendString:@"+0000"];
 	return [NSDate dateWithString:dateString];
 }
+
 
 - (NSDate *) remoteLastUpdate {
 	NSXMLDocument *updateDoc = [self deliciousAPIResponseToRequest:@"posts/update"];
@@ -271,50 +282,86 @@
 		return;
 	}
 	
-	// the work gets done here and data could be lost, so disable sudden termination
+	// The work gets done here and data could be lost, so disable Sudden Termination.
 	[[NSProcessInfo processInfo] disableSuddenTermination];
 	
-	NSXMLDocument *allPostsDoc = [self deliciousAPIResponseToRequest:@"posts/all"];
-	if (allPostsDoc != nil) {
-		NSXMLElement *root = [allPostsDoc rootElement];
-		//	NSLog([NSString stringWithFormat:@"-updateList, downloaded %@", [root description],nil]);
-		if (![[root name] isEqualTo:@"html"]) {
-			// it seems that error pages may come through without the right status code but an error message HTML page
-			// avoid reading those as they'll destroy our metadata cache
-			NSMutableDictionary *updatedPosts = [NSMutableDictionary dictionary];
+    NSMutableDictionary * updatedPosts = [NSMutableDictionary dictionary];
+    
+    // Read data in batches from the API (delicious seems to limit output to 1000 records per request).
+    const int recordCount = 1000;
+    int firstRecord = 0;
+    BOOL done = FALSE;
+    
+    while (!done) {
+        NSString * request = [NSString stringWithFormat:@"posts/all?start=%d&results=%d", firstRecord, recordCount];
+        NSXMLDocument * allPostsDoc = [self deliciousAPIResponseToRequest:request];
+        if (allPostsDoc != nil) {
+            NSXMLElement *root = [allPostsDoc rootElement];
+            if (![[root name] isEqualTo:@"html"]) {
+                NSArray * postElements = [root elementsForName:@"post"];
+                if ([postElements count] > 0) {
+                    for (NSXMLElement * postXML in postElements) {
+                        NSDictionary * postDictionary = [self postDictionaryForXML:postXML];
+                        if ([postDictionary objectForKey:DIHashKey] != nil) {
+                            [updatedPosts setObject:[postDictionary copy] forKey:[postDictionary objectForKey:DIHashKey]];
+                        }
+                    }
+                }
+                else {
+                    // We have what seeems like the correct XML structure but it contains no elements. Assume this is the case because we have downloaded all bookmarks.
+                    done = YES;
+                }
+            }
+            else {
+                // The root element was <html>. This can happen for error pages which may come through without the right status code but an error message HTML page.
+                // Avoid reading those and cancel as they will destroy our metadata cache.
+                NSLog(@"Received HTML for API request: %@", request);
+                break;
+            }
+        }
+        else {
+            NSLog(@"Did not receive valid XML for API request %@", request);
+            break;
+        }
+        firstRecord += recordCount;
+    }
 
-			for (NSXMLElement * post in [root children]) {
-				NSMutableDictionary * postDictionary = [NSMutableDictionary dictionary];
-				NSString * hash = nil;
-		
-				for (NSXMLNode * attribute in [post attributes]) {
-					if ([[attribute name] isEqualToString: DITimeKey]) {
-						[postDictionary setObject:[self dateFromXMLDateString:[attribute stringValue]] forKey:[attribute name]];
-					} else if ([[attribute name] isEqualToString: DITagKey]) {
-						[postDictionary setObject:[[attribute stringValue] componentsSeparatedByString:@" "] forKey:[attribute name]];
-					} else if ([[attribute name] isEqualToString: DIDeliciousURLKey]) {
-						// use Safari-style key for URL
-						[postDictionary setObject:[attribute stringValue] forKey:DIURLKey];
-					} else if ([[attribute name] isEqualToString: DIDeliciousNameKey]) {
-						// use Safari-style key for Name
-						[postDictionary setObject:[attribute stringValue] forKey:DINameKey];
-					} else if ([[attribute name] isEqualToString: DIHashKey]) {
-						hash = [attribute stringValue];
-						[postDictionary setObject:hash forKey: DIHashKey];
-					} else {
-						[postDictionary setObject:[attribute stringValue] forKey:[attribute name]];
-					}
-				}
-				
-				if (hash) {
-					[updatedPosts setObject:[NSDictionary dictionaryWithDictionary:postDictionary] forKey:hash];
-				}
-			}
-		[self setBookmarks:updatedPosts];
-		}
-	}
-	
+    if (done) {
+        [self setBookmarks:updatedPosts];
+    }
+    
+    // Re-enable Sudden Termination.
 	[[NSProcessInfo processInfo] enableSuddenTermination];
+}
+
+
+
+// Builds a dictionary from the XML tag’s attributes.
+- (NSDictionary *) postDictionaryForXML: (NSXMLElement *) postXML {
+    NSMutableDictionary * postDictionary = [NSMutableDictionary dictionaryWithCapacity:7];
+    
+    for (NSXMLNode * attribute in [postXML attributes]) {
+        NSString * name = [attribute name];
+        id value = [attribute stringValue];
+        
+        // Improve the values’ structure and rewrite the keys in a few cases.
+        if ([name isEqualToString:DITimeKey]) {
+            value = [self dateFromXMLDateString:value];
+        }
+        else if ([name isEqualToString:DITagKey]) {
+            value = [value componentsSeparatedByString:@" "];
+        }
+        else if ([name isEqualToString:DIDeliciousURLKey]) {
+            name = DIURLKey;
+        }
+        else if ([name isEqualToString:DIDeliciousNameKey]) {
+            name = DINameKey;
+        }
+        
+        [postDictionary setObject:value forKey:name];
+    }
+    
+    return postDictionary;
 }
 
 

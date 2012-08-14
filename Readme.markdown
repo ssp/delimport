@@ -4,22 +4,30 @@ Originally developed by [Ian Henderson](http://ianhenderson.org/), with most cha
 
 
 ### TODO
+* Handle redirects?
+** e.g. http://www.guardian.co.uk/comment/story/0,3604,1326603,00.html
+* allow multiple bookmarking accounts
+* Login item with helper app
+* show/hide Dock icon
 * Sparkle?
 * Use keychain to download password protected pages?
 
 
 ### History
 <dl>
-<dt>upcoming</dt>
+<dt>v0.7, upcoming / brave-new-world branch</dt>
 <dd>
 <ul>
-<li>
-Save webarchives for the URLs.
-<li>
+<li>Save webarchives for the bookmarked URLs.<li>
+<li>X.7 and above only.</li>
+<li>ARC</li>
+<li>sandboxed</li>
+<li>Remove Keychain.framework, use SSKeychain instead</li>
+<li>Fetch bookmarks in batches of 1000 (new delicious does not send more in one go)</li>
 </ul>
 </dd>
 
-<dt>v0.6 <a href="http://earthlingsoft.net/beta/delimport0.6.zip">download</a> / brave-new-world branch</dt>
+<dt>v0.6, 2011/2012 <a href="http://earthlingsoft.net/beta/delimport0.6.zip">download</a></dt>
 <dd>
 <ul>
 <li>Officially be X.5 only and garbage collected.</li>

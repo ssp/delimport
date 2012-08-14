@@ -37,10 +37,11 @@
 - (void) saveBookmarksDictionary: (NSDictionary *) list;
 
 - (void) verifyMetadataCache;
-- (void) updateList:(NSTimer *)timer;
-- (void) setBookmarks:(NSDictionary *)newMarks;
+- (void) updateList: (NSTimer *) timer;
+- (NSDictionary *) postDictionaryForXML: (NSXMLElement *) postXML;
+- (void) setBookmarks: (NSDictionary *) newMarks;
 
-- (void) setupTimer:(NSTimer*) timer;
+- (void) setupTimer: (NSTimer*) timer;
 - (NSTimeInterval) currentUpdateInterval;
 
 + (NSString *) serverAddress;

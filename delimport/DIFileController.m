@@ -147,9 +147,9 @@
  Returns path to file for a bookmark with the given hash.
  Use file name extension according to the bookmarking service we are using.
 */
-+ (NSString *) bookmarkPathForHash: (NSString*) hash {
++ (NSString *) bookmarkPathForHash: (NSString *) hash {
 	NSString * path = [[self class] pathForName:hash
-									inSubfolder:@"delimport-bookmarks"
+									inSubfolder:[[self class] accountString]
 									withExtension:[DIFileController filenameExtensionForPreferredService]
 					   ];
 
@@ -162,10 +162,10 @@
  Returns path to file for a bookmark with the given hash.
  The file name includes the name of the bookmarking service we are using.
 */
-+ (NSString *) webarchivePathForHash: (NSString*) hash {
++ (NSString *) webarchivePathForHash: (NSString *) hash {
 	NSString * fileName = [hash stringByAppendingFormat:@"-%@", [DIBookmarksController serviceName]];
 	NSString * path = [[self class] pathForName:fileName
-									inSubfolder:@"delimport-webarchives"
+									inSubfolder:[[self class] accountString]
 									withExtension:@"webarchive"
 					   ];
 	
@@ -191,6 +191,13 @@
 	return [DIBookmarksController serviceName];
 }
 
+
+/*
+ Helper returning a string that serves as the name of the subfolder bookmarks and webarchives are stored in.
+*/
++ (NSString *) accountString {
+    return @"Bookmarks";
+}
 
 
 

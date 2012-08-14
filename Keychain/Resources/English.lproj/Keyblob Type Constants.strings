@@ -1,9 +1,0 @@
-/* Keyblob Type Constants. */
-
-/* The key is the numeric value as defined in cssmtype.h in Apple's Security framework.  Last updated for 10.4.10. */
-/* The value is the constant corresponding to the code. */
-
-0 = "CSSM_KEYBLOB_RAW";
-2 = "CSSM_KEYBLOB_REFERENCE";
-3 = "CSSM_KEYBLOB_WRAPPED";
-4294967295 = "CSSM_KEYBLOB_OTHER";

@@ -46,7 +46,7 @@
 	<key>CFBundleSignature</key>
 	<string>DeLi</string>
 	<key>CFBundleVersion</key>
-	<string>55</string>
+	<string>56</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.7</string>
 	<key>LSUIElement</key>
@@ -83,7 +83,7 @@
 		<dict>
 			<key>UTTypeConformsTo</key>
 			<array>
-				<string>com.apple.safari.bookmark</string>
+				<string>org.ianhenderson.delicious.bookmark</string>
 			</array>
 			<key>UTTypeDescription</key>
 			<string>pinboard Bookmark</string>

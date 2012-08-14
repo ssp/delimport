@@ -26,16 +26,16 @@
 		6C21E9A412D24F4C00091671 /* DIServiceTypeToIconPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C21E9A312D24F4C00091671 /* DIServiceTypeToIconPath.m */; };
 		6C21EA2112D2592900091671 /* pinboard.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6C21EA2012D2592900091671 /* pinboard.icns */; };
 		6C2D48CB159C8CB8003C1019 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2D48CA159C8CB8003C1019 /* CoreServices.framework */; };
+		6C2D48CE159EF75A003C1019 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2D48CD159EF75A003C1019 /* SSKeychain.m */; };
+		6C2D48D0159EFAC9003C1019 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2D48CF159EFAC9003C1019 /* Security.framework */; };
 		6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C2FC9670CD9396900C1FD91 /* Localizable.strings */; };
 		6C41DF3513632F0200EB6477 /* DIWebarchiveDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C41DF3413632F0200EB6477 /* DIWebarchiveDownload.m */; };
 		6C41E0201364335C00EB6477 /* DIQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C41E01F1364335C00EB6477 /* DIQueue.m */; };
 		6C41E04D13643B5300EB6477 /* DIQueueItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C41E04C13643B5300EB6477 /* DIQueueItem.m */; };
 		6CA955C2104AA40200F225D2 /* LogIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA955C0104AA40200F225D2 /* LogIn.xib */; };
-		6CA95704104AB8B000F225D2 /* Keychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA95703104AB8B000F225D2 /* Keychain.framework */; };
 		6CCFAD1112BE394200B6A09A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCFAD1012BE394200B6A09A /* WebKit.framework */; };
-		6CD57B260CEC5261009D3862 /* del.icio.us Spotlight Interface.mdimporter in Copy mdimporter */ = {isa = PBXBuildFile; fileRef = 6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */; };
+		6CD57B260CEC5261009D3862 /* delimport Bookmark.mdimporter in Copy mdimporter */ = {isa = PBXBuildFile; fileRef = 6C38B3460CCF5C4400E5933D /* delimport Bookmark.mdimporter */; };
 		6CE1A7CE104AC5130078D932 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA955BD104AA3E100F225D2 /* MainMenu.xib */; };
-		6CE1A7F4104AD04A0078D932 /* Keychain.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA95703104AB8B000F225D2 /* Keychain.framework */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -53,13 +53,6 @@
 			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = delimport;
 		};
-		6C2C57431066F83000A90A54 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 75A0749209438F8E008B9D9E;
-			remoteInfo = Keychain;
-		};
 		6C2C57451066F83500A90A54 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
@@ -67,96 +60,12 @@
 			remoteGlobalIDString = 8D57630D048677EA00EA77CD;
 			remoteInfo = "del.icio.us Spotlight Interface";
 		};
-		6C3840491066F5850001AAAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 75A0750209438F8E008B9D9E;
-			remoteInfo = Keychain;
-		};
-		6C38404B1066F5850001AAAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 75A0750C09438F8E008B9D9E;
-			remoteInfo = CSSMUtilsTester;
-		};
-		6C38404D1066F5850001AAAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 75A0751709438F8E008B9D9E;
-			remoteInfo = NSCalendarDateAdditionsTester;
-		};
-		6C38404F1066F5850001AAAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 75A0752209438F8F008B9D9E;
-			remoteInfo = OutputStreamsTester;
-		};
-		6C3840511066F5850001AAAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 75A0752E09438F8F008B9D9E;
-			remoteInfo = StringsTester;
-		};
-		6C3840531066F5850001AAAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 75A0753A09438F8F008B9D9E;
-			remoteInfo = MDSProber;
-		};
-		6C3840551066F5850001AAAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7540B3F20999D1C000469F46;
-			remoteInfo = SKeyPlusTester;
-		};
-		6C3840571066F5850001AAAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7594D4910A2045E00090E497;
-			remoteInfo = CertificateGenerationTester;
-		};
-		6C3840591066F5850001AAAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7556131F0A2090B5003428C2;
-			remoteInfo = CryptographyTester;
-		};
-		6C38405B1066F5850001AAAD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 75C6E8F70A3BDCD8009201FB;
-			remoteInfo = KeychainSearchTester;
-		};
 		6C38B3450CCF5C4400E5933D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8D576316048677EA00EA77CD;
 			remoteInfo = "del.icio.us Spotlight Interface";
-		};
-		6C5A40A711D896FD00F8D4EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7506C03D0A3DB5A8000DB6BD;
-			remoteInfo = PolicyProber;
-		};
-		6C5A40A911D896FD00F8D4EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7588AC770CA3916D00466BEF;
-			remoteInfo = KeychainTester;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -167,7 +76,7 @@
 			dstPath = Contents/Library/Spotlight;
 			dstSubfolderSpec = 1;
 			files = (
-				6CD57B260CEC5261009D3862 /* del.icio.us Spotlight Interface.mdimporter in Copy mdimporter */,
+				6CD57B260CEC5261009D3862 /* delimport Bookmark.mdimporter in Copy mdimporter */,
 			);
 			name = "Copy mdimporter";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,7 +87,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6CE1A7F4104AD04A0078D932 /* Keychain.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +108,9 @@
 		6C21EC6A12D290B100091671 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C2D48C7159C71F9003C1019 /* delimport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = delimport.entitlements; sourceTree = "<group>"; };
 		6C2D48CA159C8CB8003C1019 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		6C2D48CC159EF75A003C1019 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = ../sskeychain/SSKeychain.h; sourceTree = "<group>"; };
+		6C2D48CD159EF75A003C1019 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = ../sskeychain/SSKeychain.m; sourceTree = "<group>"; };
+		6C2D48CF159EFAC9003C1019 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = ../../../../../../System/Library/Frameworks/Security.framework; sourceTree = "<group>"; };
 		6C383FF21066F2370001AAAD /* Readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Readme.markdown; path = ../Readme.markdown; sourceTree = "<group>"; };
 		6C41DF3313632F0200EB6477 /* DIWebarchiveDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIWebarchiveDownload.h; sourceTree = "<group>"; };
 		6C41DF3413632F0200EB6477 /* DIWebarchiveDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DIWebarchiveDownload.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -212,14 +123,12 @@
 		6C5AA488104E91210092E350 /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C5AA489104E912A0092E350 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "del.icio.us Spotlight Interface.xcodeproj"; path = "spotlight_interface/del.icio.us Spotlight Interface.xcodeproj"; sourceTree = "<group>"; };
-		6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Keychain.xcodeproj; path = ../Keychain/Keychain.xcodeproj; sourceTree = SOURCE_ROOT; };
-		6CA65EAC13679C9E003D9F82 /* Bookmarks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Bookmarks.plist; path = "../../../../Library/Application Support/delimport/Bookmarks.plist"; sourceTree = SOURCE_ROOT; };
-		6CA65EAD13679CA5003D9F82 /* Failed Downloads.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Failed Downloads.plist"; path = "../../../../Library/Application Support/delimport/Failed Downloads.plist"; sourceTree = SOURCE_ROOT; };
+		6CA65EAC13679C9E003D9F82 /* Bookmarks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Bookmarks.plist; path = "../../../../Library/Containers/org.ianhenderson.delimport/Data/Library/Application Support/delimport/Bookmarks.plist"; sourceTree = SOURCE_ROOT; };
+		6CA65EAD13679CA5003D9F82 /* Failed Downloads.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Failed Downloads.plist"; path = "../../../../Library/Containers/org.ianhenderson.delimport/Data/Library/Application Support/delimport/Failed Downloads.plist"; sourceTree = SOURCE_ROOT; };
 		6CA955BD104AA3E100F225D2 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		6CA95690104AADDB00F225D2 /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6CA95703104AB8B000F225D2 /* Keychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Keychain.framework; path = ../../../builds/Deployment/Keychain.framework; sourceTree = SOURCE_ROOT; };
 		6CCFAD1012BE394200B6A09A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
-		6CCFAE0E12BE462D00B6A09A /* org.ianhenderson.delimport.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = org.ianhenderson.delimport.plist; path = ../../../../Library/Preferences/org.ianhenderson.delimport.plist; sourceTree = SOURCE_ROOT; };
+		6CCFAE0E12BE462D00B6A09A /* org.ianhenderson.delimport.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = org.ianhenderson.delimport.plist; path = ../../../../Library/Containers/org.ianhenderson.delimport/Data/Library/Preferences/org.ianhenderson.delimport.plist; sourceTree = SOURCE_ROOT; };
 		6CE1A7CA104AC4E70078D932 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/LogIn.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* delimport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delimport.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,9 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				6CA95704104AB8B000F225D2 /* Keychain.framework in Frameworks */,
 				6CCFAD1112BE394200B6A09A /* WebKit.framework in Frameworks */,
 				6C2D48CB159C8CB8003C1019 /* CoreServices.framework in Frameworks */,
+				6C2D48D0159EFAC9003C1019 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +180,8 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C2D48CF159EFAC9003C1019 /* Security.framework */,
 				6C2D48CA159C8CB8003C1019 /* CoreServices.framework */,
-				6CA95703104AB8B000F225D2 /* Keychain.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				6CCFAD1012BE394200B6A09A /* WebKit.framework */,
 			);
@@ -305,7 +214,6 @@
 				6CCFAE0E12BE462D00B6A09A /* org.ianhenderson.delimport.plist */,
 				6CA65EAC13679C9E003D9F82 /* Bookmarks.plist */,
 				6CA65EAD13679CA5003D9F82 /* Failed Downloads.plist */,
-				6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */,
 				6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -319,6 +227,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				6C2D48CC159EF75A003C1019 /* SSKeychain.h */,
+				6C2D48CD159EF75A003C1019 /* SSKeychain.m */,
 				32CA4F630368D1EE00C91783 /* delimport_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -348,29 +258,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6C38403A1066F5850001AAAD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6C38404A1066F5850001AAAD /* Keychain.framework */,
-				6C38404C1066F5850001AAAD /* CSSMUtilsTester */,
-				6C38404E1066F5850001AAAD /* NSCalendarDateAdditionsTester */,
-				6C3840501066F5850001AAAD /* OutputStreamsTester */,
-				6C3840521066F5850001AAAD /* StringsTester */,
-				6C3840541066F5850001AAAD /* MDSProber */,
-				6C3840561066F5850001AAAD /* SKeyPlusTester */,
-				6C3840581066F5850001AAAD /* CertificateGenerationTester */,
-				6C38405A1066F5850001AAAD /* CryptographyTester */,
-				6C38405C1066F5850001AAAD /* KeychainSearchTester */,
-				6C5A40A811D896FD00F8D4EE /* PolicyProber */,
-				6C5A40AA11D896FD00F8D4EE /* KeychainTester */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		6C38B3420CCF5C4400E5933D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */,
+				6C38B3460CCF5C4400E5933D /* delimport Bookmark.mdimporter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -391,7 +282,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6C2C57441066F83000A90A54 /* PBXTargetDependency */,
 				6C2C57461066F83500A90A54 /* PBXTargetDependency */,
 			);
 			name = delimport;
@@ -406,7 +296,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0440;
 			};
 			buildConfigurationList = 6CCC64330A40CC7F00540A50 /* Build configuration list for PBXProject "delimport" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -428,10 +318,6 @@
 					ProductGroup = 6C38B3420CCF5C4400E5933D /* Products */;
 					ProjectRef = 6C8F4BE10CCE492100BFE897 /* del.icio.us Spotlight Interface.xcodeproj */;
 				},
-				{
-					ProductGroup = 6C38403A1066F5850001AAAD /* Products */;
-					ProjectRef = 6C8F4C2E0CCE4A5E00BFE897 /* Keychain.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -442,95 +328,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6C38404A1066F5850001AAAD /* Keychain.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Keychain.framework;
-			remoteRef = 6C3840491066F5850001AAAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C38404C1066F5850001AAAD /* CSSMUtilsTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = CSSMUtilsTester;
-			remoteRef = 6C38404B1066F5850001AAAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C38404E1066F5850001AAAD /* NSCalendarDateAdditionsTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = NSCalendarDateAdditionsTester;
-			remoteRef = 6C38404D1066F5850001AAAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C3840501066F5850001AAAD /* OutputStreamsTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = OutputStreamsTester;
-			remoteRef = 6C38404F1066F5850001AAAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C3840521066F5850001AAAD /* StringsTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = StringsTester;
-			remoteRef = 6C3840511066F5850001AAAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C3840541066F5850001AAAD /* MDSProber */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = MDSProber;
-			remoteRef = 6C3840531066F5850001AAAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C3840561066F5850001AAAD /* SKeyPlusTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = SKeyPlusTester;
-			remoteRef = 6C3840551066F5850001AAAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C3840581066F5850001AAAD /* CertificateGenerationTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = CertificateGenerationTester;
-			remoteRef = 6C3840571066F5850001AAAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C38405A1066F5850001AAAD /* CryptographyTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = CryptographyTester;
-			remoteRef = 6C3840591066F5850001AAAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C38405C1066F5850001AAAD /* KeychainSearchTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = KeychainSearchTester;
-			remoteRef = 6C38405B1066F5850001AAAD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C38B3460CCF5C4400E5933D /* del.icio.us Spotlight Interface.mdimporter */ = {
+		6C38B3460CCF5C4400E5933D /* delimport Bookmark.mdimporter */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "del.icio.us Spotlight Interface.mdimporter";
+			path = "delimport Bookmark.mdimporter";
 			remoteRef = 6C38B3450CCF5C4400E5933D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A40A811D896FD00F8D4EE /* PolicyProber */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = PolicyProber;
-			remoteRef = 6C5A40A711D896FD00F8D4EE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6C5A40AA11D896FD00F8D4EE /* KeychainTester */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = KeychainTester;
-			remoteRef = 6C5A40A911D896FD00F8D4EE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -595,6 +397,7 @@
 				6C41DF3513632F0200EB6477 /* DIWebarchiveDownload.m in Sources */,
 				6C41E0201364335C00EB6477 /* DIQueue.m in Sources */,
 				6C41E04D13643B5300EB6477 /* DIQueueItem.m in Sources */,
+				6C2D48CE159EF75A003C1019 /* SSKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,11 +408,6 @@
 			isa = PBXTargetDependency;
 			target = 8D1107260486CEB800E47090 /* delimport */;
 			targetProxy = 6C0CA2CC0CEC8263000B18FC /* PBXContainerItemProxy */;
-		};
-		6C2C57441066F83000A90A54 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Keychain;
-			targetProxy = 6C2C57431066F83000A90A54 /* PBXContainerItemProxy */;
 		};
 		6C2C57461066F83500A90A54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -655,9 +453,7 @@
 		6C0CA2C00CEC8222000B18FC /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = Release;
 			};
 			name = Development;
@@ -665,7 +461,7 @@
 		6C0CA2C10CEC8222000B18FC /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				PRODUCT_NAME = Release;
 			};
@@ -674,18 +470,13 @@
 		6CCC64300A40CC7F00540A50 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = delimport.entitlements;
-				CODE_SIGN_IDENTITY = "earthlingsoft Software";
-				COPY_PHASE_STRIP = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Versions/A/Frameworks\"",
 				);
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = delimport_Prefix.pch;
 				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
@@ -699,7 +490,6 @@
 				IBC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = delimport;
 				WRAPPER_EXTENSION = app;
 			};
@@ -708,14 +498,12 @@
 		6CCC64310A40CC7F00540A50 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = delimport.entitlements;
-				CODE_SIGN_IDENTITY = "earthlingsoft Software";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/CoreServices.framework/Versions/A/Frameworks\"",
 				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = delimport_Prefix.pch;
 				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
@@ -727,7 +515,6 @@
 				GCC_WARN_SHADOW = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
-				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = delimport;
 				WRAPPER_EXTENSION = app;
 			};
@@ -736,31 +523,36 @@
 		6CCC64340A40CC7F00540A50 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = earthlingsoft;
 				COPY_PHASE_STRIP = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
-				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_MISSING_PARENTHESES = YES;
-				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Development;
@@ -768,29 +560,34 @@
 		6CCC64350A40CC7F00540A50 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = earthlingsoft;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
-				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_MISSING_PARENTHESES = YES;
-				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Deployment;
 		};
