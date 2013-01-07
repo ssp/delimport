@@ -33,7 +33,6 @@
 + (NSString *) webarchivePathForHash: (NSString *) hash;
 + (NSString *) failDictPath;
 + (NSString *) filenameExtensionForPreferredService;
-+ (NSString *) accountString;
 
 - (NSDictionary *) readDictionaryForHash:(NSString *) hash;
 - (void) saveDictionary: (NSDictionary *) dictionary;

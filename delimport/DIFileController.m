@@ -149,7 +149,7 @@
 */
 + (NSString *) bookmarkPathForHash: (NSString *) hash {
 	NSString * path = [[self class] pathForName:hash
-									inSubfolder:[[self class] accountString]
+									inSubfolder:@"Bookmarks"
 									withExtension:[DIFileController filenameExtensionForPreferredService]
 					   ];
 
@@ -165,7 +165,7 @@
 + (NSString *) webarchivePathForHash: (NSString *) hash {
 	NSString * fileName = [hash stringByAppendingFormat:@"-%@", [DIBookmarksController serviceName]];
 	NSString * path = [[self class] pathForName:fileName
-									inSubfolder:[[self class] accountString]
+									inSubfolder:@"Web Pages"
 									withExtension:@"webarchive"
 					   ];
 	
@@ -189,14 +189,6 @@
 */
 + (NSString *) filenameExtensionForPreferredService {
 	return [DIBookmarksController serviceName];
-}
-
-
-/*
- Helper returning a string that serves as the name of the subfolder bookmarks and webarchives are stored in.
-*/
-+ (NSString *) accountString {
-    return @"Bookmarks";
 }
 
 
