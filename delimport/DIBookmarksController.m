@@ -239,11 +239,14 @@
 	[loginController getUsername:&dialogueUsername password:&dialoguePassword];
 
     if (![dialogueUsername isEqualToString:username] || ![dialoguePassword isEqualToString:password]) {
-        // If entered strings differ from the stored ones, replace them.
+        // If entered strings differ from the stored ones: use them
         username = dialogueUsername;
         password = dialoguePassword;
 	
+        // Update keychain: delete old password and store the new one.
         NSError * error;
+        [SSKeychain deletePasswordForService:[DIBookmarksController serverAddress] ofClass:kSecClassInternetPassword account:username error:&error];
+        
         if (![SSKeychain setPassword:password forService:[DIBookmarksController serverAddress] ofClass:kSecClassInternetPassword account:username error:&error]) {
             if (error) {
                 NSLog(@"Could not save password for user %@ on service %@: %@", username, [DIBookmarksController serverAddress], [error localizedDescription]);
