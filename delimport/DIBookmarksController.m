@@ -121,8 +121,8 @@
 - (id) init {
 	self = [super init];
 	if (self != nil) {
-		username = nil;
-		password = nil;
+		username = @"";
+		password = @"";
 		
 		bookmarks = [[self loadBookmarksDictionary] mutableCopy];
 		
@@ -233,19 +233,22 @@
 
 
 - (void) logIn {
-	NSString * myUsername;
-	NSString * myPassword;
+	NSString * dialogueUsername = username;
+	NSString * dialoguePassword = password;
 	
-	[loginController getUsername:&myUsername password:&myPassword];
+	[loginController getUsername:&dialogueUsername password:&dialoguePassword];
 
-	username = myUsername;
-	password = myPassword;
+    if (![dialogueUsername isEqualToString:username] || ![dialoguePassword isEqualToString:password]) {
+        // If entered strings differ from the stored ones, replace them.
+        username = dialogueUsername;
+        password = dialoguePassword;
 	
-	NSError * error;
-	if (![SSKeychain setPassword:myPassword forService:[DIBookmarksController serverAddress] ofClass:kSecClassInternetPassword account:username error:&error]) {
-		if (error) {
-			NSLog(@"Could not save password for user %@ on service %@: %@", username, [DIBookmarksController serverAddress], [error localizedDescription]);
-		}
+        NSError * error;
+        if (![SSKeychain setPassword:password forService:[DIBookmarksController serverAddress] ofClass:kSecClassInternetPassword account:username error:&error]) {
+            if (error) {
+                NSLog(@"Could not save password for user %@ on service %@: %@", username, [DIBookmarksController serverAddress], [error localizedDescription]);
+            }
+        }
 	}
 }
 
