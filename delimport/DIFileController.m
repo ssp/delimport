@@ -294,14 +294,16 @@
  Queue download of the dictionary item if it hasn't been marked as problematic.
 */
 - (void) fetchWebarchiveForDictionary: (NSDictionary *) dictionary {
-	if (![failDict objectForKey:[dictionary objectForKey:DIHashKey]]) {
-		DIWebarchiveDownload * download = [[DIWebarchiveDownload alloc] init];
-		NSURL * URL = [NSURL URLWithString:[dictionary objectForKey:DIURLKey]];
-		download.URL = URL;
-		download.webarchivePath = [DIFileController webarchivePathForHash:[dictionary objectForKey:DIHashKey]];
-		download.hash = [dictionary objectForKey:DIHashKey];
-		[downloadQueue addToQueue:download];
-	}
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:DIDownloadWebarchivesKey]) {
+        if (![failDict objectForKey:[dictionary objectForKey:DIHashKey]]) {
+            DIWebarchiveDownload * download = [[DIWebarchiveDownload alloc] init];
+            NSURL * URL = [NSURL URLWithString:[dictionary objectForKey:DIURLKey]];
+            download.URL = URL;
+            download.webarchivePath = [DIFileController webarchivePathForHash:[dictionary objectForKey:DIHashKey]];
+            download.hash = [dictionary objectForKey:DIHashKey];
+            [downloadQueue addToQueue:download];
+        }
+    }
 }
 
 
