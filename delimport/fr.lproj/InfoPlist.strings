@@ -1,6 +1,6 @@
 ﻿/* Localized versions of Info.plist keys */
 
-NSHumanReadableCopyright = "© Ian Henderson, 2005-2011";
+NSHumanReadableCopyright = "© Ian Henderson et Sven-S. Porst, 2005-2013";
 
 /* Document name for Bookmarks */
 "delicious Bookmark" = "Signet delicious";

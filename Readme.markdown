@@ -5,7 +5,7 @@ Originally developed by [Ian Henderson](http://ianhenderson.org/), with most cha
 
 ### TODO
 * Handle redirects?
-** e.g. http://www.guardian.co.uk/comment/story/0,3604,1326603,00.html
+    * e.g. http://www.guardian.co.uk/comment/story/0,3604,1326603,00.html
 * allow multiple bookmarking accounts
 * Login item with helper app
 * show/hide Dock icon
@@ -15,7 +15,7 @@ Originally developed by [Ian Henderson](http://ianhenderson.org/), with most cha
 
 ### History
 <dl>
-<dt>v0.7, upcoming / brave-new-world branch</dt>
+<dt>v0.7a2, upcoming / brave-new-world branch</dt>
 <dd>
 <ul>
 <li>Save webarchives for the bookmarked URLs.</li>
@@ -25,6 +25,7 @@ Originally developed by [Ian Henderson](http://ianhenderson.org/), with most cha
 <li>Remove Keychain.framework, use SSKeychain instead</li>
 <li>Fetch bookmarks in batches of 1000 (new delicious does not send more in one go)</li>
 <li>Proper icon for pinboard courtesy of Nicolas Baumüller</li>
+<li>New dialogue setup for signup, add option for downloading bookmark contents</li>
 </ul>
 </dd>
 

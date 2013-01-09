@@ -490,6 +490,7 @@
 				IBC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = delimport;
 				WRAPPER_EXTENSION = app;
 			};
@@ -515,6 +516,7 @@
 				GCC_WARN_SHADOW = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = delimport;
 				WRAPPER_EXTENSION = app;
 			};

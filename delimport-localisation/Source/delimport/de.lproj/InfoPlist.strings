@@ -1,7 +1,6 @@
 ﻿/* Localized versions of Info.plist keys */
 
-CFBundleName = "delimport";
-NSHumanReadableCopyright = "© 2005-2011 Ian Henderson";
+NSHumanReadableCopyright = "© 2005-2013 Ian Henderson und Sven-S. Porst";
 
 /* Document name for Bookmarks */
 "delicious Bookmark" = "delicious Lesezeichen";
