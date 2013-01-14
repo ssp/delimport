@@ -15,11 +15,11 @@ Originally developed by [Ian Henderson](http://ianhenderson.org/), with most cha
 
 ### History
 <dl>
-<dt>v0.7a2, upcoming / brave-new-world branch</dt>
+<dt>v0.7b1 (58), 2013-01-13 <a href="http://earthlingsoft.net/beta/delimport0.7b1.zip">download</a></dt>
 <dd>
 <ul>
 <li>Save webarchives for the bookmarked URLs.</li>
-<li>X.7 and above only.</li>
+<li>X.7 64bit and above only.</li>
 <li>ARC</li>
 <li>sandboxed</li>
 <li>Remove Keychain.framework, use SSKeychain instead</li>

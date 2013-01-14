@@ -42,11 +42,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.7a2</string>
+	<string>0.7b1</string>
 	<key>CFBundleSignature</key>
 	<string>DeLi</string>
 	<key>CFBundleVersion</key>
-	<string>57</string>
+	<string>58</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.7</string>
 	<key>LSUIElement</key>
