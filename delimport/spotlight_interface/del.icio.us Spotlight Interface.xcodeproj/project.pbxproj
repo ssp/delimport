@@ -114,9 +114,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8D57630D048677EA00EA77CD /* del.icio.us Spotlight Interface */ = {
+		8D57630D048677EA00EA77CD /* delimport Bookmark */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6CCC64490A40CCF800540A50 /* Build configuration list for PBXNativeTarget "del.icio.us Spotlight Interface" */;
+			buildConfigurationList = 6CCC64490A40CCF800540A50 /* Build configuration list for PBXNativeTarget "delimport Bookmark" */;
 			buildPhases = (
 				8D57630E048677EA00EA77CD /* Headers */,
 				8D57630F048677EA00EA77CD /* Resources */,
@@ -128,7 +128,7 @@
 			);
 			dependencies = (
 			);
-			name = "del.icio.us Spotlight Interface";
+			name = "delimport Bookmark";
 			productInstallPath = /Library/Spotlight;
 			productName = "del.icio.us Spotlight Interface";
 			productReference = 8D576316048677EA00EA77CD /* delimport Bookmark.mdimporter */;
@@ -140,7 +140,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 6CCC644D0A40CCF800540A50 /* Build configuration list for PBXProject "del.icio.us Spotlight Interface" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -157,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D57630D048677EA00EA77CD /* del.icio.us Spotlight Interface */,
+				8D57630D048677EA00EA77CD /* delimport Bookmark */,
 			);
 		};
 /* End PBXProject section */
@@ -220,6 +220,7 @@
 		6CCC644A0A40CCF800540A50 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/Spotlight;
 				OTHER_LDFLAGS = "";
@@ -231,6 +232,7 @@
 		6CCC644B0A40CCF800540A50 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Library/Spotlight;
 				OTHER_LDFLAGS = "";
@@ -249,13 +251,11 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
 				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -281,7 +281,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 			};
 			name = Development;
 		};
@@ -295,13 +295,11 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
 				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
@@ -325,14 +323,14 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 			};
 			name = Deployment;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6CCC64490A40CCF800540A50 /* Build configuration list for PBXNativeTarget "del.icio.us Spotlight Interface" */ = {
+		6CCC64490A40CCF800540A50 /* Build configuration list for PBXNativeTarget "delimport Bookmark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6CCC644A0A40CCF800540A50 /* Development */,
