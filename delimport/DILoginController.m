@@ -7,31 +7,39 @@
 //
 
 #import "DILoginController.h"
+#import "DIBookmarksController.h"
 
 
 @implementation DILoginController
 
 
-- init
-{
+- init {
 	return [super initWithWindowNibName:@"LogIn"];
 }
 
-- (void)getUsername:(NSString **)username password:(NSString **)password
-{
+- (void) run {
 	[self showWindow:self];
 	[[self window] makeKeyAndOrderFront:self];
 	[[self window] center];
-	if(*username) {
-		[userField setStringValue:*username];
+
+	NSString * username;
+	username = [DIBookmarksController username];
+	if (username) {
+		[userField setStringValue:username];
 	}
-	if (*password) {
-		[passField setStringValue:*password];
+	
+	NSString * password = [DIBookmarksController password];
+	if (password) {
+		[passField setStringValue:password];
 	}
+	
 	[NSApp runModalForWindow:[self window]];
-	*username = [userField stringValue];
-	*password = [passField stringValue];
+
+	[DIBookmarksController setUsername:[userField stringValue]];
+	[DIBookmarksController setPassword:[passField stringValue]];
+
 	[self close];
+	
 }
 
 

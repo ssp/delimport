@@ -25,7 +25,6 @@
 		6C21E9A412D24F4C00091671 /* DIServiceTypeToIconPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C21E9A312D24F4C00091671 /* DIServiceTypeToIconPath.m */; };
 		6C21EA2112D2592900091671 /* pinboard.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6C21EA2012D2592900091671 /* pinboard.icns */; };
 		6C2D48CB159C8CB8003C1019 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2D48CA159C8CB8003C1019 /* CoreServices.framework */; };
-		6C2D48CE159EF75A003C1019 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2D48CD159EF75A003C1019 /* SSKeychain.m */; };
 		6C2D48D0159EFAC9003C1019 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2D48CF159EFAC9003C1019 /* Security.framework */; };
 		6C2FC9690CD9396900C1FD91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C2FC9670CD9396900C1FD91 /* Localizable.strings */; };
 		6C41DF3513632F0200EB6477 /* DIWebarchiveDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C41DF3413632F0200EB6477 /* DIWebarchiveDownload.m */; };
@@ -34,6 +33,7 @@
 		6CA955C2104AA40200F225D2 /* LogIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA955C0104AA40200F225D2 /* LogIn.xib */; };
 		6CCFAD1112BE394200B6A09A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCFAD1012BE394200B6A09A /* WebKit.framework */; };
 		6CD57B260CEC5261009D3862 /* delimport Bookmark.mdimporter in Copy mdimporter */ = {isa = PBXBuildFile; fileRef = 6C38B3460CCF5C4400E5933D /* delimport Bookmark.mdimporter */; };
+		6CE0746F17B83B38004E6D66 /* FXKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE0746E17B83B38004E6D66 /* FXKeychain.m */; };
 		6CE1A7CE104AC5130078D932 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA955BD104AA3E100F225D2 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -107,8 +107,6 @@
 		6C21EC6A12D290B100091671 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6C2D48C7159C71F9003C1019 /* delimport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = delimport.entitlements; sourceTree = "<group>"; };
 		6C2D48CA159C8CB8003C1019 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
-		6C2D48CC159EF75A003C1019 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = ../sskeychain/SSKeychain.h; sourceTree = "<group>"; };
-		6C2D48CD159EF75A003C1019 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = ../sskeychain/SSKeychain.m; sourceTree = "<group>"; };
 		6C2D48CF159EFAC9003C1019 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = ../../../../../../System/Library/Frameworks/Security.framework; sourceTree = "<group>"; };
 		6C383FF21066F2370001AAAD /* Readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Readme.markdown; path = ../Readme.markdown; sourceTree = "<group>"; };
 		6C41DF3313632F0200EB6477 /* DIWebarchiveDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIWebarchiveDownload.h; sourceTree = "<group>"; };
@@ -128,6 +126,8 @@
 		6CA95690104AADDB00F225D2 /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6CCFAD1012BE394200B6A09A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		6CCFAE0E12BE462D00B6A09A /* org.ianhenderson.delimport.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = org.ianhenderson.delimport.plist; path = ../../../../Library/Containers/org.ianhenderson.delimport/Data/Library/Preferences/org.ianhenderson.delimport.plist; sourceTree = SOURCE_ROOT; };
+		6CE0746D17B83B38004E6D66 /* FXKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXKeychain.h; path = ../FXKeychain/FXKeychain/FXKeychain.h; sourceTree = "<group>"; };
+		6CE0746E17B83B38004E6D66 /* FXKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXKeychain.m; path = ../FXKeychain/FXKeychain/FXKeychain.m; sourceTree = "<group>"; };
 		6CE1A7CA104AC4E70078D932 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/LogIn.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* delimport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = delimport.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,8 +226,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				6C2D48CC159EF75A003C1019 /* SSKeychain.h */,
-				6C2D48CD159EF75A003C1019 /* SSKeychain.m */,
+				6CE0746D17B83B38004E6D66 /* FXKeychain.h */,
+				6CE0746E17B83B38004E6D66 /* FXKeychain.m */,
 				32CA4F630368D1EE00C91783 /* delimport_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -382,7 +382,7 @@
 				6C41DF3513632F0200EB6477 /* DIWebarchiveDownload.m in Sources */,
 				6C41E0201364335C00EB6477 /* DIQueue.m in Sources */,
 				6C41E04D13643B5300EB6477 /* DIQueueItem.m in Sources */,
-				6C2D48CE159EF75A003C1019 /* SSKeychain.m in Sources */,
+				6CE0746F17B83B38004E6D66 /* FXKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

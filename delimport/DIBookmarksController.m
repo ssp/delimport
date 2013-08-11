@@ -9,7 +9,7 @@
 #import "DIBookmarksController.h"
 #import "DIFileController.h"
 #import "DILoginController.h"
-#import "SSKeychain.h"
+#import "FXKeychain.h"
 
 #define DIBookmarksPlistFileName @"Bookmarks.plist"
 
@@ -21,7 +21,7 @@
 	LSSharedFileListItemRef myLoginItem = [self mainBundleLoginItem];
 
 	if (myLoginItem == NULL
-		&& ![[NSUserDefaults standardUserDefaults] boolForKey:DILoginAlertSuppressedKey]) {
+		&& ![[NSUserDefaults standardUserDefaults] boolForKey:DIDefaultsLoginAlertSuppressedKey]) {
 		NSAlert *alert = [NSAlert 
 						  alertWithMessageText:NSLocalizedString(@"Automatically launch delimport on login?", @"Headline for add to login items dialogue") defaultButton:NSLocalizedString(@"Add", @"Add") alternateButton:NSLocalizedString(@"Don't Add", @"Don't Add") 
 						  otherButton:nil 
@@ -38,7 +38,7 @@
 		}
 		
 		if ([[alert suppressionButton] state] == NSOnState) {
-			[[NSUserDefaults standardUserDefaults] setBool:YES forKey:DILoginAlertSuppressedKey];
+			[[NSUserDefaults standardUserDefaults] setBool:YES forKey:DIDefaultsLoginAlertSuppressedKey];
 			[[NSUserDefaults standardUserDefaults] synchronize];
 		}
 	}
@@ -95,47 +95,54 @@
 
 
 
-- (void) getKeychainUserAndPass {
-	NSError * error = nil;
-	NSArray * accounts = [SSKeychain accountsForService:[DIBookmarksController serverAddress] ofClass:kSecClassInternetPassword error:&error];
-	if (accounts) {
-		NSDictionary * firstAccount = [accounts objectAtIndex:0];
-		username = [firstAccount objectForKey: kSecAttrAccount];
-		password = [SSKeychain passwordForService:[DIBookmarksController serverAddress] ofClass:kSecClassInternetPassword account:username error:&error];
-		
-		if (password == nil) {
-			if (error != nil) {
-				NSLog(@"No password available for account %@ on server %@.", username, [DIBookmarksController serverAddress]);
-			}
-		}
-	}
-	else {
-		if (error != nil) {
-			NSLog(@"Could not get accounts for service %@ from keychain: %@", [DIBookmarksController serverAddress], [error localizedDescription]);
-		}
-	}
++ (NSString *) username {
+	return [[NSUserDefaults standardUserDefaults] objectForKey:DIDefaultsUserNameKey];
 }
 
+
++ (void) setUsername:(NSString *) newUsername {
+	[[NSUserDefaults standardUserDefaults] setObject:newUsername forKey:DIDefaultsUserNameKey];
+}
+
+
++ (FXKeychain *) keychain {
+	return [[FXKeychain alloc] initWithService:[DIBookmarksController serverAddress] accessGroup:NULL];
+}
+
++ (NSString *) keychainItemKey {
+	return [DIBookmarksController username];
+}
+
+
++ (NSString *) password {
+	NSString * password = [[DIBookmarksController keychain] objectForKey:[DIBookmarksController keychainItemKey]];
+	return password;
+}
+
+
++ (void) setPassword:(NSString *) newPassword {
+	[[DIBookmarksController keychain] setObject:newPassword forKey:[DIBookmarksController keychainItemKey]];
+}
 
 
 - (id) init {
 	self = [super init];
+	
 	if (self != nil) {
-		username = @"";
-		password = @"";
-		
 		bookmarks = [[self loadBookmarksDictionary] mutableCopy];
 		
 		lastUpdate = [[NSUserDefaults standardUserDefaults] objectForKey:DIDefaultsLastUpdateKey];
 		if (!lastUpdate) {
 			lastUpdate = [NSDate distantPast];
-		} else if (![lastUpdate isKindOfClass:[NSDate class]]) {
+		}
+		else if (![lastUpdate isKindOfClass:[NSDate class]]) {
 			lastUpdate = [NSUnarchiver unarchiveObjectWithData:(NSData *)lastUpdate];
 		}
 		
 		fileController = [[DIFileController alloc] init];
 		throttleTimepoint = [NSDate distantPast];
 	}
+	
 	return self;
 }
 
@@ -143,13 +150,14 @@
 
 - (void) applicationDidFinishLaunching: (NSNotification *) notification {
 	[self addToLoginItems];
-	[self getKeychainUserAndPass];
 	
-	// Show login/preferences window in case the Option key is held on launch.
+	// Show login/preferences window if:
+	// a) the option key is pressed
+	// b) there is no user name set up
 	CGEventRef event = CGEventCreate(NULL);
 	CGEventFlags modifiers = CGEventGetFlags(event);
 	CFRelease(event);
-	if (modifiers & kCGEventFlagMaskAlternate) {
+	if ((modifiers & kCGEventFlagMaskAlternate) || ![DIBookmarksController username]) {
 		[self logIn];
 	}
 	
@@ -188,9 +196,9 @@
 
 - (NSXMLDocument *) deliciousAPIResponseToRequest: (NSString *) request {
 	NSXMLDocument * result = nil;
-	NSString *URLString = [NSString stringWithFormat:@"https://%@:%@@%@/v1/%@", username, password, [DIBookmarksController serverAddress], request];
-	NSURL *requestURL = [NSURL URLWithString:URLString];
-	NSMutableURLRequest *URLRequest = [NSMutableURLRequest requestWithURL:requestURL];
+	NSString * URLString = [NSString stringWithFormat:@"https://%@:%@@%@/v1/%@", [DIBookmarksController username], [DIBookmarksController password], [DIBookmarksController serverAddress], request];
+	NSURL * requestURL = [NSURL URLWithString:URLString];
+	NSMutableURLRequest * URLRequest = [NSMutableURLRequest requestWithURL:requestURL];
 	[URLRequest setValue:[DIBookmarksController userAgentName] forHTTPHeaderField: @"User-Agent"];
 	
 	NSError * error;
@@ -198,10 +206,11 @@
 	NSData * xmlData = [NSURLConnection sendSynchronousRequest:URLRequest returningResponse:&response error:&error];
 	// NSLog(@"API request: '%@', response: %i, d/l size: %i", request, [response statusCode], [xmlData length], nil);
 	if ([response statusCode] == 401) {
+		// Forbidden, authorisation failed.
 		[self logIn];
 	}
 	else if ([response statusCode] == 503) {
-		// we've been throttled
+		// We’ve been throttled.
 		[self setValue:[NSDate date] forKey:@"throttleTimepoint"];
 		NSLog(@"503 http error: throttled");
 	}
@@ -211,7 +220,7 @@
 		if (result == nil) {
 			// Display or log the problem (just sliently retrying seems preferable to me)
 			[[NSUserDefaults standardUserDefaults] synchronize];
-			if ([[NSUserDefaults standardUserDefaults] boolForKey:DIDisplayErrorMessages]) {
+			if ([[NSUserDefaults standardUserDefaults] boolForKey:DIDefaultsDisplayErrorMessages]) {
 				NSAlert *alert = [NSAlert alertWithError:error];
 				[[alert window] makeKeyAndOrderFront:self];
 				[[alert window] center];
@@ -232,27 +241,7 @@
 
 
 - (void) logIn {
-	NSString * dialogueUsername = username;
-	NSString * dialoguePassword = password;
-	
-    DILoginController * loginController = [[DILoginController alloc] init];
-	[loginController getUsername:&dialogueUsername password:&dialoguePassword];
-
-    if (![dialogueUsername isEqualToString:username] || ![dialoguePassword isEqualToString:password]) {
-        // If entered strings differ from the stored ones: use them
-        username = dialogueUsername;
-        password = dialoguePassword;
-	
-        // Update keychain: delete old password and store the new one.
-        NSError * error;
-        [SSKeychain deletePasswordForService:[DIBookmarksController serverAddress] ofClass:kSecClassInternetPassword account:username error:&error];
-        
-        if (![SSKeychain setPassword:password forService:[DIBookmarksController serverAddress] ofClass:kSecClassInternetPassword account:username error:&error]) {
-            if (error) {
-                NSLog(@"Could not save password for user %@ on service %@: %@", username, [DIBookmarksController serverAddress], [error localizedDescription]);
-            }
-        }
-	}
+	[[[DILoginController alloc] init] run];
 }
 
 
@@ -279,9 +268,10 @@
 - (void) updateList: (NSTimer *) timer {
 	[self setupTimer:timer];
 
-	if (!username) {
+	if (![DIBookmarksController username]) {
 		[self logIn];
 	}
+	
 	NSDate * remoteUpdateTime = [self remoteLastUpdate];
 	NSTimeInterval interval = [lastUpdate timeIntervalSinceDate:remoteUpdateTime];
 	if (interval >= 0) {
@@ -459,7 +449,7 @@
 
 - (NSTimeInterval) currentUpdateInterval {
 	[[NSUserDefaults standardUserDefaults] synchronize];
-	NSNumber * delta = [[NSUserDefaults standardUserDefaults] objectForKey:DIMinutesBetweenChecks];
+	NSNumber * delta = [[NSUserDefaults standardUserDefaults] objectForKey:DIDefaultsMinutesBetweenChecks];
 	NSTimeInterval minutes;
 		// Might be better to not go beneath 30min because of throttling.
 	if ((delta != nil) && ([throttleTimepoint timeIntervalSinceNow] < -30.0*60.0)) {

@@ -16,13 +16,13 @@ enum serviceIDs {
 
 
 @interface DILoginController : NSWindowController {
-	IBOutlet NSTextField *userField;
-	IBOutlet NSTextField *passField;
+	IBOutlet NSTextField * userField;
+	IBOutlet NSTextField * passField;
 }
 
+- (void) run;
 - (IBAction) logIn: (id) sender;
 - (IBAction) quit: (id) sender;
 - (IBAction) showWebPage: (id) sender;
-- (void)getUsername:(NSString **)username password:(NSString **)password;
 
 @end

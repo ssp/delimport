@@ -8,22 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 
-#define DIMinutesBetweenChecks @"MinutesBetweenChecks"
-#define DIDisplayErrorMessages @"DisplayErrorMessages"
-#define DILoginAlertSuppressedKey @"Suppress Add To Login Items Alert"
-
-#define DIDefaultsBookmarksKey @"DeliciousBookmarks"
-#define DIDefaultsBookmarksDictKey @"BookmarksDictionary"
-#define DIDefaultsLastUpdateKey @"DeliciousLastUpdate"
+#define DIDefaultsMinutesBetweenChecks @"MinutesBetweenChecks"
+#define DIDefaultsDisplayErrorMessages @"DisplayErrorMessages"
+#define DIDefaultsLoginAlertSuppressedKey @"suppressAddToLoginItemsAlert"
+#define DIDefaultsLastUpdateKey @"lastUpdate"
 #define DIDefaultsServiceTypeKey @"serviceType"
+#define DIDefaultsUserNameKey @"userName"
 
 @class DIFileController, DILoginController;
 
 @interface DIBookmarksController : NSObject {
 	DIFileController *fileController;
-	
-	NSString *username;
-	NSString *password;
 
 	NSMutableDictionary *bookmarks;
 	NSDate *lastUpdate;
@@ -40,8 +35,14 @@
 - (NSDictionary *) postDictionaryForXML: (NSXMLElement *) postXML;
 - (void) setBookmarks: (NSDictionary *) newMarks;
 
-- (void) setupTimer: (NSTimer*) timer;
+- (void) setupTimer: (NSTimer *) timer;
 - (NSTimeInterval) currentUpdateInterval;
+
++ (NSString *) username;
++ (void) setUsername:(NSString *) newUsername;
++ (NSString *) keychainPasswordKey;
++ (NSString *) password;
++ (void) setPassword:(NSString *) newPassword;
 
 + (NSString *) serverAddress;
 + (NSString *) serviceName;
