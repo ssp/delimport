@@ -134,7 +134,6 @@
 		}
 		
 		fileController = [[DIFileController alloc] init];
-		loginController = [[DILoginController alloc] init];
 		throttleTimepoint = [NSDate distantPast];
 	}
 	return self;
@@ -236,6 +235,7 @@
 	NSString * dialogueUsername = username;
 	NSString * dialoguePassword = password;
 	
+    DILoginController * loginController = [[DILoginController alloc] init];
 	[loginController getUsername:&dialogueUsername password:&dialoguePassword];
 
     if (![dialogueUsername isEqualToString:username] || ![dialoguePassword isEqualToString:password]) {

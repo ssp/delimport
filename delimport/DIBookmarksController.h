@@ -21,7 +21,6 @@
 
 @interface DIBookmarksController : NSObject {
 	DIFileController *fileController;
-	DILoginController *loginController;
 	
 	NSString *username;
 	NSString *password;
