@@ -196,7 +196,16 @@
 
 - (NSXMLDocument *) deliciousAPIResponseToRequest: (NSString *) request {
 	NSXMLDocument * result = nil;
-	NSString * URLString = [NSString stringWithFormat:@"https://%@:%@@%@/v1/%@", [DIBookmarksController username], [DIBookmarksController password], [DIBookmarksController serverAddress], request];
+
+	NSString * username = [DIBookmarksController username];
+	NSString * password = [DIBookmarksController password];
+	while (!(username && password && [username length] > 0 && [password length] > 0)) {
+		[self logIn];
+		username = [DIBookmarksController username];
+		password = [DIBookmarksController password];
+	}
+
+	NSString * URLString = [NSString stringWithFormat:@"https://%@:%@@%@/v1/%@", username, password, [DIBookmarksController serverAddress], request];
 	NSURL * requestURL = [NSURL URLWithString:URLString];
 	NSMutableURLRequest * URLRequest = [NSMutableURLRequest requestWithURL:requestURL];
 	[URLRequest setValue:[DIBookmarksController userAgentName] forHTTPHeaderField: @"User-Agent"];
